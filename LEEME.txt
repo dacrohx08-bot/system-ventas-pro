@@ -1,0 +1,65 @@
+SYSTEM VENTAS PRO — APLICACIÓN DE ESCRITORIO (Windows / Mac / Linux)
+=====================================================================
+
+QUÉ ES
+  Tu mismo sistema, dentro de una aplicación real: se instala con doble clic, tiene su icono
+  del alien, se abre sin Chrome y se actualiza sola desde dentro (botón "Actualizar").
+  Los datos de cada cliente viven en su computadora y NO se borran al actualizar
+  (además se hace un respaldo justo antes de instalar la actualización).
+
+CARPETA DE RESPALDOS DEL CLIENTE
+  Automática, sin que haga nada:  Documentos\SystemVentasPro\Respaldos
+  Opcional: una segunda carpeta (USB, Google Drive, etc.) desde el botón "Elegir carpeta".
+
+--------------------------------------------------------------------
+A) PRUEBA RÁPIDA EN TU COMPUTADORA (sin instalador)
+  1. Instala Node.js (nodejs.org, versión LTS).
+  2. En esta carpeta abre una terminal y escribe:
+         npm install
+         npm start
+  Se abre el sistema como aplicación.
+
+B) CREAR EL INSTALADOR EN TU PROPIA COMPUTADORA
+         npm run dist:win      (Windows → dist\SystemVentasPro-Setup.exe)
+         npm run dist:mac      (solo se arma en una Mac → .dmg)
+         npm run dist:linux    (solo en Linux → SystemVentasPro.AppImage)
+
+C) LO MEJOR: QUE GITHUB LOS ARME TODOS Y PUBLIQUE LAS ACTUALIZACIONES (GRATIS)
+  1. Crea una cuenta en github.com y un repositorio (puede ser privado o público;
+     para actualizaciones automáticas lo más sencillo es público).
+  2. En package.json, sección "publish", cambia TU_USUARIO_GITHUB y TU_REPOSITORIO.
+  3. Sube todo este proyecto al repositorio.
+  4. Para publicar una versión (la primera o una actualización):
+       - sube el número en package.json  ("version": "12.66.0")
+       - escribe en la terminal:
+             git tag v12.66.0
+             git push --tags
+     GitHub arma solo los instaladores de Windows, Mac y Linux y los deja en
+     "Releases". Esa página es la que enlazas en tu página de descargas.
+  5. Las computadoras que ya tienen el sistema detectan la nueva versión, la descargan
+     en segundo plano y muestran "Actualización disponible → ACTUALIZAR".
+     Un clic y listo: respalda, instala y reabre con todo intacto.
+
+  ¿Prefieres tu propio servidor (Cloudflare, etc.) en vez de GitHub?
+  Sube los archivos de la carpeta dist (el .exe, latest.yml, etc.) a una dirección web y
+  arranca la app con la variable SVP_UPDATE_URL=https://tu-dominio/actualizaciones/
+
+--------------------------------------------------------------------
+CÓMO ACTUALIZAR EL SISTEMA (para ti, cuando tengamos una versión nueva)
+  1. Reemplaza el archivo  app/index.html  por el HTML nuevo que te entregue.
+  2. Sube el número de "version" en package.json.
+  3. git tag vX.Y.Z  y  git push --tags   → los clientes ven el botón Actualizar.
+
+AVISOS HONESTOS
+  • Windows mostrará "Windows protegió su PC" (SmartScreen) al instalar mientras el
+    instalador no esté firmado con certificado de pago. El cliente pulsa
+    "Más información → Ejecutar de todas formas". Se quita comprando un certificado.
+  • En Mac, para que se actualice sola y no pida permisos extra hace falta cuenta de
+    Apple Developer (99 USD al año). Sin ella funciona, pero el cliente debe permitirla
+    en Ajustes → Privacidad y seguridad.
+  • Las actualizaciones automáticas solo funcionan en la app ya instalada (no con npm start).
+  • Lo probé aquí abriendo la aplicación real y verificando respaldos, carpeta extra,
+    licencia, datos que persisten y el aviso de actualización. El armado final del
+    instalador (.exe/.dmg/.AppImage) y el ciclo real de descarga de una actualización
+    solo se pueden comprobar en GitHub/tu computadora; si algo falla ahí, me pasas el
+    mensaje y lo corrijo.
