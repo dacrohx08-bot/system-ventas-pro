@@ -67,6 +67,8 @@ function crearVentana() {
     webPreferences: { preload: path.join(__dirname, 'preload.js'), contextIsolation: true, nodeIntegration: false, sandbox: true, spellcheck: false }
   });
   Menu.setApplicationMenu(null);
+  ventana.on('page-title-updated', (e) => e.preventDefault());
+  ventana.setTitle(NOMBRE);
   ventana.once('ready-to-show', () => { ventana.show(); if (process.env.SVP_MAXIMIZAR !== '0') ventana.maximize(); });
   ventana.loadURL('app://local/index.html');
   // enlaces externos al navegador; impresión y ventanas propias de la app se permiten
