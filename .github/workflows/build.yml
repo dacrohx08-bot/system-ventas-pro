@@ -126,9 +126,9 @@ jobs:
           cp app/build/outputs/apk/debug/app-debug.apk ../../SystemVentasPro-Android.apk
           ls -la ../../SystemVentasPro-Android.apk
           AS=$(ls "$ANDROID_HOME"/build-tools/*/apksigner | tail -1)
-          echo "=== HUELLA DE FIRMA (debe ser C2:DA:99:F8 en todas las versiones) ==="
+          echo "=== HUELLA DE FIRMA (debe ser 21:B2:E7:B9 en todas las versiones) ==="
           "$AS" verify --print-certs ../../SystemVentasPro-Android.apk | grep -i "SHA-256"
-          "$AS" verify --print-certs ../../SystemVentasPro-Android.apk | grep -i "SHA-256" | grep -qi "c2da99f887b901638d0e211de3b21a02e5882f149c1605e4025a45c1101b1f3e" || (echo "ERROR: la firma no es la fija"; exit 1)
+          "$AS" verify --print-certs ../../SystemVentasPro-Android.apk | grep -i "SHA-256" | grep -qi "21b2e7b920c46ea952961b4c9bc4233486efd7dd49cd346b160bb6dca63a6e30" || (echo "ERROR: la firma no es la fija"; exit 1)
 
       - name: Guardar también como archivo de la corrida
         uses: actions/upload-artifact@v4
@@ -251,9 +251,9 @@ jobs:
           cp app/build/outputs/apk/debug/app-debug.apk ../../SystemVentasPro-Consulta.apk
           ls -la ../../SystemVentasPro-Consulta.apk
           AS=$(ls "$ANDROID_HOME"/build-tools/*/apksigner | tail -1)
-          echo "=== HUELLA DE FIRMA (debe ser C2:DA:99:F8 en todas las versiones) ==="
+          echo "=== HUELLA DE FIRMA (debe ser 21:B2:E7:B9 en todas las versiones) ==="
           "$AS" verify --print-certs ../../SystemVentasPro-Consulta.apk | grep -i "SHA-256"
-          "$AS" verify --print-certs ../../SystemVentasPro-Consulta.apk | grep -i "SHA-256" | grep -qi "c2da99f887b901638d0e211de3b21a02e5882f149c1605e4025a45c1101b1f3e" || (echo "ERROR: la firma no es la fija"; exit 1)
+          "$AS" verify --print-certs ../../SystemVentasPro-Consulta.apk | grep -i "SHA-256" | grep -qi "21b2e7b920c46ea952961b4c9bc4233486efd7dd49cd346b160bb6dca63a6e30" || (echo "ERROR: la firma no es la fija"; exit 1)
 
       - name: Guardar también como archivo de la corrida
         uses: actions/upload-artifact@v4
