@@ -20,6 +20,7 @@ contextBridge.exposeInMainWorld('svpNative', {
   leerEstadoLicencia: () => ipcRenderer.invoke('svp:lic-leer'),
   guardarEstadoLicencia: (txt) => ipcRenderer.invoke('svp:lic-guardar', txt),
   huellaEquipo: () => ipcRenderer.invoke('svp:huella'),
+  nombreEquipo: () => ipcRenderer.invoke('svp:nombre-equipo'),
   // ---- actualizaciones ----
   version: () => ipcRenderer.invoke('svp:version'),
   estadoActualizacion: () => ipcRenderer.invoke('svp:upd-estado'),
