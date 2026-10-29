@@ -59,7 +59,7 @@ jobs:
           set -e
           mkdir mobile && cd mobile
           npm init -y
-          npm install --no-audit --no-fund @capacitor/core@6 @capacitor/cli@6 @capacitor/android@6
+          npm install --no-audit --no-fund @capacitor/core@6 @capacitor/cli@6 @capacitor/android@6 @capacitor/device@6
           mkdir www
           cp ../app/index.html www/index.html
           cat > capacitor.config.json <<'EOF'
