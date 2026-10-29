@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sistema de punto de venta e inventario">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🛒</text></svg>">
-    <title>SYSTEM PRO :: SYSTEM VENTAS PRO v12.70 (HOLOGRAPHIC POS EDITION)</title>
+    <title>SYSTEM PRO :: SYSTEM VENTAS PRO v12.71 (HOLOGRAPHIC POS EDITION)</title>
     <!-- Chart.js -->
     <script>/* Chart.js 4.4.1 (MIT) incluido: las gráficas funcionan sin internet */
 /*!
@@ -102,7 +102,7 @@
         div.ticket-hoja .tk-total { font-size: 1.3em; font-weight: 800; }
         #modal-ticket > div { max-height: calc(94 * var(--vh)); }
         #area-impresion-ticket { display: none; }
-        /* v12.70: hoja carta */
+        /* v12.71: hoja carta */
         .carta-hoja{font:11px/1.35 Arial,Helvetica,sans-serif;color:#111;background:#fff;width:100%}
         .carta-hoja *{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
         .cj-enc{display:flex;gap:12px;align-items:center;border-bottom:2px solid #1e293b;padding-bottom:8px;margin-bottom:10px}
@@ -346,9 +346,9 @@
 :root{--rp-cy:#22d3ee;--rp-am:#fbbf24;--rp-or:#fb923c;--rp-gr:#34d399;--rp-rs:#fb7185;--rp-bl:#ffffff;--rp-mut:#94a3b8;--rp-tx:#cbd5e1;--rp-ln:#334155;--rp-ln2:#1e293b}
 html:not(.dark){--rp-cy:#0e7490;--rp-am:#b45309;--rp-or:#c2410c;--rp-gr:#047857;--rp-rs:#be123c;--rp-bl:#0f172a;--rp-mut:#475569;--rp-tx:#1e293b;--rp-ln:#94a3b8;--rp-ln2:#cbd5e1}
 .bp:disabled{opacity:.4!important;filter:grayscale(.35);animation:none;cursor:not-allowed;transform:none;box-shadow:none}
-/* v12.70: en tema claro el sistema pone texto oscuro a TODOS los botones; los de color fuerte deben llevar texto BLANCO */
+/* v12.71: en tema claro el sistema pone texto oscuro a TODOS los botones; los de color fuerte deben llevar texto BLANCO */
 html:not(.dark) button.bp,html:not(.dark) button.text-white,html:not(.dark) button[style*="color:#fff"],html:not(.dark) button[style*="color: #fff"],html:not(.dark) button[style*="color:#ffffff"]{color:#fff!important;font-weight:900!important}
-/* v12.70: botones de colores propios (cada uno distinto, se leen igual en tema claro y oscuro) */
+/* v12.71: botones de colores propios (cada uno distinto, se leen igual en tema claro y oscuro) */
 .bp{color:#fff!important;border:0;text-shadow:0 1px 1px rgba(0,0,0,.35);box-shadow:0 6px 16px -6px var(--bpc),inset 0 1px 0 rgba(255,255,255,.28);transition:transform .15s ease,filter .15s ease,box-shadow .15s ease;white-space:nowrap}
 .bp:hover{transform:translateY(-2px);filter:brightness(1.12);box-shadow:0 10px 22px -6px var(--bpc),inset 0 1px 0 rgba(255,255,255,.35)}
 .bp:active{transform:translateY(0) scale(.97)}
@@ -382,7 +382,7 @@ html:not(.dark) .rp-btn{background:#e2e8f0;color:#0e7490;border-color:#94a3b8}
 html:not(.dark) .rp-btn:hover{background:#cbd5e1}
 #corte-desde,#corte-hasta,#rep-desde,#rep-hasta{color:var(--rp-bl)}
 
-/* ===== v12.70: AJUSTE DE TAMAÑOS A CUALQUIER PANTALLA ===== */
+/* ===== v12.71: AJUSTE DE TAMAÑOS A CUALQUIER PANTALLA ===== */
 html{-webkit-text-size-adjust:100%}
 .flex-wrap{flex-wrap:wrap}
 header.shrink-0{height:auto!important;min-height:44px;flex-wrap:wrap;row-gap:4px;column-gap:8px}
@@ -419,7 +419,7 @@ header.shrink-0 #user-display-name{max-width:140px;overflow:hidden;text-overflow
 .pos-pie{position:sticky;bottom:-1px;z-index:5;background:#0b1220;padding-top:8px;margin-top:4px}
 html:not(.dark) .pos-pie{background:#fff}
 
-/* v12.70: carrito del punto de venta más compacto (se ven más productos) */
+/* v12.71: carrito del punto de venta más compacto (se ven más productos) */
 @media (min-width:821px){#modal-nueva-venta .w-84{width:18.5rem!important}}
 #modal-nueva-venta .w-84{padding:.6rem!important}
 #modal-nueva-venta .w-84 .space-y-3 > * + *{margin-top:.35rem!important}
@@ -443,7 +443,7 @@ html:not(.dark) .pos-pie{background:#fff}
             <div class="flex items-center gap-1.5">
                 <span class="text-base animate-pulse">👽</span>
                 <span class="text-xs font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-500">SYSTEM VENTAS PRO</span>
-                <span id="badge-version-modo" class="text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold">v12.70 HOLOGRAPHIC</span>
+                <span id="badge-version-modo" class="text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold">v12.71 HOLOGRAPHIC</span>
             </div>
 
             <!-- MENÚS DESPLEGABLES CON CONTROL DE PERMISOS -->
@@ -1043,6 +1043,22 @@ html:not(.dark) .pos-pie{background:#fff}
                 <p id="resp-nota-nosoportado" class="hidden text-[11px] text-amber-400 font-bold">Este navegador no permite guardar en carpetas. Usa Google Chrome o Microsoft Edge, o descarga una copia manual cada día con el botón de abajo.</p>
             </div>
             
+            <div id="nube-panel" class="bg-slate-950 p-4 rounded-xl border border-cyan-500/40 space-y-2">
+                <p class="text-xs font-black text-cyan-400 uppercase">☁️ Mi negocio en la nube</p>
+                <p class="text-[11px] text-slate-300">Se guarda sola una copia de tus ventas, inventario, caja y clientes en tu servidor. Así puedes <b>consultar tu negocio desde el celular o cualquier computadora</b>, y tienes un respaldo extra si algo le pasa a este equipo.</p>
+                <div class="flex justify-between items-center text-[11px] font-mono pt-1 border-t border-slate-800/80"><span class="text-slate-400">Estado:</span><span id="nube-estado" class="font-black text-amber-400 text-right">Desactivada</span></div>
+                <div id="nube-fila-cod" class="hidden flex justify-between items-center text-[11px] font-mono"><span class="text-slate-400">Código de tu negocio:</span><span id="nube-codigo" class="font-black text-cyan-400 text-lg tracking-widest"></span></div>
+                <div id="nube-fila-ult" class="hidden flex justify-between items-center text-[11px] font-mono"><span class="text-slate-400">Última copia enviada:</span><span id="nube-ultimo" class="text-cyan-400 font-bold">Nunca</span></div>
+                <div id="nube-fila-url" class="hidden text-[11px] font-mono" style="word-break:break-all"><span class="text-slate-400">Página para consultar:</span> <b id="nube-url" class="text-cyan-400"></b></div>
+                <p id="nube-nota" class="hidden text-[11px] text-amber-400 font-bold"></p>
+                <div class="grid grid-cols-2 gap-2 pt-1">
+                    <button type="button" id="nube-btn-act" onclick="nubeActivar()" class="py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-black text-[11px] cursor-pointer">☁️ ACTIVAR NUBE</button>
+                    <button type="button" id="nube-btn-sync" onclick="nubeSincronizar(true)" class="hidden py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-slate-950 font-black text-[11px] cursor-pointer">🔄 ENVIAR AHORA</button>
+                    <button type="button" id="nube-btn-copiar" onclick="nubeCopiarUrl()" class="hidden py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 font-black text-[11px] cursor-pointer">📋 COPIAR ENLACE</button>
+                </div>
+                <p class="text-[10px] text-slate-500">Entran con el mismo usuario y contraseña del sistema. Cada usuario ve solo lo que su rol permite.</p>
+            </div>
+
             <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-3">
                 <div class="flex items-center justify-between">
                     <div>
@@ -1944,7 +1960,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.70: AJUSTE DE STOCK CON MOTIVO -->
+    <!-- v12.71: AJUSTE DE STOCK CON MOTIVO -->
     <div id="modal-ajuste-stock" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-amber-500/50 w-full max-w-md p-5 rounded-2xl shadow-2xl flex flex-col space-y-3">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -1983,7 +1999,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.70: KARDEX -->
+    <!-- v12.71: KARDEX -->
     <div id="modal-kardex" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-cyan-500/50 w-full max-w-5xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh]">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2005,7 +2021,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.70: POR SURTIR -->
+    <!-- v12.71: POR SURTIR -->
     <div id="modal-por-surtir" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-amber-500/50 w-full max-w-3xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh]">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2028,7 +2044,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.70: IMPORTAR PRODUCTOS CSV -->
+    <!-- v12.71: IMPORTAR PRODUCTOS CSV -->
     <div id="modal-importar-csv" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-emerald-500/50 w-full max-w-2xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh] overflow-y-auto">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2057,7 +2073,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.70: BLOQUEO AUTOMÁTICO -->
+    <!-- v12.71: BLOQUEO AUTOMÁTICO -->
     <div id="modal-autobloqueo" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-slate-700 w-full max-w-sm p-5 rounded-2xl shadow-2xl flex flex-col space-y-3">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2081,7 +2097,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.70: ESPACIO / ALMACENAMIENTO -->
+    <!-- v12.71: ESPACIO / ALMACENAMIENTO -->
     <div id="modal-almacenamiento" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-cyan-500/50 w-full max-w-lg p-5 rounded-2xl shadow-2xl flex flex-col space-y-3">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2099,7 +2115,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.70: LIMPIEZA DE REGISTROS -->
+    <!-- v12.71: LIMPIEZA DE REGISTROS -->
     <div id="modal-limpieza" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-rose-500/50 w-full max-w-md p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh] overflow-y-auto">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2126,7 +2142,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.70: CIERRE DE TURNO -->
+    <!-- v12.71: CIERRE DE TURNO -->
     <div id="modal-cerrar-turno" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel overflow-y-auto bg-slate-900 border border-rose-500/50 w-full max-w-lg p-5 rounded-2xl shadow-2xl flex flex-col space-y-3" style="max-height:calc(94 * var(--vh))">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2154,7 +2170,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.70: HISTORIAL DE TURNOS -->
+    <!-- v12.71: HISTORIAL DE TURNOS -->
     <div id="modal-turnos" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel overflow-y-auto bg-slate-900 border border-cyan-500/50 w-full max-w-2xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3" style="max-height:calc(94 * var(--vh))">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2165,7 +2181,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.70: FOTOS DE PRODUCTOS -->
+    <!-- v12.71: FOTOS DE PRODUCTOS -->
     <div id="modal-fotos" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-pink-500/50 w-full max-w-lg p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh] overflow-y-auto text-xs">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2305,13 +2321,13 @@ html:not(.dark) .pos-pie{background:#fff}
                 </div>
             </div>
 
-            <p class="lp-nota" style="text-align:center; margin-top: 1.25rem;">SYSTEM VENTAS PRO v12.70 · Tus datos se guardan en tu propio equipo.</p>
+            <p class="lp-nota" style="text-align:center; margin-top: 1.25rem;">SYSTEM VENTAS PRO v12.71 · Tus datos se guardan en tu propio equipo.</p>
             <p id="lp-pruebas" style="display:none; text-align:center; margin-top:.75rem;"><a href="javascript:resetearADemoPruebas()" style="color:#fbbf24; font-size:.75rem; font-weight:700; text-decoration:underline;">Restablecer a DEMO (solo pruebas del dueño)</a></p>
         </div>
     </div>
 
     <!-- SCRIPT GENERAL FUNCIONAL (MODO 100% MANUAL + FORMATO DD/MM/YYYY) -->
-    <!-- ALMACENAMIENTO GRANDE v12.70: los datos pesados (productos, ventas, compras, gastos, clientes...) viven en IndexedDB (cientos de MB)
+    <!-- ALMACENAMIENTO GRANDE v12.71: los datos pesados (productos, ventas, compras, gastos, clientes...) viven en IndexedDB (cientos de MB)
          y las fotos de los productos en un almacén aparte. Si el navegador no lo permite, el sistema sigue como antes (localStorage). -->
     <script id="svp-boot">
     (function () {
@@ -2608,10 +2624,10 @@ html:not(.dark) .pos-pie{background:#fff}
             try { pintarBannerConsulta(); } catch (e) {}
             const badge = document.getElementById('badge-version-modo');
             if(licenciaData.tipo === "PRO") {
-                badge.innerText = "v12.70 PRO";
+                badge.innerText = "v12.71 PRO";
                 badge.className = "text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold";
             } else {
-                badge.innerText = "v12.70 HOLOGRAPHIC";
+                badge.innerText = "v12.71 HOLOGRAPHIC";
                 badge.className = "text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold";
             }
         }
@@ -2638,6 +2654,7 @@ html:not(.dark) .pos-pie{background:#fff}
             document.getElementById('check-auto-backup').checked = backupConfig.auto;
             document.getElementById('label-ultimo-respaldo').innerText = backupConfig.ultimo;
             respPintar();
+            try { nubePintar(); } catch (e) {}
         }
 
         function toggleAutoRespaldo() {
@@ -2664,7 +2681,7 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
 
-        // ===== RESPALDO AUTOMÁTICO A CARPETA v12.70 (File System Access API: Chrome / Edge) =====
+        // ===== RESPALDO AUTOMÁTICO A CARPETA v12.71 (File System Access API: Chrome / Edge) =====
         let respHandle = null;              // carpeta elegida por el usuario
         let respEstado = 'sin-carpeta';     // 'activo' | 'permiso' | 'sin-carpeta' | 'no-soportado' | 'error'
         let respErrorTxt = '';
@@ -2789,7 +2806,7 @@ html:not(.dark) .pos-pie{background:#fff}
         //   quitarCarpetaExtra()         -> Promise<void>
         //   abrirCarpetaRespaldos()      -> Promise<void>
         function modoEscritorio() { return !!(window.svpNative && window.svpNative.esEscritorio); }
-        // ----- v12.70: ACTUALIZACIONES DE LA APLICACIÓN DE ESCRITORIO (como una tienda de apps) -----
+        // ----- v12.71: ACTUALIZACIONES DE LA APLICACIÓN DE ESCRITORIO (como una tienda de apps) -----
         let updEstado = { estado: 'inactivo' };
         function svpTextoActualizacion(u) {
             switch (u.estado) {
@@ -3351,7 +3368,7 @@ html:not(.dark) .pos-pie{background:#fff}
 
         let idUsuarioActivo = localStorage.getItem('nexus_usuario_activo_id') || (usuariosSistema[0] ? usuariosSistema[0].id : 1);
 
-        var _pagInv = { p: 1, n: 50 }, _pagVen = { p: 1, n: 50 };   // v12.70: antes que cualquier pantalla
+        var _pagInv = { p: 1, n: 50 }, _pagVen = { p: 1, n: 50 };   // v12.71: antes que cualquier pantalla
         let clientesSistema = JSON.parse(localStorage.getItem('nexus_clientes_v9')) || [];
         clientesSistema.forEach(c => {
             if(!c.telefono) c.telefono = 'N/A';
@@ -3492,6 +3509,7 @@ html:not(.dark) .pos-pie{background:#fff}
             registrarUsoReloj();
             hacerCopiaAutomaticaSilenciosa();
             try { respProgramar(); } catch (e) {}
+            try { nubeProgramar(); } catch (e) {}
           } catch (e) {
             console.error(e);
             if (!window.__avisoGuardadoMostrado) {
@@ -3757,7 +3775,7 @@ html:not(.dark) .pos-pie{background:#fff}
             mostrarLoginSistema();
         }
 
-        // ===== RECUPERAR CONTRASEÑA DEL DUEÑO v12.70 =====
+        // ===== RECUPERAR CONTRASEÑA DEL DUEÑO v12.71 =====
         // Código firmado por el proveedor: REC1-AAAAMMDD-<aviso único>-<firma>. Sirve solo para este equipo (ID de instalación),
         // vence en la fecha indicada y se puede usar una sola vez. Cambia la clave del DUEÑO; no borra ningún dato.
         function codigosRecuperacionUsados() {
@@ -4070,7 +4088,7 @@ html:not(.dark) .pos-pie{background:#fff}
             corteHoy();
         }
 
-        // ===== CORTE DE CAJA Y REPORTES v12.70 =====
+        // ===== CORTE DE CAJA Y REPORTES v12.71 =====
         const METODOS_PAGO = ['EFECTIVO', 'TARJETA', 'TRANSFERENCIA'];
         function dinero(n) { return '$' + (Number(n) || 0).toFixed(2); }
         function csvCelda(x) { return '"' + String(x === undefined || x === null ? '' : x).replace(/"/g, '""') + '"'; }
@@ -4080,7 +4098,7 @@ html:not(.dark) .pos-pie{background:#fff}
         function registrarAbonoHistorial(venta, monto, metodo) {
             if (!(monto > 0)) return;
             if (!Array.isArray(venta.abonos)) {
-                // venta anterior a la v12.70: el abono previo se conserva como un solo movimiento con la fecha de la venta
+                // venta anterior a la v12.71: el abono previo se conserva como un solo movimiento con la fecha de la venta
                 const previo = Math.max(0, (venta.abonado || 0) - monto);
                 venta.abonos = previo > 0 ? [{ fecha: venta.fecha, monto: previo, metodo: venta.con || 'EFECTIVO', antiguo: true }] : [];
             }
@@ -4703,7 +4721,7 @@ html:not(.dark) .pos-pie{background:#fff}
             }
         }
 
-        // v12.70: proveedor, categoría y medida también se pueden corregir al editar
+        // v12.71: proveedor, categoría y medida también se pueden corregir al editar
         function llenarClasificacionEdicion(p) {
             const caja = document.getElementById('edit-prod-clasif');
             const esServicio = p.categoria === 'SERVICIOS';
@@ -5061,7 +5079,7 @@ html:not(.dark) .pos-pie{background:#fff}
             `).join('') + (_totProds > 120 ? `<div class="col-span-full text-center text-[11px] font-bold text-slate-400 p-3">Mostrando 120 de ${_totProds} productos — escribe o escanea para encontrar el que buscas.</div>` : '');
         }
 
-        // ===== LECTOR DE CÓDIGO DE BARRAS v12.70 =====
+        // ===== LECTOR DE CÓDIGO DE BARRAS v12.71 =====
         // El lector funciona como un teclado: "escribe" el código muy rápido y pulsa Enter.
         function sonidoLectorActivo() { try { return localStorage.getItem('nexus_sonido_lector') !== '0'; } catch (e) { return true; } }
         function alternarSonidoLector() {
@@ -5318,7 +5336,7 @@ html:not(.dark) .pos-pie{background:#fff}
             if (t.envio > 0) t.total = redondear2(t.total + t.envio);
             return t;
         }
-        // ===== v12.70: COSTO DE ENVÍO A DOMICILIO =====
+        // ===== v12.71: COSTO DE ENVÍO A DOMICILIO =====
         function aplicarOpcionesPOS() {
             let min = false; try { min = localStorage.getItem('svp_pos_min') === '1'; } catch (e) { }
             const c = document.getElementById('pos-controles'), b = document.getElementById('pos-btn-opciones'); if (!c) return;
@@ -5628,7 +5646,7 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
 
-        // ===== DEVOLUCIONES PARCIALES v12.70 =====
+        // ===== DEVOLUCIONES PARCIALES v12.71 =====
         function devueltoPorItem(v) { const m = {}; (v.devoluciones || []).forEach(d => (d.items || []).forEach(i => { m[i.idx] = (m[i.idx] || 0) + i.cant; })); return m; }
         function totalDevueltoVenta(v) { return (v.devoluciones || []).reduce((a, d) => a + d.total, 0); }
         function ventaTieneRestante(v) { const m = devueltoPorItem(v); return (v.items || []).some((it, idx) => (it.cant - (m[idx] || 0)) > 1e-9); }
@@ -6476,7 +6494,7 @@ html:not(.dark) .pos-pie{background:#fff}
             // La pantalla de inicio se muestra SIEMPRE al abrir el sistema (queda visible hasta que se pulse Entrar / Probar DEMO).
         }
 
-        // ===== DEMO DE 3 DÍAS QUE NO SE REINICIA + MODO CONSULTA v12.70 =====
+        // ===== DEMO DE 3 DÍAS QUE NO SE REINICIA + MODO CONSULTA v12.71 =====
         // La fecha de inicio de la demo (y el ID del equipo y la clave) se guardan en varios lugares a la vez:
         //   aplicación de escritorio (svpNative) · IndexedDB · localStorage · respaldos.
         // Siempre gana la fecha de inicio MÁS ANTIGUA, así borrar un lugar no reinicia la prueba.
@@ -6609,7 +6627,7 @@ html:not(.dark) .pos-pie{background:#fff}
             window.entrarAlSistema = async function () { const r = await ent.apply(this, arguments); try { pintarBannerConsulta(); } catch (e) {} return r; };
         })();
 
-        // ===== SERVIDOR DE LICENCIAS v12.70 =====
+        // ===== SERVIDOR DE LICENCIAS v12.71 =====
         // Con servidor: la fecha de inicio de la demo la fija EL SERVIDOR la primera vez que el equipo se conecta,
         // así borrar datos o reinstalar no sirve. Las respuestas vienen firmadas y se verifican con SERVIDOR_PUBLIC_JWK.
         // Sin internet el sistema sigue funcionando con su estado local; en cuanto hay conexión se sincroniza.
@@ -6705,6 +6723,116 @@ html:not(.dark) .pos-pie{background:#fff}
         setInterval(() => { try { verificarConServidor(); } catch (e) {} }, 6 * 3600 * 1000);
 
         iniciarPantallaInicio();
+
+        // ===== NUBE v12.71: copia automática al servidor + panel web de consulta =====
+        const NUBE_COLS = ['inventario', 'historialVentas', 'historialGastos', 'clientesSistema', 'cajaEstado', 'turnosCaja', 'ventasAnuladas', 'ventasDevueltas', 'historialCompras', 'proveedoresSistema', 'negocioData', 'acceso'];
+        let _nubeTimer = null, _nubeBusy = false, _nubeMsg = '', _nubeFalla = false;
+        function nubeCfg() { try { return JSON.parse(localStorage.getItem('svp_nube') || 'null') || {}; } catch (e) { return {}; } }
+        function nubeGuardarCfg(c) { try { localStorage.setItem('svp_nube', JSON.stringify(c)); } catch (e) {} }
+        function nubeHash(t) {
+            let a = 0x811c9dc5, b = 0x1b873593;
+            for (let i = 0; i < t.length; i++) { const c = t.charCodeAt(i); a = Math.imul(a ^ c, 16777619) >>> 0; b = Math.imul(b + c, 2246822519) >>> 0; b = (b ^ (b >>> 13)) >>> 0; }
+            return a.toString(16).padStart(8, '0') + b.toString(16).padStart(8, '0') + t.length.toString(36);
+        }
+        function nubeDatos(col) {
+            switch (col) {
+                case 'inventario': return svpAlm.sinImagen(inventario);
+                case 'historialVentas': return historialVentas;
+                case 'historialGastos': return historialGastos;
+                case 'clientesSistema': return clientesSistema;
+                case 'cajaEstado': return cajaEstado;
+                case 'turnosCaja': return turnosCaja.slice(0, 500);
+                case 'ventasAnuladas': return ventasAnuladas || [];
+                case 'ventasDevueltas': return ventasDevueltas || [];
+                case 'historialCompras': return historialCompras;
+                case 'proveedoresSistema': return proveedoresSistema;
+                case 'negocioData': return { nombre: negocioData.nombre, direccion: negocioData.direccion };
+                case 'acceso': return usuariosSistema.filter(u => u && u.hash && u.salt && (u.alg || 'p1') === 'p1').map(u => ({ nombre: u.nombre, rol: u.rol, salt: u.salt, hash: u.hash, alg: 'p1', permisos: u.rol === 'DUEÑO' ? [] : ((rolesPermisosData && rolesPermisosData[u.rol]) || []) }));
+            }
+            return null;
+        }
+        function nubeBase() { return String(CONFIG_VENTA.servidorUrl || '').replace(/\/+$/, ''); }
+        async function nubeFetch(ruta, opts) {
+            const ctl = (typeof AbortController === 'function') ? new AbortController() : null;
+            const to = setTimeout(() => { try { ctl && ctl.abort(); } catch (e) {} }, 40000);
+            try {
+                const r = await fetch(nubeBase() + ruta, Object.assign({ cache: 'no-store', signal: ctl ? ctl.signal : undefined }, opts || {}));
+                let j = null; try { j = await r.json(); } catch (e) {}
+                return { st: r.status, j };
+            } catch (e) { return { st: 0, j: null }; } finally { clearTimeout(to); }
+        }
+        function nubeLicenciaOk() { return !!(CONFIG_VENTA.servidorUrl && licenciaData && licenciaData.tipo === 'PRO' && licenciaData.clave && licenciaData.activa !== false); }
+        function nubeProgramar(ms) {
+            const c = nubeCfg(); if (!c.token) return;
+            clearTimeout(_nubeTimer); _nubeTimer = setTimeout(() => { nubeSincronizar(false); }, ms || 45000);
+        }
+        async function nubeActivar() {
+            if (!servidorActivo()) { mostrarAvisoPro('Este sistema todavía no está conectado a un servidor. Contacta a tu proveedor.', 'Nube', '☁️'); return; }
+            if (!nubeLicenciaOk()) { mostrarAvisoPro('La nube es parte de la licencia PRO. Activa tu clave PRO y vuelve a intentarlo.', 'Nube', '☁️'); return; }
+            const b = document.getElementById('nube-btn-act'); if (b) { b.disabled = true; b.innerText = 'ACTIVANDO...'; }
+            try {
+                const huella = await huellaEquipo(), id = idInstalacion(), nonce = _nonce();
+                const r = await nubeFetch('/v1/nube/alta', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ huella, id, nonce, clave: _limpiaClaveSrv(licenciaData.clave), nombre: negocioData.nombre || '' }) });
+                if (r.st === 200 && r.j && r.j.ok) {
+                    nubeGuardarCfg({ negocio: r.j.negocio, token: r.j.token, hashes: {}, ultimo: '' });
+                    _nubeMsg = ''; nubePintar();
+                    await nubeSincronizar(true);
+                    mostrarAvisoPro('La nube quedó activada.\n\nCódigo de tu negocio: ' + r.j.negocio + '\n\nPara consultar desde otro equipo abre el enlace de "Página para consultar" y entra con tu usuario y contraseña del sistema.', 'Nube activada', '☁️');
+                } else {
+                    const m = r.st === 0 ? 'No se pudo conectar. Revisa tu internet e inténtalo otra vez.' : ((r.j && r.j.error) || 'No se pudo activar la nube.');
+                    mostrarAvisoPro(m, 'Nube', '☁️');
+                }
+            } finally { nubePintar(); }
+        }
+        async function nubeSincronizar(manual) {
+            const c = nubeCfg(); if (!c.token || _nubeBusy) return false;
+            if (!nubeLicenciaOk()) { _nubeMsg = 'La licencia PRO no está vigente: la nube se pausó.'; nubePintar(); return false; }
+            _nubeBusy = true; _nubeMsg = 'Enviando…'; nubePintar();
+            let ok = true, subidas = 0;
+            try {
+                const h = { 'Content-Type': 'application/json', Authorization: 'Bearer ' + c.token, 'X-Negocio': c.negocio, 'X-Clave': _limpiaClaveSrv(licenciaData.clave), 'X-Id': idInstalacion() };
+                c.hashes = c.hashes || {};
+                for (const col of NUBE_COLS) {
+                    const datos = JSON.stringify(nubeDatos(col)), hh = nubeHash(datos);
+                    if (c.hashes[col] === hh) continue;
+                    const r = await nubeFetch('/v1/nube/subir', { method: 'POST', headers: h, body: JSON.stringify({ col, hash: hh, datos }) });
+                    if (r.st === 200 && r.j && r.j.ok) { c.hashes[col] = hh; subidas++; continue; }
+                    ok = false;
+                    if (r.st === 0) _nubeMsg = 'Sin internet: se reintentará solo.';
+                    else if (r.st === 401) _nubeMsg = 'Este equipo perdió su vínculo con la nube. Pulsa "Activar nube" otra vez.';
+                    else if (r.st === 402) _nubeMsg = (r.j && r.j.error) || 'Licencia no válida para la nube.';
+                    else _nubeMsg = (r.j && r.j.error) || 'No se pudo enviar. Se reintentará.';
+                    break;
+                }
+                if (ok) { c.ultimo = new Date().toISOString(); _nubeMsg = ''; }
+                nubeGuardarCfg(c);
+            } catch (e) { ok = false; _nubeMsg = 'Error al enviar. Se reintentará.'; console.error(e); }
+            finally { _nubeBusy = false; _nubeFalla = !ok; nubePintar(); }
+            if (!ok) nubeProgramar(5 * 60000);
+            return ok;
+        }
+        function nubeUrl() { return nubeBase() + '/panel'; }
+        function nubeCopiarUrl() {
+            const u = nubeUrl();
+            try { navigator.clipboard.writeText(u).then(() => avisoRapidoLector('Enlace copiado', true), () => mostrarAvisoPro(u, 'Enlace de tu nube', '☁️')); }
+            catch (e) { mostrarAvisoPro(u, 'Enlace de tu nube', '☁️'); }
+        }
+        function nubePintar() {
+            const g = id => document.getElementById(id); if (!g('nube-estado')) return;
+            const c = nubeCfg(), on = !!c.token, est = g('nube-estado'), nota = g('nube-nota');
+            const mostrar = (id, si) => { const e = g(id); if (e) e.classList.toggle('hidden', !si); };
+            if (!servidorActivo()) { est.innerText = 'No disponible'; est.className = 'font-black text-slate-400 text-right'; }
+            else if (!nubeLicenciaOk() && !on) { est.innerText = 'Requiere licencia PRO'; est.className = 'font-black text-amber-400 text-right'; }
+            else if (!on) { est.innerText = 'Desactivada'; est.className = 'font-black text-amber-400 text-right'; }
+            else if (_nubeFalla) { est.innerText = 'Con problemas'; est.className = 'font-black text-red-400 text-right'; }
+            else { est.innerText = 'ACTIVA ✔ (se envía sola)'; est.className = 'font-black text-emerald-400 text-right'; }
+            mostrar('nube-fila-cod', on); mostrar('nube-fila-ult', on); mostrar('nube-fila-url', on);
+            mostrar('nube-btn-act', !on || _nubeFalla); mostrar('nube-btn-sync', on); mostrar('nube-btn-copiar', on);
+            if (on) { g('nube-codigo').innerText = c.negocio || ''; g('nube-url').innerText = nubeUrl(); try { g('nube-ultimo').innerText = c.ultimo ? new Date(c.ultimo).toLocaleString() : 'Nunca'; } catch (e) {} }
+            nota.innerText = _nubeMsg || ''; nota.classList.toggle('hidden', !_nubeMsg);
+        }
+        setTimeout(() => { try { if (nubeCfg().token) nubeProgramar(10000); } catch (e) {} }, 8000);
+
         window.licenciaLista = revalidarLicenciaGuardada();
         window.licenciaLista.then(() => { try { verificarConServidor(); } catch (e) {} });
         restablecerIvaPOS(); aplicarOpcionesPOS(); actualizarBadgeEspera(); refrescarEtiquetasIvaGeneral();
@@ -6781,7 +6909,7 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
         // ===================================================================================
-        // v12.70 — CANTIDADES DECIMALES · DESCUENTOS · STOCK MÍNIMO · KARDEX · CSV · BLOQUEO
+        // v12.71 — CANTIDADES DECIMALES · DESCUENTOS · STOCK MÍNIMO · KARDEX · CSV · BLOQUEO
         // ===================================================================================
         function r3(n) { return Math.round((Number(n) || 0) * 1000) / 1000; }
         function numDec(s) {            // "1,5" -> 1.5 · "" -> NaN
@@ -7183,10 +7311,10 @@ html:not(.dark) .pos-pie{background:#fff}
         })();
 
         // ===================================================================================
-        // v12.70 — ALMACENAMIENTO GRANDE: imágenes ligeras, ventas ligeras, listas por páginas, control de espacio
+        // v12.71 — ALMACENAMIENTO GRANDE: imágenes ligeras, ventas ligeras, listas por páginas, control de espacio
         // ===================================================================================
         var _terminoInvPrev = '';
-        // ===== v12.70: TURNOS POR CAJERO Y REPORTE DE GANANCIA =====
+        // ===== v12.71: TURNOS POR CAJERO Y REPORTE DE GANANCIA =====
         function usaTurnos() { return !!(negocioData && negocioData.usarTurnos); }
         function turnoIdActual() { return (usaTurnos() && cajaEstado.turnoId) ? cajaEstado.turnoId : null; }
         function turnoAbierto() { return usaTurnos() ? (turnosCaja.find(t => t.id === cajaEstado.turnoId && !t.cierre) || null) : null; }
@@ -7357,7 +7485,7 @@ html:not(.dark) .pos-pie{background:#fff}
             return h;
         }
 
-        // ===== v12.70: REPORTES EN HOJA CARTA =====
+        // ===== v12.71: REPORTES EN HOJA CARTA =====
         function imprimirHtmlCarta(html) {
             let area = document.getElementById('area-impresion-ticket');
             if (!area) { area = document.createElement('div'); area.id = 'area-impresion-ticket'; document.body.appendChild(area); }
@@ -7465,20 +7593,20 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
 
-        // ===== v12.70: ESCALA AUTOMÁTICA SEGÚN EL TAMAÑO DE LA PANTALLA =====
+        // ===== v12.71: ESCALA AUTOMÁTICA SEGÚN EL TAMAÑO DE LA PANTALLA =====
         function aplicarEscalaPantalla() {
             try {
                 const w = window.innerWidth;
                 const z = w >= 3000 ? 1.6 : w >= 2400 ? 1.4 : w >= 1900 ? 1.2 : w >= 1700 ? 1.1 : 1;
                 document.documentElement.style.zoom = z === 1 ? '' : String(z);
-                // v12.70: con zoom, 1vh debe valer (alto real / 100 / zoom) para que la ventana no se salga de la pantalla
+                // v12.71: con zoom, 1vh debe valer (alto real / 100 / zoom) para que la ventana no se salga de la pantalla
                 document.documentElement.style.setProperty('--vh', (window.innerHeight / 100 / z) + 'px');
             } catch (e) { }
         }
         aplicarEscalaPantalla();
         window.addEventListener('resize', aplicarEscalaPantalla);
 
-        // ===== v12.70: FOTOS DE PRODUCTOS (internet por código de barras / archivos) =====
+        // ===== v12.71: FOTOS DE PRODUCTOS (internet por código de barras / archivos) =====
         function abrirFotos() {
             abrirModal('modal-fotos');
             document.getElementById('fotos-resultado').innerHTML = '';
@@ -7504,7 +7632,7 @@ html:not(.dark) .pos-pie{background:#fff}
             document.getElementById('fotos-archivos').value = '';
         }
 
-        // ===== v12.70: PAGINACIÓN Y LIMPIEZA DE REGISTROS =====
+        // ===== v12.71: PAGINACIÓN Y LIMPIEZA DE REGISTROS =====
         function paginar(st, total) {
             const paginas = Math.max(1, Math.ceil(total / st.n));
             if (st.p > paginas) st.p = paginas;
