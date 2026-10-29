@@ -128,6 +128,21 @@ ipcMain.handle('svp:abrir-carpeta', () => shell.openPath(carpetaPrincipal()));
 const rutaLic = () => path.join(app.getPath('userData'), 'estado.dat');
 ipcMain.handle('svp:lic-leer', () => { try { return fs.readFileSync(rutaLic(), 'utf8'); } catch (e) { return null; } });
 ipcMain.handle('svp:lic-guardar', (_e, txt) => { try { escribirAtomico(rutaLic(), String(txt)); return true; } catch (e) { return false; } });
+// nombre legible del equipo: nombre de la computadora + marca/modelo (si Windows lo informa)
+let _nombreEq = null;
+ipcMain.handle('svp:nombre-equipo', () => new Promise((resolve) => {
+  if (_nombreEq) return resolve(_nombreEq);
+  const host = os.hostname();
+  const fin = (modelo) => { _nombreEq = modelo ? (host + ' · ' + modelo) : host; resolve(_nombreEq); };
+  if (process.platform !== 'win32') return fin('');
+  try {
+    require('child_process').execFile('powershell.exe', ['-NoProfile', '-NonInteractive', '-Command', "$c=Get-CimInstance Win32_ComputerSystem; ($c.Manufacturer + ' ' + $c.Model)"], { timeout: 5000, windowsHide: true }, (err, out) => {
+      let t = err ? '' : String(out || '').trim().replace(/\s+/g, ' ');
+      if (/to be filled|system product|default string|^\s*$/i.test(t)) t = '';
+      fin(t);
+    });
+  } catch (e) { fin(''); }
+}));
 ipcMain.handle('svp:huella', () => {
   const macs = Object.values(os.networkInterfaces()).flat().filter(i => i && !i.internal && i.mac && i.mac !== '00:00:00:00:00:00').map(i => i.mac).sort();
   const base = [os.hostname(), os.platform(), os.arch(), (os.cpus()[0] || {}).model || '', macs[0] || '', os.userInfo().username].join('|');
