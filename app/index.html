@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sistema de punto de venta e inventario">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🛒</text></svg>">
-    <title>SYSTEM PRO :: SYSTEM VENTAS PRO v12.73 (HOLOGRAPHIC POS EDITION)</title>
+    <title>SYSTEM PRO :: SYSTEM VENTAS PRO v12.74 (HOLOGRAPHIC POS EDITION)</title>
     <!-- Chart.js -->
     <script>/* Chart.js 4.4.1 (MIT) incluido: las gráficas funcionan sin internet */
 /*!
@@ -102,7 +102,7 @@
         div.ticket-hoja .tk-total { font-size: 1.3em; font-weight: 800; }
         #modal-ticket > div { max-height: calc(94 * var(--vh)); }
         #area-impresion-ticket { display: none; }
-        /* v12.73: hoja carta */
+        /* v12.74: hoja carta */
         .carta-hoja{font:11px/1.35 Arial,Helvetica,sans-serif;color:#111;background:#fff;width:100%}
         .carta-hoja *{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
         .cj-enc{display:flex;gap:12px;align-items:center;border-bottom:2px solid #1e293b;padding-bottom:8px;margin-bottom:10px}
@@ -346,9 +346,9 @@
 :root{--rp-cy:#22d3ee;--rp-am:#fbbf24;--rp-or:#fb923c;--rp-gr:#34d399;--rp-rs:#fb7185;--rp-bl:#ffffff;--rp-mut:#94a3b8;--rp-tx:#cbd5e1;--rp-ln:#334155;--rp-ln2:#1e293b}
 html:not(.dark){--rp-cy:#0e7490;--rp-am:#b45309;--rp-or:#c2410c;--rp-gr:#047857;--rp-rs:#be123c;--rp-bl:#0f172a;--rp-mut:#475569;--rp-tx:#1e293b;--rp-ln:#94a3b8;--rp-ln2:#cbd5e1}
 .bp:disabled{opacity:.4!important;filter:grayscale(.35);animation:none;cursor:not-allowed;transform:none;box-shadow:none}
-/* v12.73: en tema claro el sistema pone texto oscuro a TODOS los botones; los de color fuerte deben llevar texto BLANCO */
+/* v12.74: en tema claro el sistema pone texto oscuro a TODOS los botones; los de color fuerte deben llevar texto BLANCO */
 html:not(.dark) button.bp,html:not(.dark) button.text-white,html:not(.dark) button[style*="color:#fff"],html:not(.dark) button[style*="color: #fff"],html:not(.dark) button[style*="color:#ffffff"]{color:#fff!important;font-weight:900!important}
-/* v12.73: botones de colores propios (cada uno distinto, se leen igual en tema claro y oscuro) */
+/* v12.74: botones de colores propios (cada uno distinto, se leen igual en tema claro y oscuro) */
 .bp{color:#fff!important;border:0;text-shadow:0 1px 1px rgba(0,0,0,.35);box-shadow:0 6px 16px -6px var(--bpc),inset 0 1px 0 rgba(255,255,255,.28);transition:transform .15s ease,filter .15s ease,box-shadow .15s ease;white-space:nowrap}
 .bp:hover{transform:translateY(-2px);filter:brightness(1.12);box-shadow:0 10px 22px -6px var(--bpc),inset 0 1px 0 rgba(255,255,255,.35)}
 .bp:active{transform:translateY(0) scale(.97)}
@@ -382,7 +382,7 @@ html:not(.dark) .rp-btn{background:#e2e8f0;color:#0e7490;border-color:#94a3b8}
 html:not(.dark) .rp-btn:hover{background:#cbd5e1}
 #corte-desde,#corte-hasta,#rep-desde,#rep-hasta{color:var(--rp-bl)}
 
-/* ===== v12.73: AJUSTE DE TAMAÑOS A CUALQUIER PANTALLA ===== */
+/* ===== v12.74: AJUSTE DE TAMAÑOS A CUALQUIER PANTALLA ===== */
 html{-webkit-text-size-adjust:100%}
 .flex-wrap{flex-wrap:wrap}
 header.shrink-0{height:auto!important;min-height:44px;flex-wrap:wrap;row-gap:4px;column-gap:8px}
@@ -419,7 +419,7 @@ header.shrink-0 #user-display-name{max-width:140px;overflow:hidden;text-overflow
 .pos-pie{position:sticky;bottom:-1px;z-index:5;background:#0b1220;padding-top:8px;margin-top:4px}
 html:not(.dark) .pos-pie{background:#fff}
 
-/* v12.73: carrito del punto de venta más compacto (se ven más productos) */
+/* v12.74: carrito del punto de venta más compacto (se ven más productos) */
 @media (min-width:821px){#modal-nueva-venta .w-84{width:18.5rem!important}}
 #modal-nueva-venta .w-84{padding:.6rem!important}
 #modal-nueva-venta .w-84 .space-y-3 > * + *{margin-top:.35rem!important}
@@ -443,7 +443,7 @@ html:not(.dark) .pos-pie{background:#fff}
             <div class="flex items-center gap-1.5">
                 <span class="text-base animate-pulse">👽</span>
                 <span class="text-xs font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-500">SYSTEM VENTAS PRO</span>
-                <span id="badge-version-modo" class="text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold">v12.73 HOLOGRAPHIC</span>
+                <span id="badge-version-modo" class="text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold">v12.74 HOLOGRAPHIC</span>
             </div>
 
             <!-- MENÚS DESPLEGABLES CON CONTROL DE PERMISOS -->
@@ -1005,6 +1005,17 @@ html:not(.dark) .pos-pie{background:#fff}
     </div>
 
     <!-- MODAL: COPIAS DE SEGURIDAD (RESPALDOS) -->
+    <div id="modal-unir" class="fixed inset-0 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4 z-[120]">
+        <div class="glass-panel bg-slate-900 border border-violet-500/60 w-full max-w-sm p-6 rounded-2xl shadow-2xl space-y-3">
+            <div class="flex justify-between items-center border-b border-slate-800 pb-2"><h3 class="text-xs font-black text-violet-300 tracking-wider uppercase">🔗 Unir este equipo a un negocio</h3><button onclick="cerrarModal('modal-unir')" class="btn-cerrar-modal-custom w-7 h-7 rounded-lg flex items-center justify-center text-xs cursor-pointer">✕</button></div>
+            <p class="text-[11px] text-slate-300">En el <b>equipo principal</b> pulsa «Vincular otro equipo». Te dará dos códigos. Escríbelos aquí. <b>Los datos de este equipo se reemplazarán</b> por los del negocio.</p>
+            <input id="unir-neg" placeholder="Código del negocio (XXXX-XXXX)" autocomplete="off" class="w-full px-3 py-2 rounded-lg text-sm font-mono uppercase bg-slate-950 border border-slate-700 text-slate-100">
+            <input id="unir-cod" placeholder="Código de vinculación (XXXX-XXXX)" autocomplete="off" class="w-full px-3 py-2 rounded-lg text-sm font-mono uppercase bg-slate-950 border border-slate-700 text-slate-100">
+            <p id="unir-msg" class="text-[11px] font-bold text-amber-400" style="min-height:16px"></p>
+            <button type="button" id="unir-btn" onclick="nubeConfirmarUnir()" style="background:#7c3aed;color:#fff" class="w-full py-2 rounded-xl font-black text-[12px] cursor-pointer">UNIR ESTE EQUIPO</button>
+        </div>
+    </div>
+
     <div id="modal-respaldos" class="fixed inset-0 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4 z-[105]">
         <div class="glass-panel bg-slate-900 border border-emerald-500/60 w-full max-w-lg p-6 rounded-2xl shadow-2xl space-y-4" style="max-height:calc(94 * var(--vh));overflow-y:auto">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -1051,6 +1062,8 @@ html:not(.dark) .pos-pie{background:#fff}
                 <div id="nube-fila-ult" class="hidden flex justify-between items-center text-[11px] font-mono"><span class="text-slate-400">Última copia enviada:</span><span id="nube-ultimo" class="text-cyan-400 font-bold">Nunca</span></div>
                 <div id="nube-fila-url" class="hidden text-[11px] font-mono" style="word-break:break-all"><span class="text-slate-400">Página para consultar:</span> <b id="nube-url" class="text-cyan-400"></b></div>
                 <div id="nube-fila-plan" class="hidden flex justify-between items-center text-[11px] font-mono"><span class="text-slate-400">Equipos permitidos:</span><span id="nube-plan" class="text-cyan-400 font-bold"></span></div>
+                <div id="nube-multi" class="hidden space-y-1 pt-1 border-t border-slate-800/80"><p class="text-[10px] font-black text-cyan-300 uppercase">Equipos del negocio</p><div id="nube-equipos" class="text-[11px] font-mono text-slate-300"></div><button type="button" id="nube-btn-vincular" onclick="nubeVincularOtro()" style="background:#7c3aed;color:#fff" class="hidden w-full py-2 rounded-xl font-black text-[11px] cursor-pointer">➕ VINCULAR OTRO EQUIPO</button></div>
+                <button type="button" id="nube-btn-unir" onclick="nubeAbrirUnir()" style="background:#7c3aed;color:#fff" class="w-full py-2 rounded-xl font-black text-[11px] cursor-pointer">🔗 UNIR ESTE EQUIPO A UN NEGOCIO (MULTI-CAJA)</button>
                 <p id="nube-nota" class="hidden text-[11px] text-amber-400 font-bold"></p>
                 <div class="grid grid-cols-2 gap-2 pt-1">
                     <button type="button" id="nube-btn-act" onclick="nubeActivar()" style="background:#0891b2;color:#fff" class="py-2 rounded-xl font-black text-[11px] cursor-pointer">☁️ ACTIVAR NUBE</button>
@@ -1961,7 +1974,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.73: AJUSTE DE STOCK CON MOTIVO -->
+    <!-- v12.74: AJUSTE DE STOCK CON MOTIVO -->
     <div id="modal-ajuste-stock" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-amber-500/50 w-full max-w-md p-5 rounded-2xl shadow-2xl flex flex-col space-y-3">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2000,7 +2013,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.73: KARDEX -->
+    <!-- v12.74: KARDEX -->
     <div id="modal-kardex" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-cyan-500/50 w-full max-w-5xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh]">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2022,7 +2035,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.73: POR SURTIR -->
+    <!-- v12.74: POR SURTIR -->
     <div id="modal-por-surtir" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-amber-500/50 w-full max-w-3xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh]">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2045,7 +2058,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.73: IMPORTAR PRODUCTOS CSV -->
+    <!-- v12.74: IMPORTAR PRODUCTOS CSV -->
     <div id="modal-importar-csv" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-emerald-500/50 w-full max-w-2xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh] overflow-y-auto">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2074,7 +2087,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.73: BLOQUEO AUTOMÁTICO -->
+    <!-- v12.74: BLOQUEO AUTOMÁTICO -->
     <div id="modal-autobloqueo" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-slate-700 w-full max-w-sm p-5 rounded-2xl shadow-2xl flex flex-col space-y-3">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2098,7 +2111,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.73: ESPACIO / ALMACENAMIENTO -->
+    <!-- v12.74: ESPACIO / ALMACENAMIENTO -->
     <div id="modal-almacenamiento" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-cyan-500/50 w-full max-w-lg p-5 rounded-2xl shadow-2xl flex flex-col space-y-3">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2116,7 +2129,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.73: LIMPIEZA DE REGISTROS -->
+    <!-- v12.74: LIMPIEZA DE REGISTROS -->
     <div id="modal-limpieza" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-rose-500/50 w-full max-w-md p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh] overflow-y-auto">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2143,7 +2156,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.73: CIERRE DE TURNO -->
+    <!-- v12.74: CIERRE DE TURNO -->
     <div id="modal-cerrar-turno" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel overflow-y-auto bg-slate-900 border border-rose-500/50 w-full max-w-lg p-5 rounded-2xl shadow-2xl flex flex-col space-y-3" style="max-height:calc(94 * var(--vh))">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2171,7 +2184,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.73: HISTORIAL DE TURNOS -->
+    <!-- v12.74: HISTORIAL DE TURNOS -->
     <div id="modal-turnos" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel overflow-y-auto bg-slate-900 border border-cyan-500/50 w-full max-w-2xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3" style="max-height:calc(94 * var(--vh))">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2182,7 +2195,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.73: FOTOS DE PRODUCTOS -->
+    <!-- v12.74: FOTOS DE PRODUCTOS -->
     <div id="modal-fotos" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-pink-500/50 w-full max-w-lg p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh] overflow-y-auto text-xs">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2322,13 +2335,13 @@ html:not(.dark) .pos-pie{background:#fff}
                 </div>
             </div>
 
-            <p class="lp-nota" style="text-align:center; margin-top: 1.25rem;">SYSTEM VENTAS PRO v12.73 · Tus datos se guardan en tu propio equipo.</p>
+            <p class="lp-nota" style="text-align:center; margin-top: 1.25rem;">SYSTEM VENTAS PRO v12.74 · Tus datos se guardan en tu propio equipo.</p>
             <p id="lp-pruebas" style="display:none; text-align:center; margin-top:.75rem;"><a href="javascript:resetearADemoPruebas()" style="color:#fbbf24; font-size:.75rem; font-weight:700; text-decoration:underline;">Restablecer a DEMO (solo pruebas del dueño)</a></p>
         </div>
     </div>
 
     <!-- SCRIPT GENERAL FUNCIONAL (MODO 100% MANUAL + FORMATO DD/MM/YYYY) -->
-    <!-- ALMACENAMIENTO GRANDE v12.73: los datos pesados (productos, ventas, compras, gastos, clientes...) viven en IndexedDB (cientos de MB)
+    <!-- ALMACENAMIENTO GRANDE v12.74: los datos pesados (productos, ventas, compras, gastos, clientes...) viven en IndexedDB (cientos de MB)
          y las fotos de los productos en un almacén aparte. Si el navegador no lo permite, el sistema sigue como antes (localStorage). -->
     <script id="svp-boot">
     (function () {
@@ -2625,10 +2638,10 @@ html:not(.dark) .pos-pie{background:#fff}
             try { pintarBannerConsulta(); } catch (e) {}
             const badge = document.getElementById('badge-version-modo');
             if(licenciaData.tipo === "PRO") {
-                badge.innerText = "v12.73 PRO";
+                badge.innerText = "v12.74 PRO";
                 badge.className = "text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold";
             } else {
-                badge.innerText = "v12.73 HOLOGRAPHIC";
+                badge.innerText = "v12.74 HOLOGRAPHIC";
                 badge.className = "text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold";
             }
         }
@@ -2682,7 +2695,7 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
 
-        // ===== RESPALDO AUTOMÁTICO A CARPETA v12.73 (File System Access API: Chrome / Edge) =====
+        // ===== RESPALDO AUTOMÁTICO A CARPETA v12.74 (File System Access API: Chrome / Edge) =====
         let respHandle = null;              // carpeta elegida por el usuario
         let respEstado = 'sin-carpeta';     // 'activo' | 'permiso' | 'sin-carpeta' | 'no-soportado' | 'error'
         let respErrorTxt = '';
@@ -2807,7 +2820,7 @@ html:not(.dark) .pos-pie{background:#fff}
         //   quitarCarpetaExtra()         -> Promise<void>
         //   abrirCarpetaRespaldos()      -> Promise<void>
         function modoEscritorio() { return !!(window.svpNative && window.svpNative.esEscritorio); }
-        // ----- v12.73: ACTUALIZACIONES DE LA APLICACIÓN DE ESCRITORIO (como una tienda de apps) -----
+        // ----- v12.74: ACTUALIZACIONES DE LA APLICACIÓN DE ESCRITORIO (como una tienda de apps) -----
         let updEstado = { estado: 'inactivo' };
         function svpTextoActualizacion(u) {
             switch (u.estado) {
@@ -3233,7 +3246,13 @@ html:not(.dark) .pos-pie{background:#fff}
             let degradada = false;
             try { await sincronizarEstadoLicencia(); } catch (e) { console.error(e); }
             try {
-                if (licenciaData.tipo === 'PRO') {
+                if (nubeCfg().rol === 'vinculado') {
+                    if (!(await licenciaNubeValida())) {
+                        const ayer = new Date(); ayer.setDate(ayer.getDate() - 1);
+                        licenciaData = { tipo: 'DEMO', activa: false, vencimiento: fechaLocalISO(ayer) };
+                        guardarMemoria();
+                    }
+                } else if (licenciaData.tipo === 'PRO') {
                     let valida = false;
                     if (licenciaData.clave && !claveRevocada(licenciaData.clave)) {
                         const r = await verificarClaveLicencia(licenciaData.clave);
@@ -3369,7 +3388,7 @@ html:not(.dark) .pos-pie{background:#fff}
 
         let idUsuarioActivo = localStorage.getItem('nexus_usuario_activo_id') || (usuariosSistema[0] ? usuariosSistema[0].id : 1);
 
-        var _pagInv = { p: 1, n: 50 }, _pagVen = { p: 1, n: 50 };   // v12.73: antes que cualquier pantalla
+        var _pagInv = { p: 1, n: 50 }, _pagVen = { p: 1, n: 50 };   // v12.74: antes que cualquier pantalla
         let clientesSistema = JSON.parse(localStorage.getItem('nexus_clientes_v9')) || [];
         clientesSistema.forEach(c => {
             if(!c.telefono) c.telefono = 'N/A';
@@ -3476,7 +3495,8 @@ html:not(.dark) .pos-pie{background:#fff}
             try { n = parseInt(localStorage.getItem('nexus_correlativo_ult'), 10) || 0; } catch (e) {}
             const usados = new Set((historialVentas || []).map(v => String(v.correlativo || '')));
             let cod;
-            do { n++; cod = 'NX-' + String(n).padStart(4, '0'); } while (usados.has(cod));
+            const _pf = (function () { try { const c = JSON.parse(localStorage.getItem('svp_nube') || '{}'); return (c.multi && c.prefijo && c.prefijo !== 'A') ? c.prefijo : ''; } catch (e) { return ''; } })();
+            do { n++; cod = 'NX-' + _pf + String(n).padStart(4, '0'); } while (usados.has(cod));
             try { localStorage.setItem('nexus_correlativo_ult', String(n)); } catch (e) {}
             return cod;
         }
@@ -3776,7 +3796,7 @@ html:not(.dark) .pos-pie{background:#fff}
             mostrarLoginSistema();
         }
 
-        // ===== RECUPERAR CONTRASEÑA DEL DUEÑO v12.73 =====
+        // ===== RECUPERAR CONTRASEÑA DEL DUEÑO v12.74 =====
         // Código firmado por el proveedor: REC1-AAAAMMDD-<aviso único>-<firma>. Sirve solo para este equipo (ID de instalación),
         // vence en la fecha indicada y se puede usar una sola vez. Cambia la clave del DUEÑO; no borra ningún dato.
         function codigosRecuperacionUsados() {
@@ -4089,7 +4109,7 @@ html:not(.dark) .pos-pie{background:#fff}
             corteHoy();
         }
 
-        // ===== CORTE DE CAJA Y REPORTES v12.73 =====
+        // ===== CORTE DE CAJA Y REPORTES v12.74 =====
         const METODOS_PAGO = ['EFECTIVO', 'TARJETA', 'TRANSFERENCIA'];
         function dinero(n) { return '$' + (Number(n) || 0).toFixed(2); }
         function csvCelda(x) { return '"' + String(x === undefined || x === null ? '' : x).replace(/"/g, '""') + '"'; }
@@ -4099,7 +4119,7 @@ html:not(.dark) .pos-pie{background:#fff}
         function registrarAbonoHistorial(venta, monto, metodo) {
             if (!(monto > 0)) return;
             if (!Array.isArray(venta.abonos)) {
-                // venta anterior a la v12.73: el abono previo se conserva como un solo movimiento con la fecha de la venta
+                // venta anterior a la v12.74: el abono previo se conserva como un solo movimiento con la fecha de la venta
                 const previo = Math.max(0, (venta.abonado || 0) - monto);
                 venta.abonos = previo > 0 ? [{ fecha: venta.fecha, monto: previo, metodo: venta.con || 'EFECTIVO', antiguo: true }] : [];
             }
@@ -4722,7 +4742,7 @@ html:not(.dark) .pos-pie{background:#fff}
             }
         }
 
-        // v12.73: proveedor, categoría y medida también se pueden corregir al editar
+        // v12.74: proveedor, categoría y medida también se pueden corregir al editar
         function llenarClasificacionEdicion(p) {
             const caja = document.getElementById('edit-prod-clasif');
             const esServicio = p.categoria === 'SERVICIOS';
@@ -5080,7 +5100,7 @@ html:not(.dark) .pos-pie{background:#fff}
             `).join('') + (_totProds > 120 ? `<div class="col-span-full text-center text-[11px] font-bold text-slate-400 p-3">Mostrando 120 de ${_totProds} productos — escribe o escanea para encontrar el que buscas.</div>` : '');
         }
 
-        // ===== LECTOR DE CÓDIGO DE BARRAS v12.73 =====
+        // ===== LECTOR DE CÓDIGO DE BARRAS v12.74 =====
         // El lector funciona como un teclado: "escribe" el código muy rápido y pulsa Enter.
         function sonidoLectorActivo() { try { return localStorage.getItem('nexus_sonido_lector') !== '0'; } catch (e) { return true; } }
         function alternarSonidoLector() {
@@ -5337,7 +5357,7 @@ html:not(.dark) .pos-pie{background:#fff}
             if (t.envio > 0) t.total = redondear2(t.total + t.envio);
             return t;
         }
-        // ===== v12.73: COSTO DE ENVÍO A DOMICILIO =====
+        // ===== v12.74: COSTO DE ENVÍO A DOMICILIO =====
         function aplicarOpcionesPOS() {
             let min = false; try { min = localStorage.getItem('svp_pos_min') === '1'; } catch (e) { }
             const c = document.getElementById('pos-controles'), b = document.getElementById('pos-btn-opciones'); if (!c) return;
@@ -5647,7 +5667,7 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
 
-        // ===== DEVOLUCIONES PARCIALES v12.73 =====
+        // ===== DEVOLUCIONES PARCIALES v12.74 =====
         function devueltoPorItem(v) { const m = {}; (v.devoluciones || []).forEach(d => (d.items || []).forEach(i => { m[i.idx] = (m[i.idx] || 0) + i.cant; })); return m; }
         function totalDevueltoVenta(v) { return (v.devoluciones || []).reduce((a, d) => a + d.total, 0); }
         function ventaTieneRestante(v) { const m = devueltoPorItem(v); return (v.items || []).some((it, idx) => (it.cant - (m[idx] || 0)) > 1e-9); }
@@ -5755,7 +5775,8 @@ html:not(.dark) .pos-pie{background:#fff}
         function siguienteCorrelativoDev() {
             let n = 0; try { n = parseInt(localStorage.getItem('nexus_correlativo_dev'), 10) || 0; } catch (e) {}
             n++; try { localStorage.setItem('nexus_correlativo_dev', String(n)); } catch (e) {}
-            return 'DEV-' + String(n).padStart(4, '0');
+            let _pf = ''; try { const c = JSON.parse(localStorage.getItem('svp_nube') || '{}'); _pf = (c.multi && c.prefijo && c.prefijo !== 'A') ? c.prefijo : ''; } catch (e) {}
+            return 'DEV-' + _pf + String(n).padStart(4, '0');
         }
         function registrarDevolucion() {
             const v = historialVentas.find(x => String(x.id) === String(document.getElementById('dev-id-venta').value));
@@ -6495,7 +6516,7 @@ html:not(.dark) .pos-pie{background:#fff}
             // La pantalla de inicio se muestra SIEMPRE al abrir el sistema (queda visible hasta que se pulse Entrar / Probar DEMO).
         }
 
-        // ===== DEMO DE 3 DÍAS QUE NO SE REINICIA + MODO CONSULTA v12.73 =====
+        // ===== DEMO DE 3 DÍAS QUE NO SE REINICIA + MODO CONSULTA v12.74 =====
         // La fecha de inicio de la demo (y el ID del equipo y la clave) se guardan en varios lugares a la vez:
         //   aplicación de escritorio (svpNative) · IndexedDB · localStorage · respaldos.
         // Siempre gana la fecha de inicio MÁS ANTIGUA, así borrar un lugar no reinicia la prueba.
@@ -6628,7 +6649,7 @@ html:not(.dark) .pos-pie{background:#fff}
             window.entrarAlSistema = async function () { const r = await ent.apply(this, arguments); try { pintarBannerConsulta(); } catch (e) {} return r; };
         })();
 
-        // ===== SERVIDOR DE LICENCIAS v12.73 =====
+        // ===== SERVIDOR DE LICENCIAS v12.74 =====
         // Con servidor: la fecha de inicio de la demo la fija EL SERVIDOR la primera vez que el equipo se conecta,
         // así borrar datos o reinstalar no sirve. Las respuestas vienen firmadas y se verifican con SERVIDOR_PUBLIC_JWK.
         // Sin internet el sistema sigue funcionando con su estado local; en cuanto hay conexión se sincroniza.
@@ -6725,7 +6746,7 @@ html:not(.dark) .pos-pie{background:#fff}
 
         iniciarPantallaInicio();
 
-        // ===== NUBE v12.73: copia automática al servidor + panel web de consulta =====
+        // ===== NUBE v12.74: copia automática al servidor + panel web de consulta =====
         const NUBE_COLS = ['inventario', 'historialVentas', 'historialGastos', 'clientesSistema', 'cajaEstado', 'turnosCaja', 'ventasAnuladas', 'ventasDevueltas', 'historialCompras', 'proveedoresSistema', 'negocioData', 'acceso'];
         let _nubeTimer = null, _nubeBusy = false, _nubeMsg = '', _nubeFalla = false;
         function nubeCfg() { try { return JSON.parse(localStorage.getItem('svp_nube') || 'null') || {}; } catch (e) { return {}; } }
@@ -6747,7 +6768,14 @@ html:not(.dark) .pos-pie{background:#fff}
                 case 'ventasDevueltas': return ventasDevueltas || [];
                 case 'historialCompras': return historialCompras;
                 case 'proveedoresSistema': return proveedoresSistema;
-                case 'negocioData': return { nombre: negocioData.nombre, direccion: negocioData.direccion };
+                case 'negocioData': return negocioData;
+                case 'usuariosSistema': return usuariosSistema;
+                case 'rolesPermisosData': return rolesPermisosData;
+                case 'listaCategorias': return listaCategorias;
+                case 'listaMedidas': return listaMedidas;
+                case 'listaServicios': return listaServicios;
+                case 'configTicketData': return configTicketData;
+                case 'movimientosInv': return movimientosInv || [];
                 case 'acceso': return usuariosSistema.filter(u => u && u.hash && u.salt && (u.alg || 'p1') === 'p1').map(u => ({ nombre: u.nombre, rol: u.rol, salt: u.salt, hash: u.hash, alg: 'p1', permisos: u.rol === 'DUEÑO' ? [] : ((rolesPermisosData && rolesPermisosData[u.rol]) || []) }));
             }
             return null;
@@ -6765,6 +6793,7 @@ html:not(.dark) .pos-pie{background:#fff}
         function nubeLicenciaOk() { return !!(CONFIG_VENTA.servidorUrl && licenciaData && licenciaData.tipo === 'PRO' && licenciaData.clave && licenciaData.activa !== false); }
         function nubeProgramar(ms) {
             const c = nubeCfg(); if (!c.token) return;
+            if (c.multi) { syProgramar(); return; }
             clearTimeout(_nubeTimer); _nubeTimer = setTimeout(() => { nubeSincronizar(false); }, ms || 45000);
         }
         async function nubeActivar() {
@@ -6787,7 +6816,8 @@ html:not(.dark) .pos-pie{background:#fff}
         }
         async function nubeSincronizar(manual) {
             const c = nubeCfg(); if (!c.token || _nubeBusy) return false;
-            if (!nubeLicenciaOk()) { _nubeMsg = 'La licencia PRO no está vigente: la nube se pausó.'; nubePintar(); return false; }
+            if (c.multi) return await syRonda(!!manual);
+            if (c.rol !== 'vinculado' && !nubeLicenciaOk()) { _nubeMsg = 'La licencia PRO no está vigente: la nube se pausó.'; nubePintar(); return false; }
             _nubeBusy = true; _nubeMsg = 'Enviando…'; nubePintar();
             let ok = true, subidas = 0;
             try {
@@ -6807,10 +6837,9 @@ html:not(.dark) .pos-pie{background:#fff}
                 }
                 if (ok) {
                     c.ultimo = new Date().toISOString(); _nubeMsg = '';
-                    const e = await nubeFetch('/v1/nube/estado', { headers: h });
-                    if (e.st === 200 && e.j && e.j.ok) { c.maxEquipos = e.j.max_equipos || 1; c.equipos = e.j.equipos || 1; }
                 }
                 nubeGuardarCfg(c);
+                if (ok) { const p = await syActualizarPlan(); if (p && nubeCfg().multi) { _nubeBusy = false; await syRonda(true); } }
             } catch (e) { ok = false; _nubeMsg = 'Error al enviar. Se reintentará.'; console.error(e); }
             finally { _nubeBusy = false; _nubeFalla = !ok; nubePintar(); }
             if (!ok) nubeProgramar(5 * 60000);
@@ -6836,9 +6865,342 @@ html:not(.dark) .pos-pie{background:#fff}
             mostrar('nube-btn-act', !on || _nubeFalla); mostrar('nube-btn-sync', on); mostrar('nube-btn-copiar', on);
             if (on && g('nube-plan')) g('nube-plan').innerText = (c.maxEquipos > 1) ? ('PRO Multi-caja · ' + (c.equipos || 1) + ' de ' + c.maxEquipos + ' en uso') : '1 equipo (Multi-caja: pídelo a tu proveedor)';
             if (on) { g('nube-codigo').innerText = c.negocio || ''; g('nube-url').innerText = nubeUrl(); try { g('nube-ultimo').innerText = c.ultimo ? new Date(c.ultimo).toLocaleString() : 'Nunca'; } catch (e) {} }
+            const multi = !!c.multi;
+            mostrar('nube-multi', multi); mostrar('nube-btn-unir', !on);
+            mostrar('nube-btn-vincular', multi && c.rol !== 'vinculado' && (c.equipos || 1) < (c.maxEquipos || 1));
+            if (multi && g('nube-equipos')) g('nube-equipos').innerHTML = ((c.lista && c.lista.length) ? c.lista : [{ prefijo: c.prefijo || 'A', nombre: 'Este equipo' }]).map(q => '<div class="flex justify-between items-center py-0.5"><span>' + (q.prefijo === (c.prefijo || 'A') ? '⭐ ' : '') + 'Equipo ' + q.prefijo + (q.prefijo === 'A' ? ' (principal)' : '') + '</span>' + ((c.rol !== 'vinculado' && q.prefijo !== 'A') ? '<button type="button" onclick="nubeQuitarEquipo(\'' + q.prefijo + '\')" class="text-[10px] underline text-red-400 cursor-pointer">quitar</button>' : '') + '</div>').join('');
+            if (g('nube-btn-act') && c.rol === 'vinculado') mostrar('nube-btn-act', false);
             nota.innerText = _nubeMsg || ''; nota.classList.toggle('hidden', !_nubeMsg);
         }
         setTimeout(() => { try { if (nubeCfg().token) nubeProgramar(10000); } catch (e) {} }, 8000);
+
+
+        // ===== MULTI-CAJA v12.74: varios equipos con los mismos datos =====
+        // Cada equipo anota sus CAMBIOS (ventas nuevas, descuentos de stock, gastos...) y los envía a la nube; los demás los reciben y los aplican.
+        // El stock viaja como DIFERENCIA (-2, +10), nunca como valor final: así dos cajas que venden a la vez no se pisan.
+        const SY_IDCOLS = {
+            historialVentas: [() => historialVentas, v => { historialVentas = v; }],
+            ventasAnuladas: [() => ventasAnuladas, v => { ventasAnuladas = v; }],
+            ventasDevueltas: [() => ventasDevueltas, v => { ventasDevueltas = v; }],
+            historialGastos: [() => historialGastos, v => { historialGastos = v; }],
+            clientesSistema: [() => clientesSistema, v => { clientesSistema = v; }],
+            historialCompras: [() => historialCompras, v => { historialCompras = v; }],
+            proveedoresSistema: [() => proveedoresSistema, v => { proveedoresSistema = v; }],
+            listaServicios: [() => listaServicios, v => { listaServicios = v; }],
+            usuariosSistema: [() => usuariosSistema, v => { usuariosSistema = v; }],
+            movimientosInv: [() => movimientosInv, v => { movimientosInv = v; }],
+            inventario: [() => inventario, v => { inventario = v; }]
+        };
+        const SY_SETCOLS = {
+            negocioData: [() => negocioData, v => { negocioData = v; }],
+            rolesPermisosData: [() => rolesPermisosData, v => { rolesPermisosData = v; }],
+            listaCategorias: [() => listaCategorias, v => { listaCategorias = v; }],
+            listaMedidas: [() => listaMedidas, v => { listaMedidas = v; }]
+        };
+        // lo que se descarga al unir un equipo nuevo
+        const SY_JOIN = ['inventario', 'historialVentas', 'historialGastos', 'clientesSistema', 'ventasAnuladas', 'ventasDevueltas', 'historialCompras', 'proveedoresSistema', 'movimientosInv', 'usuariosSistema', 'rolesPermisosData', 'listaCategorias', 'listaMedidas', 'listaServicios', 'negocioData'];
+        let _sy = null, _syBusy = false, _syDirty = true, _syTimer = null, _syIntervalo = null, _syMsg = '', _sySnapPend = true, _syUltSnap = 0, _syUltLic = 0;
+
+        function syCanon(v) {
+            if (Array.isArray(v)) return '[' + v.map(syCanon).join(',') + ']';
+            if (v && typeof v === 'object') return '{' + Object.keys(v).sort().filter(k => v[k] !== undefined).map(k => JSON.stringify(k) + ':' + syCanon(v[k])).join(',') + '}';
+            return JSON.stringify(v === undefined ? null : v);
+        }
+        function syPlano(col, r) { if (col !== 'inventario') return r; const c = Object.assign({}, r); delete c.stock; delete c.imagen; return c; }
+        function syHash(col, r) { return nubeHash(syCanon(syPlano(col, r))); }
+        function syIdDe(r) { return r && r.id !== undefined && r.id !== null ? String(r.id) : null; }
+
+        // ---- almacenamiento local del estado de sincronización (IndexedDB) ----
+        function syDB() { return new Promise((res, rej) => { const q = indexedDB.open('svp_sync', 1); q.onupgradeneeded = () => q.result.createObjectStore('k'); q.onsuccess = () => res(q.result); q.onerror = () => rej(q.error); }); }
+        async function syLeer() {
+            if (_sy) return _sy;
+            let v = null;
+            try { const db = await syDB(); v = await new Promise((res, rej) => { const q = db.transaction('k').objectStore('k').get('estado'); q.onsuccess = () => res(q.result); q.onerror = () => rej(q.error); }); } catch (e) {}
+            _sy = v && typeof v === 'object' ? v : { base: {}, stock: {}, set: {}, out: [], opn: 0 };
+            if (!_sy.base) _sy.base = {}; if (!_sy.stock) _sy.stock = {}; if (!_sy.set) _sy.set = {}; if (!_sy.out) _sy.out = []; if (!_sy.opn) _sy.opn = 0;
+            return _sy;
+        }
+        async function syGuardar() {
+            if (!_sy) return;
+            try { const db = await syDB(); await new Promise((res, rej) => { const tx = db.transaction('k', 'readwrite'); tx.objectStore('k').put(_sy, 'estado'); tx.oncomplete = res; tx.onerror = () => rej(tx.error); }); } catch (e) { console.error(e); }
+        }
+        // fotografía del estado actual como "ya sincronizado" (sin generar cambios)
+        async function syInicializarBase() {
+            await syLeer();
+            _sy.base = {}; _sy.stock = {}; _sy.set = {}; _sy.out = [];
+            for (const col in SY_IDCOLS) {
+                const m = {}; (SY_IDCOLS[col][0]() || []).forEach(r => { const id = syIdDe(r); if (id !== null) m[id] = syHash(col, r); }); _sy.base[col] = m;
+            }
+            (inventario || []).forEach(p => { const id = syIdDe(p); if (id !== null) _sy.stock[id] = Number(p.stock) || 0; });
+            for (const col in SY_SETCOLS) _sy.set[col] = nubeHash(syCanon(SY_SETCOLS[col][0]()));
+            await syGuardar();
+        }
+
+        // ---- generar los cambios locales ----
+        function syPrefijo() { return nubeCfg().prefijo || 'A'; }
+        function syNuevoOpid() { _sy.opn++; return syPrefijo() + '-' + _sy.opn.toString(36) + '-' + Math.random().toString(36).slice(2, 7); }
+        function syDiff() {
+            let n = 0;
+            const poner = (col, tipo, k, o) => { _sy.out.push({ opid: syNuevoOpid(), col, tipo, k, json: JSON.stringify(o) }); n++; };
+            for (const col in SY_IDCOLS) {
+                const arr = SY_IDCOLS[col][0]() || [], base = _sy.base[col] || (_sy.base[col] = {}), vistos = new Set();
+                for (const r of arr) {
+                    const id = syIdDe(r); if (id === null) continue; vistos.add(id);
+                    const h = syHash(col, r);
+                    if (base[id] === h) continue;
+                    const esNuevo = base[id] === undefined;
+                    if (col === 'inventario') {
+                        const c = Object.assign({}, r); delete c.imagen; if (!esNuevo) delete c.stock;
+                        poner(col, 'up', id, c);
+                        if (esNuevo) _sy.stock[id] = Number(r.stock) || 0;
+                    } else poner(col, 'up', id, r);
+                    base[id] = h;
+                }
+                for (const id of Object.keys(base)) if (!vistos.has(id)) { poner(col, 'del', id, { id }); delete base[id]; if (col === 'inventario') delete _sy.stock[id]; }
+            }
+            for (const p of (inventario || [])) {
+                const id = syIdDe(p); if (id === null || _sy.stock[id] === undefined) continue;
+                const d = Math.round(((Number(p.stock) || 0) - _sy.stock[id]) * 1000) / 1000;
+                if (d !== 0) { poner('inventario', 'stock', id, { d }); _sy.stock[id] = Number(p.stock) || 0; }
+            }
+            for (const col in SY_SETCOLS) {
+                const v = SY_SETCOLS[col][0](), h = nubeHash(syCanon(v));
+                if (_sy.set[col] !== h) { poner(col, 'set', '', v); _sy.set[col] = h; }
+            }
+            return n;
+        }
+
+        // ---- aplicar los cambios que llegan de otros equipos ----
+        function syUnirAbonos(local, remoto) {
+            try {
+                if (!Array.isArray(local.abonos) || !Array.isArray(remoto.abonos) || !local.abonos.length || !remoto.abonos.length) return remoto;
+                const llave = a => [a.fecha, a.monto, a.metodo, a.usuario].join('|'), vistos = new Set(), todos = [];
+                for (const a of local.abonos.concat(remoto.abonos)) { const k = llave(a); if (!vistos.has(k)) { vistos.add(k); todos.push(a); } }
+                todos.sort((x, y) => String(x.fecha).localeCompare(String(y.fecha)) || (Number(x.monto) - Number(y.monto)) || String(x.metodo).localeCompare(String(y.metodo)));
+                const r = Object.assign({}, remoto); r.abonos = todos;
+                r.abonado = Math.round(todos.reduce((s, a) => s + (Number(a.monto) || 0), 0) * 100) / 100;
+                r.liquidado = r.abonado >= (Number(r.total) || 0);
+                return r;
+            } catch (e) { return remoto; }
+        }
+        function syAplicar(op) {
+            let dato; try { dato = JSON.parse(op.json); } catch (e) { return false; }
+            const col = op.col;
+            if (SY_SETCOLS[col]) { if (op.tipo === 'set') { SY_SETCOLS[col][1](dato); _sy.set[col] = nubeHash(syCanon(SY_SETCOLS[col][0]())); return true; } return false; }
+            const acc = SY_IDCOLS[col]; if (!acc) return false;
+            let arr = acc[0](); if (!Array.isArray(arr)) { arr = []; acc[1](arr); arr = acc[0](); }
+            const base = _sy.base[col] || (_sy.base[col] = {}), id = String(op.k);
+            const i = arr.findIndex(r => syIdDe(r) === id);
+            if (op.tipo === 'del') { if (i >= 0) arr.splice(i, 1); delete base[id]; if (col === 'inventario') delete _sy.stock[id]; return true; }
+            if (col === 'inventario' && op.tipo === 'stock') {
+                if (i < 0) return false;
+                const p = arr[i], d = Number(dato.d) || 0;
+                p.stock = Math.round(((Number(p.stock) || 0) + d) * 1000) / 1000;
+                _sy.stock[id] = (_sy.stock[id] !== undefined ? _sy.stock[id] : 0) + d;
+                _sy.stock[id] = Math.round(_sy.stock[id] * 1000) / 1000;
+                return true;
+            }
+            if (op.tipo !== 'up') return false;
+            if (col === 'inventario') {
+                if (i >= 0) { const p = arr[i], st = p.stock, im = p.imagen; Object.keys(dato).forEach(k => { if (k !== 'stock' && k !== 'imagen') p[k] = dato[k]; }); p.stock = st; p.imagen = im; base[id] = syHash(col, p); }
+                else { dato.imagen = dato.imagen || ''; arr.unshift(dato); base[id] = syHash(col, dato); _sy.stock[id] = Number(dato.stock) || 0; }
+                return true;
+            }
+            if (i >= 0) { const nuevo = col === 'historialVentas' ? syUnirAbonos(arr[i], dato) : dato; arr[i] = nuevo; base[id] = syHash(col, nuevo); }
+            else { arr.unshift(dato); base[id] = syHash(col, dato); }
+            return true;
+        }
+        function syRefrescarPantallas() {
+            ['renderizarInventario', 'renderizarGridPOS', 'renderizarTablaClientes', 'renderizarTablaGastos', 'renderizarTablaVentas', 'renderizarTablaProveedores', 'renderizarTablaUsuarios', 'renderizarTablaServicios', 'renderizarListaCategorias', 'renderizarListaMedidas', 'renderizarPantallaInicio', 'renderizarTablaFiados', 'actualizarSelectClientesPOS'].forEach(f => { try { if (typeof window[f] === 'function') window[f](); } catch (e) {} });
+        }
+
+        // ---- comunicación con la nube ----
+        function syCab(c) { return { 'Content-Type': 'application/json', Authorization: 'Bearer ' + c.token, 'X-Negocio': c.negocio, 'X-Clave': c.rol === 'vinculado' ? '' : _limpiaClaveSrv(licenciaData.clave), 'X-Id': idInstalacion() }; }
+        async function syPush(c) {
+            while (_sy.out.length) {
+                const lote = _sy.out.slice(0, 150);
+                const r = await nubeFetch('/v1/nube/ops', { method: 'POST', headers: syCab(c), body: JSON.stringify({ ops: lote }) });
+                if (!(r.st === 200 && r.j && r.j.ok)) return r;
+                _sy.out.splice(0, lote.length);
+                await syGuardar();
+            }
+            return { st: 200, j: { ok: true } };
+        }
+        async function syPull(c) {
+            let aplicadas = 0, maximo = c.ptr || 0, ultimo = { st: 200, j: { ok: true } };
+            for (let vueltas = 0; vueltas < 40; vueltas++) {
+                const r = await nubeFetch('/v1/nube/ops?desde=' + (c.ptr || 0), { headers: syCab(c) });
+                ultimo = r;
+                if (!(r.st === 200 && r.j && r.j.ok)) return { r, aplicadas, alDia: false };
+                maximo = r.j.maximo || maximo;
+                if (r.j.minimo && (c.ptr || 0) + 1 < r.j.minimo && r.j.ops.length && (c.ptr || 0) > 0 && r.j.ops[0].seq > (c.ptr || 0) + 1 && false) { /* huecos por limpieza: se ignoran */ }
+                for (const op of r.j.ops) { if (op.dev !== syPrefijo() && syAplicar(op)) aplicadas++; c.ptr = op.seq; }
+                if (!r.j.ops.length) { if (maximo > (c.ptr || 0)) c.ptr = maximo; break; }
+                if (!r.j.mas) break;
+            }
+            if (aplicadas) { try { guardarMemoria(); } catch (e) {} await syGuardar(); syRefrescarPantallas(); }
+            nubeGuardarCfg(c);
+            return { r: ultimo, aplicadas, alDia: (c.ptr || 0) >= maximo };
+        }
+        // Un ciclo completo: anotar cambios → enviarlos → recibir los de los demás
+        async function syRonda(forzarSnapshot) {
+            const c = nubeCfg(); if (!c.token || !c.multi || _syBusy) return false;
+            _syBusy = true; _syMsg = '';
+            try {
+                await syLeer();
+                if (_syDirty || _sy.out.length || forzarSnapshot) { if (syDiff() > 0) _sySnapPend = true; _syDirty = false; await syGuardar(); }
+                const p = await syPush(c);
+                if (p.st !== 200) { syFalla(p); return false; }
+                const q = await syPull(c);
+                if (!(q.r.st === 200)) { syFalla(q.r); return false; }
+                c.ultimo = new Date().toISOString(); nubeGuardarCfg(c);
+                if (q.aplicadas) _sySnapPend = true;
+                if (c.rol === 'vinculado' && Date.now() - _syUltLic > 6 * 3600 * 1000) { try { await syRenovarLicencia(c); _syUltLic = Date.now(); } catch (e) {} }
+                // copia coherente para la página de consulta y para vincular equipos nuevos (máx. 1 por minuto)
+                if ((_sySnapPend && Date.now() - _syUltSnap > 60000 || forzarSnapshot) && q.alDia && !_sy.out.length && syDiff() === 0) {
+                    if (await sySubirSnapshot(c)) { _sySnapPend = false; _syUltSnap = Date.now(); }
+                }
+                _nubeFalla = false; _nubeMsg = ''; nubePintar();
+                return true;
+            } catch (e) { console.error(e); _syMsg = 'Error al sincronizar.'; return false; }
+            finally { _syBusy = false; }
+        }
+        function syFalla(r) {
+            _nubeFalla = true;
+            if (r.st === 401 && nubeCfg().rol === 'vinculado') {
+                _marcarLicenciaNubeCaida();
+                const ayer = new Date(); ayer.setDate(ayer.getDate() - 1);
+                licenciaData = { tipo: 'DEMO', activa: false, vencimiento: fechaLocalISO(ayer) };
+                try { guardarMemoria(); actualizarBadgeModoVisual(); } catch (e) {}
+            }
+            _nubeMsg = r.st === 0 ? 'Sin internet: el equipo sigue vendiendo y se pondrá al día solo.' : r.st === 401 ? 'Este equipo perdió su vínculo con el negocio. Vuélvelo a unir con un código.' : r.st === 402 ? ((r.j && r.j.error) || 'Licencia no válida para la nube.') : ((r.j && r.j.error) || 'No se pudo sincronizar. Se reintentará.');
+            nubePintar();
+        }
+        async function sySubirSnapshot(c) {
+            const seq = c.ptr || 0, h = syCab(c), lote = {};
+            const cols = NUBE_COLS.filter(x => x !== 'acceso').concat(['usuariosSistema', 'rolesPermisosData', 'listaCategorias', 'listaMedidas', 'listaServicios', 'configTicketData', 'movimientosInv']);
+            const unicas = Array.from(new Set(cols));
+            for (const col of unicas) lote[col] = JSON.stringify(nubeDatos(col));       // todo en el mismo instante: copia coherente
+            lote.acceso = JSON.stringify(nubeDatos('acceso'));
+            c.hashes = c.hashes || {};
+            for (const col of unicas.concat(['acceso'])) {
+                const hh = nubeHash(lote[col]);
+                const r = await nubeFetch('/v1/nube/subir', { method: 'POST', headers: h, body: JSON.stringify({ col, hash: hh, datos: lote[col], seq }) });
+                if (!(r.st === 200 && r.j && r.j.ok)) { syFalla(r); return false; }
+                c.hashes[col] = hh;
+            }
+            nubeGuardarCfg(c); return true;
+        }
+
+        // ---- licencia del equipo vinculado (la presta el negocio; la firma el servidor) ----
+        async function syGuardarLicenciaNube(l, nonce, ref) {
+            try { localStorage.setItem('svp_lic_nube', JSON.stringify({ vence: l.vence, ahora: l.ahora, firma: l.firma, nonce, ref })); } catch (e) {}
+        }
+        async function syRenovarLicencia(c) {
+            const huella = await huellaEquipo(), id = idInstalacion(), nonce = _nonce();
+            const r = await nubeFetch('/v1/nube/renovar', { method: 'POST', headers: syCab(c), body: JSON.stringify({ huella, id, nonce }) });
+            if (r.st === 200 && r.j && r.j.licencia && await _verificarFirmaSrv(['SRV3', huella || ('id-' + id), nonce, r.j.licencia.vence, r.j.licencia.ahora].join('|'), r.j.licencia.firma)) {
+                await syGuardarLicenciaNube(r.j.licencia, nonce, huella || ('id-' + id));
+                aplicarLicenciaNube(r.j.licencia.vence);
+            } else if (r.st === 402) { _marcarLicenciaNubeCaida(); }
+        }
+        function _marcarLicenciaNubeCaida() { try { localStorage.removeItem('svp_lic_nube'); } catch (e) {} }
+        function aplicarLicenciaNube(vence) {
+            licenciaData = { tipo: 'PRO', activa: vence >= fechaLocalISO(new Date()), vencimiento: vence, viaNube: true };
+            try { localStorage.setItem('nexus_licencia_renta', JSON.stringify(licenciaData)); } catch (e) {}
+            try { actualizarBadgeModoVisual(); } catch (e) {}
+        }
+        async function licenciaNubeValida() {
+            try {
+                const c = nubeCfg(); if (c.rol !== 'vinculado') return false;
+                const l = JSON.parse(localStorage.getItem('svp_lic_nube') || 'null'); if (!l || !l.firma) return false;
+                if (!(await _verificarFirmaSrv(['SRV3', l.ref, l.nonce, l.vence, l.ahora].join('|'), l.firma))) return false;
+                const hoy = fechaLocalISO(new Date());
+                const dias = (new Date(hoy + 'T00:00:00') - new Date(String(l.ahora).slice(0, 10) + 'T00:00:00')) / 86400000;
+                if (dias > 21) return false;               // más de 3 semanas sin conectarse: debe renovar
+                if (l.vence < hoy) return false;
+                aplicarLicenciaNube(l.vence); return true;
+            } catch (e) { return false; }
+        }
+
+        // ---- unir este equipo a un negocio ----
+        async function nubeUnirEquipo() {
+            const neg = (document.getElementById('unir-neg').value || '').trim().toUpperCase(), cod = (document.getElementById('unir-cod').value || '').trim().toUpperCase();
+            const msg = document.getElementById('unir-msg'); msg.innerText = '';
+            if (!neg || !cod) { msg.innerText = 'Escribe el código del negocio y el código de vinculación.'; return; }
+            if (!servidorActivo()) { msg.innerText = 'Este sistema no está conectado a un servidor.'; return; }
+            const btn = document.getElementById('unir-btn'); btn.disabled = true; btn.innerText = 'UNIENDO…';
+            try {
+                const huella = await huellaEquipo(), id = idInstalacion(), nonce = _nonce();
+                const r = await nubeFetch('/v1/nube/unir', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ negocio: neg, codigo: cod, huella, id, nonce, nombre: '' }) });
+                if (!(r.st === 200 && r.j && r.j.ok)) { msg.innerText = r.st === 0 ? 'No se pudo conectar. Revisa tu internet.' : ((r.j && r.j.error) || 'No se pudo unir.'); return; }
+                const ref = huella || ('id-' + id);
+                if (!(await _verificarFirmaSrv(['SRV3', ref, nonce, r.j.licencia.vence, r.j.licencia.ahora].join('|'), r.j.licencia.firma))) { msg.innerText = 'La respuesta del servidor no es de confianza.'; return; }
+                const c = { negocio: r.j.negocio, token: r.j.token, prefijo: r.j.prefijo, rol: 'vinculado', multi: true, hashes: {}, ultimo: '', ptr: 0 };
+                msg.innerText = 'Descargando los datos del negocio…';
+                try { hacerCopiaAutomaticaSilenciosa(); } catch (e) {}
+                const datos = {}; let snap = null;
+                for (const col of SY_JOIN) {
+                    const d = await nubeFetch('/v1/nube/bajar?col=' + col, { headers: syCab(c) });
+                    if (!(d.st === 200 && d.j && d.j.ok)) { msg.innerText = (d.j && d.j.error) || 'No se pudieron descargar los datos. Intenta de nuevo.'; return; }
+                    if (d.j.vacio) continue;
+                    if (snap === null) snap = d.j.snap_seq; else if (snap !== d.j.snap_seq) { msg.innerText = 'El equipo principal está guardando una copia. Espera un minuto e inténtalo otra vez.'; return; }
+                    datos[col] = d.j.datos;
+                }
+                if (!datos.inventario || snap === null) { msg.innerText = 'El equipo principal aún no ha preparado los datos. Ábrelo, espera un minuto y vuelve a intentar.'; return; }
+                for (const col in datos) { if (SY_IDCOLS[col]) SY_IDCOLS[col][1](datos[col]); else if (SY_SETCOLS[col]) SY_SETCOLS[col][1](datos[col]); }
+                (inventario || []).forEach(p => { p.imagen = p.imagen || ''; });
+                if (datos.configTicketData === undefined) { /* conserva la local */ }
+                c.ptr = snap || 0;
+                nubeGuardarCfg(c);
+                _sy = null; await syLeer(); await syInicializarBase();
+                await syGuardarLicenciaNube(r.j.licencia, nonce, ref);
+                aplicarLicenciaNube(r.j.licencia.vence);
+                try { idUsuarioActivo = null; } catch (e) {}
+                guardarMemoria();
+                msg.innerText = '✔ Listo. Reiniciando el sistema…';
+                setTimeout(() => { try { location.reload(); } catch (e) {} }, 700);
+            } catch (e) { console.error(e); msg.innerText = 'Ocurrió un error al unir el equipo.'; }
+            finally { btn.disabled = false; btn.innerText = 'UNIR ESTE EQUIPO'; }
+        }
+        function nubeAbrirUnir() { const m = document.getElementById('unir-msg'); if (m) m.innerText = ''; abrirModal('modal-unir'); }
+        function nubeConfirmarUnir() {
+            mostrarConfirmacionPro('Este equipo tomará los datos del negocio (productos, ventas, clientes, usuarios). Los datos actuales de ESTE equipo se reemplazarán; antes se guarda una copia de seguridad interna.\n\n¿Continuar?', 'Unir equipo', '🔗', () => nubeUnirEquipo());
+        }
+        async function nubeVincularOtro() {
+            const c = nubeCfg(); if (!c.token || c.rol === 'vinculado') return;
+            const r = await nubeFetch('/v1/nube/codigo', { method: 'POST', headers: syCab(c), body: '{}' });
+            if (!(r.st === 200 && r.j && r.j.ok)) { mostrarAvisoPro((r.j && r.j.error) || 'No se pudo generar el código.', 'Multi-caja', '🔗'); return; }
+            _syDirty = true; await syRonda(true);          // deja lista una copia coherente para el equipo nuevo
+            mostrarAvisoPro('En el otro equipo abre «Copias de seguridad» → «Unir este equipo a un negocio» y escribe:\n\n• Código del negocio: ' + c.negocio + '\n• Código de vinculación: ' + r.j.codigo + '\n\nEl código vale 15 minutos y se usa una sola vez.', 'Vincular otro equipo', '🔗');
+        }
+        async function nubeQuitarEquipo(pref) {
+            const c = nubeCfg(); if (!c.token || c.rol === 'vinculado') return;
+            mostrarConfirmacionPro('¿Quitar el equipo ' + pref + ' del negocio? Dejará de sincronizar y se libera un lugar de tu plan.', 'Quitar equipo', '🔗', async () => {
+                const r = await nubeFetch('/v1/nube/desvincular', { method: 'POST', headers: syCab(c), body: JSON.stringify({ prefijo: pref }) });
+                if (!(r.st === 200 && r.j && r.j.ok)) mostrarAvisoPro((r.j && r.j.error) || 'No se pudo quitar el equipo.', 'Multi-caja', '🔗');
+                await syActualizarPlan(); nubePintar();
+            });
+        }
+        async function syActualizarPlan() {
+            const c = nubeCfg(); if (!c.token) return null;
+            const e = await nubeFetch('/v1/nube/estado', { headers: syCab(c) });
+            if (e.st === 200 && e.j && e.j.ok) {
+                c.maxEquipos = e.j.max_equipos || 1; c.equipos = e.j.equipos || 1; c.lista = e.j.lista || [];
+                if (c.rol !== 'vinculado' && c.maxEquipos > 1 && !c.multi) { c.multi = true; c.rol = 'principal'; c.prefijo = 'A'; c.ptr = e.j.seq || 0; nubeGuardarCfg(c); await syInicializarBase(); _syDirty = true; }
+                else if (c.rol !== 'vinculado' && c.maxEquipos <= 1 && c.multi && c.equipos <= 1) { c.multi = false; }
+                nubeGuardarCfg(c);
+            }
+            return e;
+        }
+        function syArrancar() {
+            if (_syIntervalo) return;
+            _syIntervalo = setInterval(() => { try { const c = nubeCfg(); if (c.token && c.multi && !document.hidden) syRonda(false); } catch (e) {} }, 20000);
+            document.addEventListener('visibilitychange', () => { try { const c = nubeCfg(); if (c.token && c.multi && !document.hidden) syRonda(false); } catch (e) {} });
+            window.addEventListener('online', () => { try { const c = nubeCfg(); if (c.token && c.multi) syRonda(false); } catch (e) {} });
+        }
+        function syProgramar() { const c = nubeCfg(); if (!c.token || !c.multi) return; _syDirty = true; clearTimeout(_syTimer); _syTimer = setTimeout(() => syRonda(false), 4000); }
+        setTimeout(() => { try { const c = nubeCfg(); if (c.token) { syArrancar(); if (c.multi) syRonda(false); } } catch (e) {} }, 6000);
 
         window.licenciaLista = revalidarLicenciaGuardada();
         window.licenciaLista.then(() => { try { verificarConServidor(); } catch (e) {} });
@@ -6916,7 +7278,7 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
         // ===================================================================================
-        // v12.73 — CANTIDADES DECIMALES · DESCUENTOS · STOCK MÍNIMO · KARDEX · CSV · BLOQUEO
+        // v12.74 — CANTIDADES DECIMALES · DESCUENTOS · STOCK MÍNIMO · KARDEX · CSV · BLOQUEO
         // ===================================================================================
         function r3(n) { return Math.round((Number(n) || 0) * 1000) / 1000; }
         function numDec(s) {            // "1,5" -> 1.5 · "" -> NaN
@@ -7318,10 +7680,10 @@ html:not(.dark) .pos-pie{background:#fff}
         })();
 
         // ===================================================================================
-        // v12.73 — ALMACENAMIENTO GRANDE: imágenes ligeras, ventas ligeras, listas por páginas, control de espacio
+        // v12.74 — ALMACENAMIENTO GRANDE: imágenes ligeras, ventas ligeras, listas por páginas, control de espacio
         // ===================================================================================
         var _terminoInvPrev = '';
-        // ===== v12.73: TURNOS POR CAJERO Y REPORTE DE GANANCIA =====
+        // ===== v12.74: TURNOS POR CAJERO Y REPORTE DE GANANCIA =====
         function usaTurnos() { return !!(negocioData && negocioData.usarTurnos); }
         function turnoIdActual() { return (usaTurnos() && cajaEstado.turnoId) ? cajaEstado.turnoId : null; }
         function turnoAbierto() { return usaTurnos() ? (turnosCaja.find(t => t.id === cajaEstado.turnoId && !t.cierre) || null) : null; }
@@ -7492,7 +7854,7 @@ html:not(.dark) .pos-pie{background:#fff}
             return h;
         }
 
-        // ===== v12.73: REPORTES EN HOJA CARTA =====
+        // ===== v12.74: REPORTES EN HOJA CARTA =====
         function imprimirHtmlCarta(html) {
             let area = document.getElementById('area-impresion-ticket');
             if (!area) { area = document.createElement('div'); area.id = 'area-impresion-ticket'; document.body.appendChild(area); }
@@ -7600,20 +7962,20 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
 
-        // ===== v12.73: ESCALA AUTOMÁTICA SEGÚN EL TAMAÑO DE LA PANTALLA =====
+        // ===== v12.74: ESCALA AUTOMÁTICA SEGÚN EL TAMAÑO DE LA PANTALLA =====
         function aplicarEscalaPantalla() {
             try {
                 const w = window.innerWidth;
                 const z = w >= 3000 ? 1.6 : w >= 2400 ? 1.4 : w >= 1900 ? 1.2 : w >= 1700 ? 1.1 : 1;
                 document.documentElement.style.zoom = z === 1 ? '' : String(z);
-                // v12.73: con zoom, 1vh debe valer (alto real / 100 / zoom) para que la ventana no se salga de la pantalla
+                // v12.74: con zoom, 1vh debe valer (alto real / 100 / zoom) para que la ventana no se salga de la pantalla
                 document.documentElement.style.setProperty('--vh', (window.innerHeight / 100 / z) + 'px');
             } catch (e) { }
         }
         aplicarEscalaPantalla();
         window.addEventListener('resize', aplicarEscalaPantalla);
 
-        // ===== v12.73: FOTOS DE PRODUCTOS (internet por código de barras / archivos) =====
+        // ===== v12.74: FOTOS DE PRODUCTOS (internet por código de barras / archivos) =====
         function abrirFotos() {
             abrirModal('modal-fotos');
             document.getElementById('fotos-resultado').innerHTML = '';
@@ -7639,7 +8001,7 @@ html:not(.dark) .pos-pie{background:#fff}
             document.getElementById('fotos-archivos').value = '';
         }
 
-        // ===== v12.73: PAGINACIÓN Y LIMPIEZA DE REGISTROS =====
+        // ===== v12.74: PAGINACIÓN Y LIMPIEZA DE REGISTROS =====
         function paginar(st, total) {
             const paginas = Math.max(1, Math.ceil(total / st.n));
             if (st.p > paginas) st.p = paginas;
