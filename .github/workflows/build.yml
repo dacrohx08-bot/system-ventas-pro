@@ -1,16 +1,16 @@
 name: Crear instaladores
-# Se ejecuta solo cuando subes una "etiqueta" de versión, por ejemplo v12.65.0
+# Se ejecuta solo cuando subes una "etiqueta" de versión, por ejemplo v12.77.0
+# (Mac está desactivado: GitHub casi nunca tiene equipos Mac libres y hacía fallar todo.)
 on:
   push:
     tags: ['v*']
 jobs:
   build:
     timeout-minutes: 25
-    continue-on-error: ${{ matrix.os == 'macos-latest' }}
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, macos-latest, ubuntu-latest]
+        os: [windows-latest, ubuntu-latest]
     runs-on: ${{ matrix.os }}
     permissions:
       contents: write
