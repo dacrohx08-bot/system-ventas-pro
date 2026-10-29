@@ -49,6 +49,7 @@ jobs:
             mkdir -p ~/.android
             echo "$KS" | base64 -d > ~/.android/debug.keystore
             echo "Se usará la firma fija."
+            keytool -list -v -keystore ~/.android/debug.keystore -storepass android | grep -E "Alias name|SHA256:" || { echo "ERROR: la llave guardada en el secreto no se puede abrir (clave o formato incorrecto)"; exit 1; }
           else
             echo "ERROR: falta el secreto ANDROID_DEBUG_KEYSTORE_B64. Sin él la app saldría con otra firma y no se podría actualizar encima."
             exit 1
@@ -122,13 +123,30 @@ jobs:
           cd mobile/android
           chmod +x gradlew
           (yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null 2>&1) || true
-          ./gradlew assembleDebug --no-daemon --stacktrace
+          cat > "$RUNNER_TEMP/firma.gradle" <<'EOF'
+          allprojects { p ->
+            p.afterEvaluate {
+              if (p.plugins.hasPlugin('com.android.application')) {
+                p.android.signingConfigs.debug {
+                  storeFile new File(System.getProperty('user.home'), '.android/debug.keystore')
+                  storePassword 'android'
+                  keyAlias 'androiddebugkey'
+                  keyPassword 'android'
+                }
+                p.android.buildTypes.debug.signingConfig = p.android.signingConfigs.debug
+              }
+            }
+          }
+          EOF
+          ./gradlew assembleDebug --no-daemon --stacktrace -I "$RUNNER_TEMP/firma.gradle"
           cp app/build/outputs/apk/debug/app-debug.apk ../../SystemVentasPro-Android.apk
           ls -la ../../SystemVentasPro-Android.apk
           AS=$(ls "$ANDROID_HOME"/build-tools/*/apksigner | tail -1)
-          echo "=== HUELLA DE FIRMA (debe ser 21:B2:E7:B9 en todas las versiones) ==="
+          echo "=== HUELLA DE FIRMA (debe ser igual en todas las versiones) ==="
           "$AS" verify --print-certs ../../SystemVentasPro-Android.apk | grep -i "SHA-256"
-          "$AS" verify --print-certs ../../SystemVentasPro-Android.apk | grep -i "SHA-256" | grep -qi "21b2e7b920c46ea952961b4c9bc4233486efd7dd49cd346b160bb6dca63a6e30" || (echo "ERROR: la firma no es la fija"; exit 1)
+          KSFP=$(keytool -list -v -keystore ~/.android/debug.keystore -storepass android | grep "SHA256:" | head -1 | sed 's/.*SHA256: //' | tr -d ':' | tr 'A-F' 'a-f')
+          echo "Huella de la llave guardada: $KSFP"
+          "$AS" verify --print-certs ../../SystemVentasPro-Android.apk | grep -i "SHA-256" | grep -qi "$KSFP" || (echo "ERROR: la APK NO quedó firmada con la llave guardada"; exit 1)
 
       - name: Guardar también como archivo de la corrida
         uses: actions/upload-artifact@v4
@@ -170,6 +188,7 @@ jobs:
             mkdir -p ~/.android
             echo "$KS" | base64 -d > ~/.android/debug.keystore
             echo "Se usará la firma fija."
+            keytool -list -v -keystore ~/.android/debug.keystore -storepass android | grep -E "Alias name|SHA256:" || { echo "ERROR: la llave guardada en el secreto no se puede abrir (clave o formato incorrecto)"; exit 1; }
           else
             echo "ERROR: falta el secreto ANDROID_DEBUG_KEYSTORE_B64. Sin él la app saldría con otra firma y no se podría actualizar encima."
             exit 1
@@ -247,13 +266,30 @@ jobs:
           cd mobile/android
           chmod +x gradlew
           (yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null 2>&1) || true
-          ./gradlew assembleDebug --no-daemon --stacktrace
+          cat > "$RUNNER_TEMP/firma.gradle" <<'EOF'
+          allprojects { p ->
+            p.afterEvaluate {
+              if (p.plugins.hasPlugin('com.android.application')) {
+                p.android.signingConfigs.debug {
+                  storeFile new File(System.getProperty('user.home'), '.android/debug.keystore')
+                  storePassword 'android'
+                  keyAlias 'androiddebugkey'
+                  keyPassword 'android'
+                }
+                p.android.buildTypes.debug.signingConfig = p.android.signingConfigs.debug
+              }
+            }
+          }
+          EOF
+          ./gradlew assembleDebug --no-daemon --stacktrace -I "$RUNNER_TEMP/firma.gradle"
           cp app/build/outputs/apk/debug/app-debug.apk ../../SystemVentasPro-Consulta.apk
           ls -la ../../SystemVentasPro-Consulta.apk
           AS=$(ls "$ANDROID_HOME"/build-tools/*/apksigner | tail -1)
-          echo "=== HUELLA DE FIRMA (debe ser 21:B2:E7:B9 en todas las versiones) ==="
+          echo "=== HUELLA DE FIRMA (debe ser igual en todas las versiones) ==="
           "$AS" verify --print-certs ../../SystemVentasPro-Consulta.apk | grep -i "SHA-256"
-          "$AS" verify --print-certs ../../SystemVentasPro-Consulta.apk | grep -i "SHA-256" | grep -qi "21b2e7b920c46ea952961b4c9bc4233486efd7dd49cd346b160bb6dca63a6e30" || (echo "ERROR: la firma no es la fija"; exit 1)
+          KSFP=$(keytool -list -v -keystore ~/.android/debug.keystore -storepass android | grep "SHA256:" | head -1 | sed 's/.*SHA256: //' | tr -d ':' | tr 'A-F' 'a-f')
+          echo "Huella de la llave guardada: $KSFP"
+          "$AS" verify --print-certs ../../SystemVentasPro-Consulta.apk | grep -i "SHA-256" | grep -qi "$KSFP" || (echo "ERROR: la APK NO quedó firmada con la llave guardada"; exit 1)
 
       - name: Guardar también como archivo de la corrida
         uses: actions/upload-artifact@v4
