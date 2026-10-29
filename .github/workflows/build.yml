@@ -50,7 +50,8 @@ jobs:
             echo "$KS" | base64 -d > ~/.android/debug.keystore
             echo "Se usará la firma fija."
           else
-            echo "Sin firma fija: la app se firmará con una llave nueva (para actualizar habrá que desinstalar la anterior)."
+            echo "ERROR: falta el secreto ANDROID_DEBUG_KEYSTORE_B64. Sin él la app saldría con otra firma y no se podría actualizar encima."
+            exit 1
           fi
 
       - name: Preparar el proyecto de Android
@@ -124,6 +125,10 @@ jobs:
           ./gradlew assembleDebug --no-daemon --stacktrace
           cp app/build/outputs/apk/debug/app-debug.apk ../../SystemVentasPro-Android.apk
           ls -la ../../SystemVentasPro-Android.apk
+          AS=$(ls "$ANDROID_HOME"/build-tools/*/apksigner | tail -1)
+          echo "=== HUELLA DE FIRMA (debe ser C2:DA:99:F8 en todas las versiones) ==="
+          "$AS" verify --print-certs ../../SystemVentasPro-Android.apk | grep -i "SHA-256"
+          "$AS" verify --print-certs ../../SystemVentasPro-Android.apk | grep -i "SHA-256" | grep -qi "c2da99f887b901638d0e211de3b21a02e5882f149c1605e4025a45c1101b1f3e" || (echo "ERROR: la firma no es la fija"; exit 1)
 
       - name: Guardar también como archivo de la corrida
         uses: actions/upload-artifact@v4
@@ -166,7 +171,8 @@ jobs:
             echo "$KS" | base64 -d > ~/.android/debug.keystore
             echo "Se usará la firma fija."
           else
-            echo "Sin firma fija: la app se firmará con una llave nueva (para actualizar habrá que desinstalar la anterior)."
+            echo "ERROR: falta el secreto ANDROID_DEBUG_KEYSTORE_B64. Sin él la app saldría con otra firma y no se podría actualizar encima."
+            exit 1
           fi
 
       - name: Preparar el proyecto de Android
@@ -244,6 +250,10 @@ jobs:
           ./gradlew assembleDebug --no-daemon --stacktrace
           cp app/build/outputs/apk/debug/app-debug.apk ../../SystemVentasPro-Consulta.apk
           ls -la ../../SystemVentasPro-Consulta.apk
+          AS=$(ls "$ANDROID_HOME"/build-tools/*/apksigner | tail -1)
+          echo "=== HUELLA DE FIRMA (debe ser C2:DA:99:F8 en todas las versiones) ==="
+          "$AS" verify --print-certs ../../SystemVentasPro-Consulta.apk | grep -i "SHA-256"
+          "$AS" verify --print-certs ../../SystemVentasPro-Consulta.apk | grep -i "SHA-256" | grep -qi "c2da99f887b901638d0e211de3b21a02e5882f149c1605e4025a45c1101b1f3e" || (echo "ERROR: la firma no es la fija"; exit 1)
 
       - name: Guardar también como archivo de la corrida
         uses: actions/upload-artifact@v4
