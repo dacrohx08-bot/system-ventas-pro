@@ -1,5 +1,5 @@
 name: Crear instaladores
-# Se ejecuta solo cuando subes una "etiqueta" de versión, por ejemplo v12.80.0
+# Se ejecuta solo cuando subes una "etiqueta" de versión, por ejemplo v12.81.3
 # Crea: instalador de Windows, de Linux y la app de Android (.apk).
 on:
   push:
@@ -54,11 +54,12 @@ jobs:
           fi
 
       - name: Preparar el proyecto de Android
+        shell: bash
         run: |
           set -e
           mkdir mobile && cd mobile
           npm init -y
-          npm install @capacitor/core@6 @capacitor/cli@6 @capacitor/android@6
+          npm install --no-audit --no-fund @capacitor/core@6 @capacitor/cli@6 @capacitor/android@6
           mkdir www
           cp ../app/index.html www/index.html
           cat > capacitor.config.json <<'EOF'
@@ -74,8 +75,14 @@ jobs:
           npx cap sync android
 
       - name: Versión e iconos
+        shell: bash
         run: |
           set -e
+          if ! command -v convert > /dev/null 2>&1; then
+            sudo apt-get update -qq
+            sudo apt-get install -y -qq imagemagick
+          fi
+          command -v convert
           cd mobile
           VER=$(node -p "require('../package.json').version")
           IFS=. read MA MI PA <<< "$VER"
