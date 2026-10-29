@@ -92,6 +92,13 @@ jobs:
               convert ../build/android-fg.png -resize ${F}x${F} $RES/mipmap-$DEN/ic_launcher_foreground.png
             done
             printf '<?xml version="1.0" encoding="utf-8"?>\n<resources>\n    <color name="ic_launcher_background">#0B1220</color>\n</resources>\n' > $RES/values/ic_launcher_background.xml
+            # los celulares modernos usan el icono "adaptable": se reescribe para que use nuestro dibujo
+            rm -f $RES/drawable/ic_launcher_background.xml $RES/drawable-v24/ic_launcher_foreground.xml
+            mkdir -p $RES/mipmap-anydpi-v26
+            for n in ic_launcher ic_launcher_round; do
+              printf '<?xml version="1.0" encoding="utf-8"?>\n<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">\n    <background android:drawable="@color/ic_launcher_background"/>\n    <foreground android:drawable="@mipmap/ic_launcher_foreground"/>\n</adaptive-icon>\n' > $RES/mipmap-anydpi-v26/$n.xml
+            done
+            ls $RES
             echo "Iconos aplicados."
           else
             echo "No hay iconos en build/, se usa el icono por defecto."
