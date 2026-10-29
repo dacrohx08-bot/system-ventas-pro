@@ -1,7 +1,7 @@
 {
   "name": "system-ventas-pro",
   "productName": "SYSTEM VENTAS PRO",
-  "version": "12.69.0",
+  "version": "12.70.0",
   "description": "SYSTEM VENTAS PRO - Punto de venta, inventario y reportes",
   "author": "SYSTEM VENTAS PRO",
   "main": "main.js",
