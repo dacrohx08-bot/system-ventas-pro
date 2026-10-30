@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sistema de punto de venta e inventario">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KPHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHJ4PSIxMDgiIGZpbGw9IiMwYjEyMjAiLz4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjU2IDI1Nikgc2NhbGUoLjc4KSB0cmFuc2xhdGUoLTIwMCAtMjUwKSI+CjxwYXRoIGlkPSJoIiBkPSJNMjAwIDIwQzI5MiAyMCAzNTIgMTAwIDM1MiAyMTVDMzUyIDMyNSAyOTIgNDE4IDIzOCA0NjhDMjE4IDQ4NyAxODIgNDg3IDE2MiA0NjhDMTA4IDQxOCA0OCAzMjUgNDggMjE1QzQ4IDEwMCAxMDggMjAgMjAwIDIwWiIgZmlsbD0iIzIyYzU1ZSIvPgo8cGF0aCBkPSJNNjAgMjM1QzYwIDIwOCAxMzAgMjE1IDE5MCAzMjhDMTI4IDM1MiA2NCAzMDUgNjAgMjM1WiIgZmlsbD0iIzA1MDgwZiIvPgo8cGF0aCBkPSJNMzQwIDIzNUMzNDAgMjA4IDI3MCAyMTUgMjEwIDMyOEMyNzIgMzUyIDMzNiAzMDUgMzQwIDIzNVoiIGZpbGw9IiMwNTA4MGYiLz4KPC9nPjwvc3ZnPgo=">
-    <title>SYSTEM PRO :: SYSTEM VENTAS PRO v12.85.10 (HOLOGRAPHIC POS EDITION)</title>
+    <title>SYSTEM PRO :: SYSTEM VENTAS PRO v12.85.17 (HOLOGRAPHIC POS EDITION)</title>
     <!-- Chart.js -->
     <script>/* Chart.js 4.4.1 (MIT) incluido: las gráficas funcionan sin internet */
 /*!
@@ -102,7 +102,7 @@
         div.ticket-hoja .tk-total { font-size: 1.3em; font-weight: 800; }
         #modal-ticket > div { max-height: calc(94 * var(--vh)); }
         #area-impresion-ticket { display: none; }
-        /* v12.85.10: hoja carta */
+        /* v12.85.17: hoja carta */
         .carta-hoja{font:11px/1.35 Arial,Helvetica,sans-serif;color:#111;background:#fff;width:100%}
         .carta-hoja *{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
         .cj-enc{display:flex;gap:12px;align-items:center;border-bottom:2px solid #1e293b;padding-bottom:8px;margin-bottom:10px}
@@ -347,9 +347,9 @@
 :root{--rp-cy:#22d3ee;--rp-am:#fbbf24;--rp-or:#fb923c;--rp-gr:#34d399;--rp-rs:#fb7185;--rp-bl:#ffffff;--rp-mut:#94a3b8;--rp-tx:#cbd5e1;--rp-ln:#334155;--rp-ln2:#1e293b}
 html:not(.dark){--rp-cy:#0e7490;--rp-am:#b45309;--rp-or:#c2410c;--rp-gr:#047857;--rp-rs:#be123c;--rp-bl:#0f172a;--rp-mut:#475569;--rp-tx:#1e293b;--rp-ln:#94a3b8;--rp-ln2:#cbd5e1}
 .bp:disabled{opacity:.4!important;filter:grayscale(.35);animation:none;cursor:not-allowed;transform:none;box-shadow:none}
-/* v12.85.10: en tema claro el sistema pone texto oscuro a TODOS los botones; los de color fuerte deben llevar texto BLANCO */
+/* v12.85.17: en tema claro el sistema pone texto oscuro a TODOS los botones; los de color fuerte deben llevar texto BLANCO */
 html:not(.dark) button.bp,html:not(.dark) button.text-white,html:not(.dark) button[style*="color:#fff"],html:not(.dark) button[style*="color: #fff"],html:not(.dark) button[style*="color:#ffffff"]{color:#fff!important;font-weight:900!important}
-/* v12.85.10: botones de colores propios (cada uno distinto, se leen igual en tema claro y oscuro) */
+/* v12.85.17: botones de colores propios (cada uno distinto, se leen igual en tema claro y oscuro) */
 .bp{color:#fff!important;border:0;text-shadow:0 1px 1px rgba(0,0,0,.35);box-shadow:0 6px 16px -6px var(--bpc),inset 0 1px 0 rgba(255,255,255,.28);transition:transform .15s ease,filter .15s ease,box-shadow .15s ease;white-space:nowrap}
 .bp:hover{transform:translateY(-2px);filter:brightness(1.12);box-shadow:0 10px 22px -6px var(--bpc),inset 0 1px 0 rgba(255,255,255,.35)}
 .bp:active{transform:translateY(0) scale(.97)}
@@ -383,7 +383,7 @@ html:not(.dark) .rp-btn{background:#e2e8f0;color:#0e7490;border-color:#94a3b8}
 html:not(.dark) .rp-btn:hover{background:#cbd5e1}
 #corte-desde,#corte-hasta,#rep-desde,#rep-hasta{color:var(--rp-bl)}
 
-/* ===== v12.85.10: AJUSTE DE TAMAÑOS A CUALQUIER PANTALLA ===== */
+/* ===== v12.85.17: AJUSTE DE TAMAÑOS A CUALQUIER PANTALLA ===== */
 html{-webkit-text-size-adjust:100%}
 .flex-wrap{flex-wrap:wrap}
 header.shrink-0{height:auto!important;min-height:44px;flex-wrap:wrap;row-gap:4px;column-gap:8px}
@@ -420,7 +420,7 @@ header.shrink-0 #user-display-name{max-width:140px;overflow:hidden;text-overflow
 .pos-pie{position:sticky;bottom:-1px;z-index:5;background:#0b1220;padding-top:8px;margin-top:4px}
 html:not(.dark) .pos-pie{background:#fff}
 
-/* v12.85.10: carrito del punto de venta más compacto (se ven más productos) */
+/* v12.85.17: carrito del punto de venta más compacto (se ven más productos) */
 @media (min-width:821px){#modal-nueva-venta .w-84{width:18.5rem!important}}
 #modal-nueva-venta .w-84{padding:.6rem!important}
 #modal-nueva-venta .w-84 .space-y-3 > * + *{margin-top:.35rem!important}
@@ -436,7 +436,7 @@ html:not(.dark) .pos-pie{background:#fff}
 #pos-controles.pos-min > :not(.pos-toggle):not(.pos-pie):not(.pos-paga):not(#pos-envio-resumen):not(#pos-desc-resumen){display:none!important}\n@media print{html{zoom:1!important}}
 </style>
 <style id="cards-m-css">
-/* v12.85.10: en el celular las tablas se ven como tarjetas (sin cortarse de lado) */
+/* v12.85.17: en el celular las tablas se ven como tarjetas (sin cortarse de lado) */
 @media (max-width:700px){
  table.cards-m{display:block;width:100%!important;min-width:0!important}
  table.cards-m thead{display:none!important}
@@ -448,6 +448,19 @@ html:not(.dark) .pos-pie{background:#fff}
  table.cards-m td[colspan]{display:block!important;text-align:center!important}
 }
 </style>
+<style id="svp-scroll-fix">
+/* v12.85.17: la clase overflow-auto no existía en el CSS offline: las tablas se salían de su caja y tapaban los botones */
+.overflow-auto{overflow:auto}
+.min-h-0{min-height:0}
+#modal-por-surtir>div,#modal-por-caducar>div,#modal-editar-lotes>div,#modal-baja-lote>div,#modal-asesor>div,#modal-etiquetas>div{max-height:calc(92 * var(--vh));overflow-y:auto}
+</style>
+<style id="svp-destello">
+@keyframes svpDestelloRojo{0%,100%{box-shadow:0 0 0 0 rgba(225,29,72,.0)}50%{box-shadow:0 0 0 4px rgba(225,29,72,.45),0 0 14px 2px rgba(225,29,72,.55)}}
+@keyframes svpDestelloNaranja{0%,100%{box-shadow:0 0 0 0 rgba(234,88,12,.0)}50%{box-shadow:0 0 0 4px rgba(234,88,12,.45),0 0 14px 2px rgba(234,88,12,.55)}}
+.svp-dest-rojo{animation:svpDestelloRojo 1.6s ease-in-out infinite}
+.svp-dest-naranja{animation:svpDestelloNaranja 1.6s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.svp-dest-rojo,.svp-dest-naranja{animation:none}}
+</style>
 </head>
 <body class="h-screen flex flex-col overflow-hidden select-none" onclick="cerrarMenus(event)">
 
@@ -457,7 +470,7 @@ html:not(.dark) .pos-pie{background:#fff}
             <div class="flex items-center gap-1.5">
                 <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQwIDEyIDMyMCA0ODYiPgoKPGc+CjxwYXRoIGQ9Ik0yMDAgMjBDMjkyIDIwIDM1MiAxMDAgMzUyIDIxNUMzNTIgMzI1IDI5MiA0MTggMjM4IDQ2OEMyMTggNDg3IDE4MiA0ODcgMTYyIDQ2OEMxMDggNDE4IDQ4IDMyNSA0OCAyMTVDNDggMTAwIDEwOCAyMCAyMDAgMjBaIiBmaWxsPSIjMjJjNTVlIi8+CjxwYXRoIGQ9Ik02MCAyMzVDNjAgMjA4IDEzMCAyMTUgMTkwIDMyOEMxMjggMzUyIDY0IDMwNSA2MCAyMzVaIiBmaWxsPSIjMDUwODBmIi8+CjxwYXRoIGQ9Ik0zNDAgMjM1QzM0MCAyMDggMjcwIDIxNSAyMTAgMzI4QzI3MiAzNTIgMzM2IDMwNSAzNDAgMjM1WiIgZmlsbD0iIzA1MDgwZiIvPgo8L2c+PC9zdmc+Cg==" alt="" style="height:1.4em;width:auto;display:inline-block;vertical-align:middle" class="animate-pulse">
                 <span class="text-xs font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-500">SYSTEM VENTAS PRO</span>
-                <span id="badge-version-modo" class="text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold">v12.85.10 HOLOGRAPHIC</span>
+                <span id="badge-version-modo" class="text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold">v12.85.17 HOLOGRAPHIC</span>
             </div>
 
             <!-- MENÚS DESPLEGABLES CON CONTROL DE PERMISOS -->
@@ -621,10 +634,13 @@ html:not(.dark) .pos-pie{background:#fff}
         <!-- VISTA INVENTARIO PRO -->
         <div id="vista-inventario" class="hidden h-full p-4 overflow-y-auto space-y-3">
             <div class="flex justify-between items-center flex-wrap gap-2">
-                <h1 class="text-sm font-black text-emerald-400 tracking-wider uppercase">📦 Catálogo de Productos & Stock</h1>
+                <h1 class="font-black text-emerald-400 uppercase" style="font-size:10.5px;letter-spacing:.08em;line-height:1.2">📦 Catálogo de Productos & Stock</h1>
                 <div class="flex flex-wrap gap-2 justify-end">
                     <button onclick="abrirAlmacenamiento()" title="Espacio y almacenamiento" class="bp bp-indigo px-3 py-2 rounded-xl font-black text-xs cursor-pointer">💾 Espacio</button>
                     <button id="btn-por-caducar" onclick="abrirPorCaducar()" class="bp bp-pink px-3 py-2 rounded-xl font-black text-xs cursor-pointer">⏳ Por caducar</button>
+                    <button onclick="imprimirCaducidadesProximas(false)" class="bp bp-indigo px-3 py-2 rounded-xl font-black text-xs cursor-pointer">🖨️ Imprimir caducidades próximas</button>
+                    <button onclick="abrirAsesor()" class="bp bp-green px-3 py-2 rounded-xl font-black text-xs cursor-pointer">🧠 Asesor de compras</button>
+                    <button onclick="etqAbrir()" class="bp bp-indigo px-3 py-2 rounded-xl font-black text-xs cursor-pointer">🏷️ Etiquetas de código</button>
                     <button id="btn-por-surtir" onclick="abrirPorSurtir()" class="bp bp-amber px-3 py-2 rounded-xl font-black text-xs cursor-pointer">📋 Por surtir</button>
                     <button onclick="abrirKardex()" class="bp bp-cyan px-3 py-2 rounded-xl font-black text-xs cursor-pointer">📒 Movimientos</button>
                     <button onclick="abrirFotos()" class="bp bp-teal px-3 py-2 rounded-xl font-black text-xs cursor-pointer">🖼️ Fotos</button>
@@ -1995,7 +2011,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.10: AJUSTE DE STOCK CON MOTIVO -->
+    <!-- v12.85.17: AJUSTE DE STOCK CON MOTIVO -->
     <div id="modal-ajuste-stock" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-amber-500/50 w-full max-w-md p-5 rounded-2xl shadow-2xl flex flex-col space-y-3">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2034,7 +2050,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.10: KARDEX -->
+    <!-- v12.85.17: KARDEX -->
     <div id="modal-kardex" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-cyan-500/50 w-full max-w-5xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh]">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2056,7 +2072,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.10: POR SURTIR -->
+    <!-- v12.85.17: POR SURTIR -->
     <div id="modal-por-surtir" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-amber-500/50 w-full max-w-3xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh]">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2079,7 +2095,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.10: LOTES DE CADUCIDAD -->
+    <!-- v12.85.17: LOTES DE CADUCIDAD -->
     <div id="modal-por-caducar" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-pink-500/50 w-full max-w-4xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh]">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2102,7 +2118,68 @@ html:not(.dark) .pos-pie{background:#fff}
             </div>
             <div id="pc-bajas" class="text-[10px] text-slate-400 font-bold"></div>
             <div class="flex justify-end gap-2 pt-2 border-t border-slate-800">
+                <button onclick="imprimirCaducidadesProximas(true)" class="bp bp-indigo px-5 py-2 rounded-xl font-black text-xs cursor-pointer">🖨️ Imprimir caducidades próximas</button>
                 <button onclick="cerrarModal('modal-por-caducar')" class="px-5 py-2 rounded-xl text-xs cursor-pointer btn-cerrar-modal-custom">Cerrar</button>
+            </div>
+        </div>
+    </div>
+    <!-- v12.85.17: ASESOR DE COMPRAS -->
+    <div id="modal-asesor" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
+        <div class="glass-panel bg-slate-900 border border-emerald-500/50 w-full max-w-5xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh]">
+            <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+                <h3 class="text-xs font-black text-emerald-400 tracking-wider uppercase">🧠 Asesor de compras</h3>
+                <button onclick="cerrarModal('modal-asesor')" class="btn-cerrar-modal-custom w-7 h-7 rounded-lg flex items-center justify-center text-xs cursor-pointer">✕</button>
+            </div>
+            <p class="text-[11px] text-slate-400 font-semibold">Mira lo que de verdad vendes y te dice <b>qué conviene comprar</b> y <b>qué NO</b>, para no gastar en lo que no se mueve.</p>
+            <div class="flex flex-wrap gap-3 items-end">
+                <div><label class="text-slate-400 block mb-1 text-[10px] uppercase font-black">Revisar ventas de</label>
+                    <select id="as-periodo" onchange="pintarAsesor()" class="bg-slate-950 border border-slate-700 p-2 rounded-lg text-slate-100 font-bold text-xs"><option value="15">Últimos 15 días</option><option value="30">Últimos 30 días</option><option value="60">Últimos 60 días</option><option value="90">Últimos 90 días</option></select></div>
+                <div><label class="text-slate-400 block mb-1 text-[10px] uppercase font-black">Quiero tener para</label>
+                    <select id="as-cob" onchange="pintarAsesor()" class="bg-slate-950 border border-slate-700 p-2 rounded-lg text-slate-100 font-bold text-xs"><option value="7">7 días de venta</option><option value="15">15 días de venta</option><option value="30">30 días de venta</option></select></div>
+                <div><label class="text-slate-400 block mb-1 text-[10px] uppercase font-black">Mostrar</label>
+                    <select id="as-filtro" onchange="pintarAsesor()" class="bg-slate-950 border border-slate-700 p-2 rounded-lg text-slate-100 font-bold text-xs"><option value="comprar">🔴 Lo que hay que comprar</option><option value="no">🧊 Lo que NO hay que comprar</option><option value="ok">🟢 Lo que está bien</option><option value="todos">Todos</option></select></div>
+            </div>
+            <div id="as-kpis" class="flex flex-wrap gap-3"></div>
+            <div class="overflow-auto border border-slate-800 rounded-xl" style="max-height:44vh;overflow:auto">
+                <table class="w-full text-left text-xs text-slate-300">
+                    <thead class="bg-emerald-950/60 uppercase font-black text-[10px] text-emerald-300 sticky top-0"><tr><th class="p-2">Producto</th><th class="p-2 text-center">Stock</th><th class="p-2 text-center">Vendidos</th><th class="p-2 text-center">Te alcanza</th><th class="p-2">Estado</th><th class="p-2">Qué hacer</th></tr></thead>
+                    <tbody id="as-body"></tbody>
+                </table>
+            </div>
+            <div id="as-nota" class="text-[10px] text-slate-500 font-semibold"></div>
+            <div class="flex flex-wrap justify-end gap-2 pt-2 border-t border-slate-800">
+                <button onclick="imprimirListaCompras()" class="bp bp-indigo px-4 py-2 rounded-xl font-black text-xs cursor-pointer">🖨️ Imprimir lista de compras</button>
+                <button onclick="imprimirNoComprar()" class="bp bp-pink px-4 py-2 rounded-xl font-black text-xs cursor-pointer">🖨️ Imprimir «No comprar»</button>
+                <button onclick="cerrarModal('modal-asesor')" class="px-5 py-2 rounded-xl text-xs cursor-pointer btn-cerrar-modal-custom">Cerrar</button>
+            </div>
+        </div>
+    </div>
+    <!-- v12.85.17: ETIQUETAS DE CÓDIGO DE BARRAS -->
+    <div id="modal-etiquetas" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
+        <div class="glass-panel bg-slate-900 border border-sky-500/50 w-full max-w-3xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh]">
+            <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+                <h3 class="text-xs font-black text-sky-400 tracking-wider uppercase">🏷️ Etiquetas de código de barras</h3>
+                <button onclick="cerrarModal('modal-etiquetas')" class="btn-cerrar-modal-custom w-7 h-7 rounded-lg flex items-center justify-center text-xs cursor-pointer">✕</button>
+            </div>
+            <p class="text-[11px] text-slate-400 font-semibold">Para los productos que <b>no traen código de barras</b>: imprime una etiquetita, pégala en el producto y tu lector la escanea en caja.</p>
+            <div class="flex flex-wrap gap-2 items-end">
+                <div style="flex:1;min-width:160px"><label class="text-slate-400 block mb-1 text-[10px] uppercase font-black">Buscar</label><input id="etq-buscar" oninput="etqPintar()" placeholder="Nombre o código" class="w-full bg-slate-950 border border-slate-700 p-2 rounded-lg text-slate-100 font-bold text-xs"></div>
+                <div><label class="text-slate-400 block mb-1 text-[10px] uppercase font-black">Mostrar</label><select id="etq-filtro" onchange="etqPintar()" class="bg-slate-950 border border-slate-700 p-2 rounded-lg text-slate-100 font-bold text-xs"><option value="interno">Solo los de código propio (sin código de fábrica)</option><option value="todos">Todos los productos</option></select></div>
+            </div>
+            <div class="flex flex-wrap gap-2">
+                <button onclick="etqMarcarTodos(true)" class="px-3 py-1.5 rounded-lg text-[11px] font-black cursor-pointer btn-cerrar-modal-custom">☑ Marcar todos</button>
+                <button onclick="etqMarcarTodos(false)" class="px-3 py-1.5 rounded-lg text-[11px] font-black cursor-pointer btn-cerrar-modal-custom">☐ Quitar marcas</button>
+                <button onclick="etqCopiasComoStock()" class="px-3 py-1.5 rounded-lg text-[11px] font-black cursor-pointer btn-cerrar-modal-custom">📦 Una etiqueta por pieza en stock</button>
+                <button onclick="etqAsignarCodigos()" class="px-3 py-1.5 rounded-lg text-[11px] font-black cursor-pointer btn-cerrar-modal-custom">🔢 Dar código a los que no tienen</button>
+            </div>
+            <div id="etq-cuerpo" class="border border-slate-800 rounded-xl" style="max-height:38vh;overflow:auto"></div>
+            <div id="etq-resumen" class="text-[11px] text-sky-300 font-black"></div>
+            <div class="flex flex-wrap gap-3 items-end pt-2 border-t border-slate-800">
+                <div><label class="text-slate-400 block mb-1 text-[10px] uppercase font-black">Tamaño / papel</label><select id="etq-tam" class="bg-slate-950 border border-slate-700 p-2 rounded-lg text-slate-100 font-bold text-xs"><option value="carta">Hoja carta (muchas etiquetas por hoja, 66×27 mm)</option><option value="t58">Rollo de tickets 58 mm (el de la impresora de tickets)</option><option value="t80">Rollo de tickets 80 mm (el de la impresora de tickets)</option><option value="r5025">Rollo de etiquetas 50×25 mm</option><option value="r6040">Rollo de etiquetas 60×40 mm</option></select></div>
+                <label class="flex items-center gap-2 text-xs text-slate-300 font-bold cursor-pointer pb-2"><input id="etq-precio" type="checkbox" checked style="width:16px;height:16px"> Mostrar precio</label>
+                <div class="flex-1"></div>
+                <button onclick="etqImprimir()" class="bp bp-indigo px-4 py-2 rounded-xl font-black text-xs cursor-pointer">🖨️ Imprimir etiquetas</button>
+                <button onclick="cerrarModal('modal-etiquetas')" class="px-5 py-2 rounded-xl text-xs cursor-pointer btn-cerrar-modal-custom">Cerrar</button>
             </div>
         </div>
     </div>
@@ -2146,7 +2223,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.10: IMPORTAR PRODUCTOS CSV -->
+    <!-- v12.85.17: IMPORTAR PRODUCTOS CSV -->
     <div id="modal-importar-csv" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-emerald-500/50 w-full max-w-2xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh] overflow-y-auto">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2175,7 +2252,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.10: BLOQUEO AUTOMÁTICO -->
+    <!-- v12.85.17: BLOQUEO AUTOMÁTICO -->
     <div id="modal-autobloqueo" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-slate-700 w-full max-w-sm p-5 rounded-2xl shadow-2xl flex flex-col space-y-3">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2199,7 +2276,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.10: ESPACIO / ALMACENAMIENTO -->
+    <!-- v12.85.17: ESPACIO / ALMACENAMIENTO -->
     <div id="modal-almacenamiento" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-cyan-500/50 w-full max-w-lg p-5 rounded-2xl shadow-2xl flex flex-col space-y-3">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2217,7 +2294,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.10: LIMPIEZA DE REGISTROS -->
+    <!-- v12.85.17: LIMPIEZA DE REGISTROS -->
     <div id="modal-limpieza" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-rose-500/50 w-full max-w-md p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh] overflow-y-auto">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2244,7 +2321,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.10: CIERRE DE TURNO -->
+    <!-- v12.85.17: CIERRE DE TURNO -->
     <div id="modal-cerrar-turno" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel overflow-y-auto bg-slate-900 border border-rose-500/50 w-full max-w-lg p-5 rounded-2xl shadow-2xl flex flex-col space-y-3" style="max-height:calc(94 * var(--vh))">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2272,7 +2349,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.10: HISTORIAL DE TURNOS -->
+    <!-- v12.85.17: HISTORIAL DE TURNOS -->
     <div id="modal-turnos" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel overflow-y-auto bg-slate-900 border border-cyan-500/50 w-full max-w-2xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3" style="max-height:calc(94 * var(--vh))">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2283,7 +2360,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.10: FOTOS DE PRODUCTOS -->
+    <!-- v12.85.17: FOTOS DE PRODUCTOS -->
     <div id="modal-fotos" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-pink-500/50 w-full max-w-lg p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh] overflow-y-auto text-xs">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2428,13 +2505,13 @@ html:not(.dark) .pos-pie{background:#fff}
                 </div>
             </div>
 
-            <p class="lp-nota" style="text-align:center; margin-top: 1.25rem;">SYSTEM VENTAS PRO v12.85.10 · Tus datos se guardan en tu propio equipo.</p>
+            <p class="lp-nota" style="text-align:center; margin-top: 1.25rem;">SYSTEM VENTAS PRO v12.85.17 · Tus datos se guardan en tu propio equipo.</p>
             <p id="lp-pruebas" style="display:none; text-align:center; margin-top:.75rem;"><a href="javascript:resetearADemoPruebas()" style="color:#fbbf24; font-size:.75rem; font-weight:700; text-decoration:underline;">Restablecer a DEMO (solo pruebas del dueño)</a></p>
         </div>
     </div>
 
     <!-- SCRIPT GENERAL FUNCIONAL (MODO 100% MANUAL + FORMATO DD/MM/YYYY) -->
-    <!-- ALMACENAMIENTO GRANDE v12.85.10: los datos pesados (productos, ventas, compras, gastos, clientes...) viven en IndexedDB (cientos de MB)
+    <!-- ALMACENAMIENTO GRANDE v12.85.17: los datos pesados (productos, ventas, compras, gastos, clientes...) viven en IndexedDB (cientos de MB)
          y las fotos de los productos en un almacén aparte. Si el navegador no lo permite, el sistema sigue como antes (localStorage). -->
     <script id="svp-boot">
     (function () {
@@ -2731,10 +2808,10 @@ html:not(.dark) .pos-pie{background:#fff}
             try { pintarBannerConsulta(); } catch (e) {}
             const badge = document.getElementById('badge-version-modo');
             if(licenciaData.tipo === "PRO") {
-                badge.innerText = "v12.85.10 PRO";
+                badge.innerText = "v12.85.17 PRO";
                 badge.className = "text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold";
             } else {
-                badge.innerText = "v12.85.10 HOLOGRAPHIC";
+                badge.innerText = "v12.85.17 HOLOGRAPHIC";
                 badge.className = "text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold";
             }
         }
@@ -2788,7 +2865,7 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
 
-        // ===== RESPALDO AUTOMÁTICO A CARPETA v12.85.10 (File System Access API: Chrome / Edge) =====
+        // ===== RESPALDO AUTOMÁTICO A CARPETA v12.85.17 (File System Access API: Chrome / Edge) =====
         let respHandle = null;              // carpeta elegida por el usuario
         let respEstado = 'sin-carpeta';     // 'activo' | 'permiso' | 'sin-carpeta' | 'no-soportado' | 'error'
         let respErrorTxt = '';
@@ -2914,7 +2991,7 @@ html:not(.dark) .pos-pie{background:#fff}
         //   quitarCarpetaExtra()         -> Promise<void>
         //   abrirCarpetaRespaldos()      -> Promise<void>
         function modoEscritorio() { return !!(window.svpNative && window.svpNative.esEscritorio); }
-        // ----- v12.85.10: ACTUALIZACIONES DE LA APLICACIÓN DE ESCRITORIO (como una tienda de apps) -----
+        // ----- v12.85.17: ACTUALIZACIONES DE LA APLICACIÓN DE ESCRITORIO (como una tienda de apps) -----
         let updEstado = { estado: 'inactivo' };
         function svpTextoActualizacion(u) {
             switch (u.estado) {
@@ -3482,7 +3559,7 @@ html:not(.dark) .pos-pie{background:#fff}
 
         let idUsuarioActivo = localStorage.getItem('nexus_usuario_activo_id') || (usuariosSistema[0] ? usuariosSistema[0].id : 1);
 
-        var _pagInv = { p: 1, n: 50 }, _pagVen = { p: 1, n: 50 };   // v12.85.10: antes que cualquier pantalla
+        var _pagInv = { p: 1, n: 50 }, _pagVen = { p: 1, n: 50 };   // v12.85.17: antes que cualquier pantalla
         let clientesSistema = JSON.parse(localStorage.getItem('nexus_clientes_v9')) || [];
         clientesSistema.forEach(c => {
             if(!c.telefono) c.telefono = 'N/A';
@@ -3635,7 +3712,7 @@ html:not(.dark) .pos-pie{background:#fff}
           }
         }
 
-        // ===== LOTES DE CADUCIDAD v12.85.10 =====
+        // ===== LOTES DE CADUCIDAD v12.85.17 =====
         // Cada producto puede tener varios lotes {f: 'AAAA-MM-DD', c: piezas}. El stock manda: si baja (venta, merma, ajuste),
         // se descuenta primero del lote que caduca antes. p.caducidad siempre guarda la fecha del lote más próximo.
         function diasAvisoCad() { try { const n = parseInt(localStorage.getItem('svp_cad_dias'), 10); return n >= 1 && n <= 90 ? n : 7; } catch (e) { return 7; } }
@@ -3800,8 +3877,219 @@ html:not(.dark) .pos-pie{background:#fff}
             cerrarModal('modal-editar-lotes');
         }
 
+        function lotesEstadoTexto(d) { return d < 0 ? 'VENCIDO hace ' + (-d) + (d === -1 ? ' día' : ' días') : d === 0 ? 'CADUCA HOY' : d === 1 ? 'Caduca mañana' : 'En ' + d + ' días'; }
+        function imprimirCaducidadesProximas(usarFiltro) {
+            const fel = document.getElementById('pc-filtro'), f = (usarFiltro && fel) ? fel.value : 'aviso';
+            const max = f === 'vencidos' ? -1 : f === '3' ? 3 : f === '30' ? 30 : f === 'todos' ? 99999 : diasAvisoCad();
+            const rango = f === 'vencidos' ? 'Solo lotes vencidos' : f === 'todos' ? 'Todos los lotes con fecha' : 'Vencidos y que caducan en ' + (f === '3' ? 3 : f === '30' ? 30 : diasAvisoCad()) + ' días o menos';
+            const l = lotesPorCaducar(max);
+            if (!l.length) { mostrarAvisoPro('No hay lotes por caducar en este rango.', 'Caducidades', '✅'); return; }
+            const grupos = {};
+            l.forEach(x => { const k = x.p.proveedor || 'GENERAL'; (grupos[k] = grupos[k] || []).push(x); });
+            const provs = Object.keys(grupos).sort((a, b) => a.localeCompare(b));
+            const totPz = r3(l.reduce((a, x) => a + x.c, 0)), totRiesgo = redondear2(l.reduce((a, x) => a + x.riesgo, 0));
+            // Estilos propios (fondo blanco y letras negras) para que se lea igual en cualquier vista de impresión
+            const T = 'color:#0f172a;-webkit-print-color-adjust:exact;print-color-adjust:exact;';
+            const th = (t, al) => '<th style="' + T + 'background:#1e293b;color:#ffffff;border:1px solid #0f172a;padding:5px 7px;font-size:11px;text-align:' + (al || 'left') + '">' + t + '</th>';
+            const td = (t, al, extra) => '<td style="' + T + 'background:#ffffff;border:1px solid #94a3b8;padding:5px 7px;font-size:11.5px;text-align:' + (al || 'left') + ';' + (extra || '') + '">' + t + '</td>';
+            let h = '<div style="' + T + 'background:#ffffff;font-family:Arial,Helvetica,sans-serif;">';
+            h += '<div style="' + T + 'background:#ffffff">' + cjEncabezado('CADUCIDADES PRÓXIMAS', escHtml(rango) + ' · ' + l.length + ' lote' + (l.length === 1 ? '' : 's') + ' · ' + provs.length + ' proveedor' + (provs.length === 1 ? '' : 'es')) + '</div>';
+            provs.forEach(k => {
+                const g = grupos[k], pz = r3(g.reduce((a, x) => a + x.c, 0)), rs = redondear2(g.reduce((a, x) => a + x.riesgo, 0));
+                h += '<div style="' + T + 'background:#e2e8f0;border-left:5px solid #4f46e5;padding:7px 10px;margin:16px 0 6px;font-weight:900;font-size:13px">PROVEEDOR: ' + escHtml(k) + ' — ' + g.length + ' lote' + (g.length === 1 ? '' : 's') + ' · ' + fmtCant(pz) + ' pz · costo en riesgo ' + dinero(rs) + '</div>';
+                h += '<table style="width:100%;border-collapse:collapse;background:#ffffff"><thead><tr>' + th('Producto') + th('Código') + th('Caduca') + th('Estado') + th('Piezas', 'right') + th('Costo en riesgo', 'right') + th('Revisado', 'center') + '</tr></thead><tbody>' +
+                    g.map(x => '<tr>' + td(escHtml(x.p.nombre), 'left', 'font-weight:700') + td(escHtml(x.p.codigo || '')) + td(isoADMY(x.f)) + td(lotesEstadoTexto(x.d), 'left', x.d <= 1 ? 'font-weight:900' : '') + td(fmtCant(x.c), 'right') + td(dinero(x.riesgo), 'right') + td('☐', 'center', 'font-size:14px') + '</tr>').join('') + '</tbody></table>';
+            });
+            h += '<table style="margin:16px 0 0 auto;border-collapse:collapse;min-width:300px;background:#ffffff"><tr>' + td('Total de lotes') + td(String(l.length), 'right') + '</tr><tr>' + td('Total de piezas') + td(fmtCant(totPz), 'right') + '</tr><tr>' + td('<b>Costo total en riesgo</b>', 'left', 'background:#e2e8f0') + td('<b>' + dinero(totRiesgo) + '</b>', 'right', 'background:#e2e8f0') + '</tr></table></div>';
+            imprimirHtmlCarta(h);
+        }
+        // ===== ASESOR DE COMPRAS v12.85.17 =====
+        // Cruza lo que vendes de verdad con tu stock: qué conviene comprar y qué NO.
+        function asesorParam(k, def) { try { const n = parseInt(localStorage.getItem(k), 10); return n > 0 ? n : def; } catch (e) { return def; } }
+        function asesorAnalizar(periodo, cobertura) {
+            const hoy = new Date(); hoy.setHours(0, 0, 0, 0);
+            const desde = new Date(hoy); desde.setDate(desde.getDate() - periodo + 1);
+            const desdeISO = fechaLocalISO(desde), vend = {};
+            (historialVentas || []).forEach(v => {
+                if (String(v.fecha).slice(0, 10) < desdeISO || !Array.isArray(v.items)) return;
+                const dev = devueltoPorItem(v);
+                v.items.forEach((it, idx) => { const c = (Number(it.cant) || 0) - (dev[idx] || 0); if (c > 0) { const k = String(it.id); vend[k] = r3((vend[k] || 0) + c); } });
+            });
+            const primera = {};
+            (movimientosInv || []).forEach(m => { const d = String(m.fecha).slice(0, 10); if (!primera[m.prodId] || d < primera[m.prodId]) primera[m.prodId] = d; });
+            const res = [];
+            (inventario || []).forEach(p => {
+                if (p.categoria === 'SERVICIOS' || p.esServicioVariable) return;
+                lotesNormalizar(p);
+                const stock = Number(p.stock) || 0, costo = Number(p.costo) || 0, min = stockMinimoDe(p);
+                const vendido = vend[String(p.id)] || 0, vel = vendido / periodo, alcance = vel > 0 ? stock / vel : Infinity;
+                const edad = primera[p.id] ? Math.round((hoy - new Date(primera[p.id] + 'T00:00:00')) / 86400000) : 9999;
+                const r = { p, stock, vendido, vel, alcance, est: 'OK', cat: 'ok', motivo: 'Se vende a buen ritmo y tienes lo suficiente.', sug: 0, costoSug: 0, parado: 0 };
+                const sugerir = () => { const raw = vel * cobertura - stock; r.sug = esFraccionable(p) ? r3(Math.max(raw, 0.001)) : Math.max(1, Math.ceil(raw - 1e-9)); r.costoSug = redondear2(r.sug * costo); };
+                let riesgoCad = false;
+                if (vel > 0 && Array.isArray(p.lotes)) { let acum = 0; p.lotes.forEach(l => { const d = Math.max(0, diasParaFecha(l.f)); acum += l.c; if (d <= 60 && acum > vel * d + 0.5) riesgoCad = true; }); }
+                if (vendido === 0) {
+                    if (edad < periodo) { r.est = 'NUEVO'; r.motivo = 'Es nuevo: todavía no hay suficiente historial para juzgarlo.'; }
+                    else if (stock <= 0) { r.est = 'AGOTADO, NO SE VENDÍA'; r.cat = 'no'; r.motivo = 'No se vendió en ' + periodo + ' días. Piensa si vale la pena volver a comprarlo.'; }
+                    else { r.est = stock <= min ? 'BAJO PERO NO SE VENDE' : 'SIN MOVIMIENTO'; r.cat = 'no'; r.parado = redondear2(stock * costo); r.motivo = 'No se vendió nada en ' + periodo + ' días. No compres más; considera ofertarlo.'; }
+                } else if (stock <= 0) { r.est = 'AGOTADO'; r.cat = 'comprar'; sugerir(); r.motivo = 'Se vende y ya no tienes.'; }
+                else if (riesgoCad) { r.est = 'RIESGO DE CADUCAR'; r.cat = 'no'; r.parado = redondear2(stock * costo); r.motivo = 'Se vende más lento de lo que caduca. No compres más y ofrécelo en oferta.'; }
+                else if (stock <= min || alcance <= 3) { r.est = 'COMPRAR YA'; r.cat = 'comprar'; sugerir(); r.motivo = 'Te alcanza para ' + (alcance < 1 ? 'menos de 1 día' : Math.round(alcance) + ' días') + ' de venta.'; }
+                else if (alcance <= 7) { r.est = 'COMPRAR PRONTO'; r.cat = 'comprar'; sugerir(); r.motivo = 'Te alcanza para unos ' + Math.round(alcance) + ' días.'; }
+                else if (alcance > 90) { r.est = 'SOBRESTOCK'; r.cat = 'no'; r.parado = redondear2(Math.max(0, stock - vel * cobertura) * costo); r.motivo = 'Tienes para ' + Math.round(alcance) + ' días. No compres más por ahora.'; }
+                res.push(r);
+            });
+            const orden = { comprar: 0, no: 1, ok: 2 };
+            return res.sort((a, b) => orden[a.cat] - orden[b.cat] || (a.cat === 'comprar' ? a.alcance - b.alcance : a.cat === 'no' ? b.parado - a.parado : 0) || String(a.p.nombre).localeCompare(String(b.p.nombre)));
+        }
+        function asesorColor(e) { return e === 'AGOTADO' || e === 'COMPRAR YA' ? '#e11d48' : e === 'COMPRAR PRONTO' ? '#c2410c' : e === 'RIESGO DE CADUCAR' ? '#6d28d9' : e === 'SOBRESTOCK' ? '#0369a1' : e === 'OK' ? '#059669' : e === 'NUEVO' ? '#0f766e' : '#475569'; }
+        function asesorAlcanceTxt(a) { return a === Infinity ? '—' : a < 1 ? '< 1 día' : Math.round(a) + ' días'; }
+        function abrirAsesor() {
+            document.getElementById('as-periodo').value = String(asesorParam('svp_as_per', 30));
+            document.getElementById('as-cob').value = String(asesorParam('svp_as_cob', 15));
+            document.getElementById('as-filtro').value = 'comprar';
+            pintarAsesor(); abrirModal('modal-asesor');
+        }
+        function pintarAsesor() {
+            const per = parseInt(document.getElementById('as-periodo').value, 10) || 30, cob = parseInt(document.getElementById('as-cob').value, 10) || 15;
+            try { localStorage.setItem('svp_as_per', String(per)); localStorage.setItem('svp_as_cob', String(cob)); } catch (e) {}
+            const all = asesorAnalizar(per, cob), f = document.getElementById('as-filtro').value;
+            const l = f === 'todos' ? all : all.filter(x => x.cat === f);
+            const comp = all.filter(x => x.cat === 'comprar'), no = all.filter(x => x.cat === 'no');
+            document.getElementById('as-kpis').innerHTML =
+                '<div style="flex:1;min-width:150px;padding:8px 10px;border-radius:10px;border:1px solid #e11d48"><div style="font-size:10px;font-weight:900;text-transform:uppercase" class="text-slate-400">Por comprar</div><div style="font-size:18px;font-weight:900;color:#e11d48">' + comp.length + ' productos</div><div style="font-size:11px;font-weight:700" class="text-slate-400">Inversión sugerida ' + dinero(redondear2(comp.reduce((a, x) => a + x.costoSug, 0))) + '</div></div>' +
+                '<div style="flex:1;min-width:150px;padding:8px 10px;border-radius:10px;border:1px solid #475569"><div style="font-size:10px;font-weight:900;text-transform:uppercase" class="text-slate-400">No comprar</div><div style="font-size:18px;font-weight:900;color:#64748b">' + no.length + ' productos</div><div style="font-size:11px;font-weight:700" class="text-slate-400">Dinero parado ' + dinero(redondear2(no.reduce((a, x) => a + x.parado, 0))) + '</div></div>';
+            document.getElementById('as-body').innerHTML = l.length ? l.map(x => '<tr class="border-b border-slate-800/40"><td class="p-2"><div class="font-black text-slate-100">' + escHtml(x.p.nombre) + '</div><div class="text-[10px] text-slate-400 font-bold">' + escHtml(x.p.proveedor || 'GENERAL') + '</div></td>' +
+                '<td class="p-2 text-center font-mono font-black">' + fmtCant(x.stock) + '</td><td class="p-2 text-center font-mono">' + fmtCant(x.vendido) + '</td><td class="p-2 text-center font-mono">' + asesorAlcanceTxt(x.alcance) + '</td>' +
+                '<td class="p-2"><span style="display:inline-block;padding:3px 8px;border-radius:8px;font-weight:900;font-size:10px;color:#fff;background:' + asesorColor(x.est) + '">' + x.est + '</span></td>' +
+                '<td class="p-2 text-[11px] font-semibold">' + (x.cat === 'comprar' ? '<b style="color:#e11d48">Comprar ' + fmtCant(x.sug) + ' pz</b> (≈ ' + dinero(x.costoSug) + ')<div class="text-slate-400">' + escHtml(x.motivo) + '</div>' : escHtml(x.motivo) + (x.parado > 0 ? '<div style="color:#6d28d9;font-weight:900">Dinero parado: ' + dinero(x.parado) + '</div>' : '')) + '</td></tr>').join('') :
+                '<tr><td colspan="6" class="p-6 text-center text-emerald-400 font-bold">✅ No hay productos en esta lista.</td></tr>';
+            document.getElementById('as-nota').innerText = 'Basado en lo vendido en los últimos ' + per + ' días (ya sin devoluciones). Las sugerencias de compra buscan que tengas ' + cob + ' días de venta.';
+        }
+        function asesorHoja(titulo, sub, bloques, kv) {
+            const T = 'color:#0f172a;-webkit-print-color-adjust:exact;print-color-adjust:exact;';
+            const th = (t, al) => '<th style="' + T + 'background:#1e293b;color:#ffffff;border:1px solid #0f172a;padding:5px 7px;font-size:11px;text-align:' + (al || 'left') + '">' + t + '</th>';
+            const td = (t, al, ex) => '<td style="' + T + 'background:#ffffff;border:1px solid #94a3b8;padding:5px 7px;font-size:11.5px;text-align:' + (al || 'left') + ';' + (ex || '') + '">' + t + '</td>';
+            let h = '<div style="' + T + 'background:#ffffff;font-family:Arial,Helvetica,sans-serif;">' + cjEncabezado(titulo, sub);
+            bloques.forEach(b => {
+                h += '<div style="' + T + 'background:#e2e8f0;border-left:5px solid #4f46e5;padding:7px 10px;margin:16px 0 6px;font-weight:900;font-size:13px">' + b.t + '</div>';
+                h += '<table style="width:100%;border-collapse:collapse;background:#ffffff"><thead><tr>' + b.cols.map(c => th(c.t, c.a)).join('') + '</tr></thead><tbody>' +
+                    b.filas.map(f => '<tr>' + f.map((x, i) => td(x, b.cols[i].a, i === 0 ? 'font-weight:700' : '')).join('') + '</tr>').join('') + '</tbody></table>';
+            });
+            h += '<table style="margin:16px 0 0 auto;border-collapse:collapse;min-width:300px;background:#ffffff">' + kv.map((r, i) => '<tr>' + td(i === kv.length - 1 ? '<b>' + r[0] + '</b>' : r[0], 'left', i === kv.length - 1 ? 'background:#e2e8f0' : '') + td(i === kv.length - 1 ? '<b>' + r[1] + '</b>' : r[1], 'right', i === kv.length - 1 ? 'background:#e2e8f0' : '') + '</tr>').join('') + '</table></div>';
+            imprimirHtmlCarta(h);
+        }
+        function imprimirListaCompras() {
+            const per = asesorParam('svp_as_per', 30), cob = asesorParam('svp_as_cob', 15);
+            const l = asesorAnalizar(per, cob).filter(x => x.cat === 'comprar');
+            if (!l.length) { mostrarAvisoPro('Por ahora no hay productos que comprar.', 'Lista de compras', '✅'); return; }
+            const g = {}; l.forEach(x => { const k = x.p.proveedor || 'GENERAL'; (g[k] = g[k] || []).push(x); });
+            const bloques = Object.keys(g).sort((a, b) => a.localeCompare(b)).map(k => ({
+                t: 'PROVEEDOR: ' + escHtml(k) + ' — ' + g[k].length + ' producto' + (g[k].length === 1 ? '' : 's') + ' · ≈ ' + dinero(redondear2(g[k].reduce((a, x) => a + x.costoSug, 0))),
+                cols: [{ t: 'Producto' }, { t: 'Código' }, { t: 'Stock', a: 'right' }, { t: 'Vendió ' + per + ' d', a: 'right' }, { t: 'Comprar', a: 'right' }, { t: 'Costo aprox.', a: 'right' }, { t: 'Pedido', a: 'center' }],
+                filas: g[k].map(x => [escHtml(x.p.nombre), escHtml(x.p.codigo || ''), fmtCant(x.stock), fmtCant(x.vendido), '<b>' + fmtCant(x.sug) + '</b>', dinero(x.costoSug), '☐'])
+            }));
+            asesorHoja('LISTA DE COMPRAS SUGERIDA', 'Según las ventas de los últimos ' + per + ' días · para ' + cob + ' días de venta · ' + l.length + ' producto' + (l.length === 1 ? '' : 's'), bloques,
+                [['Productos por comprar', String(l.length)], ['Piezas sugeridas', fmtCant(r3(l.reduce((a, x) => a + x.sug, 0)))], ['Inversión aproximada', dinero(redondear2(l.reduce((a, x) => a + x.costoSug, 0)))]]);
+        }
+        function imprimirNoComprar() {
+            const per = asesorParam('svp_as_per', 30), cob = asesorParam('svp_as_cob', 15);
+            const l = asesorAnalizar(per, cob).filter(x => x.cat === 'no');
+            if (!l.length) { mostrarAvisoPro('No hay productos en la lista de «No comprar».', 'No comprar', '✅'); return; }
+            const bloques = [{ t: 'PRODUCTOS QUE NO CONVIENE COMPRAR — ' + l.length, cols: [{ t: 'Producto' }, { t: 'Proveedor' }, { t: 'Stock', a: 'right' }, { t: 'Vendió ' + per + ' d', a: 'right' }, { t: 'Motivo' }, { t: 'Dinero parado', a: 'right' }],
+                filas: l.map(x => [escHtml(x.p.nombre), escHtml(x.p.proveedor || 'GENERAL'), fmtCant(x.stock), fmtCant(x.vendido), '<b>' + x.est + '</b>', dinero(x.parado)]) }];
+            asesorHoja('PRODUCTOS QUE NO CONVIENE COMPRAR', 'Según las ventas de los últimos ' + per + ' días · ' + l.length + ' producto' + (l.length === 1 ? '' : 's'), bloques,
+                [['Productos en la lista', String(l.length)], ['Dinero parado o en riesgo', dinero(redondear2(l.reduce((a, x) => a + x.parado, 0)))]]);
+        }
+
+        // ===== ETIQUETAS DE CÓDIGO DE BARRAS v12.85.17 =====
+        // Genera códigos Code128 (los lee cualquier lector) sin internet ni librerías externas.
+        const C128 = "212222,222122,222221,121223,121322,131222,122213,122312,132212,221213,221312,231212,112232,122132,122231,113222,123122,123221,223211,221132,221231,213212,223112,312131,311222,321122,321221,312212,322112,322211,212123,212321,232121,111323,131123,131321,112313,132113,132311,211313,231113,231311,112133,112331,132131,113123,113321,133121,313121,211331,231131,213113,213311,213131,311123,311321,331121,312113,312311,332111,314111,221411,431111,111224,111422,121124,121421,141122,141221,112214,112412,122114,122411,142112,142211,241211,221114,413111,241112,134111,111242,121142,121241,114212,124112,124211,411212,421112,421211,212141,214121,412121,111143,111341,131141,114113,114311,411113,411311,113141,114131,311141,411131,211412,211214,211232,2331112".split(',');
+        function code128Modulos(texto) {
+            let t = String(texto == null ? '' : texto).replace(/[^\x20-\x7e]/g, '-');
+            if (!t) return null;
+            let codes = [], start;
+            if (/^\d{4,}$/.test(t) && t.length % 2 === 0) { start = 105; for (let i = 0; i < t.length; i += 2) codes.push(parseInt(t.substr(i, 2), 10)); }
+            else { start = 104; for (let i = 0; i < t.length; i++) codes.push(t.charCodeAt(i) - 32); }
+            let suma = start; codes.forEach((c, i) => suma += c * (i + 1));
+            const all = [start].concat(codes, [suma % 103, 106]);
+            let w = [];
+            all.forEach(c => { C128[c].split('').forEach(x => w.push(parseInt(x, 10))); });
+            return w;
+        }
+        function code128Svg(texto) {
+            const w = code128Modulos(texto); if (!w) return '';
+            const q = 10; let x = q, rects = '';
+            w.forEach((a, i) => { if (i % 2 === 0) rects += '<rect x="' + x + '" y="0" width="' + a + '" height="50"/>'; x += a; });
+            return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + (x + q) + ' 50" preserveAspectRatio="none" style="display:block;width:100%;height:100%" shape-rendering="crispEdges"><rect x="0" y="0" width="' + (x + q) + '" height="50" fill="#ffffff"/><g fill="#000000">' + rects + '</g></svg>';
+        }
+        const etqSel = {};
+        function etqEsInterno(p) { return /^750\d{9}$/.test(String(p.codigo || '')) || !String(p.codigo || '').trim(); }
+        function etqLista() {
+            const q = (document.getElementById('etq-buscar').value || '').toLowerCase().trim(), f = document.getElementById('etq-filtro').value;
+            return inventario.filter(p => p.categoria !== 'SERVICIOS' && (f === 'todos' || etqEsInterno(p)) && (!q || String(p.nombre).toLowerCase().includes(q) || String(p.codigo || '').toLowerCase().includes(q)));
+        }
+        function etqAbrir() { document.getElementById('etq-buscar').value = ''; etqPintar(); abrirModal('modal-etiquetas'); }
+        function etqPintar() {
+            const l = etqLista(), tope = 300;
+            document.getElementById('etq-cuerpo').innerHTML = l.length ? l.slice(0, tope).map(p => {
+                const sel = etqSel[p.id] > 0;
+                return '<div style="display:flex;align-items:center;gap:8px;padding:6px 8px;border-bottom:1px solid rgba(100,116,139,.25)">' +
+                    '<input type="checkbox" ' + (sel ? 'checked' : '') + ' onchange="etqToggle(' + p.id + ',this.checked)" style="width:18px;height:18px;cursor:pointer">' +
+                    '<div style="flex:1;min-width:0"><div class="font-black text-slate-100 text-xs" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + escHtml(p.nombre) + '</div><div class="text-[10px] text-slate-400 font-mono font-bold">' + (escHtml(p.codigo) || '<span style="color:#e11d48">SIN CÓDIGO</span>') + ' · ' + dinero(p.precio) + '</div></div>' +
+                    '<label class="text-[10px] text-slate-400 font-black uppercase">Copias</label><input type="number" min="1" max="500" value="' + (sel ? etqSel[p.id] : 1) + '" onchange="etqCopias(' + p.id + ',this.value)" class="bg-slate-950 border border-slate-700 rounded-lg text-slate-100 font-bold text-xs text-center" style="width:62px;padding:5px"></div>';
+            }).join('') + (l.length > tope ? '<div class="p-3 text-center text-[11px] text-amber-400 font-bold">Se muestran los primeros ' + tope + '. Usa el buscador para encontrar otros.</div>' : '') :
+                '<div class="p-6 text-center text-slate-400 font-bold text-xs">No hay productos con ese filtro.</div>';
+            const n = Object.keys(etqSel).filter(k => etqSel[k] > 0).length, tot = Object.keys(etqSel).reduce((a, k) => a + (etqSel[k] > 0 ? etqSel[k] : 0), 0);
+            document.getElementById('etq-resumen').innerText = n + ' producto' + (n === 1 ? '' : 's') + ' elegido' + (n === 1 ? '' : 's') + ' · ' + tot + ' etiqueta' + (tot === 1 ? '' : 's') + ' por imprimir';
+        }
+        function etqToggle(id, on) { if (on) etqSel[id] = etqSel[id] || 1; else delete etqSel[id]; etqPintar(); }
+        function etqCopias(id, v) { const n = Math.max(1, Math.min(500, parseInt(v, 10) || 1)); etqSel[id] = n; etqPintar(); }
+        function etqMarcarTodos(on) { etqLista().forEach(p => { if (on) etqSel[p.id] = etqSel[p.id] || 1; else delete etqSel[p.id]; }); etqPintar(); }
+        function etqCopiasComoStock() { Object.keys(etqSel).forEach(k => { const p = inventario.find(x => String(x.id) === k); if (p) etqSel[k] = Math.max(1, Math.min(500, Math.round(Number(p.stock) || 1))); }); etqPintar(); }
+        function etqAsignarCodigos() {
+            const sin = inventario.filter(p => p.categoria !== 'SERVICIOS' && !String(p.codigo || '').trim());
+            if (!sin.length) { mostrarAvisoPro('Todos tus productos ya tienen código.', 'Códigos', '✅'); return; }
+            const usados = new Set(inventario.map(p => String(p.codigo || '')));
+            sin.forEach(p => { let c; do { c = '750' + Math.floor(100000000 + Math.random() * 900000000); } while (usados.has(c)); usados.add(c); p.codigo = c; });
+            guardarMemoria(); etqPintar();
+            mostrarAvisoPro('Se asignó un código nuevo a ' + sin.length + ' producto' + (sin.length === 1 ? '' : 's') + '.', 'Códigos', '✅');
+        }
+        function etqHtml(items, tam, precio) {
+            const T = { carta: [66, 27], r5025: [50, 25], r6040: [60, 40], t58: [52, 24], t80: [72, 26] }[tam] || [66, 27];
+            const fs = T[1] >= 35 ? [9, 8, 13] : [7, 6.5, 10];
+            const un = p => '<div style="box-sizing:border-box;width:' + T[0] + 'mm;height:' + T[1] + 'mm;padding:1.6mm 2mm;background:#ffffff;color:#000000;font-family:Arial,Helvetica,sans-serif;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;' + (tam === 'carta' ? 'border:0.2mm dashed #b0b0b0;' : '') + 'page-break-inside:avoid;break-inside:avoid;-webkit-print-color-adjust:exact;print-color-adjust:exact">' +
+                '<div style="font-size:' + fs[0] + 'pt;font-weight:700;line-height:1.1;max-height:2.3em;overflow:hidden;text-transform:uppercase;color:#000000">' + escHtml(p.nombre) + '</div>' +
+                '<div style="flex:1;min-height:6mm;margin:0.8mm 0">' + code128Svg(p.codigo) + '</div>' +
+                '<div style="display:flex;justify-content:space-between;align-items:baseline;color:#000000"><span style="font-size:' + fs[1] + 'pt;font-family:monospace;letter-spacing:.3px">' + escHtml(p.codigo) + '</span>' + (precio ? '<b style="font-size:' + fs[2] + 'pt">' + dinero(p.precio) + '</b>' : '') + '</div></div>';
+            let h = '';
+            if (tam === 'carta') { h = '<div style="display:flex;flex-wrap:wrap;width:198mm;background:#ffffff">' + items.map(un).join('') + '</div>'; }
+            else h = items.map((p, i) => '<div style="' + (tam === 't58' || tam === 't80' ? 'margin:0 auto;width:' + T[0] + 'mm;' : '') + (i < items.length - 1 ? 'page-break-after:always;break-after:page;' : '') + '">' + un(p) + '</div>').join('');
+            const pag = tam === 'carta' ? 'size: letter portrait; margin: 8mm 8mm' : (tam === 't58' ? 'size: 58mm ' + (T[1] + 2) + 'mm; margin: 1mm 0' : tam === 't80' ? 'size: 80mm ' + (T[1] + 2) + 'mm; margin: 1mm 0' : 'size: ' + T[0] + 'mm ' + T[1] + 'mm; margin: 0');
+            return { html: h, pag };
+        }
+        function etqImprimir() {
+            const items = [];
+            // los que no tienen código reciben uno nuevo automáticamente: se imprime y se pega en el producto
+            const usados = new Set(inventario.map(p => String(p.codigo || ''))); let nuevos = 0;
+            Object.keys(etqSel).forEach(k => { const p = inventario.find(x => String(x.id) === k); if (p && etqSel[k] > 0 && !String(p.codigo || '').trim()) { let c; do { c = '750' + Math.floor(100000000 + Math.random() * 900000000); } while (usados.has(c)); usados.add(c); p.codigo = c; nuevos++; } });
+            if (nuevos) { guardarMemoria(); etqPintar(); }
+            Object.keys(etqSel).forEach(k => { const p = inventario.find(x => String(x.id) === k); if (p && etqSel[k] > 0 && String(p.codigo || '').trim()) for (let i = 0; i < etqSel[k]; i++) items.push(p); });
+            if (!items.length) { mostrarAvisoPro('Marca al menos un producto (con código) para imprimir sus etiquetas.', 'Etiquetas', '🏷️'); return; }
+            const r = etqHtml(items, document.getElementById('etq-tam').value, document.getElementById('etq-precio').checked);
+            let area = document.getElementById('area-impresion-ticket');
+            if (!area) { area = document.createElement('div'); area.id = 'area-impresion-ticket'; document.body.appendChild(area); }
+            area.innerHTML = '<div style="background:#ffffff">' + r.html + '</div>';
+            let st = document.getElementById('estilo-pagina-ticket');
+            if (!st) { st = document.createElement('style'); st.id = 'estilo-pagina-ticket'; document.head.appendChild(st); }
+            st.textContent = '@page { ' + r.pag + '; }';
+            document.body.classList.add('imprimiendo-ticket');
+            impresionReporteActiva = true;
+            window.print();
+        }
+
         function evaluarEstadoCaducidad(caducidadStr) {
-            if(!caducidadStr || caducidadStr === 'N/A') return '<span class="text-slate-500">N/A</span>';
+            if(!caducidadStr || caducidadStr === 'N/A') return '<span style="color:#64748b;font-weight:700">N/A</span>';
             const hoy = new Date();
             hoy.setHours(0,0,0,0);
             const proximaSemana = new Date(hoy);
@@ -3814,11 +4102,11 @@ html:not(.dark) .pos-pie{background:#fff}
             const caducidadFormateada = formatearFecha(caducidadStr);
 
             if(fechaCad < hoy) {
-                return `<span class="text-rose-500 font-black animate-pulse">⚠️ VENCIDO (${caducidadFormateada})</span>`;
+                return `<span class="svp-dest-rojo" style="display:inline-block;padding:3px 9px;border-radius:8px;font-weight:900;color:#fff;background:#e11d48;border:1px solid #9f1239">⚠️ VENCIDO (${caducidadFormateada})</span>`;
             } else if(fechaCad <= proximaSemana) {
-                return `<span class="text-amber-400 font-black animate-pulse">⏳ PRÓXIMO (${caducidadFormateada})</span>`;
+                return `<span class="svp-dest-naranja" style="display:inline-block;padding:3px 9px;border-radius:8px;font-weight:900;color:#fff;background:#c2410c;border:1px solid #7c2d12">⏳ PRÓXIMO (${caducidadFormateada})</span>`;
             } else {
-                return `<span class="text-emerald-400">${caducidadFormateada}</span>`;
+                return `<span style="color:#059669;font-weight:900">${caducidadFormateada}</span>`;
             }
         }
 
@@ -3826,7 +4114,7 @@ html:not(.dark) .pos-pie{background:#fff}
             if(esServicio) return '<span class="text-indigo-400">ILIMITADO</span>';
             const p = inventario.find(x => x.id === idProd);
             const min = stockMinimoDe(p), bajo = stock <= min;
-            return `<div class="flex items-center justify-center gap-1.5"><span class="min-w-[3.5rem] text-center p-1 rounded font-black ${bajo ? 'bg-rose-950/50 border border-rose-500 text-rose-400 animate-pulse' : 'bg-slate-950 border border-slate-800 text-emerald-400'}" title="${bajo ? '¡Stock bajo o crítico!' : 'Existencia'}">${fmtCant(stock)}</span><button onclick="abrirAjusteStock(${idProd})" title="Ajustar stock (con motivo)" class="text-amber-400 cursor-pointer">⚖️</button></div><div class="text-[9px] text-slate-500 text-center">mín. ${fmtCant(min)}</div>`;
+            return `<div class="flex items-center justify-center gap-1.5"><span class="min-w-[3.5rem] text-center p-1 rounded font-black ${bajo ? 'svp-dest-rojo' : ''}" style="font-size:15px;${bajo ? 'background:#e11d48;border:1px solid #9f1239;color:#fff' : 'background:#059669;border:1px solid #047857;color:#fff'}" title="${bajo ? '¡Stock bajo o crítico!' : 'Existencia'}">${fmtCant(stock)}</span><button onclick="abrirAjusteStock(${idProd})" title="Ajustar stock (con motivo)" class="text-amber-400 cursor-pointer">⚖️</button></div><div class="text-[10px] text-slate-400 text-center font-bold">mín. ${fmtCant(min)}</div>`;
         }
 
         function verificarAlertasAlInicio() {
@@ -4061,7 +4349,7 @@ html:not(.dark) .pos-pie{background:#fff}
             mostrarLoginSistema();
         }
 
-        // ===== RECUPERAR CONTRASEÑA DEL DUEÑO v12.85.10 =====
+        // ===== RECUPERAR CONTRASEÑA DEL DUEÑO v12.85.17 =====
         // Código firmado por el proveedor: REC1-AAAAMMDD-<aviso único>-<firma>. Sirve solo para este equipo (ID de instalación),
         // vence en la fecha indicada y se puede usar una sola vez. Cambia la clave del DUEÑO; no borra ningún dato.
         function codigosRecuperacionUsados() {
@@ -4374,7 +4662,7 @@ html:not(.dark) .pos-pie{background:#fff}
             corteHoy();
         }
 
-        // ===== CORTE DE CAJA Y REPORTES v12.85.10 =====
+        // ===== CORTE DE CAJA Y REPORTES v12.85.17 =====
         const METODOS_PAGO = ['EFECTIVO', 'TARJETA', 'TRANSFERENCIA'];
         function dinero(n) { return '$' + (Number(n) || 0).toFixed(2); }
         function csvCelda(x) { return '"' + String(x === undefined || x === null ? '' : x).replace(/"/g, '""') + '"'; }
@@ -4384,7 +4672,7 @@ html:not(.dark) .pos-pie{background:#fff}
         function registrarAbonoHistorial(venta, monto, metodo) {
             if (!(monto > 0)) return;
             if (!Array.isArray(venta.abonos)) {
-                // venta anterior a la v12.85.10: el abono previo se conserva como un solo movimiento con la fecha de la venta
+                // venta anterior a la v12.85.17: el abono previo se conserva como un solo movimiento con la fecha de la venta
                 const previo = Math.max(0, (venta.abonado || 0) - monto);
                 venta.abonos = previo > 0 ? [{ fecha: venta.fecha, monto: previo, metodo: venta.con || 'EFECTIVO', antiguo: true }] : [];
             }
@@ -5013,7 +5301,7 @@ html:not(.dark) .pos-pie{background:#fff}
             }
         }
 
-        // v12.85.10: proveedor, categoría y medida también se pueden corregir al editar
+        // v12.85.17: proveedor, categoría y medida también se pueden corregir al editar
         function llenarClasificacionEdicion(p) {
             const caja = document.getElementById('edit-prod-clasif');
             const esServicio = p.categoria === 'SERVICIOS';
@@ -5360,7 +5648,7 @@ html:not(.dark) .pos-pie{background:#fff}
             `).join('') + (_totProds > 120 ? `<div class="col-span-full text-center text-[11px] font-bold text-slate-400 p-3">Mostrando 120 de ${_totProds} productos — escribe o escanea para encontrar el que buscas.</div>` : '');
         }
 
-        // ===== LECTOR DE CÓDIGO DE BARRAS v12.85.10 =====
+        // ===== LECTOR DE CÓDIGO DE BARRAS v12.85.17 =====
         // El lector funciona como un teclado: "escribe" el código muy rápido y pulsa Enter.
         function sonidoLectorActivo() { try { return localStorage.getItem('nexus_sonido_lector') !== '0'; } catch (e) { return true; } }
         function alternarSonidoLector() {
@@ -5617,7 +5905,7 @@ html:not(.dark) .pos-pie{background:#fff}
             if (t.envio > 0) t.total = redondear2(t.total + t.envio);
             return t;
         }
-        // ===== v12.85.10: COSTO DE ENVÍO A DOMICILIO =====
+        // ===== v12.85.17: COSTO DE ENVÍO A DOMICILIO =====
         function aplicarOpcionesPOS() {
             let min = false; try { min = localStorage.getItem('svp_pos_min') === '1'; } catch (e) { }
             const c = document.getElementById('pos-controles'), b = document.getElementById('pos-btn-opciones'); if (!c) return;
@@ -5922,7 +6210,7 @@ html:not(.dark) .pos-pie{background:#fff}
             renderizarCarrito();
 
             if (posSeguirAbierto()) {
-                // v12.85.10: la ventana de venta se queda abierta y lista para la siguiente
+                // v12.85.17: la ventana de venta se queda abierta y lista para la siguiente
                 try { document.getElementById('pos-forma-pago').value = 'CONTADO'; const tp = document.getElementById('pos-tipo-pago'); if (tp) tp.value = 'EFECTIVO'; actualizarEtiquetaFormaPago(); const sc = document.getElementById('pos-select-cliente'); if (sc) sc.value = 'CLIENTE GENERAL'; const bp = document.getElementById('buscador-pos'); if (bp) bp.value = ''; renderizarCarrito(); renderizarGridPOS(); } catch (e) {}
             } else {
                 cerrarModal('modal-nueva-venta');
@@ -5934,7 +6222,7 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
 
-        // ===== DEVOLUCIONES PARCIALES v12.85.10 =====
+        // ===== DEVOLUCIONES PARCIALES v12.85.17 =====
         function devueltoPorItem(v) { const m = {}; (v.devoluciones || []).forEach(d => (d.items || []).forEach(i => { m[i.idx] = (m[i.idx] || 0) + i.cant; })); return m; }
         function totalDevueltoVenta(v) { return (v.devoluciones || []).reduce((a, d) => a + d.total, 0); }
         function ventaTieneRestante(v) { const m = devueltoPorItem(v); return (v.items || []).some((it, idx) => (it.cant - (m[idx] || 0)) > 1e-9); }
@@ -6786,7 +7074,7 @@ html:not(.dark) .pos-pie{background:#fff}
             // La pantalla de inicio se muestra SIEMPRE al abrir el sistema (queda visible hasta que se pulse Entrar / Probar DEMO).
         }
 
-        // ===== DEMO DE 3 DÍAS QUE NO SE REINICIA + MODO CONSULTA v12.85.10 =====
+        // ===== DEMO DE 3 DÍAS QUE NO SE REINICIA + MODO CONSULTA v12.85.17 =====
         // La fecha de inicio de la demo (y el ID del equipo y la clave) se guardan en varios lugares a la vez:
         //   aplicación de escritorio (svpNative) · IndexedDB · localStorage · respaldos.
         // Siempre gana la fecha de inicio MÁS ANTIGUA, así borrar un lugar no reinicia la prueba.
@@ -6919,7 +7207,7 @@ html:not(.dark) .pos-pie{background:#fff}
             window.entrarAlSistema = async function () { const r = await ent.apply(this, arguments); try { pintarBannerConsulta(); } catch (e) {} return r; };
         })();
 
-        // ===== SERVIDOR DE LICENCIAS v12.85.10 =====
+        // ===== SERVIDOR DE LICENCIAS v12.85.17 =====
         // Con servidor: la fecha de inicio de la demo la fija EL SERVIDOR la primera vez que el equipo se conecta,
         // así borrar datos o reinstalar no sirve. Las respuestas vienen firmadas y se verifican con SERVIDOR_PUBLIC_JWK.
         // Sin internet el sistema sigue funcionando con su estado local; en cuanto hay conexión se sincroniza.
@@ -7016,7 +7304,7 @@ html:not(.dark) .pos-pie{background:#fff}
 
         iniciarPantallaInicio();
 
-        // ===== NUBE v12.85.10: copia automática al servidor + panel web de consulta =====
+        // ===== NUBE v12.85.17: copia automática al servidor + panel web de consulta =====
         const NUBE_COLS = ['inventario', 'historialVentas', 'historialGastos', 'clientesSistema', 'cajaEstado', 'turnosCaja', 'ventasAnuladas', 'ventasDevueltas', 'historialCompras', 'proveedoresSistema', 'negocioData', 'acceso'];
         let _nubeTimer = null, _nubeBusy = false, _nubeMsg = '', _nubeFalla = false;
         function nubeCfg() { try { return JSON.parse(localStorage.getItem('svp_nube') || 'null') || {}; } catch (e) { return {}; } }
@@ -7146,7 +7434,7 @@ html:not(.dark) .pos-pie{background:#fff}
         setTimeout(() => { try { if (nubeCfg().token) nubeProgramar(10000); } catch (e) {} }, 8000);
 
 
-        // ===== MULTI-CAJA v12.85.10: varios equipos con los mismos datos =====
+        // ===== MULTI-CAJA v12.85.17: varios equipos con los mismos datos =====
         // Cada equipo anota sus CAMBIOS (ventas nuevas, descuentos de stock, gastos...) y los envía a la nube; los demás los reciben y los aplican.
         // El stock viaja como DIFERENCIA (-2, +10), nunca como valor final: así dos cajas que venden a la vez no se pisan.
         const SY_IDCOLS = {
@@ -7531,7 +7819,7 @@ html:not(.dark) .pos-pie{background:#fff}
         function syGapMs(quietoMs) { return quietoMs < 60000 ? 5000 : (quietoMs < 300000 ? 15000 : 30000); }
         function syArrancar() {
             if (_syIntervalo) return;
-            // v12.85.10: consulta más espaciada cuando nadie usa el equipo (ahorra peticiones al servidor): 5 s en uso, 15 s tras 1 min quieto, 30 s tras 5 min
+            // v12.85.17: consulta más espaciada cuando nadie usa el equipo (ahorra peticiones al servidor): 5 s en uso, 15 s tras 1 min quieto, 30 s tras 5 min
             ['click', 'keydown', 'touchstart', 'mousemove', 'scroll'].forEach(ev => document.addEventListener(ev, syBump, { passive: true, capture: true }));
             _syIntervalo = setInterval(() => { try { const c = nubeCfg(); if (c.token && c.multi && !document.hidden && Date.now() - _syUltPoll >= syGapMs(Date.now() - _syAct) - 600) syRonda(false); } catch (e) {} }, 5000);
             document.addEventListener('visibilitychange', () => { try { const c = nubeCfg(); if (c.token && c.multi && !document.hidden) syRonda(false); } catch (e) {} });
@@ -7603,7 +7891,7 @@ html:not(.dark) .pos-pie{background:#fff}
                     <td class="p-3 text-cyan-400">${escHtml(p.codigo)}</td>
                     <td class="p-3 text-slate-100 font-black">${escHtml(p.nombre)}</td>
                     <td class="p-3">${escHtml(p.categoria)}</td>
-                    <td class="p-3 text-center ${stockEsBajo(p) ? 'text-rose-400 font-black animate-pulse' : 'text-emerald-400'}">${fmtCant(p.stock)}</td>
+                    <td class="p-3 text-center font-black" style="color:${stockEsBajo(p) ? '#e11d48' : '#059669'}">${fmtCant(p.stock)}</td>
                     <td class="p-3">${evaluarEstadoCaducidad(p.caducidad)}</td>
                     <td class="p-3 text-right text-cyan-400">$${p.precio.toFixed(2)}</td>
                 </tr>
@@ -7617,7 +7905,7 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
         // ===================================================================================
-        // v12.85.10 — CANTIDADES DECIMALES · DESCUENTOS · STOCK MÍNIMO · KARDEX · CSV · BLOQUEO
+        // v12.85.17 — CANTIDADES DECIMALES · DESCUENTOS · STOCK MÍNIMO · KARDEX · CSV · BLOQUEO
         // ===================================================================================
         function r3(n) { return Math.round((Number(n) || 0) * 1000) / 1000; }
         function numDec(s) {            // "1,5" -> 1.5 · "" -> NaN
@@ -8025,10 +8313,10 @@ html:not(.dark) .pos-pie{background:#fff}
         })();
 
         // ===================================================================================
-        // v12.85.10 — ALMACENAMIENTO GRANDE: imágenes ligeras, ventas ligeras, listas por páginas, control de espacio
+        // v12.85.17 — ALMACENAMIENTO GRANDE: imágenes ligeras, ventas ligeras, listas por páginas, control de espacio
         // ===================================================================================
         var _terminoInvPrev = '';
-        // ===== v12.85.10: TURNOS POR CAJERO Y REPORTE DE GANANCIA =====
+        // ===== v12.85.17: TURNOS POR CAJERO Y REPORTE DE GANANCIA =====
         function usaTurnos() { return !!(negocioData && negocioData.usarTurnos); }
         function turnoIdActual() { return (usaTurnos() && cajaEstado.turnoId) ? cajaEstado.turnoId : null; }
         function turnoAbierto() { return usaTurnos() ? (turnosCaja.find(t => t.id === cajaEstado.turnoId && !t.cierre) || null) : null; }
@@ -8199,7 +8487,7 @@ html:not(.dark) .pos-pie{background:#fff}
             return h;
         }
 
-        // ===== v12.85.10: REPORTES EN HOJA CARTA =====
+        // ===== v12.85.17: REPORTES EN HOJA CARTA =====
         function imprimirHtmlCarta(html) {
             let area = document.getElementById('area-impresion-ticket');
             if (!area) { area = document.createElement('div'); area.id = 'area-impresion-ticket'; document.body.appendChild(area); }
@@ -8307,20 +8595,20 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
 
-        // ===== v12.85.10: ESCALA AUTOMÁTICA SEGÚN EL TAMAÑO DE LA PANTALLA =====
+        // ===== v12.85.17: ESCALA AUTOMÁTICA SEGÚN EL TAMAÑO DE LA PANTALLA =====
         function aplicarEscalaPantalla() {
             try {
                 const w = window.innerWidth;
                 const z = w >= 3000 ? 1.6 : w >= 2400 ? 1.4 : w >= 1900 ? 1.2 : w >= 1700 ? 1.1 : 1;
                 document.documentElement.style.zoom = z === 1 ? '' : String(z);
-                // v12.85.10: con zoom, 1vh debe valer (alto real / 100 / zoom) para que la ventana no se salga de la pantalla
+                // v12.85.17: con zoom, 1vh debe valer (alto real / 100 / zoom) para que la ventana no se salga de la pantalla
                 document.documentElement.style.setProperty('--vh', (window.innerHeight / 100 / z) + 'px');
             } catch (e) { }
         }
         aplicarEscalaPantalla();
         window.addEventListener('resize', aplicarEscalaPantalla);
 
-        // ===== v12.85.10: FOTOS DE PRODUCTOS (internet por código de barras / archivos) =====
+        // ===== v12.85.17: FOTOS DE PRODUCTOS (internet por código de barras / archivos) =====
         function abrirFotos() {
             abrirModal('modal-fotos');
             document.getElementById('fotos-resultado').innerHTML = '';
@@ -8346,7 +8634,7 @@ html:not(.dark) .pos-pie{background:#fff}
             document.getElementById('fotos-archivos').value = '';
         }
 
-        // ===== v12.85.10: PAGINACIÓN Y LIMPIEZA DE REGISTROS =====
+        // ===== v12.85.17: PAGINACIÓN Y LIMPIEZA DE REGISTROS =====
         function paginar(st, total) {
             const paginas = Math.max(1, Math.ceil(total / st.n));
             if (st.p > paginas) st.p = paginas;
@@ -8547,7 +8835,7 @@ window.addEventListener('error', e => console.error('Error:', e.message));
 window.addEventListener('unhandledrejection', e => console.error('Promesa:', e.reason));
 </script>
 <script>
-/* v12.85.10: etiqueta cada celda con el nombre de su columna para mostrar tarjetas en el celular */
+/* v12.85.17: etiqueta cada celda con el nombre de su columna para mostrar tarjetas en el celular */
 (function(){var t=null;
 function run(){try{document.querySelectorAll('table').forEach(function(tb){
  if(tb.classList.contains('cj-t')||tb.classList.contains('cj-kv'))return;
@@ -8564,9 +8852,9 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 })();
 </script>
 <script>
-/* v12.85.10: aviso de versión nueva en la app de Android (no se actualiza sola: se descarga e instala encima) */
+/* v12.85.17: aviso de versión nueva en la app de Android (no se actualiza sola: se descarga e instala encima) */
 (function(){
- var VER='12.85.10',REPO='dacrohx08-bot/system-ventas-pro',APK='https://github.com/'+REPO+'/releases/latest/download/SystemVentasPro-Android.apk';
+ var VER='12.85.17',REPO='dacrohx08-bot/system-ventas-pro',APK='https://github.com/'+REPO+'/releases/latest/download/SystemVentasPro-Android.apk';
  function esAndroid(){try{return !!(window.Capacitor&&Capacitor.getPlatform&&Capacitor.getPlatform()==='android')}catch(e){return false}}
  function num(v){return String(v||'').replace(/^v/i,'').split('.').map(function(x){return parseInt(x,10)||0})}
  function mayor(a,b){a=num(a);b=num(b);for(var i=0;i<3;i++){if((a[i]||0)>(b[i]||0))return true;if((a[i]||0)<(b[i]||0))return false}return false}
