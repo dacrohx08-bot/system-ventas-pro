@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sistema de punto de venta e inventario">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KPHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHJ4PSIxMDgiIGZpbGw9IiMwYjEyMjAiLz4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjU2IDI1Nikgc2NhbGUoLjc4KSB0cmFuc2xhdGUoLTIwMCAtMjUwKSI+CjxwYXRoIGlkPSJoIiBkPSJNMjAwIDIwQzI5MiAyMCAzNTIgMTAwIDM1MiAyMTVDMzUyIDMyNSAyOTIgNDE4IDIzOCA0NjhDMjE4IDQ4NyAxODIgNDg3IDE2MiA0NjhDMTA4IDQxOCA0OCAzMjUgNDggMjE1QzQ4IDEwMCAxMDggMjAgMjAwIDIwWiIgZmlsbD0iIzIyYzU1ZSIvPgo8cGF0aCBkPSJNNjAgMjM1QzYwIDIwOCAxMzAgMjE1IDE5MCAzMjhDMTI4IDM1MiA2NCAzMDUgNjAgMjM1WiIgZmlsbD0iIzA1MDgwZiIvPgo8cGF0aCBkPSJNMzQwIDIzNUMzNDAgMjA4IDI3MCAyMTUgMjEwIDMyOEMyNzIgMzUyIDMzNiAzMDUgMzQwIDIzNVoiIGZpbGw9IiMwNTA4MGYiLz4KPC9nPjwvc3ZnPgo=">
-    <title>SYSTEM PRO :: SYSTEM VENTAS PRO v12.85.6 (HOLOGRAPHIC POS EDITION)</title>
+    <title>SYSTEM PRO :: SYSTEM VENTAS PRO v12.85.8 (HOLOGRAPHIC POS EDITION)</title>
     <!-- Chart.js -->
     <script>/* Chart.js 4.4.1 (MIT) incluido: las gráficas funcionan sin internet */
 /*!
@@ -102,7 +102,7 @@
         div.ticket-hoja .tk-total { font-size: 1.3em; font-weight: 800; }
         #modal-ticket > div { max-height: calc(94 * var(--vh)); }
         #area-impresion-ticket { display: none; }
-        /* v12.85.6: hoja carta */
+        /* v12.85.8: hoja carta */
         .carta-hoja{font:11px/1.35 Arial,Helvetica,sans-serif;color:#111;background:#fff;width:100%}
         .carta-hoja *{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
         .cj-enc{display:flex;gap:12px;align-items:center;border-bottom:2px solid #1e293b;padding-bottom:8px;margin-bottom:10px}
@@ -347,9 +347,9 @@
 :root{--rp-cy:#22d3ee;--rp-am:#fbbf24;--rp-or:#fb923c;--rp-gr:#34d399;--rp-rs:#fb7185;--rp-bl:#ffffff;--rp-mut:#94a3b8;--rp-tx:#cbd5e1;--rp-ln:#334155;--rp-ln2:#1e293b}
 html:not(.dark){--rp-cy:#0e7490;--rp-am:#b45309;--rp-or:#c2410c;--rp-gr:#047857;--rp-rs:#be123c;--rp-bl:#0f172a;--rp-mut:#475569;--rp-tx:#1e293b;--rp-ln:#94a3b8;--rp-ln2:#cbd5e1}
 .bp:disabled{opacity:.4!important;filter:grayscale(.35);animation:none;cursor:not-allowed;transform:none;box-shadow:none}
-/* v12.85.6: en tema claro el sistema pone texto oscuro a TODOS los botones; los de color fuerte deben llevar texto BLANCO */
+/* v12.85.8: en tema claro el sistema pone texto oscuro a TODOS los botones; los de color fuerte deben llevar texto BLANCO */
 html:not(.dark) button.bp,html:not(.dark) button.text-white,html:not(.dark) button[style*="color:#fff"],html:not(.dark) button[style*="color: #fff"],html:not(.dark) button[style*="color:#ffffff"]{color:#fff!important;font-weight:900!important}
-/* v12.85.6: botones de colores propios (cada uno distinto, se leen igual en tema claro y oscuro) */
+/* v12.85.8: botones de colores propios (cada uno distinto, se leen igual en tema claro y oscuro) */
 .bp{color:#fff!important;border:0;text-shadow:0 1px 1px rgba(0,0,0,.35);box-shadow:0 6px 16px -6px var(--bpc),inset 0 1px 0 rgba(255,255,255,.28);transition:transform .15s ease,filter .15s ease,box-shadow .15s ease;white-space:nowrap}
 .bp:hover{transform:translateY(-2px);filter:brightness(1.12);box-shadow:0 10px 22px -6px var(--bpc),inset 0 1px 0 rgba(255,255,255,.35)}
 .bp:active{transform:translateY(0) scale(.97)}
@@ -383,7 +383,7 @@ html:not(.dark) .rp-btn{background:#e2e8f0;color:#0e7490;border-color:#94a3b8}
 html:not(.dark) .rp-btn:hover{background:#cbd5e1}
 #corte-desde,#corte-hasta,#rep-desde,#rep-hasta{color:var(--rp-bl)}
 
-/* ===== v12.85.6: AJUSTE DE TAMAÑOS A CUALQUIER PANTALLA ===== */
+/* ===== v12.85.8: AJUSTE DE TAMAÑOS A CUALQUIER PANTALLA ===== */
 html{-webkit-text-size-adjust:100%}
 .flex-wrap{flex-wrap:wrap}
 header.shrink-0{height:auto!important;min-height:44px;flex-wrap:wrap;row-gap:4px;column-gap:8px}
@@ -420,7 +420,7 @@ header.shrink-0 #user-display-name{max-width:140px;overflow:hidden;text-overflow
 .pos-pie{position:sticky;bottom:-1px;z-index:5;background:#0b1220;padding-top:8px;margin-top:4px}
 html:not(.dark) .pos-pie{background:#fff}
 
-/* v12.85.6: carrito del punto de venta más compacto (se ven más productos) */
+/* v12.85.8: carrito del punto de venta más compacto (se ven más productos) */
 @media (min-width:821px){#modal-nueva-venta .w-84{width:18.5rem!important}}
 #modal-nueva-venta .w-84{padding:.6rem!important}
 #modal-nueva-venta .w-84 .space-y-3 > * + *{margin-top:.35rem!important}
@@ -436,7 +436,7 @@ html:not(.dark) .pos-pie{background:#fff}
 #pos-controles.pos-min > :not(.pos-toggle):not(.pos-pie):not(.pos-paga):not(#pos-envio-resumen):not(#pos-desc-resumen){display:none!important}\n@media print{html{zoom:1!important}}
 </style>
 <style id="cards-m-css">
-/* v12.85.6: en el celular las tablas se ven como tarjetas (sin cortarse de lado) */
+/* v12.85.8: en el celular las tablas se ven como tarjetas (sin cortarse de lado) */
 @media (max-width:700px){
  table.cards-m{display:block;width:100%!important;min-width:0!important}
  table.cards-m thead{display:none!important}
@@ -457,7 +457,7 @@ html:not(.dark) .pos-pie{background:#fff}
             <div class="flex items-center gap-1.5">
                 <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQwIDEyIDMyMCA0ODYiPgoKPGc+CjxwYXRoIGQ9Ik0yMDAgMjBDMjkyIDIwIDM1MiAxMDAgMzUyIDIxNUMzNTIgMzI1IDI5MiA0MTggMjM4IDQ2OEMyMTggNDg3IDE4MiA0ODcgMTYyIDQ2OEMxMDggNDE4IDQ4IDMyNSA0OCAyMTVDNDggMTAwIDEwOCAyMCAyMDAgMjBaIiBmaWxsPSIjMjJjNTVlIi8+CjxwYXRoIGQ9Ik02MCAyMzVDNjAgMjA4IDEzMCAyMTUgMTkwIDMyOEMxMjggMzUyIDY0IDMwNSA2MCAyMzVaIiBmaWxsPSIjMDUwODBmIi8+CjxwYXRoIGQ9Ik0zNDAgMjM1QzM0MCAyMDggMjcwIDIxNSAyMTAgMzI4QzI3MiAzNTIgMzM2IDMwNSAzNDAgMjM1WiIgZmlsbD0iIzA1MDgwZiIvPgo8L2c+PC9zdmc+Cg==" alt="" style="height:1.4em;width:auto;display:inline-block;vertical-align:middle" class="animate-pulse">
                 <span class="text-xs font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-500">SYSTEM VENTAS PRO</span>
-                <span id="badge-version-modo" class="text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold">v12.85.6 HOLOGRAPHIC</span>
+                <span id="badge-version-modo" class="text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold">v12.85.8 HOLOGRAPHIC</span>
             </div>
 
             <!-- MENÚS DESPLEGABLES CON CONTROL DE PERMISOS -->
@@ -624,6 +624,7 @@ html:not(.dark) .pos-pie{background:#fff}
                 <h1 class="text-sm font-black text-emerald-400 tracking-wider uppercase">📦 Catálogo de Productos & Stock</h1>
                 <div class="flex flex-wrap gap-2 justify-end">
                     <button onclick="abrirAlmacenamiento()" title="Espacio y almacenamiento" class="bp bp-indigo px-3 py-2 rounded-xl font-black text-xs cursor-pointer">💾 Espacio</button>
+                    <button id="btn-por-caducar" onclick="abrirPorCaducar()" class="bp bp-pink px-3 py-2 rounded-xl font-black text-xs cursor-pointer">⏳ Por caducar</button>
                     <button id="btn-por-surtir" onclick="abrirPorSurtir()" class="bp bp-amber px-3 py-2 rounded-xl font-black text-xs cursor-pointer">📋 Por surtir</button>
                     <button onclick="abrirKardex()" class="bp bp-cyan px-3 py-2 rounded-xl font-black text-xs cursor-pointer">📒 Movimientos</button>
                     <button onclick="abrirFotos()" class="bp bp-teal px-3 py-2 rounded-xl font-black text-xs cursor-pointer">🖼️ Fotos</button>
@@ -1585,6 +1586,10 @@ html:not(.dark) .pos-pie{background:#fff}
                         <input type="number" id="compra-costo" step="0.01" placeholder="0.00" class="w-full bg-slate-950 border border-slate-800 p-2 rounded-lg text-purple-400 font-mono font-black">
                     </div>
                 </div>
+                <div>
+                    <label class="text-slate-400 block mb-1">⏳ Fecha de caducidad de estas piezas <span class="text-slate-500 text-[10px]">(opcional — crea un lote)</span></label>
+                    <input type="text" id="compra-caducidad" inputmode="numeric" maxlength="10" placeholder="DD/MM/AAAA" oninput="formatearFechaProducto(this)" autocomplete="off" class="w-full bg-slate-950 border border-slate-800 p-2 rounded-lg text-amber-300 font-mono font-black">
+                </div>
             </div>
 
             <div class="flex justify-end gap-2 pt-3 border-t border-slate-800">
@@ -1736,8 +1741,9 @@ html:not(.dark) .pos-pie{background:#fff}
                         <input type="file" id="edit-prod-imagen" accept="image/*" class="w-full text-[10px] text-slate-400">
                     </div>
                     <div>
-                        <label class="text-slate-400 block mb-1">Fecha de Caducidad (DD/MM/AAAA)</label>
-                        <input type="text" inputmode="numeric" maxlength="10" placeholder="DD/MM/AAAA" oninput="formatearFechaProducto(this)" id="edit-prod-caducidad" autocomplete="off" class="w-full bg-slate-950 border border-slate-800 p-2 rounded-lg text-amber-400 font-mono text-xs">
+                        <label class="text-slate-400 block mb-1">⏳ Caducidad (por lotes)</label>
+                        <button type="button" onclick="abrirLotes(parseInt(document.getElementById('edit-prod-id').value))" class="w-full py-2 rounded-lg bg-amber-500/15 hover:bg-amber-500/25 border border-amber-500/40 text-amber-300 font-black text-xs cursor-pointer">Administrar lotes…</button>
+                        <div id="edit-lotes-res" class="text-[10px] text-slate-400 font-semibold mt-1"></div>
                     </div>
                 </div>
                 <div>
@@ -1980,6 +1986,7 @@ html:not(.dark) .pos-pie{background:#fff}
                             <span class="text-xs font-black text-slate-300 uppercase">TOTAL:</span>
                             <span id="pos-total" class="text-base font-black text-cyan-400 font-mono">$0.00</span>
                         </div>
+                        <label class="flex items-center gap-2 text-[10px] font-black text-slate-400 cursor-pointer uppercase px-1"><input type="checkbox" id="pos-chk-seguir" onchange="alternarPosSeguir()" class="w-4 h-4 rounded bg-slate-900 border-slate-700 cursor-pointer"> Mantener esta ventana abierta después de cobrar</label>
                         <button onclick="cobrarVentaPOS()" class="bp bp-green w-full py-3.5 rounded-xl font-black text-sm tracking-wider uppercase cursor-pointer">💳 COMPLETAR VENTA</button>
                         </div>
                     </div>
@@ -1988,7 +1995,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.6: AJUSTE DE STOCK CON MOTIVO -->
+    <!-- v12.85.8: AJUSTE DE STOCK CON MOTIVO -->
     <div id="modal-ajuste-stock" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-amber-500/50 w-full max-w-md p-5 rounded-2xl shadow-2xl flex flex-col space-y-3">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2027,7 +2034,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.6: KARDEX -->
+    <!-- v12.85.8: KARDEX -->
     <div id="modal-kardex" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-cyan-500/50 w-full max-w-5xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh]">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2049,7 +2056,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.6: POR SURTIR -->
+    <!-- v12.85.8: POR SURTIR -->
     <div id="modal-por-surtir" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-amber-500/50 w-full max-w-3xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh]">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2072,7 +2079,51 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.6: IMPORTAR PRODUCTOS CSV -->
+    <!-- v12.85.8: LOTES DE CADUCIDAD -->
+    <div id="modal-por-caducar" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
+        <div class="glass-panel bg-slate-900 border border-pink-500/50 w-full max-w-4xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh]">
+            <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+                <h3 class="text-xs font-black text-pink-400 tracking-wider uppercase">⏳ Productos por caducar</h3>
+                <button onclick="cerrarModal('modal-por-caducar')" class="btn-cerrar-modal-custom w-7 h-7 rounded-lg flex items-center justify-center text-xs cursor-pointer">✕</button>
+            </div>
+            <p class="text-[11px] text-slate-400 font-semibold">Cada fila es un lote (piezas que caducan el mismo día). Al vender, el sistema descuenta primero el lote que caduca antes. Saca al frente lo más próximo o ponlo en oferta; si ya venció, usa «Dar de baja».</p>
+            <div class="flex flex-wrap gap-3 items-end">
+                <div><label class="text-slate-400 block mb-1 text-[10px] uppercase font-black">Mostrar</label>
+                    <select id="pc-filtro" onchange="pintarPorCaducar()" class="bg-slate-950 border border-slate-700 p-2 rounded-lg text-slate-100 font-bold text-xs"><option value="aviso">Dentro de los días de aviso</option><option value="vencidos">Solo vencidos</option><option value="3">Caducan en 3 días o menos</option><option value="30">Caducan en 30 días o menos</option><option value="todos">Todos los lotes</option></select></div>
+                <div><label class="text-slate-400 block mb-1 text-[10px] uppercase font-black">Avisar con (días)</label>
+                    <input id="pc-dias" type="number" min="1" max="90" onchange="cambiarDiasAvisoCad()" class="w-24 bg-slate-950 border border-slate-700 p-2 rounded-lg text-amber-300 font-mono font-black text-xs"></div>
+            </div>
+            <div id="pc-resumen" class="text-[11px] text-pink-300 font-black"></div>
+            <div class="overflow-auto border border-slate-800 rounded-xl" style="max-height:calc(50 * var(--vh))">
+                <table class="w-full text-left text-xs text-slate-300">
+                    <thead class="bg-pink-950/60 uppercase font-black text-[10px] text-pink-300"><tr><th class="p-2">Producto</th><th class="p-2">Caduca</th><th class="p-2">Estado</th><th class="p-2 text-center">Piezas</th><th class="p-2 text-right">Costo en riesgo</th><th class="p-2 text-center">Acción</th></tr></thead>
+                    <tbody id="pc-body"></tbody>
+                </table>
+            </div>
+            <div class="flex justify-end gap-2 pt-2 border-t border-slate-800">
+                <button onclick="cerrarModal('modal-por-caducar')" class="px-5 py-2 rounded-xl text-xs cursor-pointer btn-cerrar-modal-custom">Cerrar</button>
+            </div>
+        </div>
+    </div>
+    <div id="modal-editar-lotes" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-[140]">
+        <div class="glass-panel bg-slate-900 border border-amber-500/50 w-full max-w-md p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh] overflow-y-auto">
+            <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+                <h3 class="text-xs font-black text-amber-400 tracking-wider uppercase">⏳ Lotes y caducidad</h3>
+                <button onclick="cerrarModal('modal-editar-lotes')" class="btn-cerrar-modal-custom w-7 h-7 rounded-lg flex items-center justify-center text-xs cursor-pointer">✕</button>
+            </div>
+            <div id="lt-nombre" class="text-[11px] font-black text-slate-200"></div>
+            <p class="text-[11px] text-slate-400 font-semibold">Escribe la fecha y cuántas piezas caducan ese día. Las piezas sin fecha no generan avisos.</p>
+            <div id="lt-lista"></div>
+            <button type="button" onclick="lotesAgregarFila()" class="py-2 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-600 text-slate-200 font-black text-xs cursor-pointer">➕ Agregar lote</button>
+            <div id="lt-resumen" class="text-[11px] font-bold"></div>
+            <div class="flex justify-end gap-2 pt-2 border-t border-slate-800">
+                <button onclick="cerrarModal('modal-editar-lotes')" class="px-5 py-2 rounded-xl text-xs cursor-pointer btn-cerrar-modal-custom">Cancelar</button>
+                <button onclick="guardarLotes()" class="bp bp-green px-5 py-2 rounded-xl font-black text-xs cursor-pointer">Guardar lotes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- v12.85.8: IMPORTAR PRODUCTOS CSV -->
     <div id="modal-importar-csv" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-emerald-500/50 w-full max-w-2xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh] overflow-y-auto">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2101,7 +2152,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.6: BLOQUEO AUTOMÁTICO -->
+    <!-- v12.85.8: BLOQUEO AUTOMÁTICO -->
     <div id="modal-autobloqueo" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-slate-700 w-full max-w-sm p-5 rounded-2xl shadow-2xl flex flex-col space-y-3">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2125,7 +2176,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.6: ESPACIO / ALMACENAMIENTO -->
+    <!-- v12.85.8: ESPACIO / ALMACENAMIENTO -->
     <div id="modal-almacenamiento" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-cyan-500/50 w-full max-w-lg p-5 rounded-2xl shadow-2xl flex flex-col space-y-3">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2143,7 +2194,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.6: LIMPIEZA DE REGISTROS -->
+    <!-- v12.85.8: LIMPIEZA DE REGISTROS -->
     <div id="modal-limpieza" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-rose-500/50 w-full max-w-md p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh] overflow-y-auto">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2170,7 +2221,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.6: CIERRE DE TURNO -->
+    <!-- v12.85.8: CIERRE DE TURNO -->
     <div id="modal-cerrar-turno" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel overflow-y-auto bg-slate-900 border border-rose-500/50 w-full max-w-lg p-5 rounded-2xl shadow-2xl flex flex-col space-y-3" style="max-height:calc(94 * var(--vh))">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2198,7 +2249,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.6: HISTORIAL DE TURNOS -->
+    <!-- v12.85.8: HISTORIAL DE TURNOS -->
     <div id="modal-turnos" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel overflow-y-auto bg-slate-900 border border-cyan-500/50 w-full max-w-2xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3" style="max-height:calc(94 * var(--vh))">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2209,7 +2260,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.6: FOTOS DE PRODUCTOS -->
+    <!-- v12.85.8: FOTOS DE PRODUCTOS -->
     <div id="modal-fotos" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-pink-500/50 w-full max-w-lg p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh] overflow-y-auto text-xs">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2354,13 +2405,13 @@ html:not(.dark) .pos-pie{background:#fff}
                 </div>
             </div>
 
-            <p class="lp-nota" style="text-align:center; margin-top: 1.25rem;">SYSTEM VENTAS PRO v12.85.6 · Tus datos se guardan en tu propio equipo.</p>
+            <p class="lp-nota" style="text-align:center; margin-top: 1.25rem;">SYSTEM VENTAS PRO v12.85.8 · Tus datos se guardan en tu propio equipo.</p>
             <p id="lp-pruebas" style="display:none; text-align:center; margin-top:.75rem;"><a href="javascript:resetearADemoPruebas()" style="color:#fbbf24; font-size:.75rem; font-weight:700; text-decoration:underline;">Restablecer a DEMO (solo pruebas del dueño)</a></p>
         </div>
     </div>
 
     <!-- SCRIPT GENERAL FUNCIONAL (MODO 100% MANUAL + FORMATO DD/MM/YYYY) -->
-    <!-- ALMACENAMIENTO GRANDE v12.85.6: los datos pesados (productos, ventas, compras, gastos, clientes...) viven en IndexedDB (cientos de MB)
+    <!-- ALMACENAMIENTO GRANDE v12.85.8: los datos pesados (productos, ventas, compras, gastos, clientes...) viven en IndexedDB (cientos de MB)
          y las fotos de los productos en un almacén aparte. Si el navegador no lo permite, el sistema sigue como antes (localStorage). -->
     <script id="svp-boot">
     (function () {
@@ -2657,10 +2708,10 @@ html:not(.dark) .pos-pie{background:#fff}
             try { pintarBannerConsulta(); } catch (e) {}
             const badge = document.getElementById('badge-version-modo');
             if(licenciaData.tipo === "PRO") {
-                badge.innerText = "v12.85.6 PRO";
+                badge.innerText = "v12.85.8 PRO";
                 badge.className = "text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold";
             } else {
-                badge.innerText = "v12.85.6 HOLOGRAPHIC";
+                badge.innerText = "v12.85.8 HOLOGRAPHIC";
                 badge.className = "text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold";
             }
         }
@@ -2714,7 +2765,7 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
 
-        // ===== RESPALDO AUTOMÁTICO A CARPETA v12.85.6 (File System Access API: Chrome / Edge) =====
+        // ===== RESPALDO AUTOMÁTICO A CARPETA v12.85.8 (File System Access API: Chrome / Edge) =====
         let respHandle = null;              // carpeta elegida por el usuario
         let respEstado = 'sin-carpeta';     // 'activo' | 'permiso' | 'sin-carpeta' | 'no-soportado' | 'error'
         let respErrorTxt = '';
@@ -2840,7 +2891,7 @@ html:not(.dark) .pos-pie{background:#fff}
         //   quitarCarpetaExtra()         -> Promise<void>
         //   abrirCarpetaRespaldos()      -> Promise<void>
         function modoEscritorio() { return !!(window.svpNative && window.svpNative.esEscritorio); }
-        // ----- v12.85.6: ACTUALIZACIONES DE LA APLICACIÓN DE ESCRITORIO (como una tienda de apps) -----
+        // ----- v12.85.8: ACTUALIZACIONES DE LA APLICACIÓN DE ESCRITORIO (como una tienda de apps) -----
         let updEstado = { estado: 'inactivo' };
         function svpTextoActualizacion(u) {
             switch (u.estado) {
@@ -3408,7 +3459,7 @@ html:not(.dark) .pos-pie{background:#fff}
 
         let idUsuarioActivo = localStorage.getItem('nexus_usuario_activo_id') || (usuariosSistema[0] ? usuariosSistema[0].id : 1);
 
-        var _pagInv = { p: 1, n: 50 }, _pagVen = { p: 1, n: 50 };   // v12.85.6: antes que cualquier pantalla
+        var _pagInv = { p: 1, n: 50 }, _pagVen = { p: 1, n: 50 };   // v12.85.8: antes que cualquier pantalla
         let clientesSistema = JSON.parse(localStorage.getItem('nexus_clientes_v9')) || [];
         clientesSistema.forEach(c => {
             if(!c.telefono) c.telefono = 'N/A';
@@ -3522,6 +3573,7 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
         function guardarMemoria() {
+          try { lotesNormalizarTodos(); } catch (e) {}
           try {
             svpAlm.guardarImagenes(inventario);
             localStorage.setItem('nexus_inventario', JSON.stringify(svpAlm.sinImagen(inventario)));
@@ -3560,12 +3612,134 @@ html:not(.dark) .pos-pie{background:#fff}
           }
         }
 
+        // ===== LOTES DE CADUCIDAD v12.85.8 =====
+        // Cada producto puede tener varios lotes {f: 'AAAA-MM-DD', c: piezas}. El stock manda: si baja (venta, merma, ajuste),
+        // se descuenta primero del lote que caduca antes. p.caducidad siempre guarda la fecha del lote más próximo.
+        function diasAvisoCad() { try { const n = parseInt(localStorage.getItem('svp_cad_dias'), 10); return n >= 1 && n <= 90 ? n : 7; } catch (e) { return 7; } }
+        function fechaISOValida(x) { return typeof x === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(x); }
+        function diasParaFecha(iso) { const q = String(iso).split('-').map(Number), h = new Date(); h.setHours(0, 0, 0, 0); return Math.round((new Date(q[0], q[1] - 1, q[2]) - h) / 86400000); }
+        function lotesNormalizar(p) {
+            if (!p || p.categoria === 'SERVICIOS' || p.esServicioVariable) return false;
+            let cambio = false;
+            if (!Array.isArray(p.lotes)) {
+                if (fechaISOValida(p.caducidad) && Number(p.stock) > 0) { p.lotes = [{ f: p.caducidad, c: r3(Number(p.stock)) }]; cambio = true; }
+                else return false;
+            }
+            const mapa = {};
+            p.lotes.forEach(l => { if (l && fechaISOValida(l.f) && Number(l.c) > 0) mapa[l.f] = r3((mapa[l.f] || 0) + Number(l.c)); });
+            let lots = Object.keys(mapa).sort().map(f => ({ f, c: mapa[f] }));
+            let sobra = r3(lots.reduce((a, l) => a + l.c, 0) - (Number(p.stock) || 0));
+            for (let i = 0; i < lots.length && sobra > 0.0005; i++) { const q = Math.min(lots[i].c, sobra); lots[i].c = r3(lots[i].c - q); sobra = r3(sobra - q); }
+            lots = lots.filter(l => l.c > 0.0005);
+            const cad = lots.length ? lots[0].f : 'N/A';
+            if (JSON.stringify(lots) !== JSON.stringify(p.lotes) || p.caducidad !== cad) { p.lotes = lots; p.caducidad = cad; cambio = true; }
+            return cambio;
+        }
+        function lotesNormalizarTodos() { (inventario || []).forEach(lotesNormalizar); }
+        function lotesCuando(d) { return d < 0 ? (d === -1 ? 'venció ayer' : 'vencieron hace ' + (-d) + ' días') : d === 0 ? 'caducan HOY' : d === 1 ? 'caducan mañana' : 'caducan en ' + d + ' días'; }
+        function lotesEtiquetaPOS(p) {
+            if (!Array.isArray(p.lotes) || !p.lotes.length) return '';
+            const lim = diasAvisoCad(); let c = 0, dmin = null;
+            p.lotes.forEach(l => { const d = diasParaFecha(l.f); if (d <= lim) { c = r3(c + l.c); if (dmin === null || d < dmin) dmin = d; } });
+            if (!c) return '';
+            const col = dmin < 0 ? '#fb7185' : dmin <= 3 ? '#fb923c' : '#facc15';
+            return '<span style="display:block;margin-top:2px;font-size:9px;font-weight:900;color:' + col + '">⏳ ' + fmtCant(c) + ' ' + lotesCuando(dmin).replace('caducan', c === 1 ? 'caduca' : 'caducan').replace('vencieron', c === 1 ? 'venció' : 'vencieron') + '</span>';
+        }
+        function lotesPorCaducar(maxDias) {
+            lotesNormalizarTodos();
+            const r = [];
+            (inventario || []).forEach(p => { if (!Array.isArray(p.lotes)) return; p.lotes.forEach(l => { const d = diasParaFecha(l.f); if (d <= maxDias) r.push({ p, f: l.f, c: l.c, d, riesgo: redondear2(l.c * (Number(p.costo) || 0)) }); }); });
+            return r.sort((a, b) => a.d - b.d || String(a.p.nombre).localeCompare(String(b.p.nombre)));
+        }
+        function actualizarBotonCaducar() {
+            const b = document.getElementById('btn-por-caducar'); if (!b) return;
+            const n = lotesPorCaducar(diasAvisoCad()).length;
+            b.innerText = '⏳ Por caducar (' + n + ')'; b.style.opacity = '1'; b.style.filter = n ? '' : 'saturate(.55)';
+        }
+        function abrirPorCaducar() {
+            document.getElementById('pc-dias').value = diasAvisoCad();
+            document.getElementById('pc-filtro').value = 'aviso';
+            pintarPorCaducar(); abrirModal('modal-por-caducar');
+        }
+        function cambiarDiasAvisoCad() {
+            const n = parseInt(document.getElementById('pc-dias').value, 10);
+            if (!(n >= 1 && n <= 90)) { mostrarAvisoPro('Escribe un número de días entre 1 y 90.', 'Días de aviso', '⚠️'); return; }
+            try { localStorage.setItem('svp_cad_dias', String(n)); } catch (e) {}
+            pintarPorCaducar(); actualizarBotonCaducar(); try { renderizarGridPOS(); } catch (e) {}
+        }
+        function pintarPorCaducar() {
+            const f = document.getElementById('pc-filtro').value;
+            const max = f === 'vencidos' ? -1 : f === '3' ? 3 : f === '30' ? 30 : f === 'todos' ? 99999 : diasAvisoCad();
+            const l = lotesPorCaducar(max);
+            const est = d => d < 0 ? '<span style="color:#fb7185;font-weight:900">VENCIDO hace ' + (-d) + (d === -1 ? ' día' : ' días') + '</span>' : d === 0 ? '<span style="color:#fb923c;font-weight:900">HOY</span>' : d === 1 ? '<span style="color:#fb923c;font-weight:900">MAÑANA</span>' : '<span style="color:' + (d <= 3 ? '#fb923c' : d <= diasAvisoCad() ? '#facc15' : '#34d399') + ';font-weight:900">en ' + d + ' días</span>';
+            document.getElementById('pc-body').innerHTML = l.length ? l.map(x => '<tr class="border-b border-slate-800/40"><td class="p-2 font-black text-slate-100">' + escHtml(x.p.nombre) + '</td><td class="p-2 font-mono">' + isoADMY(x.f) + '</td><td class="p-2">' + est(x.d) + '</td><td class="p-2 text-center font-mono font-black text-cyan-400">' + fmtCant(x.c) + '</td><td class="p-2 text-right font-mono text-purple-300">$' + x.riesgo.toFixed(2) + '</td><td class="p-2 text-center"><button onclick="darDeBajaLote(' + x.p.id + ',\'' + x.f + '\')" class="px-2 py-1 rounded-lg bg-rose-600 hover:bg-rose-500 text-white font-black text-[10px] cursor-pointer">Dar de baja</button></td></tr>').join('') : '<tr><td colspan="6" class="p-6 text-center text-emerald-400 font-bold">✅ No hay lotes en este rango.</td></tr>';
+            const pz = r3(l.reduce((a, x) => a + x.c, 0)), riesgo = redondear2(l.reduce((a, x) => a + x.riesgo, 0));
+            document.getElementById('pc-resumen').innerText = l.length + ' lote(s) · ' + fmtCant(pz) + ' pieza(s) · $' + riesgo.toFixed(2) + ' de costo en riesgo';
+        }
+        function darDeBajaLote(id, f) {
+            const p = inventario.find(x => x.id === id); if (!p || !Array.isArray(p.lotes)) return;
+            const l = p.lotes.find(x => x.f === f); if (!l) return;
+            mostrarConfirmacionPro('Se sacarán ' + fmtCant(l.c) + ' pieza(s) de «' + p.nombre + '» (lote ' + isoADMY(f) + ') del inventario y se registrarán como merma. ¿Continuar?', 'Dar de baja lote', '🗑️', () => {
+                const q = l.c, antes = p.stock;
+                p.lotes = p.lotes.filter(x => x.f !== f);
+                p.stock = Math.max(0, r3(p.stock - q));
+                registrarMovimiento(p, 'MERMA', -q, antes, 'Baja por caducidad (lote ' + isoADMY(f) + ')', '');
+                lotesNormalizar(p); guardarMemoria(); renderizarInventario(); pintarPorCaducar(); actualizarBotonCaducar(); actualizarBotonSurtir();
+            });
+        }
+        // ----- editor de lotes de un producto -----
+        var _lotesProdId = null, _lotesTmp = [];
+        function resumenLotesProducto(p) {
+            if (!Array.isArray(p.lotes) || !p.lotes.length) return 'Sin fechas registradas.';
+            const l = p.lotes[0];
+            return 'Primero en caducar: ' + isoADMY(l.f) + ' (' + fmtCant(l.c) + ' pz)' + (p.lotes.length > 1 ? ' · ' + p.lotes.length + ' lotes' : '');
+        }
+        function abrirLotes(id) {
+            const p = inventario.find(x => x.id === id); if (!p) return;
+            lotesNormalizar(p); _lotesProdId = id;
+            _lotesTmp = (p.lotes || []).map(l => ({ f: isoADMY(l.f), c: l.c }));
+            document.getElementById('lt-nombre').innerText = p.nombre + ' · stock actual: ' + fmtCant(p.stock);
+            pintarLotes(); abrirModal('modal-editar-lotes');
+        }
+        function pintarLotes() {
+            const cls = 'bg-slate-950 border border-slate-700 p-2 rounded-lg text-amber-300 font-mono font-black text-xs';
+            document.getElementById('lt-lista').innerHTML = _lotesTmp.length ? _lotesTmp.map((l, i) => '<div style="display:grid;grid-template-columns:1fr 90px 36px;gap:6px;margin-bottom:6px"><input type="text" inputmode="numeric" maxlength="10" placeholder="DD/MM/AAAA" value="' + escHtml(l.f) + '" oninput="formatearFechaProducto(this);_lotesTmp[' + i + '].f=this.value" class="' + cls + '"><input type="number" min="0" step="any" placeholder="Piezas" value="' + escHtml(String(l.c)) + '" oninput="_lotesTmp[' + i + '].c=this.value;resumenEditorLotes()" class="' + cls + '"><button type="button" onclick="_lotesTmp.splice(' + i + ',1);pintarLotes()" class="rounded-lg bg-rose-600 hover:bg-rose-500 text-white text-xs cursor-pointer">🗑️</button></div>').join('') : '<p class="text-[11px] text-slate-400 font-semibold">Este producto no tiene lotes. Pulsa «Agregar lote».</p>';
+            resumenEditorLotes();
+        }
+        function resumenEditorLotes() {
+            const p = inventario.find(x => x.id === _lotesProdId); if (!p) return;
+            const suma = r3(_lotesTmp.reduce((a, l) => a + (parseFloat(l.c) > 0 ? parseFloat(l.c) : 0), 0)), res = r3(p.stock - suma);
+            const el = document.getElementById('lt-resumen');
+            el.style.color = res < 0 ? '#fb7185' : '#94a3b8';
+            el.innerText = res < 0 ? 'Los lotes suman ' + fmtCant(suma) + ' y el stock es ' + fmtCant(p.stock) + '. Baja alguna cantidad.' : 'Con fecha: ' + fmtCant(suma) + ' pz · Sin fecha: ' + fmtCant(res) + ' pz';
+        }
+        function lotesAgregarFila() { _lotesTmp.push({ f: '', c: '' }); pintarLotes(); }
+        function guardarLotes() {
+            const p = inventario.find(x => x.id === _lotesProdId); if (!p) return;
+            const res = [];
+            for (const l of _lotesTmp) {
+                const vacioF = !String(l.f).trim(), vacioC = String(l.c).trim() === '';
+                if (vacioF && vacioC) continue;
+                const iso = convertirFechaProductoAISO(String(l.f));
+                if (iso === null || iso === 'N/A') { mostrarAvisoPro('Escribe cada fecha con formato DD/MM/AAAA.', 'Fecha incorrecta', '⚠️'); return; }
+                let c = numDec(String(l.c)); if (!isFinite(c) || c <= 0) { mostrarAvisoPro('Escribe cuántas piezas tiene el lote del ' + isoADMY(iso) + '.', 'Cantidad incorrecta', '⚠️'); return; }
+                c = esFraccionable(p) ? r3(c) : Math.round(c);
+                res.push({ f: iso, c });
+            }
+            const suma = r3(res.reduce((a, l) => a + l.c, 0));
+            if (suma > p.stock + 0.0005) { mostrarAvisoPro('Los lotes suman ' + fmtCant(suma) + ' pieza(s) pero el stock del producto es ' + fmtCant(p.stock) + '. Corrige las cantidades.', 'Lotes mayores al stock', '⚠️'); return; }
+            p.lotes = res; p.caducidad = 'N/A'; lotesNormalizar(p);
+            guardarMemoria(); renderizarInventario(); actualizarBotonCaducar();
+            const r = document.getElementById('edit-lotes-res'); if (r && Number(document.getElementById('edit-prod-id').value) === p.id) r.innerText = resumenLotesProducto(p);
+            cerrarModal('modal-editar-lotes');
+        }
+
         function evaluarEstadoCaducidad(caducidadStr) {
             if(!caducidadStr || caducidadStr === 'N/A') return '<span class="text-slate-500">N/A</span>';
             const hoy = new Date();
             hoy.setHours(0,0,0,0);
             const proximaSemana = new Date(hoy);
-            proximaSemana.setDate(hoy.getDate() + 7);
+            proximaSemana.setDate(hoy.getDate() + diasAvisoCad());
             
             const [ano, mes, dia] = caducidadStr.split('-').map(Number);
             const fechaCad = new Date(ano, mes - 1, dia);
@@ -3595,14 +3769,19 @@ html:not(.dark) .pos-pie{background:#fff}
             const hoy = new Date();
             hoy.setHours(0,0,0,0);
             const proximaSemana = new Date(hoy);
-            proximaSemana.setDate(hoy.getDate() + 7);
+            proximaSemana.setDate(hoy.getDate() + diasAvisoCad());
 
             let alertasCaducidad = [];
             let alertasStock = [];
 
             inventario.forEach(p => {
                 if(p.categoria !== 'SERVICIOS') {
-                    if(p.caducidad && p.caducidad !== 'N/A') {
+                    lotesNormalizar(p);
+                    if (Array.isArray(p.lotes) && p.lotes.length) {
+                        let cc = 0, dm = null;
+                        p.lotes.forEach(l => { const d = diasParaFecha(l.f); if (d <= diasAvisoCad()) { cc = r3(cc + l.c); if (dm === null || d < dm) dm = d; } });
+                        if (cc) alertasCaducidad.push('• ' + p.nombre + ': ' + fmtCant(cc) + ' pz ' + (dm < 0 ? 'VENCIDAS' : lotesCuando(dm)));
+                    } else if(p.caducidad && p.caducidad !== 'N/A') {
                         const [ano, mes, dia] = p.caducidad.split('-').map(Number);
                         const fechaCad = new Date(ano, mes - 1, dia);
                         fechaCad.setHours(0,0,0,0);
@@ -3618,7 +3797,7 @@ html:not(.dark) .pos-pie{background:#fff}
 
             let mensajeFinal = "";
             if(alertasCaducidad.length > 0) {
-                mensajeFinal += `⏳ PRODUCTOS POR CADUCAR (${alertasCaducidad.length}):\n` + alertasCaducidad.slice(0,3).join('\n') + `\n\n`;
+                mensajeFinal += `⏳ PRODUCTOS POR CADUCAR (${alertasCaducidad.length}):\n` + alertasCaducidad.slice(0,3).join('\n') + `\n(Abre Inventario → ⏳ Por caducar para ver todo)\n\n`;
             }
             if(alertasStock.length > 0) {
                 mensajeFinal += `📉 PRODUCTOS CON STOCK BAJO (${alertasStock.length}):\n` + alertasStock.slice(0,3).join('\n');
@@ -3816,7 +3995,7 @@ html:not(.dark) .pos-pie{background:#fff}
             mostrarLoginSistema();
         }
 
-        // ===== RECUPERAR CONTRASEÑA DEL DUEÑO v12.85.6 =====
+        // ===== RECUPERAR CONTRASEÑA DEL DUEÑO v12.85.8 =====
         // Código firmado por el proveedor: REC1-AAAAMMDD-<aviso único>-<firma>. Sirve solo para este equipo (ID de instalación),
         // vence en la fecha indicada y se puede usar una sola vez. Cambia la clave del DUEÑO; no borra ningún dato.
         function codigosRecuperacionUsados() {
@@ -4129,7 +4308,7 @@ html:not(.dark) .pos-pie{background:#fff}
             corteHoy();
         }
 
-        // ===== CORTE DE CAJA Y REPORTES v12.85.6 =====
+        // ===== CORTE DE CAJA Y REPORTES v12.85.8 =====
         const METODOS_PAGO = ['EFECTIVO', 'TARJETA', 'TRANSFERENCIA'];
         function dinero(n) { return '$' + (Number(n) || 0).toFixed(2); }
         function csvCelda(x) { return '"' + String(x === undefined || x === null ? '' : x).replace(/"/g, '""') + '"'; }
@@ -4139,7 +4318,7 @@ html:not(.dark) .pos-pie{background:#fff}
         function registrarAbonoHistorial(venta, monto, metodo) {
             if (!(monto > 0)) return;
             if (!Array.isArray(venta.abonos)) {
-                // venta anterior a la v12.85.6: el abono previo se conserva como un solo movimiento con la fecha de la venta
+                // venta anterior a la v12.85.8: el abono previo se conserva como un solo movimiento con la fecha de la venta
                 const previo = Math.max(0, (venta.abonado || 0) - monto);
                 venta.abonos = previo > 0 ? [{ fecha: venta.fecha, monto: previo, metodo: venta.con || 'EFECTIVO', antiguo: true }] : [];
             }
@@ -4546,6 +4725,7 @@ html:not(.dark) .pos-pie{background:#fff}
             proveedoresSistema.map(p => `<option value="${p.empresa}">${p.empresa} (${p.contacto})</option>`).join('');
 
             document.getElementById('compra-buscador-prod').value = '';
+            { const cc = document.getElementById('compra-caducidad'); if (cc) cc.value = ''; }
             renderizarSelectProductosCompra('');
         }
 
@@ -4579,9 +4759,14 @@ html:not(.dark) .pos-pie{background:#fff}
             const usuario = document.getElementById('compra-usuario').value;
             
             const prod = inventario.find(p => p.id === idProd);
+            const cadTxt = (document.getElementById('compra-caducidad').value || '').trim();
+            const cadISO = cadTxt ? convertirFechaProductoAISO(cadTxt) : '';
+            if (cadTxt && !fechaISOValida(cadISO)) { mostrarAvisoPro('Escribe la fecha de caducidad con formato DD/MM/AAAA, o déjala vacía.', 'Fecha incorrecta', '⚠️'); return; }
             if(prod && cant > 0) {
+                lotesNormalizar(prod);
                 const stockAntes = prod.stock;
                 prod.stock = r3(prod.stock + cant);
+                if (cadISO) { if (!Array.isArray(prod.lotes)) prod.lotes = []; prod.lotes.push({ f: cadISO, c: cant }); lotesNormalizar(prod); }
                 registrarMovimiento(prod, 'COMPRA', cant, stockAntes, 'Compra a ' + proveedor, '');
                 if(costo > 0) prod.costo = costo;
 
@@ -4762,7 +4947,7 @@ html:not(.dark) .pos-pie{background:#fff}
             }
         }
 
-        // v12.85.6: proveedor, categoría y medida también se pueden corregir al editar
+        // v12.85.8: proveedor, categoría y medida también se pueden corregir al editar
         function llenarClasificacionEdicion(p) {
             const caja = document.getElementById('edit-prod-clasif');
             const esServicio = p.categoria === 'SERVICIOS';
@@ -4793,12 +4978,8 @@ html:not(.dark) .pos-pie{background:#fff}
             document.getElementById('edit-prod-iva').value = (p.ivaTasa === undefined || p.ivaTasa === null) ? '' : String(p.ivaTasa);
             document.getElementById('edit-prod-stockmin').value = (typeof p.stockMin === 'number') ? String(p.stockMin) : '';
             document.getElementById('edit-prod-fraccion').checked = esFraccionable(p);
-            const inputCad = document.getElementById('edit-prod-caducidad');
-            if (p.caducidad && p.caducidad !== 'N/A') {
-                const partes = String(p.caducidad).match(/^(\d{4})-(\d{2})-(\d{2})$/);
-                inputCad.value = partes ? `${partes[3]}/${partes[2]}/${partes[1]}` : String(p.caducidad);
-            } else { inputCad.value = ''; }
-            inputCad.type = 'text';
+            lotesNormalizar(p);
+            document.getElementById('edit-lotes-res').innerText = resumenLotesProducto(p);
             abrirModal('modal-editar-producto');
         }
 
@@ -4808,8 +4989,6 @@ html:not(.dark) .pos-pie{background:#fff}
             const nombre = document.getElementById('edit-prod-nombre').value.trim().toUpperCase();
             const costo = parseFloat(document.getElementById('edit-prod-costo').value) || 0;
             const precio = parseFloat(document.getElementById('edit-prod-precio').value) || 0;
-            const fechaCaducidadEntrada = document.getElementById('edit-prod-caducidad').value;
-            const caducidad = convertirFechaProductoAISO(fechaCaducidadEntrada);
             const fileInput = document.getElementById('edit-prod-imagen');
             const stockMinTxtE = document.getElementById('edit-prod-stockmin').value.trim();
             const stockMinE = stockMinTxtE === '' ? undefined : numDec(stockMinTxtE);
@@ -4817,11 +4996,6 @@ html:not(.dark) .pos-pie{background:#fff}
 
             if(!nombre) {
                 mostrarAvisoPro("El nombre del producto no puede estar vacío.", "Validación", "⚠️");
-                return;
-            }
-            if (caducidad === null) {
-                mostrarAvisoPro("Escribe una fecha válida con formato DD/MM/AAAA.", "Fecha incorrecta", "⚠️");
-                document.getElementById('edit-prod-caducidad').focus();
                 return;
             }
 
@@ -4844,7 +5018,6 @@ html:not(.dark) .pos-pie{background:#fff}
                 }
                 const ivaEditado = leerIvaSelect('edit-prod-iva');
                 if (ivaEditado === undefined) delete p.ivaTasa; else p.ivaTasa = ivaEditado;
-                p.caducidad = caducidad;
                 if (stockMinE === undefined) delete p.stockMin; else p.stockMin = r3(stockMinE);
                 p.fraccion = document.getElementById('edit-prod-fraccion').checked;
 
@@ -5028,6 +5201,7 @@ html:not(.dark) .pos-pie{background:#fff}
             actualizarEtiquetaFormaPago();
             renderizarCarrito();
             abrirModal('modal-nueva-venta');
+            try { const ck = document.getElementById('pos-chk-seguir'); if (ck) ck.checked = posSeguirAbierto(); } catch (e) {}
             renderizarCategoriasPOS();
             renderizarGridPOS();
             
@@ -5114,13 +5288,13 @@ html:not(.dark) .pos-pie{background:#fff}
 
                     <div class="text-center z-10 pb-0.5">
                         <p class="font-extrabold text-slate-100 text-[11px] uppercase truncate tracking-wide" title="${escHtml(p.nombre)}">${escHtml(p.nombre)}</p>
-                        <span class="text-[9px] ${p.categoria === 'SERVICIOS' ? 'text-indigo-400' : 'text-emerald-400'} font-mono font-bold block mt-0.5">${p.categoria === 'SERVICIOS' ? '⚡ SERVICIO' : p.stock + ' disponibles'}</span>
+                        <span class="text-[9px] ${p.categoria === 'SERVICIOS' ? 'text-indigo-400' : 'text-emerald-400'} font-mono font-bold block mt-0.5">${p.categoria === 'SERVICIOS' ? '⚡ SERVICIO' : p.stock + ' disponibles'}</span>${p.categoria === 'SERVICIOS' ? '' : lotesEtiquetaPOS(p)}
                     </div>
                 </div>
             `).join('') + (_totProds > 120 ? `<div class="col-span-full text-center text-[11px] font-bold text-slate-400 p-3">Mostrando 120 de ${_totProds} productos — escribe o escanea para encontrar el que buscas.</div>` : '');
         }
 
-        // ===== LECTOR DE CÓDIGO DE BARRAS v12.85.6 =====
+        // ===== LECTOR DE CÓDIGO DE BARRAS v12.85.8 =====
         // El lector funciona como un teclado: "escribe" el código muy rápido y pulsa Enter.
         function sonidoLectorActivo() { try { return localStorage.getItem('nexus_sonido_lector') !== '0'; } catch (e) { return true; } }
         function alternarSonidoLector() {
@@ -5377,7 +5551,7 @@ html:not(.dark) .pos-pie{background:#fff}
             if (t.envio > 0) t.total = redondear2(t.total + t.envio);
             return t;
         }
-        // ===== v12.85.6: COSTO DE ENVÍO A DOMICILIO =====
+        // ===== v12.85.8: COSTO DE ENVÍO A DOMICILIO =====
         function aplicarOpcionesPOS() {
             let min = false; try { min = localStorage.getItem('svp_pos_min') === '1'; } catch (e) { }
             const c = document.getElementById('pos-controles'), b = document.getElementById('pos-btn-opciones'); if (!c) return;
@@ -5612,6 +5786,8 @@ html:not(.dark) .pos-pie{background:#fff}
             enfocarBuscadorPOS();
         }
 
+        function posSeguirAbierto() { try { return localStorage.getItem('svp_pos_seguir') !== '0'; } catch (e) { return true; } }
+        function alternarPosSeguir() { const c = document.getElementById('pos-chk-seguir'); try { localStorage.setItem('svp_pos_seguir', c && c.checked ? '1' : '0'); } catch (e) {} }
         function cobrarVentaPOS() {
             if(carrito.length === 0) return;
             const tot = calcularTotalesCarrito();
@@ -5679,7 +5855,12 @@ html:not(.dark) .pos-pie{background:#fff}
             restablecerIvaPOS();
             renderizarCarrito();
 
-            cerrarModal('modal-nueva-venta');
+            if (posSeguirAbierto()) {
+                // v12.85.8: la ventana de venta se queda abierta y lista para la siguiente
+                try { document.getElementById('pos-forma-pago').value = 'CONTADO'; const tp = document.getElementById('pos-tipo-pago'); if (tp) tp.value = 'EFECTIVO'; actualizarEtiquetaFormaPago(); const sc = document.getElementById('pos-select-cliente'); if (sc) sc.value = 'CLIENTE GENERAL'; const bp = document.getElementById('buscador-pos'); if (bp) bp.value = ''; renderizarCarrito(); renderizarGridPOS(); } catch (e) {}
+            } else {
+                cerrarModal('modal-nueva-venta');
+            }
             renderizarTablaVentas();
             renderizarInventario();
 
@@ -5687,7 +5868,7 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
 
-        // ===== DEVOLUCIONES PARCIALES v12.85.6 =====
+        // ===== DEVOLUCIONES PARCIALES v12.85.8 =====
         function devueltoPorItem(v) { const m = {}; (v.devoluciones || []).forEach(d => (d.items || []).forEach(i => { m[i.idx] = (m[i.idx] || 0) + i.cant; })); return m; }
         function totalDevueltoVenta(v) { return (v.devoluciones || []).reduce((a, d) => a + d.total, 0); }
         function ventaTieneRestante(v) { const m = devueltoPorItem(v); return (v.items || []).some((it, idx) => (it.cant - (m[idx] || 0)) > 1e-9); }
@@ -6396,6 +6577,7 @@ html:not(.dark) .pos-pie{background:#fff}
             document.getElementById(id).classList.add('hidden');
             document.getElementById('modal-' + id)?.classList.add('hidden');
             document.getElementById(id).classList.remove('flex');
+            if (id === 'modal-ticket') setTimeout(() => { try { enfocarBuscadorPOS(); } catch (e) {} }, 80);
         }
 
         actualizarBarraUsuarioActivo();
@@ -6538,7 +6720,7 @@ html:not(.dark) .pos-pie{background:#fff}
             // La pantalla de inicio se muestra SIEMPRE al abrir el sistema (queda visible hasta que se pulse Entrar / Probar DEMO).
         }
 
-        // ===== DEMO DE 3 DÍAS QUE NO SE REINICIA + MODO CONSULTA v12.85.6 =====
+        // ===== DEMO DE 3 DÍAS QUE NO SE REINICIA + MODO CONSULTA v12.85.8 =====
         // La fecha de inicio de la demo (y el ID del equipo y la clave) se guardan en varios lugares a la vez:
         //   aplicación de escritorio (svpNative) · IndexedDB · localStorage · respaldos.
         // Siempre gana la fecha de inicio MÁS ANTIGUA, así borrar un lugar no reinicia la prueba.
@@ -6671,7 +6853,7 @@ html:not(.dark) .pos-pie{background:#fff}
             window.entrarAlSistema = async function () { const r = await ent.apply(this, arguments); try { pintarBannerConsulta(); } catch (e) {} return r; };
         })();
 
-        // ===== SERVIDOR DE LICENCIAS v12.85.6 =====
+        // ===== SERVIDOR DE LICENCIAS v12.85.8 =====
         // Con servidor: la fecha de inicio de la demo la fija EL SERVIDOR la primera vez que el equipo se conecta,
         // así borrar datos o reinstalar no sirve. Las respuestas vienen firmadas y se verifican con SERVIDOR_PUBLIC_JWK.
         // Sin internet el sistema sigue funcionando con su estado local; en cuanto hay conexión se sincroniza.
@@ -6768,7 +6950,7 @@ html:not(.dark) .pos-pie{background:#fff}
 
         iniciarPantallaInicio();
 
-        // ===== NUBE v12.85.6: copia automática al servidor + panel web de consulta =====
+        // ===== NUBE v12.85.8: copia automática al servidor + panel web de consulta =====
         const NUBE_COLS = ['inventario', 'historialVentas', 'historialGastos', 'clientesSistema', 'cajaEstado', 'turnosCaja', 'ventasAnuladas', 'ventasDevueltas', 'historialCompras', 'proveedoresSistema', 'negocioData', 'acceso'];
         let _nubeTimer = null, _nubeBusy = false, _nubeMsg = '', _nubeFalla = false;
         function nubeCfg() { try { return JSON.parse(localStorage.getItem('svp_nube') || 'null') || {}; } catch (e) { return {}; } }
@@ -6898,7 +7080,7 @@ html:not(.dark) .pos-pie{background:#fff}
         setTimeout(() => { try { if (nubeCfg().token) nubeProgramar(10000); } catch (e) {} }, 8000);
 
 
-        // ===== MULTI-CAJA v12.85.6: varios equipos con los mismos datos =====
+        // ===== MULTI-CAJA v12.85.8: varios equipos con los mismos datos =====
         // Cada equipo anota sus CAMBIOS (ventas nuevas, descuentos de stock, gastos...) y los envía a la nube; los demás los reciben y los aplican.
         // El stock viaja como DIFERENCIA (-2, +10), nunca como valor final: así dos cajas que venden a la vez no se pisan.
         const SY_IDCOLS = {
@@ -7035,13 +7217,14 @@ html:not(.dark) .pos-pie{background:#fff}
                 if (i < 0) return false;
                 const p = arr[i], d = Number(dato.d) || 0;
                 p.stock = Math.round(((Number(p.stock) || 0) + d) * 1000) / 1000;
+                try { lotesNormalizar(p); } catch (e) {}
                 _sy.stock[id] = (_sy.stock[id] !== undefined ? _sy.stock[id] : 0) + d;
                 _sy.stock[id] = Math.round(_sy.stock[id] * 1000) / 1000;
                 return true;
             }
             if (op.tipo !== 'up') return false;
             if (col === 'inventario') {
-                if (i >= 0) { const p = arr[i], st = p.stock, im = p.imagen; Object.keys(dato).forEach(k => { if (k !== 'stock' && k !== 'imagen') p[k] = dato[k]; }); p.stock = st; p.imagen = im; base[id] = syHash(col, p); }
+                if (i >= 0) { const p = arr[i], st = p.stock, im = p.imagen; Object.keys(dato).forEach(k => { if (k !== 'stock' && k !== 'imagen') p[k] = dato[k]; }); p.stock = st; p.imagen = im; try { lotesNormalizar(p); } catch (e) {} base[id] = syHash(col, p); }
                 else { dato.imagen = dato.imagen || _syImgPend[id] || ''; delete _syImgPend[id]; arr.unshift(dato); base[id] = syHash(col, dato); _sy.stock[id] = Number(dato.stock) || 0; }
                 return true;
             }
@@ -7282,7 +7465,7 @@ html:not(.dark) .pos-pie{background:#fff}
         function syGapMs(quietoMs) { return quietoMs < 60000 ? 5000 : (quietoMs < 300000 ? 15000 : 30000); }
         function syArrancar() {
             if (_syIntervalo) return;
-            // v12.85.6: consulta más espaciada cuando nadie usa el equipo (ahorra peticiones al servidor): 5 s en uso, 15 s tras 1 min quieto, 30 s tras 5 min
+            // v12.85.8: consulta más espaciada cuando nadie usa el equipo (ahorra peticiones al servidor): 5 s en uso, 15 s tras 1 min quieto, 30 s tras 5 min
             ['click', 'keydown', 'touchstart', 'mousemove', 'scroll'].forEach(ev => document.addEventListener(ev, syBump, { passive: true, capture: true }));
             _syIntervalo = setInterval(() => { try { const c = nubeCfg(); if (c.token && c.multi && !document.hidden && Date.now() - _syUltPoll >= syGapMs(Date.now() - _syAct) - 600) syRonda(false); } catch (e) {} }, 5000);
             document.addEventListener('visibilitychange', () => { try { const c = nubeCfg(); if (c.token && c.multi && !document.hidden) syRonda(false); } catch (e) {} });
@@ -7337,7 +7520,7 @@ html:not(.dark) .pos-pie{background:#fff}
             const hoy = new Date();
             hoy.setHours(0,0,0,0);
             const proximaSemana = new Date(hoy);
-            proximaSemana.setDate(hoy.getDate() + 7);
+            proximaSemana.setDate(hoy.getDate() + diasAvisoCad());
 
             tbody.innerHTML = prodsProv.length === 0 ? `<tr><td colspan="6" class="p-4 text-center text-slate-500">No hay productos asignados a este proveedor</td></tr>` :
             prodsProv.map(p => {
@@ -7368,7 +7551,7 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
         // ===================================================================================
-        // v12.85.6 — CANTIDADES DECIMALES · DESCUENTOS · STOCK MÍNIMO · KARDEX · CSV · BLOQUEO
+        // v12.85.8 — CANTIDADES DECIMALES · DESCUENTOS · STOCK MÍNIMO · KARDEX · CSV · BLOQUEO
         // ===================================================================================
         function r3(n) { return Math.round((Number(n) || 0) * 1000) / 1000; }
         function numDec(s) {            // "1,5" -> 1.5 · "" -> NaN
@@ -7483,7 +7666,7 @@ html:not(.dark) .pos-pie{background:#fff}
             } catch (e) { console.error(e); }
         }
         function altaProdMov(p) { if (p && p.categoria !== 'SERVICIOS' && p.stock > 0) registrarMovimiento(p, 'ALTA', p.stock, 0, 'Producto nuevo (stock inicial)', ''); }
-        function etiquetaTipoMov(t) { return ({ VENTA: 'Venta', COMPRA: 'Compra', AJUSTE: 'Ajuste', DEVOLUCION: 'Devolución', ANULACION: 'Anulación', ALTA: 'Alta', IMPORTACION: 'Importación' })[t] || t; }
+        function etiquetaTipoMov(t) { return ({ VENTA: 'Venta', COMPRA: 'Compra', AJUSTE: 'Ajuste', DEVOLUCION: 'Devolución', ANULACION: 'Anulación', MERMA: 'Merma', ALTA: 'Alta', IMPORTACION: 'Importación' })[t] || t; }
 
         var _ajusteProdId = null;
         function abrirAjusteStock(id) {
@@ -7573,6 +7756,7 @@ html:not(.dark) .pos-pie{background:#fff}
             const n = productosPorSurtir().length;
             b.innerText = '📋 Por surtir (' + n + ')';
             b.style.opacity = '1'; b.style.filter = n ? '' : 'saturate(.55)';
+            try { actualizarBotonCaducar(); } catch (e) {}
         }
         function abrirPorSurtir() {
             const l = productosPorSurtir();
@@ -7723,11 +7907,16 @@ html:not(.dark) .pos-pie{background:#fff}
                 if (d.tieneCosto) p.costo = d.costo; if (d.tienePrecio) p.precio = d.precio;
                 if (d.tieneCat) { p.categoria = d.categoria; if (!listaCategorias.includes(d.categoria)) listaCategorias.push(d.categoria); }
                 if (d.tieneMed) p.medida = d.medida; if (d.tieneProv) p.proveedor = d.proveedor;
-                if (d.tieneMin) p.stockMin = d.stockMin; if (d.tieneIva) p.ivaTasa = d.ivaTasa; if (d.tieneCad) p.caducidad = d.caducidad;
+                lotesNormalizar(p); if (d.tieneMin) p.stockMin = d.stockMin; if (d.tieneIva) p.ivaTasa = d.ivaTasa; if (d.tieneCad && !fechaISOValida(d.caducidad)) { /* sin fecha en el CSV: se respetan los lotes */ } else if (d.tieneCad) p.caducidad = d.caducidad;
                 p.nombre = d.nombre;
                 if (d.tieneStock && (modo === 'sumar' || modo === 'reemplazar')) {
                     const antes = p.stock; p.stock = modo === 'sumar' ? r3(p.stock + d.stock) : d.stock;
                     if (Math.abs(p.stock - antes) > 0.0005) registrarMovimiento(p, 'IMPORTACION', p.stock - antes, antes, modo === 'sumar' ? 'Stock sumado desde CSV' : 'Stock reemplazado desde CSV', '');
+                }
+                if (d.tieneCad && fechaISOValida(d.caducidad)) {
+                    if (modo === 'sumar' && d.tieneStock) { if (!Array.isArray(p.lotes)) p.lotes = []; p.lotes.push({ f: d.caducidad, c: d.stock }); }
+                    else p.lotes = [{ f: d.caducidad, c: p.stock }];
+                    lotesNormalizar(p);
                 }
                 nC++;
             });
@@ -7770,10 +7959,10 @@ html:not(.dark) .pos-pie{background:#fff}
         })();
 
         // ===================================================================================
-        // v12.85.6 — ALMACENAMIENTO GRANDE: imágenes ligeras, ventas ligeras, listas por páginas, control de espacio
+        // v12.85.8 — ALMACENAMIENTO GRANDE: imágenes ligeras, ventas ligeras, listas por páginas, control de espacio
         // ===================================================================================
         var _terminoInvPrev = '';
-        // ===== v12.85.6: TURNOS POR CAJERO Y REPORTE DE GANANCIA =====
+        // ===== v12.85.8: TURNOS POR CAJERO Y REPORTE DE GANANCIA =====
         function usaTurnos() { return !!(negocioData && negocioData.usarTurnos); }
         function turnoIdActual() { return (usaTurnos() && cajaEstado.turnoId) ? cajaEstado.turnoId : null; }
         function turnoAbierto() { return usaTurnos() ? (turnosCaja.find(t => t.id === cajaEstado.turnoId && !t.cierre) || null) : null; }
@@ -7944,7 +8133,7 @@ html:not(.dark) .pos-pie{background:#fff}
             return h;
         }
 
-        // ===== v12.85.6: REPORTES EN HOJA CARTA =====
+        // ===== v12.85.8: REPORTES EN HOJA CARTA =====
         function imprimirHtmlCarta(html) {
             let area = document.getElementById('area-impresion-ticket');
             if (!area) { area = document.createElement('div'); area.id = 'area-impresion-ticket'; document.body.appendChild(area); }
@@ -8052,20 +8241,20 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
 
-        // ===== v12.85.6: ESCALA AUTOMÁTICA SEGÚN EL TAMAÑO DE LA PANTALLA =====
+        // ===== v12.85.8: ESCALA AUTOMÁTICA SEGÚN EL TAMAÑO DE LA PANTALLA =====
         function aplicarEscalaPantalla() {
             try {
                 const w = window.innerWidth;
                 const z = w >= 3000 ? 1.6 : w >= 2400 ? 1.4 : w >= 1900 ? 1.2 : w >= 1700 ? 1.1 : 1;
                 document.documentElement.style.zoom = z === 1 ? '' : String(z);
-                // v12.85.6: con zoom, 1vh debe valer (alto real / 100 / zoom) para que la ventana no se salga de la pantalla
+                // v12.85.8: con zoom, 1vh debe valer (alto real / 100 / zoom) para que la ventana no se salga de la pantalla
                 document.documentElement.style.setProperty('--vh', (window.innerHeight / 100 / z) + 'px');
             } catch (e) { }
         }
         aplicarEscalaPantalla();
         window.addEventListener('resize', aplicarEscalaPantalla);
 
-        // ===== v12.85.6: FOTOS DE PRODUCTOS (internet por código de barras / archivos) =====
+        // ===== v12.85.8: FOTOS DE PRODUCTOS (internet por código de barras / archivos) =====
         function abrirFotos() {
             abrirModal('modal-fotos');
             document.getElementById('fotos-resultado').innerHTML = '';
@@ -8091,7 +8280,7 @@ html:not(.dark) .pos-pie{background:#fff}
             document.getElementById('fotos-archivos').value = '';
         }
 
-        // ===== v12.85.6: PAGINACIÓN Y LIMPIEZA DE REGISTROS =====
+        // ===== v12.85.8: PAGINACIÓN Y LIMPIEZA DE REGISTROS =====
         function paginar(st, total) {
             const paginas = Math.max(1, Math.ceil(total / st.n));
             if (st.p > paginas) st.p = paginas;
@@ -8292,7 +8481,7 @@ window.addEventListener('error', e => console.error('Error:', e.message));
 window.addEventListener('unhandledrejection', e => console.error('Promesa:', e.reason));
 </script>
 <script>
-/* v12.85.6: etiqueta cada celda con el nombre de su columna para mostrar tarjetas en el celular */
+/* v12.85.8: etiqueta cada celda con el nombre de su columna para mostrar tarjetas en el celular */
 (function(){var t=null;
 function run(){try{document.querySelectorAll('table').forEach(function(tb){
  if(tb.classList.contains('cj-t')||tb.classList.contains('cj-kv'))return;
@@ -8309,9 +8498,9 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 })();
 </script>
 <script>
-/* v12.85.6: aviso de versión nueva en la app de Android (no se actualiza sola: se descarga e instala encima) */
+/* v12.85.8: aviso de versión nueva en la app de Android (no se actualiza sola: se descarga e instala encima) */
 (function(){
- var VER='12.85.6',REPO='dacrohx08-bot/system-ventas-pro',APK='https://github.com/'+REPO+'/releases/latest/download/SystemVentasPro-Android.apk';
+ var VER='12.85.8',REPO='dacrohx08-bot/system-ventas-pro',APK='https://github.com/'+REPO+'/releases/latest/download/SystemVentasPro-Android.apk';
  function esAndroid(){try{return !!(window.Capacitor&&Capacitor.getPlatform&&Capacitor.getPlatform()==='android')}catch(e){return false}}
  function num(v){return String(v||'').replace(/^v/i,'').split('.').map(function(x){return parseInt(x,10)||0})}
  function mayor(a,b){a=num(a);b=num(b);for(var i=0;i<3;i++){if((a[i]||0)>(b[i]||0))return true;if((a[i]||0)<(b[i]||0))return false}return false}
