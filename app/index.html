@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sistema de punto de venta e inventario">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KPHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHJ4PSIxMDgiIGZpbGw9IiMwYjEyMjAiLz4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjU2IDI1Nikgc2NhbGUoLjc4KSB0cmFuc2xhdGUoLTIwMCAtMjUwKSI+CjxwYXRoIGlkPSJoIiBkPSJNMjAwIDIwQzI5MiAyMCAzNTIgMTAwIDM1MiAyMTVDMzUyIDMyNSAyOTIgNDE4IDIzOCA0NjhDMjE4IDQ4NyAxODIgNDg3IDE2MiA0NjhDMTA4IDQxOCA0OCAzMjUgNDggMjE1QzQ4IDEwMCAxMDggMjAgMjAwIDIwWiIgZmlsbD0iIzIyYzU1ZSIvPgo8cGF0aCBkPSJNNjAgMjM1QzYwIDIwOCAxMzAgMjE1IDE5MCAzMjhDMTI4IDM1MiA2NCAzMDUgNjAgMjM1WiIgZmlsbD0iIzA1MDgwZiIvPgo8cGF0aCBkPSJNMzQwIDIzNUMzNDAgMjA4IDI3MCAyMTUgMjEwIDMyOEMyNzIgMzUyIDMzNiAzMDUgMzQwIDIzNVoiIGZpbGw9IiMwNTA4MGYiLz4KPC9nPjwvc3ZnPgo=">
-    <title>SYSTEM PRO :: SYSTEM VENTAS PRO v12.85.17 (HOLOGRAPHIC POS EDITION)</title>
+    <title>SYSTEM PRO :: SYSTEM VENTAS PRO v12.85.18 (HOLOGRAPHIC POS EDITION)</title>
     <!-- Chart.js -->
     <script>/* Chart.js 4.4.1 (MIT) incluido: las gráficas funcionan sin internet */
 /*!
@@ -102,7 +102,7 @@
         div.ticket-hoja .tk-total { font-size: 1.3em; font-weight: 800; }
         #modal-ticket > div { max-height: calc(94 * var(--vh)); }
         #area-impresion-ticket { display: none; }
-        /* v12.85.17: hoja carta */
+        /* v12.85.18: hoja carta */
         .carta-hoja{font:11px/1.35 Arial,Helvetica,sans-serif;color:#111;background:#fff;width:100%}
         .carta-hoja *{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
         .cj-enc{display:flex;gap:12px;align-items:center;border-bottom:2px solid #1e293b;padding-bottom:8px;margin-bottom:10px}
@@ -347,9 +347,9 @@
 :root{--rp-cy:#22d3ee;--rp-am:#fbbf24;--rp-or:#fb923c;--rp-gr:#34d399;--rp-rs:#fb7185;--rp-bl:#ffffff;--rp-mut:#94a3b8;--rp-tx:#cbd5e1;--rp-ln:#334155;--rp-ln2:#1e293b}
 html:not(.dark){--rp-cy:#0e7490;--rp-am:#b45309;--rp-or:#c2410c;--rp-gr:#047857;--rp-rs:#be123c;--rp-bl:#0f172a;--rp-mut:#475569;--rp-tx:#1e293b;--rp-ln:#94a3b8;--rp-ln2:#cbd5e1}
 .bp:disabled{opacity:.4!important;filter:grayscale(.35);animation:none;cursor:not-allowed;transform:none;box-shadow:none}
-/* v12.85.17: en tema claro el sistema pone texto oscuro a TODOS los botones; los de color fuerte deben llevar texto BLANCO */
+/* v12.85.18: en tema claro el sistema pone texto oscuro a TODOS los botones; los de color fuerte deben llevar texto BLANCO */
 html:not(.dark) button.bp,html:not(.dark) button.text-white,html:not(.dark) button[style*="color:#fff"],html:not(.dark) button[style*="color: #fff"],html:not(.dark) button[style*="color:#ffffff"]{color:#fff!important;font-weight:900!important}
-/* v12.85.17: botones de colores propios (cada uno distinto, se leen igual en tema claro y oscuro) */
+/* v12.85.18: botones de colores propios (cada uno distinto, se leen igual en tema claro y oscuro) */
 .bp{color:#fff!important;border:0;text-shadow:0 1px 1px rgba(0,0,0,.35);box-shadow:0 6px 16px -6px var(--bpc),inset 0 1px 0 rgba(255,255,255,.28);transition:transform .15s ease,filter .15s ease,box-shadow .15s ease;white-space:nowrap}
 .bp:hover{transform:translateY(-2px);filter:brightness(1.12);box-shadow:0 10px 22px -6px var(--bpc),inset 0 1px 0 rgba(255,255,255,.35)}
 .bp:active{transform:translateY(0) scale(.97)}
@@ -383,7 +383,7 @@ html:not(.dark) .rp-btn{background:#e2e8f0;color:#0e7490;border-color:#94a3b8}
 html:not(.dark) .rp-btn:hover{background:#cbd5e1}
 #corte-desde,#corte-hasta,#rep-desde,#rep-hasta{color:var(--rp-bl)}
 
-/* ===== v12.85.17: AJUSTE DE TAMAÑOS A CUALQUIER PANTALLA ===== */
+/* ===== v12.85.18: AJUSTE DE TAMAÑOS A CUALQUIER PANTALLA ===== */
 html{-webkit-text-size-adjust:100%}
 .flex-wrap{flex-wrap:wrap}
 header.shrink-0{height:auto!important;min-height:44px;flex-wrap:wrap;row-gap:4px;column-gap:8px}
@@ -420,7 +420,7 @@ header.shrink-0 #user-display-name{max-width:140px;overflow:hidden;text-overflow
 .pos-pie{position:sticky;bottom:-1px;z-index:5;background:#0b1220;padding-top:8px;margin-top:4px}
 html:not(.dark) .pos-pie{background:#fff}
 
-/* v12.85.17: carrito del punto de venta más compacto (se ven más productos) */
+/* v12.85.18: carrito del punto de venta más compacto (se ven más productos) */
 @media (min-width:821px){#modal-nueva-venta .w-84{width:18.5rem!important}}
 #modal-nueva-venta .w-84{padding:.6rem!important}
 #modal-nueva-venta .w-84 .space-y-3 > * + *{margin-top:.35rem!important}
@@ -436,7 +436,7 @@ html:not(.dark) .pos-pie{background:#fff}
 #pos-controles.pos-min > :not(.pos-toggle):not(.pos-pie):not(.pos-paga):not(#pos-envio-resumen):not(#pos-desc-resumen){display:none!important}\n@media print{html{zoom:1!important}}
 </style>
 <style id="cards-m-css">
-/* v12.85.17: en el celular las tablas se ven como tarjetas (sin cortarse de lado) */
+/* v12.85.18: en el celular las tablas se ven como tarjetas (sin cortarse de lado) */
 @media (max-width:700px){
  table.cards-m{display:block;width:100%!important;min-width:0!important}
  table.cards-m thead{display:none!important}
@@ -449,7 +449,7 @@ html:not(.dark) .pos-pie{background:#fff}
 }
 </style>
 <style id="svp-scroll-fix">
-/* v12.85.17: la clase overflow-auto no existía en el CSS offline: las tablas se salían de su caja y tapaban los botones */
+/* v12.85.18: la clase overflow-auto no existía en el CSS offline: las tablas se salían de su caja y tapaban los botones */
 .overflow-auto{overflow:auto}
 .min-h-0{min-height:0}
 #modal-por-surtir>div,#modal-por-caducar>div,#modal-editar-lotes>div,#modal-baja-lote>div,#modal-asesor>div,#modal-etiquetas>div{max-height:calc(92 * var(--vh));overflow-y:auto}
@@ -470,7 +470,7 @@ html:not(.dark) .pos-pie{background:#fff}
             <div class="flex items-center gap-1.5">
                 <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQwIDEyIDMyMCA0ODYiPgoKPGc+CjxwYXRoIGQ9Ik0yMDAgMjBDMjkyIDIwIDM1MiAxMDAgMzUyIDIxNUMzNTIgMzI1IDI5MiA0MTggMjM4IDQ2OEMyMTggNDg3IDE4MiA0ODcgMTYyIDQ2OEMxMDggNDE4IDQ4IDMyNSA0OCAyMTVDNDggMTAwIDEwOCAyMCAyMDAgMjBaIiBmaWxsPSIjMjJjNTVlIi8+CjxwYXRoIGQ9Ik02MCAyMzVDNjAgMjA4IDEzMCAyMTUgMTkwIDMyOEMxMjggMzUyIDY0IDMwNSA2MCAyMzVaIiBmaWxsPSIjMDUwODBmIi8+CjxwYXRoIGQ9Ik0zNDAgMjM1QzM0MCAyMDggMjcwIDIxNSAyMTAgMzI4QzI3MiAzNTIgMzM2IDMwNSAzNDAgMjM1WiIgZmlsbD0iIzA1MDgwZiIvPgo8L2c+PC9zdmc+Cg==" alt="" style="height:1.4em;width:auto;display:inline-block;vertical-align:middle" class="animate-pulse">
                 <span class="text-xs font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-500">SYSTEM VENTAS PRO</span>
-                <span id="badge-version-modo" class="text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold">v12.85.17 HOLOGRAPHIC</span>
+                <span id="badge-version-modo" class="text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold">v12.85.18 HOLOGRAPHIC</span>
             </div>
 
             <!-- MENÚS DESPLEGABLES CON CONTROL DE PERMISOS -->
@@ -638,10 +638,10 @@ html:not(.dark) .pos-pie{background:#fff}
                 <div class="flex flex-wrap gap-2 justify-end">
                     <button onclick="abrirAlmacenamiento()" title="Espacio y almacenamiento" class="bp bp-indigo px-3 py-2 rounded-xl font-black text-xs cursor-pointer">💾 Espacio</button>
                     <button id="btn-por-caducar" onclick="abrirPorCaducar()" class="bp bp-pink px-3 py-2 rounded-xl font-black text-xs cursor-pointer">⏳ Por caducar</button>
+                    <button id="btn-por-surtir" onclick="abrirPorSurtir()" class="bp bp-amber px-3 py-2 rounded-xl font-black text-xs cursor-pointer">📋 Por surtir</button>
                     <button onclick="imprimirCaducidadesProximas(false)" class="bp bp-indigo px-3 py-2 rounded-xl font-black text-xs cursor-pointer">🖨️ Imprimir caducidades próximas</button>
                     <button onclick="abrirAsesor()" class="bp bp-green px-3 py-2 rounded-xl font-black text-xs cursor-pointer">🧠 Asesor de compras</button>
                     <button onclick="etqAbrir()" class="bp bp-indigo px-3 py-2 rounded-xl font-black text-xs cursor-pointer">🏷️ Etiquetas de código</button>
-                    <button id="btn-por-surtir" onclick="abrirPorSurtir()" class="bp bp-amber px-3 py-2 rounded-xl font-black text-xs cursor-pointer">📋 Por surtir</button>
                     <button onclick="abrirKardex()" class="bp bp-cyan px-3 py-2 rounded-xl font-black text-xs cursor-pointer">📒 Movimientos</button>
                     <button onclick="abrirFotos()" class="bp bp-teal px-3 py-2 rounded-xl font-black text-xs cursor-pointer">🖼️ Fotos</button>
                     <button onclick="abrirImportarCsv()" class="bp bp-pink px-3 py-2 rounded-xl font-black text-xs cursor-pointer">📥 Importar CSV</button>
@@ -2011,7 +2011,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.17: AJUSTE DE STOCK CON MOTIVO -->
+    <!-- v12.85.18: AJUSTE DE STOCK CON MOTIVO -->
     <div id="modal-ajuste-stock" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-amber-500/50 w-full max-w-md p-5 rounded-2xl shadow-2xl flex flex-col space-y-3">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2050,7 +2050,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.17: KARDEX -->
+    <!-- v12.85.18: KARDEX -->
     <div id="modal-kardex" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-cyan-500/50 w-full max-w-5xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh]">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2072,7 +2072,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.17: POR SURTIR -->
+    <!-- v12.85.18: POR SURTIR -->
     <div id="modal-por-surtir" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-amber-500/50 w-full max-w-3xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh]">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2095,7 +2095,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.17: LOTES DE CADUCIDAD -->
+    <!-- v12.85.18: LOTES DE CADUCIDAD -->
     <div id="modal-por-caducar" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-pink-500/50 w-full max-w-4xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh]">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2123,7 +2123,7 @@ html:not(.dark) .pos-pie{background:#fff}
             </div>
         </div>
     </div>
-    <!-- v12.85.17: ASESOR DE COMPRAS -->
+    <!-- v12.85.18: ASESOR DE COMPRAS -->
     <div id="modal-asesor" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-emerald-500/50 w-full max-w-5xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh]">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2154,7 +2154,7 @@ html:not(.dark) .pos-pie{background:#fff}
             </div>
         </div>
     </div>
-    <!-- v12.85.17: ETIQUETAS DE CÓDIGO DE BARRAS -->
+    <!-- v12.85.18: ETIQUETAS DE CÓDIGO DE BARRAS -->
     <div id="modal-etiquetas" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-sky-500/50 w-full max-w-3xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh]">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2223,7 +2223,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.17: IMPORTAR PRODUCTOS CSV -->
+    <!-- v12.85.18: IMPORTAR PRODUCTOS CSV -->
     <div id="modal-importar-csv" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-emerald-500/50 w-full max-w-2xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh] overflow-y-auto">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2252,7 +2252,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.17: BLOQUEO AUTOMÁTICO -->
+    <!-- v12.85.18: BLOQUEO AUTOMÁTICO -->
     <div id="modal-autobloqueo" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-slate-700 w-full max-w-sm p-5 rounded-2xl shadow-2xl flex flex-col space-y-3">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2276,7 +2276,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.17: ESPACIO / ALMACENAMIENTO -->
+    <!-- v12.85.18: ESPACIO / ALMACENAMIENTO -->
     <div id="modal-almacenamiento" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-cyan-500/50 w-full max-w-lg p-5 rounded-2xl shadow-2xl flex flex-col space-y-3">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2294,7 +2294,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.17: LIMPIEZA DE REGISTROS -->
+    <!-- v12.85.18: LIMPIEZA DE REGISTROS -->
     <div id="modal-limpieza" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-rose-500/50 w-full max-w-md p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh] overflow-y-auto">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2321,7 +2321,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.17: CIERRE DE TURNO -->
+    <!-- v12.85.18: CIERRE DE TURNO -->
     <div id="modal-cerrar-turno" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel overflow-y-auto bg-slate-900 border border-rose-500/50 w-full max-w-lg p-5 rounded-2xl shadow-2xl flex flex-col space-y-3" style="max-height:calc(94 * var(--vh))">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2349,7 +2349,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.17: HISTORIAL DE TURNOS -->
+    <!-- v12.85.18: HISTORIAL DE TURNOS -->
     <div id="modal-turnos" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel overflow-y-auto bg-slate-900 border border-cyan-500/50 w-full max-w-2xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3" style="max-height:calc(94 * var(--vh))">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2360,7 +2360,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.17: FOTOS DE PRODUCTOS -->
+    <!-- v12.85.18: FOTOS DE PRODUCTOS -->
     <div id="modal-fotos" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-pink-500/50 w-full max-w-lg p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh] overflow-y-auto text-xs">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2505,13 +2505,13 @@ html:not(.dark) .pos-pie{background:#fff}
                 </div>
             </div>
 
-            <p class="lp-nota" style="text-align:center; margin-top: 1.25rem;">SYSTEM VENTAS PRO v12.85.17 · Tus datos se guardan en tu propio equipo.</p>
+            <p class="lp-nota" style="text-align:center; margin-top: 1.25rem;">SYSTEM VENTAS PRO v12.85.18 · Tus datos se guardan en tu propio equipo.</p>
             <p id="lp-pruebas" style="display:none; text-align:center; margin-top:.75rem;"><a href="javascript:resetearADemoPruebas()" style="color:#fbbf24; font-size:.75rem; font-weight:700; text-decoration:underline;">Restablecer a DEMO (solo pruebas del dueño)</a></p>
         </div>
     </div>
 
     <!-- SCRIPT GENERAL FUNCIONAL (MODO 100% MANUAL + FORMATO DD/MM/YYYY) -->
-    <!-- ALMACENAMIENTO GRANDE v12.85.17: los datos pesados (productos, ventas, compras, gastos, clientes...) viven en IndexedDB (cientos de MB)
+    <!-- ALMACENAMIENTO GRANDE v12.85.18: los datos pesados (productos, ventas, compras, gastos, clientes...) viven en IndexedDB (cientos de MB)
          y las fotos de los productos en un almacén aparte. Si el navegador no lo permite, el sistema sigue como antes (localStorage). -->
     <script id="svp-boot">
     (function () {
@@ -2808,10 +2808,10 @@ html:not(.dark) .pos-pie{background:#fff}
             try { pintarBannerConsulta(); } catch (e) {}
             const badge = document.getElementById('badge-version-modo');
             if(licenciaData.tipo === "PRO") {
-                badge.innerText = "v12.85.17 PRO";
+                badge.innerText = "v12.85.18 PRO";
                 badge.className = "text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold";
             } else {
-                badge.innerText = "v12.85.17 HOLOGRAPHIC";
+                badge.innerText = "v12.85.18 HOLOGRAPHIC";
                 badge.className = "text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold";
             }
         }
@@ -2865,7 +2865,7 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
 
-        // ===== RESPALDO AUTOMÁTICO A CARPETA v12.85.17 (File System Access API: Chrome / Edge) =====
+        // ===== RESPALDO AUTOMÁTICO A CARPETA v12.85.18 (File System Access API: Chrome / Edge) =====
         let respHandle = null;              // carpeta elegida por el usuario
         let respEstado = 'sin-carpeta';     // 'activo' | 'permiso' | 'sin-carpeta' | 'no-soportado' | 'error'
         let respErrorTxt = '';
@@ -2991,7 +2991,7 @@ html:not(.dark) .pos-pie{background:#fff}
         //   quitarCarpetaExtra()         -> Promise<void>
         //   abrirCarpetaRespaldos()      -> Promise<void>
         function modoEscritorio() { return !!(window.svpNative && window.svpNative.esEscritorio); }
-        // ----- v12.85.17: ACTUALIZACIONES DE LA APLICACIÓN DE ESCRITORIO (como una tienda de apps) -----
+        // ----- v12.85.18: ACTUALIZACIONES DE LA APLICACIÓN DE ESCRITORIO (como una tienda de apps) -----
         let updEstado = { estado: 'inactivo' };
         function svpTextoActualizacion(u) {
             switch (u.estado) {
@@ -3559,7 +3559,7 @@ html:not(.dark) .pos-pie{background:#fff}
 
         let idUsuarioActivo = localStorage.getItem('nexus_usuario_activo_id') || (usuariosSistema[0] ? usuariosSistema[0].id : 1);
 
-        var _pagInv = { p: 1, n: 50 }, _pagVen = { p: 1, n: 50 };   // v12.85.17: antes que cualquier pantalla
+        var _pagInv = { p: 1, n: 50 }, _pagVen = { p: 1, n: 50 };   // v12.85.18: antes que cualquier pantalla
         let clientesSistema = JSON.parse(localStorage.getItem('nexus_clientes_v9')) || [];
         clientesSistema.forEach(c => {
             if(!c.telefono) c.telefono = 'N/A';
@@ -3712,7 +3712,7 @@ html:not(.dark) .pos-pie{background:#fff}
           }
         }
 
-        // ===== LOTES DE CADUCIDAD v12.85.17 =====
+        // ===== LOTES DE CADUCIDAD v12.85.18 =====
         // Cada producto puede tener varios lotes {f: 'AAAA-MM-DD', c: piezas}. El stock manda: si baja (venta, merma, ajuste),
         // se descuenta primero del lote que caduca antes. p.caducidad siempre guarda la fecha del lote más próximo.
         function diasAvisoCad() { try { const n = parseInt(localStorage.getItem('svp_cad_dias'), 10); return n >= 1 && n <= 90 ? n : 7; } catch (e) { return 7; } }
@@ -3903,7 +3903,7 @@ html:not(.dark) .pos-pie{background:#fff}
             h += '<table style="margin:16px 0 0 auto;border-collapse:collapse;min-width:300px;background:#ffffff"><tr>' + td('Total de lotes') + td(String(l.length), 'right') + '</tr><tr>' + td('Total de piezas') + td(fmtCant(totPz), 'right') + '</tr><tr>' + td('<b>Costo total en riesgo</b>', 'left', 'background:#e2e8f0') + td('<b>' + dinero(totRiesgo) + '</b>', 'right', 'background:#e2e8f0') + '</tr></table></div>';
             imprimirHtmlCarta(h);
         }
-        // ===== ASESOR DE COMPRAS v12.85.17 =====
+        // ===== ASESOR DE COMPRAS v12.85.18 =====
         // Cruza lo que vendes de verdad con tu stock: qué conviene comprar y qué NO.
         function asesorParam(k, def) { try { const n = parseInt(localStorage.getItem(k), 10); return n > 0 ? n : def; } catch (e) { return def; } }
         function asesorAnalizar(periodo, cobertura) {
@@ -4002,7 +4002,7 @@ html:not(.dark) .pos-pie{background:#fff}
                 [['Productos en la lista', String(l.length)], ['Dinero parado o en riesgo', dinero(redondear2(l.reduce((a, x) => a + x.parado, 0)))]]);
         }
 
-        // ===== ETIQUETAS DE CÓDIGO DE BARRAS v12.85.17 =====
+        // ===== ETIQUETAS DE CÓDIGO DE BARRAS v12.85.18 =====
         // Genera códigos Code128 (los lee cualquier lector) sin internet ni librerías externas.
         const C128 = "212222,222122,222221,121223,121322,131222,122213,122312,132212,221213,221312,231212,112232,122132,122231,113222,123122,123221,223211,221132,221231,213212,223112,312131,311222,321122,321221,312212,322112,322211,212123,212321,232121,111323,131123,131321,112313,132113,132311,211313,231113,231311,112133,112331,132131,113123,113321,133121,313121,211331,231131,213113,213311,213131,311123,311321,331121,312113,312311,332111,314111,221411,431111,111224,111422,121124,121421,141122,141221,112214,112412,122114,122411,142112,142211,241211,221114,413111,241112,134111,111242,121142,121241,114212,124112,124211,411212,421112,421211,212141,214121,412121,111143,111341,131141,114113,114311,411113,411311,113141,114131,311141,411131,211412,211214,211232,2331112".split(',');
         function code128Modulos(texto) {
@@ -4349,7 +4349,7 @@ html:not(.dark) .pos-pie{background:#fff}
             mostrarLoginSistema();
         }
 
-        // ===== RECUPERAR CONTRASEÑA DEL DUEÑO v12.85.17 =====
+        // ===== RECUPERAR CONTRASEÑA DEL DUEÑO v12.85.18 =====
         // Código firmado por el proveedor: REC1-AAAAMMDD-<aviso único>-<firma>. Sirve solo para este equipo (ID de instalación),
         // vence en la fecha indicada y se puede usar una sola vez. Cambia la clave del DUEÑO; no borra ningún dato.
         function codigosRecuperacionUsados() {
@@ -4662,7 +4662,7 @@ html:not(.dark) .pos-pie{background:#fff}
             corteHoy();
         }
 
-        // ===== CORTE DE CAJA Y REPORTES v12.85.17 =====
+        // ===== CORTE DE CAJA Y REPORTES v12.85.18 =====
         const METODOS_PAGO = ['EFECTIVO', 'TARJETA', 'TRANSFERENCIA'];
         function dinero(n) { return '$' + (Number(n) || 0).toFixed(2); }
         function csvCelda(x) { return '"' + String(x === undefined || x === null ? '' : x).replace(/"/g, '""') + '"'; }
@@ -4672,7 +4672,7 @@ html:not(.dark) .pos-pie{background:#fff}
         function registrarAbonoHistorial(venta, monto, metodo) {
             if (!(monto > 0)) return;
             if (!Array.isArray(venta.abonos)) {
-                // venta anterior a la v12.85.17: el abono previo se conserva como un solo movimiento con la fecha de la venta
+                // venta anterior a la v12.85.18: el abono previo se conserva como un solo movimiento con la fecha de la venta
                 const previo = Math.max(0, (venta.abonado || 0) - monto);
                 venta.abonos = previo > 0 ? [{ fecha: venta.fecha, monto: previo, metodo: venta.con || 'EFECTIVO', antiguo: true }] : [];
             }
@@ -5301,7 +5301,7 @@ html:not(.dark) .pos-pie{background:#fff}
             }
         }
 
-        // v12.85.17: proveedor, categoría y medida también se pueden corregir al editar
+        // v12.85.18: proveedor, categoría y medida también se pueden corregir al editar
         function llenarClasificacionEdicion(p) {
             const caja = document.getElementById('edit-prod-clasif');
             const esServicio = p.categoria === 'SERVICIOS';
@@ -5648,7 +5648,7 @@ html:not(.dark) .pos-pie{background:#fff}
             `).join('') + (_totProds > 120 ? `<div class="col-span-full text-center text-[11px] font-bold text-slate-400 p-3">Mostrando 120 de ${_totProds} productos — escribe o escanea para encontrar el que buscas.</div>` : '');
         }
 
-        // ===== LECTOR DE CÓDIGO DE BARRAS v12.85.17 =====
+        // ===== LECTOR DE CÓDIGO DE BARRAS v12.85.18 =====
         // El lector funciona como un teclado: "escribe" el código muy rápido y pulsa Enter.
         function sonidoLectorActivo() { try { return localStorage.getItem('nexus_sonido_lector') !== '0'; } catch (e) { return true; } }
         function alternarSonidoLector() {
@@ -5905,7 +5905,7 @@ html:not(.dark) .pos-pie{background:#fff}
             if (t.envio > 0) t.total = redondear2(t.total + t.envio);
             return t;
         }
-        // ===== v12.85.17: COSTO DE ENVÍO A DOMICILIO =====
+        // ===== v12.85.18: COSTO DE ENVÍO A DOMICILIO =====
         function aplicarOpcionesPOS() {
             let min = false; try { min = localStorage.getItem('svp_pos_min') === '1'; } catch (e) { }
             const c = document.getElementById('pos-controles'), b = document.getElementById('pos-btn-opciones'); if (!c) return;
@@ -6210,7 +6210,7 @@ html:not(.dark) .pos-pie{background:#fff}
             renderizarCarrito();
 
             if (posSeguirAbierto()) {
-                // v12.85.17: la ventana de venta se queda abierta y lista para la siguiente
+                // v12.85.18: la ventana de venta se queda abierta y lista para la siguiente
                 try { document.getElementById('pos-forma-pago').value = 'CONTADO'; const tp = document.getElementById('pos-tipo-pago'); if (tp) tp.value = 'EFECTIVO'; actualizarEtiquetaFormaPago(); const sc = document.getElementById('pos-select-cliente'); if (sc) sc.value = 'CLIENTE GENERAL'; const bp = document.getElementById('buscador-pos'); if (bp) bp.value = ''; renderizarCarrito(); renderizarGridPOS(); } catch (e) {}
             } else {
                 cerrarModal('modal-nueva-venta');
@@ -6222,7 +6222,7 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
 
-        // ===== DEVOLUCIONES PARCIALES v12.85.17 =====
+        // ===== DEVOLUCIONES PARCIALES v12.85.18 =====
         function devueltoPorItem(v) { const m = {}; (v.devoluciones || []).forEach(d => (d.items || []).forEach(i => { m[i.idx] = (m[i.idx] || 0) + i.cant; })); return m; }
         function totalDevueltoVenta(v) { return (v.devoluciones || []).reduce((a, d) => a + d.total, 0); }
         function ventaTieneRestante(v) { const m = devueltoPorItem(v); return (v.items || []).some((it, idx) => (it.cant - (m[idx] || 0)) > 1e-9); }
@@ -7074,7 +7074,7 @@ html:not(.dark) .pos-pie{background:#fff}
             // La pantalla de inicio se muestra SIEMPRE al abrir el sistema (queda visible hasta que se pulse Entrar / Probar DEMO).
         }
 
-        // ===== DEMO DE 3 DÍAS QUE NO SE REINICIA + MODO CONSULTA v12.85.17 =====
+        // ===== DEMO DE 3 DÍAS QUE NO SE REINICIA + MODO CONSULTA v12.85.18 =====
         // La fecha de inicio de la demo (y el ID del equipo y la clave) se guardan en varios lugares a la vez:
         //   aplicación de escritorio (svpNative) · IndexedDB · localStorage · respaldos.
         // Siempre gana la fecha de inicio MÁS ANTIGUA, así borrar un lugar no reinicia la prueba.
@@ -7207,7 +7207,7 @@ html:not(.dark) .pos-pie{background:#fff}
             window.entrarAlSistema = async function () { const r = await ent.apply(this, arguments); try { pintarBannerConsulta(); } catch (e) {} return r; };
         })();
 
-        // ===== SERVIDOR DE LICENCIAS v12.85.17 =====
+        // ===== SERVIDOR DE LICENCIAS v12.85.18 =====
         // Con servidor: la fecha de inicio de la demo la fija EL SERVIDOR la primera vez que el equipo se conecta,
         // así borrar datos o reinstalar no sirve. Las respuestas vienen firmadas y se verifican con SERVIDOR_PUBLIC_JWK.
         // Sin internet el sistema sigue funcionando con su estado local; en cuanto hay conexión se sincroniza.
@@ -7304,7 +7304,7 @@ html:not(.dark) .pos-pie{background:#fff}
 
         iniciarPantallaInicio();
 
-        // ===== NUBE v12.85.17: copia automática al servidor + panel web de consulta =====
+        // ===== NUBE v12.85.18: copia automática al servidor + panel web de consulta =====
         const NUBE_COLS = ['inventario', 'historialVentas', 'historialGastos', 'clientesSistema', 'cajaEstado', 'turnosCaja', 'ventasAnuladas', 'ventasDevueltas', 'historialCompras', 'proveedoresSistema', 'negocioData', 'acceso'];
         let _nubeTimer = null, _nubeBusy = false, _nubeMsg = '', _nubeFalla = false;
         function nubeCfg() { try { return JSON.parse(localStorage.getItem('svp_nube') || 'null') || {}; } catch (e) { return {}; } }
@@ -7434,7 +7434,7 @@ html:not(.dark) .pos-pie{background:#fff}
         setTimeout(() => { try { if (nubeCfg().token) nubeProgramar(10000); } catch (e) {} }, 8000);
 
 
-        // ===== MULTI-CAJA v12.85.17: varios equipos con los mismos datos =====
+        // ===== MULTI-CAJA v12.85.18: varios equipos con los mismos datos =====
         // Cada equipo anota sus CAMBIOS (ventas nuevas, descuentos de stock, gastos...) y los envía a la nube; los demás los reciben y los aplican.
         // El stock viaja como DIFERENCIA (-2, +10), nunca como valor final: así dos cajas que venden a la vez no se pisan.
         const SY_IDCOLS = {
@@ -7819,7 +7819,7 @@ html:not(.dark) .pos-pie{background:#fff}
         function syGapMs(quietoMs) { return quietoMs < 60000 ? 5000 : (quietoMs < 300000 ? 15000 : 30000); }
         function syArrancar() {
             if (_syIntervalo) return;
-            // v12.85.17: consulta más espaciada cuando nadie usa el equipo (ahorra peticiones al servidor): 5 s en uso, 15 s tras 1 min quieto, 30 s tras 5 min
+            // v12.85.18: consulta más espaciada cuando nadie usa el equipo (ahorra peticiones al servidor): 5 s en uso, 15 s tras 1 min quieto, 30 s tras 5 min
             ['click', 'keydown', 'touchstart', 'mousemove', 'scroll'].forEach(ev => document.addEventListener(ev, syBump, { passive: true, capture: true }));
             _syIntervalo = setInterval(() => { try { const c = nubeCfg(); if (c.token && c.multi && !document.hidden && Date.now() - _syUltPoll >= syGapMs(Date.now() - _syAct) - 600) syRonda(false); } catch (e) {} }, 5000);
             document.addEventListener('visibilitychange', () => { try { const c = nubeCfg(); if (c.token && c.multi && !document.hidden) syRonda(false); } catch (e) {} });
@@ -7905,7 +7905,7 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
         // ===================================================================================
-        // v12.85.17 — CANTIDADES DECIMALES · DESCUENTOS · STOCK MÍNIMO · KARDEX · CSV · BLOQUEO
+        // v12.85.18 — CANTIDADES DECIMALES · DESCUENTOS · STOCK MÍNIMO · KARDEX · CSV · BLOQUEO
         // ===================================================================================
         function r3(n) { return Math.round((Number(n) || 0) * 1000) / 1000; }
         function numDec(s) {            // "1,5" -> 1.5 · "" -> NaN
@@ -8313,10 +8313,10 @@ html:not(.dark) .pos-pie{background:#fff}
         })();
 
         // ===================================================================================
-        // v12.85.17 — ALMACENAMIENTO GRANDE: imágenes ligeras, ventas ligeras, listas por páginas, control de espacio
+        // v12.85.18 — ALMACENAMIENTO GRANDE: imágenes ligeras, ventas ligeras, listas por páginas, control de espacio
         // ===================================================================================
         var _terminoInvPrev = '';
-        // ===== v12.85.17: TURNOS POR CAJERO Y REPORTE DE GANANCIA =====
+        // ===== v12.85.18: TURNOS POR CAJERO Y REPORTE DE GANANCIA =====
         function usaTurnos() { return !!(negocioData && negocioData.usarTurnos); }
         function turnoIdActual() { return (usaTurnos() && cajaEstado.turnoId) ? cajaEstado.turnoId : null; }
         function turnoAbierto() { return usaTurnos() ? (turnosCaja.find(t => t.id === cajaEstado.turnoId && !t.cierre) || null) : null; }
@@ -8487,7 +8487,7 @@ html:not(.dark) .pos-pie{background:#fff}
             return h;
         }
 
-        // ===== v12.85.17: REPORTES EN HOJA CARTA =====
+        // ===== v12.85.18: REPORTES EN HOJA CARTA =====
         function imprimirHtmlCarta(html) {
             let area = document.getElementById('area-impresion-ticket');
             if (!area) { area = document.createElement('div'); area.id = 'area-impresion-ticket'; document.body.appendChild(area); }
@@ -8595,20 +8595,20 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
 
-        // ===== v12.85.17: ESCALA AUTOMÁTICA SEGÚN EL TAMAÑO DE LA PANTALLA =====
+        // ===== v12.85.18: ESCALA AUTOMÁTICA SEGÚN EL TAMAÑO DE LA PANTALLA =====
         function aplicarEscalaPantalla() {
             try {
                 const w = window.innerWidth;
                 const z = w >= 3000 ? 1.6 : w >= 2400 ? 1.4 : w >= 1900 ? 1.2 : w >= 1700 ? 1.1 : 1;
                 document.documentElement.style.zoom = z === 1 ? '' : String(z);
-                // v12.85.17: con zoom, 1vh debe valer (alto real / 100 / zoom) para que la ventana no se salga de la pantalla
+                // v12.85.18: con zoom, 1vh debe valer (alto real / 100 / zoom) para que la ventana no se salga de la pantalla
                 document.documentElement.style.setProperty('--vh', (window.innerHeight / 100 / z) + 'px');
             } catch (e) { }
         }
         aplicarEscalaPantalla();
         window.addEventListener('resize', aplicarEscalaPantalla);
 
-        // ===== v12.85.17: FOTOS DE PRODUCTOS (internet por código de barras / archivos) =====
+        // ===== v12.85.18: FOTOS DE PRODUCTOS (internet por código de barras / archivos) =====
         function abrirFotos() {
             abrirModal('modal-fotos');
             document.getElementById('fotos-resultado').innerHTML = '';
@@ -8634,7 +8634,7 @@ html:not(.dark) .pos-pie{background:#fff}
             document.getElementById('fotos-archivos').value = '';
         }
 
-        // ===== v12.85.17: PAGINACIÓN Y LIMPIEZA DE REGISTROS =====
+        // ===== v12.85.18: PAGINACIÓN Y LIMPIEZA DE REGISTROS =====
         function paginar(st, total) {
             const paginas = Math.max(1, Math.ceil(total / st.n));
             if (st.p > paginas) st.p = paginas;
@@ -8835,7 +8835,7 @@ window.addEventListener('error', e => console.error('Error:', e.message));
 window.addEventListener('unhandledrejection', e => console.error('Promesa:', e.reason));
 </script>
 <script>
-/* v12.85.17: etiqueta cada celda con el nombre de su columna para mostrar tarjetas en el celular */
+/* v12.85.18: etiqueta cada celda con el nombre de su columna para mostrar tarjetas en el celular */
 (function(){var t=null;
 function run(){try{document.querySelectorAll('table').forEach(function(tb){
  if(tb.classList.contains('cj-t')||tb.classList.contains('cj-kv'))return;
@@ -8852,9 +8852,9 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 })();
 </script>
 <script>
-/* v12.85.17: aviso de versión nueva en la app de Android (no se actualiza sola: se descarga e instala encima) */
+/* v12.85.18: aviso de versión nueva en la app de Android (no se actualiza sola: se descarga e instala encima) */
 (function(){
- var VER='12.85.17',REPO='dacrohx08-bot/system-ventas-pro',APK='https://github.com/'+REPO+'/releases/latest/download/SystemVentasPro-Android.apk';
+ var VER='12.85.18',REPO='dacrohx08-bot/system-ventas-pro',APK='https://github.com/'+REPO+'/releases/latest/download/SystemVentasPro-Android.apk';
  function esAndroid(){try{return !!(window.Capacitor&&Capacitor.getPlatform&&Capacitor.getPlatform()==='android')}catch(e){return false}}
  function num(v){return String(v||'').replace(/^v/i,'').split('.').map(function(x){return parseInt(x,10)||0})}
  function mayor(a,b){a=num(a);b=num(b);for(var i=0;i<3;i++){if((a[i]||0)>(b[i]||0))return true;if((a[i]||0)<(b[i]||0))return false}return false}
