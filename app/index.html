@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sistema de punto de venta e inventario">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KPHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHJ4PSIxMDgiIGZpbGw9IiMwYjEyMjAiLz4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjU2IDI1Nikgc2NhbGUoLjc4KSB0cmFuc2xhdGUoLTIwMCAtMjUwKSI+CjxwYXRoIGlkPSJoIiBkPSJNMjAwIDIwQzI5MiAyMCAzNTIgMTAwIDM1MiAyMTVDMzUyIDMyNSAyOTIgNDE4IDIzOCA0NjhDMjE4IDQ4NyAxODIgNDg3IDE2MiA0NjhDMTA4IDQxOCA0OCAzMjUgNDggMjE1QzQ4IDEwMCAxMDggMjAgMjAwIDIwWiIgZmlsbD0iIzIyYzU1ZSIvPgo8cGF0aCBkPSJNNjAgMjM1QzYwIDIwOCAxMzAgMjE1IDE5MCAzMjhDMTI4IDM1MiA2NCAzMDUgNjAgMjM1WiIgZmlsbD0iIzA1MDgwZiIvPgo8cGF0aCBkPSJNMzQwIDIzNUMzNDAgMjA4IDI3MCAyMTUgMjEwIDMyOEMyNzIgMzUyIDMzNiAzMDUgMzQwIDIzNVoiIGZpbGw9IiMwNTA4MGYiLz4KPC9nPjwvc3ZnPgo=">
-    <title>SYSTEM PRO :: SYSTEM VENTAS PRO v12.85.21 (HOLOGRAPHIC POS EDITION)</title>
+    <title>SYSTEM PRO :: SYSTEM VENTAS PRO v12.85.22 (HOLOGRAPHIC POS EDITION)</title>
     <!-- Chart.js -->
     <script>/* Chart.js 4.4.1 (MIT) incluido: las gráficas funcionan sin internet */
 /*!
@@ -102,7 +102,7 @@
         div.ticket-hoja .tk-total { font-size: 1.3em; font-weight: 800; }
         #modal-ticket > div { max-height: calc(94 * var(--vh)); }
         #area-impresion-ticket { display: none; }
-        /* v12.85.21: hoja carta */
+        /* v12.85.22: hoja carta */
         .carta-hoja{font:11px/1.35 Arial,Helvetica,sans-serif;color:#111;background:#fff;width:100%}
         .carta-hoja *{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-sizing:border-box}
         .cj-enc{display:flex;gap:12px;align-items:center;border-bottom:2px solid #1e293b;padding-bottom:8px;margin-bottom:10px}
@@ -347,9 +347,9 @@
 :root{--rp-cy:#22d3ee;--rp-am:#fbbf24;--rp-or:#fb923c;--rp-gr:#34d399;--rp-rs:#fb7185;--rp-bl:#ffffff;--rp-mut:#94a3b8;--rp-tx:#cbd5e1;--rp-ln:#334155;--rp-ln2:#1e293b}
 html:not(.dark){--rp-cy:#0e7490;--rp-am:#b45309;--rp-or:#c2410c;--rp-gr:#047857;--rp-rs:#be123c;--rp-bl:#0f172a;--rp-mut:#475569;--rp-tx:#1e293b;--rp-ln:#94a3b8;--rp-ln2:#cbd5e1}
 .bp:disabled{opacity:.4!important;filter:grayscale(.35);animation:none;cursor:not-allowed;transform:none;box-shadow:none}
-/* v12.85.21: en tema claro el sistema pone texto oscuro a TODOS los botones; los de color fuerte deben llevar texto BLANCO */
+/* v12.85.22: en tema claro el sistema pone texto oscuro a TODOS los botones; los de color fuerte deben llevar texto BLANCO */
 html:not(.dark) button.bp,html:not(.dark) button.text-white,html:not(.dark) button[style*="color:#fff"],html:not(.dark) button[style*="color: #fff"],html:not(.dark) button[style*="color:#ffffff"]{color:#fff!important;font-weight:900!important}
-/* v12.85.21: botones de colores propios (cada uno distinto, se leen igual en tema claro y oscuro) */
+/* v12.85.22: botones de colores propios (cada uno distinto, se leen igual en tema claro y oscuro) */
 .bp{color:#fff!important;border:0;text-shadow:0 1px 1px rgba(0,0,0,.35);box-shadow:0 6px 16px -6px var(--bpc),inset 0 1px 0 rgba(255,255,255,.28);transition:transform .15s ease,filter .15s ease,box-shadow .15s ease;white-space:nowrap}
 .bp:hover{transform:translateY(-2px);filter:brightness(1.12);box-shadow:0 10px 22px -6px var(--bpc),inset 0 1px 0 rgba(255,255,255,.35)}
 .bp:active{transform:translateY(0) scale(.97)}
@@ -383,7 +383,7 @@ html:not(.dark) .rp-btn{background:#e2e8f0;color:#0e7490;border-color:#94a3b8}
 html:not(.dark) .rp-btn:hover{background:#cbd5e1}
 #corte-desde,#corte-hasta,#rep-desde,#rep-hasta{color:var(--rp-bl)}
 
-/* ===== v12.85.21: AJUSTE DE TAMAÑOS A CUALQUIER PANTALLA ===== */
+/* ===== v12.85.22: AJUSTE DE TAMAÑOS A CUALQUIER PANTALLA ===== */
 html{-webkit-text-size-adjust:100%}
 .flex-wrap{flex-wrap:wrap}
 header.shrink-0{height:auto!important;min-height:44px;flex-wrap:wrap;row-gap:4px;column-gap:8px}
@@ -420,7 +420,7 @@ header.shrink-0 #user-display-name{max-width:140px;overflow:hidden;text-overflow
 .pos-pie{position:sticky;bottom:-1px;z-index:5;background:#0b1220;padding-top:8px;margin-top:4px}
 html:not(.dark) .pos-pie{background:#fff}
 
-/* v12.85.21: carrito del punto de venta más compacto (se ven más productos) */
+/* v12.85.22: carrito del punto de venta más compacto (se ven más productos) */
 @media (min-width:821px){#modal-nueva-venta .w-84{width:18.5rem!important}}
 #modal-nueva-venta .w-84{padding:.6rem!important}
 #modal-nueva-venta .w-84 .space-y-3 > * + *{margin-top:.35rem!important}
@@ -436,7 +436,7 @@ html:not(.dark) .pos-pie{background:#fff}
 #pos-controles.pos-min > :not(.pos-toggle):not(.pos-pie):not(.pos-paga):not(#pos-envio-resumen):not(#pos-desc-resumen){display:none!important}\n@media print{html{zoom:1!important}}
 </style>
 <style id="cards-m-css">
-/* v12.85.21: en el celular las tablas se ven como tarjetas (sin cortarse de lado) */
+/* v12.85.22: en el celular las tablas se ven como tarjetas (sin cortarse de lado) */
 @media (max-width:700px){
  table.cards-m{display:block;width:100%!important;min-width:0!important}
  table.cards-m thead{display:none!important}
@@ -449,7 +449,7 @@ html:not(.dark) .pos-pie{background:#fff}
 }
 </style>
 <style id="svp-scroll-fix">
-/* v12.85.21: la clase overflow-auto no existía en el CSS offline: las tablas se salían de su caja y tapaban los botones */
+/* v12.85.22: la clase overflow-auto no existía en el CSS offline: las tablas se salían de su caja y tapaban los botones */
 .overflow-auto{overflow:auto}
 .min-h-0{min-height:0}
 #modal-por-surtir>div,#modal-por-caducar>div,#modal-editar-lotes>div,#modal-baja-lote>div,#modal-asesor>div,#modal-etiquetas>div{max-height:calc(92 * var(--vh));overflow-y:auto}
@@ -470,7 +470,7 @@ html:not(.dark) .pos-pie{background:#fff}
             <div class="flex items-center gap-1.5">
                 <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQwIDEyIDMyMCA0ODYiPgoKPGc+CjxwYXRoIGQ9Ik0yMDAgMjBDMjkyIDIwIDM1MiAxMDAgMzUyIDIxNUMzNTIgMzI1IDI5MiA0MTggMjM4IDQ2OEMyMTggNDg3IDE4MiA0ODcgMTYyIDQ2OEMxMDggNDE4IDQ4IDMyNSA0OCAyMTVDNDggMTAwIDEwOCAyMCAyMDAgMjBaIiBmaWxsPSIjMjJjNTVlIi8+CjxwYXRoIGQ9Ik02MCAyMzVDNjAgMjA4IDEzMCAyMTUgMTkwIDMyOEMxMjggMzUyIDY0IDMwNSA2MCAyMzVaIiBmaWxsPSIjMDUwODBmIi8+CjxwYXRoIGQ9Ik0zNDAgMjM1QzM0MCAyMDggMjcwIDIxNSAyMTAgMzI4QzI3MiAzNTIgMzM2IDMwNSAzNDAgMjM1WiIgZmlsbD0iIzA1MDgwZiIvPgo8L2c+PC9zdmc+Cg==" alt="" style="height:1.4em;width:auto;display:inline-block;vertical-align:middle" class="animate-pulse">
                 <span class="text-xs font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-500">SYSTEM VENTAS PRO</span>
-                <span id="badge-version-modo" class="text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold">v12.85.21 HOLOGRAPHIC</span>
+                <span id="badge-version-modo" class="text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold">v12.85.22 HOLOGRAPHIC</span>
             </div>
 
             <!-- MENÚS DESPLEGABLES CON CONTROL DE PERMISOS -->
@@ -640,6 +640,7 @@ html:not(.dark) .pos-pie{background:#fff}
                     <button id="btn-por-surtir" onclick="abrirPorSurtir()" class="bp bp-amber px-3 py-2 rounded-xl font-black text-xs cursor-pointer">📋 Por surtir</button>
                     <button onclick="imprimirCaducidadesProximas(false)" class="bp bp-indigo px-3 py-2 rounded-xl font-black text-xs cursor-pointer">🖨️ Imprimir caducidades próximas</button>
                     <button onclick="abrirAsesor()" class="bp bp-green px-3 py-2 rounded-xl font-black text-xs cursor-pointer">🧠 Asesor de compras</button>
+                    <button id="btn-inv-fisico" onclick="invfAbrir()" class="bp bp-teal px-3 py-2 rounded-xl font-black text-xs cursor-pointer">📦 Inventario físico</button>
                     <button onclick="etqAbrir()" class="bp bp-indigo px-3 py-2 rounded-xl font-black text-xs cursor-pointer">🏷️ Etiquetas de código</button>
                     <button onclick="abrirKardex()" class="bp bp-cyan px-3 py-2 rounded-xl font-black text-xs cursor-pointer">📒 Movimientos</button>
                     <button onclick="abrirFotos()" class="bp bp-teal px-3 py-2 rounded-xl font-black text-xs cursor-pointer">🖼️ Fotos</button>
@@ -2010,7 +2011,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.21: AJUSTE DE STOCK CON MOTIVO -->
+    <!-- v12.85.22: AJUSTE DE STOCK CON MOTIVO -->
     <div id="modal-ajuste-stock" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-amber-500/50 w-full max-w-md p-5 rounded-2xl shadow-2xl flex flex-col space-y-3">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2049,7 +2050,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.21: KARDEX -->
+    <!-- v12.85.22: KARDEX -->
     <div id="modal-kardex" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-cyan-500/50 w-full max-w-5xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh]">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2071,7 +2072,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.21: POR SURTIR -->
+    <!-- v12.85.22: POR SURTIR -->
     <div id="modal-por-surtir" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-amber-500/50 w-full max-w-3xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh]">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2094,7 +2095,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.21: LOTES DE CADUCIDAD -->
+    <!-- v12.85.22: LOTES DE CADUCIDAD -->
     <div id="modal-por-caducar" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-pink-500/50 w-full max-w-4xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh]">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2122,7 +2123,7 @@ html:not(.dark) .pos-pie{background:#fff}
             </div>
         </div>
     </div>
-    <!-- v12.85.21: ASESOR DE COMPRAS -->
+    <!-- v12.85.22: ASESOR DE COMPRAS -->
     <div id="modal-asesor" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-emerald-500/50 w-full max-w-5xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh]">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2153,7 +2154,42 @@ html:not(.dark) .pos-pie{background:#fff}
             </div>
         </div>
     </div>
-    <!-- v12.85.21: ETIQUETAS DE CÓDIGO DE BARRAS -->
+    <!-- v12.85.22: INVENTARIO FÍSICO -->
+    <div id="modal-invf" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
+        <div class="glass-panel bg-slate-900 border border-teal-500/50 w-full max-w-5xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh]">
+            <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+                <h3 class="text-xs font-black text-teal-400 tracking-wider uppercase">📦 Inventario físico (conteo)</h3>
+                <button onclick="cerrarModal('modal-invf')" class="btn-cerrar-modal-custom w-7 h-7 rounded-lg flex items-center justify-center text-xs cursor-pointer">✕</button>
+            </div>
+            <div id="invf-estado" class="text-[11px] font-bold rounded-xl p-2.5" style="border:1px solid #14b8a6"></div>
+            <p class="text-[11px] text-slate-400 font-semibold"><b>1.</b> Imprime la hoja de conteo y cuenta lo que hay en tu bodega/anaqueles. <b>2.</b> Escribe aquí lo que contaste. <b>3.</b> Revisa las diferencias y pulsa «Aplicar». Solo se ajustan los productos donde escribiste algo.</p>
+            <div class="flex flex-wrap gap-3 items-end">
+                <div><label class="text-slate-400 block mb-1 text-[10px] uppercase font-black">Avisarme cada</label>
+                    <select id="invf-dias" onchange="invfCambiarDias()" class="bg-slate-950 border border-slate-700 p-2 rounded-lg text-slate-100 font-bold text-xs"><option value="0">No avisar</option><option value="7">7 días</option><option value="15">15 días</option><option value="30">30 días</option><option value="60">60 días</option><option value="90">90 días</option></select></div>
+                <div><label class="text-slate-400 block mb-1 text-[10px] uppercase font-black">Categoría</label>
+                    <select id="invf-cat" onchange="invfPintar()" class="bg-slate-950 border border-slate-700 p-2 rounded-lg text-slate-100 font-bold text-xs"></select></div>
+                <div><label class="text-slate-400 block mb-1 text-[10px] uppercase font-black">Mostrar</label>
+                    <select id="invf-fil" onchange="invfPintar()" class="bg-slate-950 border border-slate-700 p-2 rounded-lg text-slate-100 font-bold text-xs"><option value="todos">Todos</option><option value="falta">Faltan por contar</option><option value="dif">Con diferencia</option></select></div>
+                <div class="flex-1" style="min-width:150px"><label class="text-slate-400 block mb-1 text-[10px] uppercase font-black">Buscar</label>
+                    <input id="invf-q" oninput="invfPintar()" placeholder="Nombre o código" class="w-full bg-slate-950 border border-slate-700 p-2 rounded-lg text-slate-100 font-bold text-xs"></div>
+            </div>
+            <div id="invf-kpis" class="flex flex-wrap gap-3"></div>
+            <div class="overflow-auto border border-slate-800 rounded-xl" style="max-height:40vh;overflow:auto">
+                <table class="w-full text-left text-xs text-slate-300">
+                    <thead class="bg-teal-950/60 uppercase font-black text-[10px] text-teal-300 sticky top-0"><tr><th class="p-2">Producto</th><th class="p-2 text-center">En sistema</th><th class="p-2 text-center">Contado</th><th class="p-2 text-center">Diferencia</th><th class="p-2 text-right">Valor</th></tr></thead>
+                    <tbody id="invf-body"></tbody>
+                </table>
+            </div>
+            <div id="invf-nota" class="text-[10px] text-slate-500 font-semibold"></div>
+            <div class="flex flex-wrap justify-end gap-2 pt-2 border-t border-slate-800">
+                <button onclick="invfImprimirHoja()" class="bp bp-indigo px-4 py-2 rounded-xl font-black text-xs cursor-pointer">🖨️ Hoja de conteo</button>
+                <button onclick="invfImprimirDif()" class="bp bp-pink px-4 py-2 rounded-xl font-black text-xs cursor-pointer">🖨️ Informe de diferencias</button>
+                <button onclick="invfAplicar()" class="bp bp-green px-4 py-2 rounded-xl font-black text-xs cursor-pointer">✅ Aplicar y terminar inventario</button>
+                <button onclick="cerrarModal('modal-invf')" class="px-5 py-2 rounded-xl text-xs cursor-pointer btn-cerrar-modal-custom">Cerrar</button>
+            </div>
+        </div>
+    </div>
+    <!-- v12.85.22: ETIQUETAS DE CÓDIGO DE BARRAS -->
     <div id="modal-etiquetas" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-sky-500/50 w-full max-w-3xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh]">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2222,7 +2258,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.21: IMPORTAR PRODUCTOS CSV -->
+    <!-- v12.85.22: IMPORTAR PRODUCTOS CSV -->
     <div id="modal-importar-csv" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-emerald-500/50 w-full max-w-2xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh] overflow-y-auto">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2251,7 +2287,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.21: BLOQUEO AUTOMÁTICO -->
+    <!-- v12.85.22: BLOQUEO AUTOMÁTICO -->
     <div id="modal-autobloqueo" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-slate-700 w-full max-w-sm p-5 rounded-2xl shadow-2xl flex flex-col space-y-3">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2275,7 +2311,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.21: ESPACIO / ALMACENAMIENTO -->
+    <!-- v12.85.22: ESPACIO / ALMACENAMIENTO -->
     <div id="modal-almacenamiento" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-cyan-500/50 w-full max-w-lg p-5 rounded-2xl shadow-2xl flex flex-col space-y-3">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2293,7 +2329,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.21: LIMPIEZA DE REGISTROS -->
+    <!-- v12.85.22: LIMPIEZA DE REGISTROS -->
     <div id="modal-limpieza" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-rose-500/50 w-full max-w-md p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh] overflow-y-auto">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2320,7 +2356,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.21: CIERRE DE TURNO -->
+    <!-- v12.85.22: CIERRE DE TURNO -->
     <div id="modal-cerrar-turno" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel overflow-y-auto bg-slate-900 border border-rose-500/50 w-full max-w-lg p-5 rounded-2xl shadow-2xl flex flex-col space-y-3" style="max-height:calc(94 * var(--vh))">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2348,7 +2384,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.21: HISTORIAL DE TURNOS -->
+    <!-- v12.85.22: HISTORIAL DE TURNOS -->
     <div id="modal-turnos" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel overflow-y-auto bg-slate-900 border border-cyan-500/50 w-full max-w-2xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3" style="max-height:calc(94 * var(--vh))">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2359,7 +2395,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.21: FOTOS DE PRODUCTOS -->
+    <!-- v12.85.22: FOTOS DE PRODUCTOS -->
     <div id="modal-fotos" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-pink-500/50 w-full max-w-lg p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh] overflow-y-auto text-xs">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2504,13 +2540,13 @@ html:not(.dark) .pos-pie{background:#fff}
                 </div>
             </div>
 
-            <p class="lp-nota" style="text-align:center; margin-top: 1.25rem;">SYSTEM VENTAS PRO v12.85.21 · Tus datos se guardan en tu propio equipo.</p>
+            <p class="lp-nota" style="text-align:center; margin-top: 1.25rem;">SYSTEM VENTAS PRO v12.85.22 · Tus datos se guardan en tu propio equipo.</p>
             <p id="lp-pruebas" style="display:none; text-align:center; margin-top:.75rem;"><a href="javascript:resetearADemoPruebas()" style="color:#fbbf24; font-size:.75rem; font-weight:700; text-decoration:underline;">Restablecer a DEMO (solo pruebas del dueño)</a></p>
         </div>
     </div>
 
     <!-- SCRIPT GENERAL FUNCIONAL (MODO 100% MANUAL + FORMATO DD/MM/YYYY) -->
-    <!-- ALMACENAMIENTO GRANDE v12.85.21: los datos pesados (productos, ventas, compras, gastos, clientes...) viven en IndexedDB (cientos de MB)
+    <!-- ALMACENAMIENTO GRANDE v12.85.22: los datos pesados (productos, ventas, compras, gastos, clientes...) viven en IndexedDB (cientos de MB)
          y las fotos de los productos en un almacén aparte. Si el navegador no lo permite, el sistema sigue como antes (localStorage). -->
     <script id="svp-boot">
     (function () {
@@ -2807,10 +2843,10 @@ html:not(.dark) .pos-pie{background:#fff}
             try { pintarBannerConsulta(); } catch (e) {}
             const badge = document.getElementById('badge-version-modo');
             if(licenciaData.tipo === "PRO") {
-                badge.innerText = "v12.85.21 PRO";
+                badge.innerText = "v12.85.22 PRO";
                 badge.className = "text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold";
             } else {
-                badge.innerText = "v12.85.21 HOLOGRAPHIC";
+                badge.innerText = "v12.85.22 HOLOGRAPHIC";
                 badge.className = "text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold";
             }
         }
@@ -2864,7 +2900,7 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
 
-        // ===== RESPALDO AUTOMÁTICO A CARPETA v12.85.21 (File System Access API: Chrome / Edge) =====
+        // ===== RESPALDO AUTOMÁTICO A CARPETA v12.85.22 (File System Access API: Chrome / Edge) =====
         let respHandle = null;              // carpeta elegida por el usuario
         let respEstado = 'sin-carpeta';     // 'activo' | 'permiso' | 'sin-carpeta' | 'no-soportado' | 'error'
         let respErrorTxt = '';
@@ -2990,7 +3026,7 @@ html:not(.dark) .pos-pie{background:#fff}
         //   quitarCarpetaExtra()         -> Promise<void>
         //   abrirCarpetaRespaldos()      -> Promise<void>
         function modoEscritorio() { return !!(window.svpNative && window.svpNative.esEscritorio); }
-        // ----- v12.85.21: ACTUALIZACIONES DE LA APLICACIÓN DE ESCRITORIO (como una tienda de apps) -----
+        // ----- v12.85.22: ACTUALIZACIONES DE LA APLICACIÓN DE ESCRITORIO (como una tienda de apps) -----
         let updEstado = { estado: 'inactivo' };
         function svpTextoActualizacion(u) {
             switch (u.estado) {
@@ -3558,7 +3594,7 @@ html:not(.dark) .pos-pie{background:#fff}
 
         let idUsuarioActivo = localStorage.getItem('nexus_usuario_activo_id') || (usuariosSistema[0] ? usuariosSistema[0].id : 1);
 
-        var _pagInv = { p: 1, n: 50 }, _pagVen = { p: 1, n: 50 };   // v12.85.21: antes que cualquier pantalla
+        var _pagInv = { p: 1, n: 50 }, _pagVen = { p: 1, n: 50 };   // v12.85.22: antes que cualquier pantalla
         let clientesSistema = JSON.parse(localStorage.getItem('nexus_clientes_v9')) || [];
         clientesSistema.forEach(c => {
             if(!c.telefono) c.telefono = 'N/A';
@@ -3711,7 +3747,7 @@ html:not(.dark) .pos-pie{background:#fff}
           }
         }
 
-        // ===== LOTES DE CADUCIDAD v12.85.21 =====
+        // ===== LOTES DE CADUCIDAD v12.85.22 =====
         // Cada producto puede tener varios lotes {f: 'AAAA-MM-DD', c: piezas}. El stock manda: si baja (venta, merma, ajuste),
         // se descuenta primero del lote que caduca antes. p.caducidad siempre guarda la fecha del lote más próximo.
         function diasAvisoCad() { try { const n = parseInt(localStorage.getItem('svp_cad_dias'), 10); return n >= 1 && n <= 90 ? n : 7; } catch (e) { return 7; } }
@@ -3902,7 +3938,7 @@ html:not(.dark) .pos-pie{background:#fff}
             h += '<table style="margin:16px 0 0 auto;border-collapse:collapse;min-width:300px;background:#ffffff"><tr>' + td('Total de lotes') + td(String(l.length), 'right') + '</tr><tr>' + td('Total de piezas') + td(fmtCant(totPz), 'right') + '</tr><tr>' + td('<b>Costo total en riesgo</b>', 'left', 'background:#e2e8f0') + td('<b>' + dinero(totRiesgo) + '</b>', 'right', 'background:#e2e8f0') + '</tr></table></div>';
             imprimirHtmlCarta(h);
         }
-        // ===== ASESOR DE COMPRAS v12.85.21 =====
+        // ===== ASESOR DE COMPRAS v12.85.22 =====
         // Cruza lo que vendes de verdad con tu stock: qué conviene comprar y qué NO.
         function asesorParam(k, def) { try { const n = parseInt(localStorage.getItem(k), 10); return n > 0 ? n : def; } catch (e) { return def; } }
         function asesorAnalizar(periodo, cobertura) {
@@ -4001,7 +4037,157 @@ html:not(.dark) .pos-pie{background:#fff}
                 [['Productos en la lista', String(l.length)], ['Dinero parado o en riesgo', dinero(redondear2(l.reduce((a, x) => a + x.parado, 0)))]]);
         }
 
-        // ===== ETIQUETAS DE CÓDIGO DE BARRAS v12.85.21 =====
+        // ===== INVENTARIO FÍSICO v12.85.22 =====
+        var _invfConteo = {};   // clave producto -> texto escrito
+        function invfLS(k, d) { try { const v = localStorage.getItem(k); return v === null ? d : v; } catch (e) { return d; } }
+        function invfSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+        function invfDias() { const n = parseInt(invfLS('svp_invf_dias', '30'), 10); return n >= 0 ? n : 30; }
+        function invfUlt() { const f = invfLS('svp_invf_ult', ''); return /^\d{4}-\d{2}-\d{2}$/.test(f) ? f : ''; }
+        function invfDiasDesde() { const u = invfUlt(); return u ? -diasParaFecha(u) : null; }
+        function invfToca() { const d = invfDias(); if (!d) return false; const t = invfDiasDesde(); return t === null || t >= d; }
+        function invfProductos() { return (inventario || []).filter(p => p && p.categoria !== 'SERVICIOS'); }
+        function invfCargarBorrador() { try { const o = JSON.parse(invfLS('svp_invf_borr', '{}')); _invfConteo = (o && typeof o === 'object') ? o : {}; } catch (e) { _invfConteo = {}; } }
+        function invfGuardarBorrador() { invfSet('svp_invf_borr', JSON.stringify(_invfConteo)); }
+        function invfValor(p, t) { const n = numDec(t); return isFinite(n) ? (esFraccionable(p) ? r3(n) : Math.round(n)) : NaN; }
+        function invfEstadoTxt() {
+            const u = invfUlt(), t = invfDiasDesde(), d = invfDias();
+            if (!u) return '<span style="color:#f59e0b">⚠️ Todavía no has registrado ningún inventario físico.</span>';
+            const msg = 'Último inventario: <b>' + isoADMY(u) + '</b> (' + (t === 0 ? 'hoy' : 'hace ' + t + ' día' + (t === 1 ? '' : 's') + '). ');
+            if (!d) return msg + 'El aviso está apagado.';
+            return invfToca() ? '<span style="color:#f59e0b">' + msg + '⚠️ Ya toca hacer inventario.</span>' : msg + 'Te toca de nuevo en ' + (d - t) + ' día' + (d - t === 1 ? '' : 's') + '.';
+        }
+        function actualizarBotonInvf() {
+            const b = document.getElementById('btn-inv-fisico'); if (!b) return;
+            const toca = invfToca();
+            b.innerText = toca ? '📦 Inventario físico (toca)' : '📦 Inventario físico';
+            b.style.filter = toca ? '' : 'saturate(.6)';
+        }
+        function invfAvisoInicial() {
+            try {
+                if (!invfToca()) return;
+                const hoy = fechaLocalISO();
+                if (invfLS('svp_invf_avisado', '') === hoy) return;
+                const ini = document.getElementById('pantalla-inicio');
+                if (ini && !ini.classList.contains('oculta')) { setTimeout(invfAvisoInicial, 3000); return; }
+                if (document.querySelector('[id^="modal-"]:not(.hidden)')) { setTimeout(invfAvisoInicial, 5000); return; }
+                invfSet('svp_invf_avisado', hoy);
+                const u = invfUlt();
+                mostrarAvisoPro(u ? 'Ya pasaron ' + invfDiasDesde() + ' días desde tu último inventario físico (' + isoADMY(u) + ').\nEntra a Inventario → «📦 Inventario físico» para imprimir la hoja de conteo y revisar diferencias.' : 'Todavía no has registrado un inventario físico.\nEntra a Inventario → «📦 Inventario físico»: imprime la hoja de conteo, cuenta tus productos y el sistema te muestra qué falta o sobra.', 'Toca hacer inventario', '📦');
+            } catch (e) { console.error(e); }
+        }
+        function invfAbrir() {
+            invfCargarBorrador();
+            document.getElementById('invf-dias').value = String(invfDias());
+            const cats = [...new Set(invfProductos().map(p => p.categoria || 'GENERAL'))].sort((a, b) => String(a).localeCompare(String(b)));
+            document.getElementById('invf-cat').innerHTML = '<option value="">Todas las categorías</option>' + cats.map(c => '<option>' + escHtml(c) + '</option>').join('');
+            document.getElementById('invf-fil').value = 'todos'; document.getElementById('invf-q').value = '';
+            invfPintar(); abrirModal('modal-invf');
+        }
+        function invfCambiarDias() {
+            invfSet('svp_invf_dias', document.getElementById('invf-dias').value);
+            document.getElementById('invf-estado').innerHTML = invfEstadoTxt(); actualizarBotonInvf();
+        }
+        function invfLista() {
+            const cat = document.getElementById('invf-cat').value, fil = document.getElementById('invf-fil').value, q = document.getElementById('invf-q').value.trim().toLowerCase();
+            return invfProductos().filter(p => {
+                if (cat && (p.categoria || 'GENERAL') !== cat) return false;
+                if (q && !(String(p.nombre).toLowerCase().includes(q) || String(p.codigo || '').toLowerCase().includes(q))) return false;
+                const t = _invfConteo[String(p.id)], v = (t === undefined || t === '') ? NaN : invfValor(p, t);
+                if (fil === 'falta') return !isFinite(v);
+                if (fil === 'dif') return isFinite(v) && Math.abs(v - p.stock) > 0.0004;
+                return true;
+            }).sort((a, b) => String(a.categoria || '').localeCompare(String(b.categoria || '')) || String(a.nombre).localeCompare(String(b.nombre)));
+        }
+        function invfDifHtml(p) {
+            const t = _invfConteo[String(p.id)], v = (t === undefined || t === '') ? NaN : invfValor(p, t);
+            if (!isFinite(v)) return ['<span class="text-slate-500">—</span>', ''];
+            const d = r3(v - p.stock);
+            if (Math.abs(d) < 0.0004) return ['<b style="color:#10b981">✔ Coincide</b>', '$0.00'];
+            const val = redondear2(d * (Number(p.costo) || 0));
+            return ['<b style="color:' + (d < 0 ? '#e11d48' : '#0ea5e9') + '">' + (d > 0 ? '+' : '') + fmtCant(d) + (d < 0 ? ' (falta)' : ' (sobra)') + '</b>', '<span style="color:' + (d < 0 ? '#e11d48' : '#0ea5e9') + '">' + (val < 0 ? '-' : '') + dinero(Math.abs(val)) + '</span>'];
+        }
+        function invfResumen() {
+            let contados = 0, dif = 0, falta = 0, sobra = 0;
+            invfProductos().forEach(p => {
+                const t = _invfConteo[String(p.id)]; if (t === undefined || t === '') return;
+                const v = invfValor(p, t); if (!isFinite(v)) return;
+                contados++; const d = r3(v - p.stock);
+                if (Math.abs(d) >= 0.0004) { dif++; const val = redondear2(d * (Number(p.costo) || 0)); if (d < 0) falta += -val; else sobra += val; }
+            });
+            return { contados, dif, falta: redondear2(falta), sobra: redondear2(sobra), total: invfProductos().length };
+        }
+        function invfKpis() {
+            const r = invfResumen();
+            const k = (t, v, c) => '<div style="flex:1;min-width:140px;padding:8px 10px;border-radius:10px;border:1px solid ' + c + '"><div style="font-size:10px;font-weight:900;text-transform:uppercase" class="text-slate-400">' + t + '</div><div style="font-size:16px;font-weight:900;color:' + c + '">' + v + '</div></div>';
+            document.getElementById('invf-kpis').innerHTML = k('Contados', r.contados + ' de ' + r.total, '#14b8a6') + k('Con diferencia', String(r.dif), '#f59e0b') + k('Valor que falta', dinero(r.falta), '#e11d48') + k('Valor que sobra', dinero(r.sobra), '#0ea5e9');
+        }
+        function invfPintar() {
+            document.getElementById('invf-estado').innerHTML = invfEstadoTxt();
+            const l = invfLista(), top = l.slice(0, 400);
+            document.getElementById('invf-body').innerHTML = top.length ? top.map(p => {
+                const k = escHtml(String(p.id)), d = invfDifHtml(p), t = _invfConteo[String(p.id)];
+                return '<tr class="border-b border-slate-800/40"><td class="p-2"><div class="font-black text-slate-100">' + escHtml(p.nombre) + '</div><div class="text-[10px] text-slate-500">' + escHtml(p.categoria || '') + (p.codigo ? ' · ' + escHtml(p.codigo) : '') + '</div></td>' +
+                    '<td class="p-2 text-center font-mono font-black">' + fmtCant(p.stock) + ' <span class="text-slate-500 text-[10px]">' + escHtml(p.medida || '') + '</span></td>' +
+                    '<td class="p-2 text-center"><input data-k="' + k + '" value="' + escHtml(t === undefined ? '' : t) + '" inputmode="decimal" oninput="invfEscribir(this)" style="width:84px;text-align:center;font-weight:900" class="bg-slate-950 border border-slate-700 p-1.5 rounded-lg text-slate-100 text-xs"></td>' +
+                    '<td class="p-2 text-center text-[11px]" id="invf-d-' + k + '">' + d[0] + '</td><td class="p-2 text-right font-mono text-[11px]" id="invf-v-' + k + '">' + d[1] + '</td></tr>';
+            }).join('') : '<tr><td colspan="5" class="p-6 text-center text-slate-400 font-bold">No hay productos con ese filtro.</td></tr>';
+            document.getElementById('invf-nota').innerText = (l.length > 400 ? 'Se muestran los primeros 400 de ' + l.length + ' productos: usa categoría o buscar para ver el resto. ' : '') + 'Lo que escribes se guarda solo; puedes cerrar y seguir después.';
+            invfKpis();
+        }
+        function invfEscribir(el) {
+            const k = el.dataset.k, p = invfProductos().find(x => String(x.id) === k); if (!p) return;
+            if (el.value.trim() === '') delete _invfConteo[k]; else _invfConteo[k] = el.value;
+            invfGuardarBorrador();
+            const d = invfDifHtml(p), a = document.getElementById('invf-d-' + k), b = document.getElementById('invf-v-' + k);
+            if (a) a.innerHTML = d[0]; if (b) b.innerHTML = d[1];
+            invfKpis();
+        }
+        function invfImprimirHoja() {
+            const l = invfLista(); if (!l.length) { mostrarAvisoPro('No hay productos para imprimir con ese filtro.', 'Hoja de conteo', '📦'); return; }
+            const g = {}; l.forEach(p => { const c = p.categoria || 'GENERAL'; (g[c] = g[c] || []).push(p); });
+            const bloques = Object.keys(g).sort((a, b) => a.localeCompare(b)).map(c => ({
+                t: 'CATEGORÍA: ' + escHtml(c) + ' — ' + g[c].length + ' producto' + (g[c].length === 1 ? '' : 's'),
+                cols: [{ t: 'Producto' }, { t: 'Código' }, { t: 'Unidad' }, { t: 'Cantidad contada', a: 'center' }],
+                filas: g[c].map(p => [escHtml(p.nombre), escHtml(p.codigo || ''), escHtml(p.medida || 'pz'), '<span style="display:inline-block;width:110px;border-bottom:1px solid #0f172a">&nbsp;</span>'])
+            }));
+            asesorHoja('HOJA DE CONTEO DE INVENTARIO', 'No se muestra la cantidad del sistema para contar sin ideas previas · ' + l.length + ' producto' + (l.length === 1 ? '' : 's'), bloques,
+                [['Productos a contar', String(l.length)], ['Contó', '______________________'], ['Fecha', isoADMY(fechaLocalISO())]]);
+        }
+        function invfImprimirDif() {
+            const filas = []; let falta = 0, sobra = 0;
+            invfProductos().sort((a, b) => String(a.nombre).localeCompare(String(b.nombre))).forEach(p => {
+                const t = _invfConteo[String(p.id)]; if (t === undefined || t === '') return;
+                const v = invfValor(p, t); if (!isFinite(v)) return;
+                const d = r3(v - p.stock); if (Math.abs(d) < 0.0004) return;
+                const val = redondear2(d * (Number(p.costo) || 0)); if (d < 0) falta += -val; else sobra += val;
+                filas.push([escHtml(p.nombre), fmtCant(p.stock), fmtCant(v), '<b>' + (d > 0 ? '+' : '') + fmtCant(d) + '</b>', (val < 0 ? '-' : '') + dinero(Math.abs(val))]);
+            });
+            if (!filas.length) { mostrarAvisoPro('Todavía no hay diferencias que imprimir. Escribe lo contado en la lista.', 'Informe de diferencias', '📦'); return; }
+            const r = invfResumen();
+            asesorHoja('INFORME DE DIFERENCIAS DE INVENTARIO', 'Conteo físico del ' + isoADMY(fechaLocalISO()) + ' · ' + r.contados + ' productos contados', [{ t: 'PRODUCTOS CON DIFERENCIA — ' + filas.length, cols: [{ t: 'Producto' }, { t: 'Sistema', a: 'right' }, { t: 'Contado', a: 'right' }, { t: 'Diferencia', a: 'right' }, { t: 'Valor (costo)', a: 'right' }], filas }],
+                [['Productos contados', String(r.contados)], ['Valor que falta (costo)', dinero(redondear2(falta))], ['Valor que sobra (costo)', dinero(redondear2(sobra))], ['Diferencia neta', (sobra - falta < 0 ? '-' : '') + dinero(Math.abs(redondear2(sobra - falta)))]]);
+        }
+        function invfAplicar() {
+            const r = invfResumen();
+            if (!r.contados) { mostrarAvisoPro('Primero escribe la cantidad que contaste de tus productos.', 'Inventario físico', '📦'); return; }
+            const sinContar = r.total - r.contados;
+            const ok = confirm('Se ajustará el stock de ' + r.dif + ' producto' + (r.dif === 1 ? '' : 's') + ' (valor que falta ' + dinero(r.falta) + ', sobra ' + dinero(r.sobra) + ').\n' + (sinContar ? sinContar + ' producto(s) que no contaste NO se tocan.\n' : '') + '\n¿Aplicar y terminar este inventario?');
+            if (!ok) return;
+            let n = 0;
+            invfProductos().forEach(p => {
+                const t = _invfConteo[String(p.id)]; if (t === undefined || t === '') return;
+                const v = invfValor(p, t); if (!isFinite(v) || v < 0) return;
+                const antes = p.stock; if (Math.abs(v - antes) < 0.0004) return;
+                p.stock = v; registrarMovimiento(p, 'AJUSTE', v - antes, antes, 'Conteo físico · inventario ' + isoADMY(fechaLocalISO()), ''); n++;
+            });
+            invfSet('svp_invf_ult', fechaLocalISO()); _invfConteo = {}; invfGuardarBorrador();
+            guardarMemoria(); try { renderizarInventario(); } catch (e) {} try { actualizarBotonSurtir(); } catch (e) {}
+            actualizarBotonInvf(); invfPintar();
+            mostrarAvisoPro('Inventario terminado. Se ajustaron ' + n + ' producto' + (n === 1 ? '' : 's') + ' y quedó registrado en Movimientos.\n' + (invfDias() ? 'Te avisaremos de nuevo en ' + invfDias() + ' días.' : ''), 'Inventario listo', '✅');
+        }
+        setTimeout(function () { try { actualizarBotonInvf(); } catch (e) {} setTimeout(invfAvisoInicial, 4000); }, 1500);
+
+        // ===== ETIQUETAS DE CÓDIGO DE BARRAS v12.85.22 =====
         // Genera códigos Code128 (los lee cualquier lector) sin internet ni librerías externas.
         const C128 = "212222,222122,222221,121223,121322,131222,122213,122312,132212,221213,221312,231212,112232,122132,122231,113222,123122,123221,223211,221132,221231,213212,223112,312131,311222,321122,321221,312212,322112,322211,212123,212321,232121,111323,131123,131321,112313,132113,132311,211313,231113,231311,112133,112331,132131,113123,113321,133121,313121,211331,231131,213113,213311,213131,311123,311321,331121,312113,312311,332111,314111,221411,431111,111224,111422,121124,121421,141122,141221,112214,112412,122114,122411,142112,142211,241211,221114,413111,241112,134111,111242,121142,121241,114212,124112,124211,411212,421112,421211,212141,214121,412121,111143,111341,131141,114113,114311,411113,411311,113141,114131,311141,411131,211412,211214,211232,2331112".split(',');
         function code128Modulos(texto) {
@@ -4348,7 +4534,7 @@ html:not(.dark) .pos-pie{background:#fff}
             mostrarLoginSistema();
         }
 
-        // ===== RECUPERAR CONTRASEÑA DEL DUEÑO v12.85.21 =====
+        // ===== RECUPERAR CONTRASEÑA DEL DUEÑO v12.85.22 =====
         // Código firmado por el proveedor: REC1-AAAAMMDD-<aviso único>-<firma>. Sirve solo para este equipo (ID de instalación),
         // vence en la fecha indicada y se puede usar una sola vez. Cambia la clave del DUEÑO; no borra ningún dato.
         function codigosRecuperacionUsados() {
@@ -4661,7 +4847,7 @@ html:not(.dark) .pos-pie{background:#fff}
             corteHoy();
         }
 
-        // ===== CORTE DE CAJA Y REPORTES v12.85.21 =====
+        // ===== CORTE DE CAJA Y REPORTES v12.85.22 =====
         const METODOS_PAGO = ['EFECTIVO', 'TARJETA', 'TRANSFERENCIA'];
         function dinero(n) { return '$' + (Number(n) || 0).toFixed(2); }
         function csvCelda(x) { return '"' + String(x === undefined || x === null ? '' : x).replace(/"/g, '""') + '"'; }
@@ -4671,7 +4857,7 @@ html:not(.dark) .pos-pie{background:#fff}
         function registrarAbonoHistorial(venta, monto, metodo) {
             if (!(monto > 0)) return;
             if (!Array.isArray(venta.abonos)) {
-                // venta anterior a la v12.85.21: el abono previo se conserva como un solo movimiento con la fecha de la venta
+                // venta anterior a la v12.85.22: el abono previo se conserva como un solo movimiento con la fecha de la venta
                 const previo = Math.max(0, (venta.abonado || 0) - monto);
                 venta.abonos = previo > 0 ? [{ fecha: venta.fecha, monto: previo, metodo: venta.con || 'EFECTIVO', antiguo: true }] : [];
             }
@@ -5300,7 +5486,7 @@ html:not(.dark) .pos-pie{background:#fff}
             }
         }
 
-        // v12.85.21: proveedor, categoría y medida también se pueden corregir al editar
+        // v12.85.22: proveedor, categoría y medida también se pueden corregir al editar
         function llenarClasificacionEdicion(p) {
             const caja = document.getElementById('edit-prod-clasif');
             const esServicio = p.categoria === 'SERVICIOS';
@@ -5647,7 +5833,7 @@ html:not(.dark) .pos-pie{background:#fff}
             `).join('') + (_totProds > 120 ? `<div class="col-span-full text-center text-[11px] font-bold text-slate-400 p-3">Mostrando 120 de ${_totProds} productos — escribe o escanea para encontrar el que buscas.</div>` : '');
         }
 
-        // ===== LECTOR DE CÓDIGO DE BARRAS v12.85.21 =====
+        // ===== LECTOR DE CÓDIGO DE BARRAS v12.85.22 =====
         // El lector funciona como un teclado: "escribe" el código muy rápido y pulsa Enter.
         function sonidoLectorActivo() { try { return localStorage.getItem('nexus_sonido_lector') !== '0'; } catch (e) { return true; } }
         function alternarSonidoLector() {
@@ -5904,7 +6090,7 @@ html:not(.dark) .pos-pie{background:#fff}
             if (t.envio > 0) t.total = redondear2(t.total + t.envio);
             return t;
         }
-        // ===== v12.85.21: COSTO DE ENVÍO A DOMICILIO =====
+        // ===== v12.85.22: COSTO DE ENVÍO A DOMICILIO =====
         function aplicarOpcionesPOS() {
             let min = false; try { min = localStorage.getItem('svp_pos_min') === '1'; } catch (e) { }
             const c = document.getElementById('pos-controles'), b = document.getElementById('pos-btn-opciones'); if (!c) return;
@@ -6209,7 +6395,7 @@ html:not(.dark) .pos-pie{background:#fff}
             renderizarCarrito();
 
             if (posSeguirAbierto()) {
-                // v12.85.21: la ventana de venta se queda abierta y lista para la siguiente
+                // v12.85.22: la ventana de venta se queda abierta y lista para la siguiente
                 try { document.getElementById('pos-forma-pago').value = 'CONTADO'; const tp = document.getElementById('pos-tipo-pago'); if (tp) tp.value = 'EFECTIVO'; actualizarEtiquetaFormaPago(); const sc = document.getElementById('pos-select-cliente'); if (sc) sc.value = 'CLIENTE GENERAL'; const bp = document.getElementById('buscador-pos'); if (bp) bp.value = ''; renderizarCarrito(); renderizarGridPOS(); } catch (e) {}
             } else {
                 cerrarModal('modal-nueva-venta');
@@ -6221,7 +6407,7 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
 
-        // ===== DEVOLUCIONES PARCIALES v12.85.21 =====
+        // ===== DEVOLUCIONES PARCIALES v12.85.22 =====
         function devueltoPorItem(v) { const m = {}; (v.devoluciones || []).forEach(d => (d.items || []).forEach(i => { m[i.idx] = (m[i.idx] || 0) + i.cant; })); return m; }
         function totalDevueltoVenta(v) { return (v.devoluciones || []).reduce((a, d) => a + d.total, 0); }
         function ventaTieneRestante(v) { const m = devueltoPorItem(v); return (v.items || []).some((it, idx) => (it.cant - (m[idx] || 0)) > 1e-9); }
@@ -7073,7 +7259,7 @@ html:not(.dark) .pos-pie{background:#fff}
             // La pantalla de inicio se muestra SIEMPRE al abrir el sistema (queda visible hasta que se pulse Entrar / Probar DEMO).
         }
 
-        // ===== DEMO DE 3 DÍAS QUE NO SE REINICIA + MODO CONSULTA v12.85.21 =====
+        // ===== DEMO DE 3 DÍAS QUE NO SE REINICIA + MODO CONSULTA v12.85.22 =====
         // La fecha de inicio de la demo (y el ID del equipo y la clave) se guardan en varios lugares a la vez:
         //   aplicación de escritorio (svpNative) · IndexedDB · localStorage · respaldos.
         // Siempre gana la fecha de inicio MÁS ANTIGUA, así borrar un lugar no reinicia la prueba.
@@ -7206,7 +7392,7 @@ html:not(.dark) .pos-pie{background:#fff}
             window.entrarAlSistema = async function () { const r = await ent.apply(this, arguments); try { pintarBannerConsulta(); } catch (e) {} return r; };
         })();
 
-        // ===== SERVIDOR DE LICENCIAS v12.85.21 =====
+        // ===== SERVIDOR DE LICENCIAS v12.85.22 =====
         // Con servidor: la fecha de inicio de la demo la fija EL SERVIDOR la primera vez que el equipo se conecta,
         // así borrar datos o reinstalar no sirve. Las respuestas vienen firmadas y se verifican con SERVIDOR_PUBLIC_JWK.
         // Sin internet el sistema sigue funcionando con su estado local; en cuanto hay conexión se sincroniza.
@@ -7303,7 +7489,7 @@ html:not(.dark) .pos-pie{background:#fff}
 
         iniciarPantallaInicio();
 
-        // ===== NUBE v12.85.21: copia automática al servidor + panel web de consulta =====
+        // ===== NUBE v12.85.22: copia automática al servidor + panel web de consulta =====
         const NUBE_COLS = ['inventario', 'historialVentas', 'historialGastos', 'clientesSistema', 'cajaEstado', 'turnosCaja', 'ventasAnuladas', 'ventasDevueltas', 'historialCompras', 'proveedoresSistema', 'negocioData', 'acceso'];
         let _nubeTimer = null, _nubeBusy = false, _nubeMsg = '', _nubeFalla = false;
         function nubeCfg() { try { return JSON.parse(localStorage.getItem('svp_nube') || 'null') || {}; } catch (e) { return {}; } }
@@ -7433,7 +7619,7 @@ html:not(.dark) .pos-pie{background:#fff}
         setTimeout(() => { try { if (nubeCfg().token) nubeProgramar(10000); } catch (e) {} }, 8000);
 
 
-        // ===== MULTI-CAJA v12.85.21: varios equipos con los mismos datos =====
+        // ===== MULTI-CAJA v12.85.22: varios equipos con los mismos datos =====
         // Cada equipo anota sus CAMBIOS (ventas nuevas, descuentos de stock, gastos...) y los envía a la nube; los demás los reciben y los aplican.
         // El stock viaja como DIFERENCIA (-2, +10), nunca como valor final: así dos cajas que venden a la vez no se pisan.
         const SY_IDCOLS = {
@@ -7818,7 +8004,7 @@ html:not(.dark) .pos-pie{background:#fff}
         function syGapMs(quietoMs) { return quietoMs < 60000 ? 5000 : (quietoMs < 300000 ? 15000 : 30000); }
         function syArrancar() {
             if (_syIntervalo) return;
-            // v12.85.21: consulta más espaciada cuando nadie usa el equipo (ahorra peticiones al servidor): 5 s en uso, 15 s tras 1 min quieto, 30 s tras 5 min
+            // v12.85.22: consulta más espaciada cuando nadie usa el equipo (ahorra peticiones al servidor): 5 s en uso, 15 s tras 1 min quieto, 30 s tras 5 min
             ['click', 'keydown', 'touchstart', 'mousemove', 'scroll'].forEach(ev => document.addEventListener(ev, syBump, { passive: true, capture: true }));
             _syIntervalo = setInterval(() => { try { const c = nubeCfg(); if (c.token && c.multi && !document.hidden && Date.now() - _syUltPoll >= syGapMs(Date.now() - _syAct) - 600) syRonda(false); } catch (e) {} }, 5000);
             document.addEventListener('visibilitychange', () => { try { const c = nubeCfg(); if (c.token && c.multi && !document.hidden) syRonda(false); } catch (e) {} });
@@ -7904,7 +8090,7 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
         // ===================================================================================
-        // v12.85.21 — CANTIDADES DECIMALES · DESCUENTOS · STOCK MÍNIMO · KARDEX · CSV · BLOQUEO
+        // v12.85.22 — CANTIDADES DECIMALES · DESCUENTOS · STOCK MÍNIMO · KARDEX · CSV · BLOQUEO
         // ===================================================================================
         function r3(n) { return Math.round((Number(n) || 0) * 1000) / 1000; }
         function numDec(s) {            // "1,5" -> 1.5 · "" -> NaN
@@ -8110,6 +8296,7 @@ html:not(.dark) .pos-pie{background:#fff}
             b.innerText = '📋 Por surtir (' + n + ')';
             b.style.opacity = '1'; b.style.filter = n ? '' : 'saturate(.55)';
             try { actualizarBotonCaducar(); } catch (e) {}
+            try { actualizarBotonInvf(); } catch (e) {}
         }
         function abrirPorSurtir() {
             const l = productosPorSurtir();
@@ -8312,10 +8499,10 @@ html:not(.dark) .pos-pie{background:#fff}
         })();
 
         // ===================================================================================
-        // v12.85.21 — ALMACENAMIENTO GRANDE: imágenes ligeras, ventas ligeras, listas por páginas, control de espacio
+        // v12.85.22 — ALMACENAMIENTO GRANDE: imágenes ligeras, ventas ligeras, listas por páginas, control de espacio
         // ===================================================================================
         var _terminoInvPrev = '';
-        // ===== v12.85.21: TURNOS POR CAJERO Y REPORTE DE GANANCIA =====
+        // ===== v12.85.22: TURNOS POR CAJERO Y REPORTE DE GANANCIA =====
         function usaTurnos() { return !!(negocioData && negocioData.usarTurnos); }
         function turnoIdActual() { return (usaTurnos() && cajaEstado.turnoId) ? cajaEstado.turnoId : null; }
         function turnoAbierto() { return usaTurnos() ? (turnosCaja.find(t => t.id === cajaEstado.turnoId && !t.cierre) || null) : null; }
@@ -8486,7 +8673,7 @@ html:not(.dark) .pos-pie{background:#fff}
             return h;
         }
 
-        // ===== v12.85.21: REPORTES EN HOJA CARTA =====
+        // ===== v12.85.22: REPORTES EN HOJA CARTA =====
         function imprimirHtmlCarta(html) {
             let area = document.getElementById('area-impresion-ticket');
             if (!area) { area = document.createElement('div'); area.id = 'area-impresion-ticket'; document.body.appendChild(area); }
@@ -8594,20 +8781,20 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
 
-        // ===== v12.85.21: ESCALA AUTOMÁTICA SEGÚN EL TAMAÑO DE LA PANTALLA =====
+        // ===== v12.85.22: ESCALA AUTOMÁTICA SEGÚN EL TAMAÑO DE LA PANTALLA =====
         function aplicarEscalaPantalla() {
             try {
                 const w = window.innerWidth;
                 const z = w >= 3000 ? 1.6 : w >= 2400 ? 1.4 : w >= 1900 ? 1.2 : w >= 1700 ? 1.1 : 1;
                 document.documentElement.style.zoom = z === 1 ? '' : String(z);
-                // v12.85.21: con zoom, 1vh debe valer (alto real / 100 / zoom) para que la ventana no se salga de la pantalla
+                // v12.85.22: con zoom, 1vh debe valer (alto real / 100 / zoom) para que la ventana no se salga de la pantalla
                 document.documentElement.style.setProperty('--vh', (window.innerHeight / 100 / z) + 'px');
             } catch (e) { }
         }
         aplicarEscalaPantalla();
         window.addEventListener('resize', aplicarEscalaPantalla);
 
-        // ===== v12.85.21: FOTOS DE PRODUCTOS (internet por código de barras / archivos) =====
+        // ===== v12.85.22: FOTOS DE PRODUCTOS (internet por código de barras / archivos) =====
         function abrirFotos() {
             abrirModal('modal-fotos');
             document.getElementById('fotos-resultado').innerHTML = '';
@@ -8633,7 +8820,7 @@ html:not(.dark) .pos-pie{background:#fff}
             document.getElementById('fotos-archivos').value = '';
         }
 
-        // ===== v12.85.21: PAGINACIÓN Y LIMPIEZA DE REGISTROS =====
+        // ===== v12.85.22: PAGINACIÓN Y LIMPIEZA DE REGISTROS =====
         function paginar(st, total) {
             const paginas = Math.max(1, Math.ceil(total / st.n));
             if (st.p > paginas) st.p = paginas;
@@ -8834,7 +9021,7 @@ window.addEventListener('error', e => console.error('Error:', e.message));
 window.addEventListener('unhandledrejection', e => console.error('Promesa:', e.reason));
 </script>
 <script>
-/* v12.85.21: etiqueta cada celda con el nombre de su columna para mostrar tarjetas en el celular */
+/* v12.85.22: etiqueta cada celda con el nombre de su columna para mostrar tarjetas en el celular */
 (function(){var t=null;
 function run(){try{document.querySelectorAll('table').forEach(function(tb){
  if(tb.classList.contains('cj-t')||tb.classList.contains('cj-kv'))return;
@@ -8851,9 +9038,9 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 })();
 </script>
 <script>
-/* v12.85.21: aviso de versión nueva en la app de Android (no se actualiza sola: se descarga e instala encima) */
+/* v12.85.22: aviso de versión nueva en la app de Android (no se actualiza sola: se descarga e instala encima) */
 (function(){
- var VER='12.85.21',REPO='dacrohx08-bot/system-ventas-pro',APK='https://github.com/'+REPO+'/releases/latest/download/SystemVentasPro-Android.apk';
+ var VER='12.85.22',REPO='dacrohx08-bot/system-ventas-pro',APK='https://github.com/'+REPO+'/releases/latest/download/SystemVentasPro-Android.apk';
  function esAndroid(){try{return !!(window.Capacitor&&Capacitor.getPlatform&&Capacitor.getPlatform()==='android')}catch(e){return false}}
  function num(v){return String(v||'').replace(/^v/i,'').split('.').map(function(x){return parseInt(x,10)||0})}
  function mayor(a,b){a=num(a);b=num(b);for(var i=0;i<3;i++){if((a[i]||0)>(b[i]||0))return true;if((a[i]||0)<(b[i]||0))return false}return false}
