@@ -696,7 +696,7 @@ html:not(.dark) .pos-pie{background:#fff}
                 <div class="glass-panel p-3.5 rounded-xl border-l-4 border-rose-500">
                     <p class="text-[10px] text-slate-400 font-extrabold uppercase">Gastos Totales</p>
                     <p id="stat-gastos" class="text-base font-black text-rose-400 font-mono mt-0.5">$0.00</p>
-                    <p id="stat-compras" class="text-[9px] font-bold text-amber-400 mt-0.5"></p>
+                    <p id="stat-compras" class="text-[9px] font-bold text-amber-400 mt-0.5 cursor-pointer underline" onclick="abrirListaCompras()" title="Ver las compras"></p>
                 </div>
                 <div class="glass-panel p-3.5 rounded-xl border-l-4 border-pink-500">
                     <p class="text-[10px] text-slate-400 font-extrabold uppercase">Tickets Emitidos</p>
@@ -1872,6 +1872,45 @@ html:not(.dark) .pos-pie{background:#fff}
                     <tbody id="tabla-proveedores-body" class="divide-y divide-slate-800/50 font-mono font-bold text-xs"></tbody>
                 </table>
             </div>
+        </div>
+    </div>
+
+    <!-- v12.85.29: LISTA DE COMPRAS REGISTRADAS -->
+    <div id="modal-lista-compras" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
+        <div class="glass-panel bg-slate-900 border border-slate-700 w-full max-w-3xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[90vh]">
+            <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+                <h3 class="text-xs font-black text-amber-400 tracking-wider uppercase">🛒 COMPRAS DE MERCANCÍA REGISTRADAS</h3>
+                <button onclick="cerrarModal('modal-lista-compras')" class="btn-cerrar-modal-custom w-7 h-7 rounded-lg flex items-center justify-center text-xs cursor-pointer">✕</button>
+            </div>
+            <p id="lista-compras-total" class="text-[11px] text-slate-400"></p>
+            <div class="flex-1 bg-slate-950 border border-slate-800 rounded-xl overflow-y-auto" style="max-height:55vh">
+                <table class="w-full text-left text-xs text-slate-300">
+                    <thead class="bg-amber-950/80 text-amber-300 uppercase font-black border-b border-amber-400/70 sticky top-0 text-[10px]">
+                        <tr><th class="p-2">Fecha</th><th class="p-2">Producto</th><th class="p-2">Proveedor</th><th class="p-2 text-right">Cant.</th><th class="p-2 text-right">Costo c/u</th><th class="p-2 text-right">Total</th><th class="p-2 text-center">Acción</th></tr>
+                    </thead>
+                    <tbody id="lista-compras-body" class="divide-y divide-slate-800/50 font-mono font-bold text-xs"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- v12.85.29: EDITAR COMPRA -->
+    <div id="modal-editar-compra" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
+        <div class="glass-panel bg-slate-900 border border-slate-700 w-full max-w-md p-5 rounded-2xl shadow-2xl space-y-3">
+            <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+                <h3 class="text-xs font-black text-cyan-400 tracking-wider uppercase">✏️ EDITAR COMPRA</h3>
+                <button onclick="cerrarModal('modal-editar-compra')" class="btn-cerrar-modal-custom w-7 h-7 rounded-lg flex items-center justify-center text-xs cursor-pointer">✕</button>
+            </div>
+            <p id="ec-producto" class="text-sm font-black text-slate-100"></p>
+            <div class="grid grid-cols-2 gap-3 text-xs">
+                <label class="text-slate-400 font-bold">Cantidad<input id="ec-cant" type="text" inputmode="decimal" class="w-full bg-slate-950 border border-slate-800 p-2 rounded-lg text-slate-100 font-mono"></label>
+                <label class="text-slate-400 font-bold">Costo por pieza ($)<input id="ec-costo" type="text" inputmode="decimal" class="w-full bg-slate-950 border border-slate-800 p-2 rounded-lg text-slate-100 font-mono"></label>
+                <label class="text-slate-400 font-bold">Proveedor<input id="ec-prov" type="text" class="w-full bg-slate-950 border border-slate-800 p-2 rounded-lg text-slate-100 font-bold"></label>
+                <label class="text-slate-400 font-bold">Fecha<input id="ec-fecha" type="date" class="w-full bg-slate-950 border border-slate-800 p-2 rounded-lg text-slate-100 font-mono"></label>
+            </div>
+            <p class="text-[10px] text-slate-500">Si cambias la cantidad, el stock del producto se ajusta con la diferencia.</p>
+            <input type="hidden" id="ec-id">
+            <button onclick="guardarEdicionCompra()" class="bp bp-green w-full py-2.5 rounded-xl font-black text-xs uppercase cursor-pointer">💾 GUARDAR CAMBIOS</button>
         </div>
     </div>
 
@@ -5363,6 +5402,63 @@ html:not(.dark) .pos-pie{background:#fff}
             renderizarSelectProductosCompra(texto);
         }
 
+        function abrirListaCompras() {
+            const filas = historialCompras.map(c => {
+                const tot = (parseFloat(c.cant) || 0) * (parseFloat(c.costo) || 0);
+                return '<tr><td class="p-2">' + escHtml(String(c.fecha || '').split('-').reverse().join('/')) + '</td><td class="p-2">' + escHtml(c.producto) + '</td><td class="p-2">' + escHtml(c.proveedor || '') + '</td><td class="p-2 text-right">' + escHtml(c.cant) + '</td><td class="p-2 text-right">' + dinero(c.costo) + (parseFloat(c.costo) > 0 ? '' : ' ⚠️') + '</td><td class="p-2 text-right text-amber-300">' + dinero(tot) + '</td><td class="p-2 text-center whitespace-nowrap"><button onclick="editarCompra(' + c.id + ')" class="text-cyan-400 cursor-pointer font-black">✏️ Editar</button> <button onclick="eliminarCompra(' + c.id + ')" class="text-rose-400 cursor-pointer font-black ml-2">🗑️ Eliminar</button></td></tr>';
+            });
+            document.getElementById('lista-compras-body').innerHTML = filas.join('') || '<tr><td colspan="7" class="p-4 text-center text-slate-500">Sin compras registradas</td></tr>';
+            const t = historialCompras.reduce((a, c) => a + (parseFloat(c.cant) || 0) * (parseFloat(c.costo) || 0), 0);
+            document.getElementById('lista-compras-total').innerText = historialCompras.length + ' compras · total ' + dinero(t) + '. Si una dice ⚠️ no tiene costo (cuenta $0).';
+            abrirModal('modal-lista-compras');
+        }
+
+        function _compraProd(c) { return inventario.find(p => c.prodId != null && p.id == c.prodId) || inventario.find(p => p.nombre === c.producto) || null; }
+        function _compraRefrescar() {
+            guardarMemoria();
+            try { renderizarInventario(); } catch (e) {}
+            try { renderizarEstadisticas(); } catch (e) {}
+            abrirListaCompras();
+        }
+        function eliminarCompra(id) {
+            const c = historialCompras.find(x => x.id == id); if (!c) return;
+            const prod = _compraProd(c);
+            mostrarConfirmacionPro('¿Eliminar esta compra de "' + c.producto + '" (' + c.cant + ' pzas)?' + (prod ? '\n\nSe le restarán ' + c.cant + ' piezas al stock (hoy tiene ' + prod.stock + ').' : '\n\nEl producto ya no existe; solo se borra el registro.'), 'Eliminar compra', '🗑️', () => {
+                if (prod) { const antes = prod.stock; prod.stock = Math.max(0, r3(prod.stock - (parseFloat(c.cant) || 0))); lotesNormalizar(prod); registrarMovimiento(prod, 'AJUSTE', prod.stock - antes, antes, 'Compra eliminada', ''); }
+                historialCompras = historialCompras.filter(x => x.id != id);
+                _compraRefrescar();
+            });
+        }
+        function editarCompra(id) {
+            const c = historialCompras.find(x => x.id == id); if (!c) return;
+            document.getElementById('ec-id').value = id;
+            document.getElementById('ec-producto').innerText = '🛒 ' + c.producto;
+            document.getElementById('ec-cant').value = c.cant;
+            document.getElementById('ec-costo').value = c.costo;
+            document.getElementById('ec-prov').value = c.proveedor || '';
+            document.getElementById('ec-fecha').value = /^\d{4}-\d{2}-\d{2}$/.test(String(c.fecha || '')) ? c.fecha : '';
+            abrirModal('modal-editar-compra');
+        }
+        function guardarEdicionCompra() {
+            const id = document.getElementById('ec-id').value;
+            const c = historialCompras.find(x => x.id == id); if (!c) return;
+            const prod = _compraProd(c);
+            const cantRaw = numDec(document.getElementById('ec-cant').value);
+            const cant = isFinite(cantRaw) ? (prod && esFraccionable(prod) ? r3(cantRaw) : Math.round(cantRaw)) : 0;
+            const costo = parseFloat(String(document.getElementById('ec-costo').value).replace(',', '.')) || 0;
+            if (!(cant > 0)) { mostrarAvisoPro('La cantidad debe ser mayor a 0. Si te equivocaste de compra, mejor elimínala.', 'Cantidad incorrecta', '⚠️'); return; }
+            const dif = r3(cant - (parseFloat(c.cant) || 0));
+            if (prod && dif !== 0) { const antes = prod.stock; prod.stock = Math.max(0, r3(prod.stock + dif)); lotesNormalizar(prod); registrarMovimiento(prod, 'AJUSTE', prod.stock - antes, antes, 'Compra editada', ''); }
+            // si es la compra más reciente de ese producto, su costo pasa a ser el costo del producto
+            if (prod && costo > 0 && historialCompras.find(x => _compraProd(x) === prod) === c) prod.costo = costo;
+            c.cant = cant; c.costo = costo;
+            c.proveedor = document.getElementById('ec-prov').value.trim() || c.proveedor;
+            const f = document.getElementById('ec-fecha').value; if (f) c.fecha = f;
+            if (prod) c.prodId = prod.id;
+            cerrarModal('modal-editar-compra');
+            _compraRefrescar();
+        }
+
         function registrarCompraFinal() {
             const selProd = document.getElementById('compra-producto');
             if(!selProd.value) {
@@ -5395,6 +5491,7 @@ html:not(.dark) .pos-pie{background:#fff}
                     id: Date.now(),
                     fecha,
                     proveedor,
+                    prodId: prod.id,
                     producto: prod.nombre,
                     cant,
                     costo,
@@ -5405,6 +5502,8 @@ html:not(.dark) .pos-pie{background:#fff}
                 cerrarModal('modal-compra');
                 renderizarInventario();
                 mostrarAvisoPro(`¡Compra registrada con éxito!\nProveedor: ${proveedor}\nStock actualizado.`, "Inventario", "🛒");
+            } else {
+                mostrarAvisoPro('La compra NO se guardó: revisa que el producto esté elegido y que la cantidad sea mayor a 0.', 'Compra no guardada', '⚠️');
             }
         }
 
@@ -7023,7 +7122,7 @@ html:not(.dark) .pos-pie{background:#fff}
             // v12.85.29: lo que compraste de mercancía (botón Compra) también se ve aquí. No se suma a "Gastos" para no descontarlo dos veces de la ganancia (el costo ya se resta al vender).
             const totalCompras = historialCompras.reduce((a, c) => a + (parseFloat(c.cant) || 0) * (parseFloat(c.costo) || 0), 0);
             const elCmp = document.getElementById('stat-compras');
-            if (elCmp) elCmp.innerText = historialCompras.length ? `🛒 Compras de mercancía: $${totalCompras.toFixed(2)} (${historialCompras.length})` : '';
+            if (elCmp) elCmp.innerText = historialCompras.length ? `🛒 Compras de mercancía: $${totalCompras.toFixed(2)} (${historialCompras.length}) · toca para ver` : '';
             document.getElementById('stat-tickets').innerText = totalTickets;
             document.getElementById('stat-variedades').innerText = totalVariedades;
             document.getElementById('stat-items').innerText = totalItemsInv;
