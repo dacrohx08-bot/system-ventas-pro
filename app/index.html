@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sistema de punto de venta e inventario">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KPHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHJ4PSIxMDgiIGZpbGw9IiMwYjEyMjAiLz4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjU2IDI1Nikgc2NhbGUoLjc4KSB0cmFuc2xhdGUoLTIwMCAtMjUwKSI+CjxwYXRoIGlkPSJoIiBkPSJNMjAwIDIwQzI5MiAyMCAzNTIgMTAwIDM1MiAyMTVDMzUyIDMyNSAyOTIgNDE4IDIzOCA0NjhDMjE4IDQ4NyAxODIgNDg3IDE2MiA0NjhDMTA4IDQxOCA0OCAzMjUgNDggMjE1QzQ4IDEwMCAxMDggMjAgMjAwIDIwWiIgZmlsbD0iIzIyYzU1ZSIvPgo8cGF0aCBkPSJNNjAgMjM1QzYwIDIwOCAxMzAgMjE1IDE5MCAzMjhDMTI4IDM1MiA2NCAzMDUgNjAgMjM1WiIgZmlsbD0iIzA1MDgwZiIvPgo8cGF0aCBkPSJNMzQwIDIzNUMzNDAgMjA4IDI3MCAyMTUgMjEwIDMyOEMyNzIgMzUyIDMzNiAzMDUgMzQwIDIzNVoiIGZpbGw9IiMwNTA4MGYiLz4KPC9nPjwvc3ZnPgo=">
-    <title>SYSTEM PRO :: SYSTEM VENTAS PRO v12.85.29 (HOLOGRAPHIC POS EDITION)</title>
+    <title>SYSTEM PRO :: SYSTEM VENTAS PRO v12.85.31 (HOLOGRAPHIC POS EDITION)</title>
     <!-- Chart.js -->
     <script>/* Chart.js 4.4.1 (MIT) incluido: las gráficas funcionan sin internet */
 /*!
@@ -470,7 +470,7 @@ html:not(.dark) .pos-pie{background:#fff}
             <div class="flex items-center gap-1.5">
                 <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQwIDEyIDMyMCA0ODYiPgoKPGc+CjxwYXRoIGQ9Ik0yMDAgMjBDMjkyIDIwIDM1MiAxMDAgMzUyIDIxNUMzNTIgMzI1IDI5MiA0MTggMjM4IDQ2OEMyMTggNDg3IDE4MiA0ODcgMTYyIDQ2OEMxMDggNDE4IDQ4IDMyNSA0OCAyMTVDNDggMTAwIDEwOCAyMCAyMDAgMjBaIiBmaWxsPSIjMjJjNTVlIi8+CjxwYXRoIGQ9Ik02MCAyMzVDNjAgMjA4IDEzMCAyMTUgMTkwIDMyOEMxMjggMzUyIDY0IDMwNSA2MCAyMzVaIiBmaWxsPSIjMDUwODBmIi8+CjxwYXRoIGQ9Ik0zNDAgMjM1QzM0MCAyMDggMjcwIDIxNSAyMTAgMzI4QzI3MiAzNTIgMzM2IDMwNSAzNDAgMjM1WiIgZmlsbD0iIzA1MDgwZiIvPgo8L2c+PC9zdmc+Cg==" alt="" style="height:1.4em;width:auto;display:inline-block;vertical-align:middle" class="animate-pulse">
                 <span class="text-xs font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-500">SYSTEM VENTAS PRO</span>
-                <span id="badge-version-modo" class="text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold">v12.85.29 HOLOGRAPHIC</span>
+                <span id="badge-version-modo" class="text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold">v12.85.31 HOLOGRAPHIC</span>
             </div>
 
             <!-- MENÚS DESPLEGABLES CON CONTROL DE PERMISOS -->
@@ -710,6 +710,14 @@ html:not(.dark) .pos-pie{background:#fff}
                     <p class="text-[10px] text-slate-400 font-extrabold uppercase">Piezas en Stock</p>
                     <p id="stat-items" class="text-base font-black text-emerald-400 font-mono mt-0.5">0</p>
                 </div>
+            </div>
+
+            <!-- v12.85.31: GANANCIAS POR PERIODO (igual que en el celular) -->
+            <div id="gan-periodos" class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
+                <div class="glass-panel p-3.5 rounded-xl border-l-4 border-emerald-400"><p class="text-[10px] text-slate-400 font-extrabold uppercase">Ganancia de hoy</p><p id="gp-hoy" class="text-base font-black text-emerald-400 font-mono mt-0.5">$0.00</p><p id="gp-hoy-v" class="text-[9px] font-bold text-slate-500 mt-0.5"></p></div>
+                <div class="glass-panel p-3.5 rounded-xl border-l-4 border-emerald-400"><p class="text-[10px] text-slate-400 font-extrabold uppercase">Ganancia últimos 7 días</p><p id="gp-7" class="text-base font-black text-emerald-400 font-mono mt-0.5">$0.00</p><p id="gp-7-g" class="text-[9px] font-bold text-slate-500 mt-0.5"></p></div>
+                <div class="glass-panel p-3.5 rounded-xl border-l-4 border-emerald-400"><p class="text-[10px] text-slate-400 font-extrabold uppercase">Ganancia de este mes</p><p id="gp-mes" class="text-base font-black text-emerald-400 font-mono mt-0.5">$0.00</p><p id="gp-mes-g" class="text-[9px] font-bold text-slate-500 mt-0.5"></p></div>
+                <div class="glass-panel p-3.5 rounded-xl border-l-4 border-purple-500"><p class="text-[10px] text-slate-400 font-extrabold uppercase">Utilidad del mes (ganancia − gastos)</p><p id="gp-util" class="text-base font-black text-purple-400 font-mono mt-0.5">$0.00</p><p id="gp-hoy-g" class="text-[9px] font-bold text-slate-500 mt-0.5"></p></div>
             </div>
 
             <!-- v12.85.28: VALOR DEL INVENTARIO -->
@@ -1875,7 +1883,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.29: LISTA DE COMPRAS REGISTRADAS -->
+    <!-- v12.85.31: LISTA DE COMPRAS REGISTRADAS -->
     <div id="modal-lista-compras" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-slate-700 w-full max-w-3xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[90vh]">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -1894,7 +1902,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.29: EDITAR COMPRA -->
+    <!-- v12.85.31: EDITAR COMPRA -->
     <div id="modal-editar-compra" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-slate-700 w-full max-w-md p-5 rounded-2xl shadow-2xl space-y-3">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2621,7 +2629,7 @@ html:not(.dark) .pos-pie{background:#fff}
                 </div>
             </div>
 
-            <p class="lp-nota" style="text-align:center; margin-top: 1.25rem;">SYSTEM VENTAS PRO v12.85.29 · Tus datos se guardan en tu propio equipo.</p>
+            <p class="lp-nota" style="text-align:center; margin-top: 1.25rem;">SYSTEM VENTAS PRO v12.85.31 · Tus datos se guardan en tu propio equipo.</p>
             <p id="lp-pruebas" style="display:none; text-align:center; margin-top:.75rem;"><a href="javascript:resetearADemoPruebas()" style="color:#fbbf24; font-size:.75rem; font-weight:700; text-decoration:underline;">Restablecer a DEMO (solo pruebas del dueño)</a></p>
         </div>
     </div>
@@ -2924,10 +2932,10 @@ html:not(.dark) .pos-pie{background:#fff}
             try { pintarBannerConsulta(); } catch (e) {}
             const badge = document.getElementById('badge-version-modo');
             if(licenciaData.tipo === "PRO") {
-                badge.innerText = "v12.85.29 PRO";
+                badge.innerText = "v12.85.31 PRO";
                 badge.className = "text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold";
             } else {
-                badge.innerText = "v12.85.29 HOLOGRAPHIC";
+                badge.innerText = "v12.85.31 HOLOGRAPHIC";
                 badge.className = "text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold";
             }
         }
@@ -7081,6 +7089,20 @@ html:not(.dark) .pos-pie{background:#fff}
 
         function filtrarTablaVentas() { _pagVen.p = 1; renderizarTablaVentas(); }
 
+        function renderGananciaPeriodos() {
+            const box = document.getElementById('gan-periodos'); if (!box) return;
+            if (!esDueno()) { box.classList.add('hidden'); return; }
+            box.classList.remove('hidden');
+            const hoy = fechaLocalISO(), mes1 = hoy.substring(0, 8) + '01', d7 = sumarDiasISO(hoy, -6);
+            const calc = (d, h) => { const r = calcularReporte(d, h); return { r, g: calcularGanancia(r) }; };
+            const H = calc(hoy, hoy), S = calc(d7, hoy), M = calc(mes1, hoy);
+            const set = (id, t) => { const e = document.getElementById(id); if (e) e.innerText = t; };
+            set('gp-hoy', dinero(H.g.bruta)); set('gp-hoy-v', H.r.nVentas + ' ventas · ' + dinero(H.r.total));
+            set('gp-7', dinero(S.g.bruta)); set('gp-7-g', 'Gastos: ' + dinero(S.r.totalGastos));
+            set('gp-mes', dinero(M.g.bruta)); set('gp-mes-g', 'Gastos: ' + dinero(M.r.totalGastos));
+            set('gp-util', dinero(M.g.neta)); set('gp-hoy-g', 'Gastos de hoy: ' + dinero(H.r.totalGastos));
+        }
+
         function renderizarEstadisticas() {
             const devs = historialVentas.flatMap(v => v.devoluciones || []);
             const totalIvaCobrado = historialVentas.reduce((a, b) => a + (b.iva || 0), 0) - devs.reduce((a, d) => a + d.iva, 0);
@@ -7119,7 +7141,7 @@ html:not(.dark) .pos-pie{background:#fff}
             elIva.innerText = `+ IVA cobrado: $${totalIvaCobrado.toFixed(2)}`;
             document.getElementById('stat-ganancia').innerText = `$${gananciaNetaReal.toFixed(2)}`;
             document.getElementById('stat-gastos').innerText = `$${totalGastos.toFixed(2)}`;
-            // v12.85.29: lo que compraste de mercancía (botón Compra) también se ve aquí. No se suma a "Gastos" para no descontarlo dos veces de la ganancia (el costo ya se resta al vender).
+            // v12.85.31: lo que compraste de mercancía (botón Compra) también se ve aquí. No se suma a "Gastos" para no descontarlo dos veces de la ganancia (el costo ya se resta al vender).
             const totalCompras = historialCompras.reduce((a, c) => a + (parseFloat(c.cant) || 0) * (parseFloat(c.costo) || 0), 0);
             const elCmp = document.getElementById('stat-compras');
             if (elCmp) elCmp.innerText = historialCompras.length ? `🛒 Compras de mercancía: $${totalCompras.toFixed(2)} (${historialCompras.length}) · toca para ver` : '';
@@ -7127,6 +7149,7 @@ html:not(.dark) .pos-pie{background:#fff}
             document.getElementById('stat-variedades').innerText = totalVariedades;
             document.getElementById('stat-items').innerText = totalItemsInv;
             try { invValPintar(); } catch (e) { console.error(e); }
+            try { renderGananciaPeriodos(); } catch (e) { console.error(e); }
 
             if (typeof Chart === 'undefined') { console.warn('Chart.js no cargó: gráficas no disponibles sin internet.'); return; }
             const ctxVentas = document.getElementById('chart-ventas').getContext('2d');
@@ -9310,7 +9333,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <script>
 /* v12.85.28: aviso de versión nueva en la app de Android (no se actualiza sola: se descarga e instala encima) */
 (function(){
- var VER='12.85.29',REPO='dacrohx08-bot/system-ventas-pro',APK='https://github.com/'+REPO+'/releases/latest/download/SystemVentasPro-Android.apk';
+ var VER='12.85.31',REPO='dacrohx08-bot/system-ventas-pro',APK='https://github.com/'+REPO+'/releases/latest/download/SystemVentasPro-Android.apk';
  function esAndroid(){try{return !!(window.Capacitor&&Capacitor.getPlatform&&Capacitor.getPlatform()==='android')}catch(e){return false}}
  function num(v){return String(v||'').replace(/^v/i,'').split('.').map(function(x){return parseInt(x,10)||0})}
  function mayor(a,b){a=num(a);b=num(b);for(var i=0;i<3;i++){if((a[i]||0)>(b[i]||0))return true;if((a[i]||0)<(b[i]||0))return false}return false}
