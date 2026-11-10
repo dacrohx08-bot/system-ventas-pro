@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sistema de punto de venta e inventario">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KPHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHJ4PSIxMDgiIGZpbGw9IiMwYjEyMjAiLz4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjU2IDI1Nikgc2NhbGUoLjc4KSB0cmFuc2xhdGUoLTIwMCAtMjUwKSI+CjxwYXRoIGlkPSJoIiBkPSJNMjAwIDIwQzI5MiAyMCAzNTIgMTAwIDM1MiAyMTVDMzUyIDMyNSAyOTIgNDE4IDIzOCA0NjhDMjE4IDQ4NyAxODIgNDg3IDE2MiA0NjhDMTA4IDQxOCA0OCAzMjUgNDggMjE1QzQ4IDEwMCAxMDggMjAgMjAwIDIwWiIgZmlsbD0iIzIyYzU1ZSIvPgo8cGF0aCBkPSJNNjAgMjM1QzYwIDIwOCAxMzAgMjE1IDE5MCAzMjhDMTI4IDM1MiA2NCAzMDUgNjAgMjM1WiIgZmlsbD0iIzA1MDgwZiIvPgo8cGF0aCBkPSJNMzQwIDIzNUMzNDAgMjA4IDI3MCAyMTUgMjEwIDMyOEMyNzIgMzUyIDMzNiAzMDUgMzQwIDIzNVoiIGZpbGw9IiMwNTA4MGYiLz4KPC9nPjwvc3ZnPgo=">
-    <title>SYSTEM PRO :: SYSTEM VENTAS PRO v12.85.37 (HOLOGRAPHIC POS EDITION)</title>
+    <title>SYSTEM PRO :: SYSTEM VENTAS PRO v12.85.39 (HOLOGRAPHIC POS EDITION)</title>
     <!-- Chart.js -->
     <script>/* Chart.js 4.4.1 (MIT) incluido: las gráficas funcionan sin internet */
 /*!
@@ -470,7 +470,7 @@ html:not(.dark) .pos-pie{background:#fff}
             <div class="flex items-center gap-1.5">
                 <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQwIDEyIDMyMCA0ODYiPgoKPGc+CjxwYXRoIGQ9Ik0yMDAgMjBDMjkyIDIwIDM1MiAxMDAgMzUyIDIxNUMzNTIgMzI1IDI5MiA0MTggMjM4IDQ2OEMyMTggNDg3IDE4MiA0ODcgMTYyIDQ2OEMxMDggNDE4IDQ4IDMyNSA0OCAyMTVDNDggMTAwIDEwOCAyMCAyMDAgMjBaIiBmaWxsPSIjMjJjNTVlIi8+CjxwYXRoIGQ9Ik02MCAyMzVDNjAgMjA4IDEzMCAyMTUgMTkwIDMyOEMxMjggMzUyIDY0IDMwNSA2MCAyMzVaIiBmaWxsPSIjMDUwODBmIi8+CjxwYXRoIGQ9Ik0zNDAgMjM1QzM0MCAyMDggMjcwIDIxNSAyMTAgMzI4QzI3MiAzNTIgMzM2IDMwNSAzNDAgMjM1WiIgZmlsbD0iIzA1MDgwZiIvPgo8L2c+PC9zdmc+Cg==" alt="" style="height:1.4em;width:auto;display:inline-block;vertical-align:middle" class="animate-pulse">
                 <span class="text-xs font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-500">SYSTEM VENTAS PRO</span>
-                <span id="badge-version-modo" class="text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold">v12.85.37 HOLOGRAPHIC</span>
+                <span id="badge-version-modo" class="text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold">v12.85.39 HOLOGRAPHIC</span>
             </div>
 
             <!-- MENÚS DESPLEGABLES CON CONTROL DE PERMISOS -->
@@ -712,14 +712,14 @@ html:not(.dark) .pos-pie{background:#fff}
                 </div>
             </div>
 
-            <!-- v12.85.37: VENTAS POR PERIODO -->
+            <!-- v12.85.39: VENTAS POR PERIODO -->
             <div id="ven-periodos" class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
                 <div class="glass-panel p-3.5 rounded-xl border-l-4 border-cyan-400"><p class="text-[10px] text-slate-400 font-extrabold uppercase">Venta de hoy</p><p id="vp-hoy" class="text-base font-black text-cyan-400 font-mono mt-0.5">$0.00</p><p id="vp-hoy-n" class="text-[9px] font-bold text-slate-500 mt-0.5"></p></div>
                 <div class="glass-panel p-3.5 rounded-xl border-l-4 border-cyan-400"><p class="text-[10px] text-slate-400 font-extrabold uppercase">Venta de ayer</p><p id="vp-ayer" class="text-base font-black text-cyan-400 font-mono mt-0.5">$0.00</p><p id="vp-ayer-n" class="text-[9px] font-bold text-slate-500 mt-0.5"></p></div>
                 <div class="glass-panel p-3.5 rounded-xl border-l-4 border-cyan-400"><p class="text-[10px] text-slate-400 font-extrabold uppercase">Ventas de la semana (últimos 7 días)</p><p id="vp-7" class="text-base font-black text-cyan-400 font-mono mt-0.5">$0.00</p><p id="vp-7-n" class="text-[9px] font-bold text-slate-500 mt-0.5"></p></div>
                 <div class="glass-panel p-3.5 rounded-xl border-l-4 border-cyan-400"><p class="text-[10px] text-slate-400 font-extrabold uppercase">Ventas del mes</p><p id="vp-mes" class="text-base font-black text-cyan-400 font-mono mt-0.5">$0.00</p><p id="vp-mes-n" class="text-[9px] font-bold text-slate-500 mt-0.5"></p></div>
             </div>
-            <!-- v12.85.37: GANANCIAS POR PERIODO (igual que en el celular) -->
+            <!-- v12.85.39: GANANCIAS POR PERIODO (igual que en el celular) -->
             <div id="gan-periodos" class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
                 <div class="glass-panel p-3.5 rounded-xl border-l-4 border-emerald-400"><p class="text-[10px] text-slate-400 font-extrabold uppercase">Ganancia de hoy</p><p id="gp-hoy" class="text-base font-black text-emerald-400 font-mono mt-0.5">$0.00</p><p id="gp-hoy-v" class="text-[9px] font-bold text-slate-500 mt-0.5"></p></div>
                 <div class="glass-panel p-3.5 rounded-xl border-l-4 border-emerald-400"><p class="text-[10px] text-slate-400 font-extrabold uppercase">Ganancia últimos 7 días</p><p id="gp-7" class="text-base font-black text-emerald-400 font-mono mt-0.5">$0.00</p><p id="gp-7-g" class="text-[9px] font-bold text-slate-500 mt-0.5"></p></div>
@@ -727,7 +727,7 @@ html:not(.dark) .pos-pie{background:#fff}
                 <div class="glass-panel p-3.5 rounded-xl border-l-4 border-purple-500"><p class="text-[10px] text-slate-400 font-extrabold uppercase">Utilidad del mes (ganancia − gastos)</p><p id="gp-util" class="text-base font-black text-purple-400 font-mono mt-0.5">$0.00</p><p id="gp-hoy-g" class="text-[9px] font-bold text-slate-500 mt-0.5"></p></div>
             </div>
             <p id="gp-aviso" class="text-[11px] font-bold text-amber-400 mt-2"></p>
-            <!-- v12.85.37: DINERO QUE TE QUEDA (aparte de la ganancia) -->
+            <!-- v12.85.39: DINERO QUE TE QUEDA (aparte de la ganancia) -->
             <div id="dinero-queda" class="glass-panel p-3.5 rounded-xl border-l-4 border-amber-400 mt-3">
                 <p class="text-[10px] text-slate-400 font-extrabold uppercase">💵 Dinero que te queda (cobrado − compras de mercancía − gastos)</p>
                 <p id="dq-total" class="text-xl font-black text-amber-400 font-mono mt-0.5">$0.00</p>
@@ -1671,9 +1671,18 @@ html:not(.dark) .pos-pie{background:#fff}
 
             <div class="space-y-3 text-xs font-bold text-slate-300">
                 <div class="grid grid-cols-12 gap-2">
+                    <div id="np-sugerencia" class="col-span-12 hidden rounded-xl border border-emerald-400/60 bg-emerald-950/40 p-2.5 text-xs">
+                        <p id="np-sug-estado" class="text-emerald-300 font-bold"></p>
+                        <div id="np-sug-det" class="hidden flex items-center gap-3 mt-1.5">
+                            <img id="np-sug-img" alt="" class="w-14 h-14 object-contain rounded-lg bg-white hidden">
+                            <div class="flex-1 min-w-0"><p id="np-sug-nombre" class="text-slate-100 font-black text-xs"></p><p class="text-[10px] text-slate-400">Catálogo público. La foto la sube cualquier persona y puede verse mal: mejor toma la tuya.</p></div>
+                            <div class="flex flex-col gap-1"><button type="button" onclick="npUsarSugerencia(false)" class="bp bp-green px-3 py-1.5 rounded-lg font-black text-[10px] uppercase cursor-pointer">Usar nombre</button><button type="button" onclick="npUsarSugerencia(true)" class="px-3 py-1.5 rounded-lg font-black text-[10px] uppercase cursor-pointer border border-slate-600 text-slate-400">Nombre + foto</button></div>
+                            <button type="button" onclick="npOcultarSugerencia()" class="px-2 py-1.5 rounded-lg text-[10px] font-black text-slate-400 cursor-pointer">No</button>
+                        </div>
+                    </div>
                     <div class="col-span-6">
                         <label class="text-slate-400 block mb-1">Código de barras</label>
-                        <input type="text" id="np-codigo" placeholder="Código" class="w-full bg-slate-950 border border-slate-800 p-2 rounded-lg text-slate-100 font-mono focus:outline-none focus:border-cyan-400">
+                        <input type="text" id="np-codigo" onchange="npBuscarCatalogo()" placeholder="Código" class="w-full bg-slate-950 border border-slate-800 p-2 rounded-lg text-slate-100 font-mono focus:outline-none focus:border-cyan-400">
                     </div>
                     <div class="col-span-6">
                         <label class="text-slate-400 block mb-1">Nombre del producto</label>
@@ -1904,7 +1913,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.37: LISTA DE COMPRAS REGISTRADAS -->
+    <!-- v12.85.39: LISTA DE COMPRAS REGISTRADAS -->
     <div id="modal-lista-compras" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-slate-700 w-full max-w-3xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[90vh]">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -1923,7 +1932,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.37: EDITAR COMPRA -->
+    <!-- v12.85.39: EDITAR COMPRA -->
     <div id="modal-editar-compra" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-slate-700 w-full max-w-md p-5 rounded-2xl shadow-2xl space-y-3">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2650,7 +2659,7 @@ html:not(.dark) .pos-pie{background:#fff}
                 </div>
             </div>
 
-            <p class="lp-nota" style="text-align:center; margin-top: 1.25rem;">SYSTEM VENTAS PRO v12.85.37 · Tus datos se guardan en tu propio equipo.</p>
+            <p class="lp-nota" style="text-align:center; margin-top: 1.25rem;">SYSTEM VENTAS PRO v12.85.39 · Tus datos se guardan en tu propio equipo.</p>
             <p id="lp-pruebas" style="display:none; text-align:center; margin-top:.75rem;"><a href="javascript:resetearADemoPruebas()" style="color:#fbbf24; font-size:.75rem; font-weight:700; text-decoration:underline;">Restablecer a DEMO (solo pruebas del dueño)</a></p>
         </div>
     </div>
@@ -2953,10 +2962,10 @@ html:not(.dark) .pos-pie{background:#fff}
             try { pintarBannerConsulta(); } catch (e) {}
             const badge = document.getElementById('badge-version-modo');
             if(licenciaData.tipo === "PRO") {
-                badge.innerText = "v12.85.37 PRO";
+                badge.innerText = "v12.85.39 PRO";
                 badge.className = "text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold";
             } else {
-                badge.innerText = "v12.85.37 HOLOGRAPHIC";
+                badge.innerText = "v12.85.39 HOLOGRAPHIC";
                 badge.className = "text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold";
             }
         }
@@ -4665,7 +4674,7 @@ html:not(.dark) .pos-pie{background:#fff}
             reiniciarCamposClave();
             const campoUsuario = document.getElementById('login-usuario');
             campoUsuario.value = '';
-            // Se rellena el nombre si la persona lo eligió en el menú "cambiar de usuario"; si no, con el último que entró en este equipo (v12.85.37)
+            // Se rellena el nombre si la persona lo eligió en el menú "cambiar de usuario"; si no, con el último que entró en este equipo (v12.85.39)
             if(idPreferido !== undefined && idPreferido !== null) {
                 const elegido = usuariosSistema.find(x => String(x.id) === String(idPreferido));
                 if(elegido) campoUsuario.value = elegido.nombre;
@@ -4835,7 +4844,7 @@ html:not(.dark) .pos-pie{background:#fff}
                 return;
             }
             idUsuarioActivo = usuario.id;
-            try { localStorage.setItem('svp_ultimo_usuario', usuario.nombre); } catch (e) {}   // v12.85.37: la próxima vez ya aparece tu nombre
+            try { localStorage.setItem('svp_ultimo_usuario', usuario.nombre); } catch (e) {}   // v12.85.39: la próxima vez ya aparece tu nombre
             guardarMemoria();
             actualizarBarraUsuarioActivo();
             const modal = document.getElementById('modal-login-sistema');
@@ -5382,8 +5391,62 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
         document.getElementById('np-medida').addEventListener('change', function () { document.getElementById('np-fraccion').checked = esFraccionable({ medida: this.value }); });
+        // v12.85.39: al escribir/escanear un código nuevo, busca nombre y foto en el catálogo público Open Food Facts
+        let _npImagenCat = '', _npSug = null, _npSugCodigo = '';
+        function npOcultarSugerencia() {
+            _npSug = null; _npSugCodigo = '';
+            const b = document.getElementById('np-sugerencia'); if (b) b.classList.add('hidden');
+            const d = document.getElementById('np-sug-det'); if (d) d.classList.add('hidden');
+        }
+        async function npBuscarCatalogo() {
+            const cod = String(document.getElementById('np-codigo').value || '').replace(/\D/g, '');
+            if (!/^\d{8,14}$/.test(cod) || cod === _npSugCodigo) return;
+            if (document.getElementById('np-nombre').value.trim()) return;       // no pisa lo que ya escribiste
+            if (!navigator.onLine) return;
+            _npSugCodigo = cod; _npSug = null;
+            const box = document.getElementById('np-sugerencia'), est = document.getElementById('np-sug-estado'), det = document.getElementById('np-sug-det');
+            box.classList.remove('hidden'); det.classList.add('hidden'); est.innerText = '🔎 Buscando este código en el catálogo…';
+            try {
+                const ctl = new AbortController(); const t = setTimeout(() => ctl.abort(), 7000);
+                const r = await fetch('https://world.openfoodfacts.org/api/v2/product/' + cod + '.json?fields=product_name,product_name_es,brands,quantity,image_front_small_url,image_front_url', { signal: ctl.signal });
+                clearTimeout(t);
+                const j = await r.json();
+                if (_npSugCodigo !== cod) return;
+                const pr = j && j.status === 1 && j.product;
+                const base = pr && String(pr.product_name_es || pr.product_name || '').trim();
+                if (!base) { est.innerText = 'No encontré este código en el catálogo. Escribe el nombre a mano.'; setTimeout(() => { if (_npSugCodigo === cod && !_npSug) box.classList.add('hidden'); }, 4000); return; }
+                const marca = String(pr.brands || '').split(',')[0].trim(), cant = String(pr.quantity || '').trim();
+                let nombre = base;
+                if (marca && !nombre.toUpperCase().includes(marca.toUpperCase())) nombre += ' ' + marca;
+                if (cant && !nombre.toUpperCase().includes(cant.toUpperCase())) nombre += ' ' + cant;
+                _npSug = { cod, nombre: nombre.toUpperCase(), img: pr.image_front_small_url || pr.image_front_url || '' };
+                est.innerText = '✅ Encontré este producto en el catálogo:';
+                document.getElementById('np-sug-nombre').innerText = _npSug.nombre;
+                const im = document.getElementById('np-sug-img');
+                if (_npSug.img) { im.src = _npSug.img; im.classList.remove('hidden'); } else im.classList.add('hidden');
+                det.classList.remove('hidden');
+            } catch (e) {
+                if (_npSugCodigo === cod) { est.innerText = 'No pude consultar el catálogo (sin internet). Escribe el nombre a mano.'; setTimeout(() => { if (_npSugCodigo === cod && !_npSug) box.classList.add('hidden'); }, 4000); }
+            }
+        }
+        async function npUsarSugerencia(conFoto) {
+            const s = _npSug; if (!s) return;
+            document.getElementById('np-nombre').value = s.nombre;
+            document.getElementById('np-sugerencia').classList.add('hidden');
+            if (conFoto && s.img) {
+                try {
+                    const blob = await (await fetch(s.img)).blob();
+                    const url = await new Promise((ok, no) => { const fr = new FileReader(); fr.onload = () => ok(fr.result); fr.onerror = no; fr.readAsDataURL(blob); });
+                    const chica = await comprimirDataUrl(url, 320);
+                    if (!document.getElementById('np-imagen').files.length) _npImagenCat = chica;
+                } catch (e) { /* sin foto: se guarda solo el nombre */ }
+            }
+            try { document.getElementById('np-nombre').focus(); } catch (e) {}
+        }
+
         function limpiarFormularioNuevoProducto(datosPrecarregados = null) {
             _npDesdeVenta = false;
+            try { npOcultarSugerencia(); _npImagenCat = ''; } catch (e) {}
             document.getElementById('np-codigo').value = datosPrecarregados ? datosPrecarregados.codigo : '';
             document.getElementById('np-nombre').value = datosPrecarregados ? datosPrecarregados.nombre : '';
             document.getElementById('np-costo').value = datosPrecarregados ? datosPrecarregados.costo : '0';
@@ -5421,6 +5484,7 @@ html:not(.dark) .pos-pie{background:#fff}
             proveedoresSistema.map(p => `<option value="${p.empresa}">${p.empresa} (${p.contacto})</option>`).join('');
 
             document.getElementById('compra-buscador-prod').value = '';
+            { const cc0 = document.getElementById('compra-costo'); if (cc0) cc0.value = ''; }   // no arrastrar el costo de la compra anterior
             { const cc = document.getElementById('compra-caducidad'); if (cc) cc.value = ''; }
             renderizarSelectProductosCompra('');
         }
@@ -5433,9 +5497,12 @@ html:not(.dark) .pos-pie{background:#fff}
             prodsFiltrados.map(p => `<option value="${p.id}">${escHtml(p.codigo)} - ${escHtml(p.nombre)} (Stock actual: ${p.stock})</option>`).join('');
         }
 
-        // v12.85.37: al elegir el producto, el proveedor se pone solo con el que ya tiene (se puede cambiar a mano)
+        // v12.85.39: al elegir el producto, el proveedor se pone solo con el que ya tiene (se puede cambiar a mano)
         function compraPonerProveedorDelProducto() {
             const prod = inventario.find(p => p.id == document.getElementById('compra-producto').value);
+            // v12.85.39: el costo unitario se llena con el costo actual del producto elegido (se puede editar si subió o bajó)
+            const cc = document.getElementById('compra-costo');
+            if (cc && prod) cc.value = (parseFloat(prod.costo) > 0) ? String(Math.round(parseFloat(prod.costo) * 100) / 100) : '';
             const sel = document.getElementById('compra-proveedor');
             const nom = prod && String(prod.proveedor || '').trim();
             if (!nom || !sel) return;
@@ -5706,7 +5773,7 @@ html:not(.dark) .pos-pie{background:#fff}
                 comprimirImagenArchivo(fileInput.files[0]).then(url => reader.onload({ target: { result: url } }));
             } else {
                 const proveedorAsignado = document.getElementById('np-proveedor') ? document.getElementById('np-proveedor').value : 'GENERAL';
-                inventario.unshift({ id: Date.now(), codigo, nombre: nombre.toUpperCase(), categoria, medida, costo, precio, stock, imagen: '', caducidad, proveedor: proveedorAsignado, ivaTasa: ivaProducto, fraccion: fraccionNP, stockMin: stockMinNP }); altaProdMov(inventario[0]);
+                inventario.unshift({ id: Date.now(), codigo, nombre: nombre.toUpperCase(), categoria, medida, costo, precio, stock, imagen: _npImagenCat || '', caducidad, proveedor: proveedorAsignado, ivaTasa: ivaProducto, fraccion: fraccionNP, stockMin: stockMinNP }); altaProdMov(inventario[0]);
                 guardarMemoria();
                 renderizarInventario();
                 npPostGuardar();
@@ -6114,6 +6181,7 @@ html:not(.dark) .pos-pie{background:#fff}
             actualizarSelectsNuevoProducto();
             document.getElementById('np-ganancia-label').innerText = '0.0%';
             setTimeout(() => document.getElementById('np-nombre').focus(), 150);
+            npBuscarCatalogo();
         }
         // Procesa lo que llegó del lector (o lo que se escribió + Enter en el buscador)
         function procesarCodigoPOS(texto, desdeLector) {
@@ -6263,7 +6331,7 @@ html:not(.dark) .pos-pie{background:#fff}
                 mostrarAvisoPro("Ingrese un monto válido mayor a 0.", "Validación", "⚠️");
                 return;
             }
-            // v12.85.37: lo que ganas en este servicio (opcional). Se guarda como costo = monto − ganancia
+            // v12.85.39: lo que ganas en este servicio (opcional). Se guarda como costo = monto − ganancia
             const ganSrv = parseFloat(document.getElementById('input-gan-servicio').value) || 0;
             if (ganSrv > monto) { mostrarAvisoPro('Tu ganancia no puede ser mayor que el monto cobrado.', 'Validación', '⚠️'); return; }
 
@@ -7133,7 +7201,7 @@ html:not(.dark) .pos-pie{background:#fff}
 
         function filtrarTablaVentas() { _pagVen.p = 1; renderizarTablaVentas(); }
 
-        // v12.85.37: MISMA cuenta que el panel del celular: ganancia = total de la venta − costo guardado de cada pieza vendida
+        // v12.85.39: MISMA cuenta que el panel del celular: ganancia = total de la venta − costo guardado de cada pieza vendida
         function gananciaCelular(v) { return (Number(v.total) || 0) - (v.items || []).reduce((a, i) => { const c = Number(i.costo) || 0, q = Number(i.cant) || 0; return a + (c > 0 ? c * q : (Number(i.precio) || 0) * q); }, 0); }   // lo vendido SIN costo registrado no cuenta como ganancia
         function ventaSinCosto(v) { return (v.items || []).some(i => !(Number(i.costo) > 0) && i.categoria !== 'SERVICIOS'); }
         function renderVentasPeriodos() {
@@ -7163,7 +7231,7 @@ html:not(.dark) .pos-pie{background:#fff}
             set('gp-util', dinero(ganM - gasM)); set('gp-hoy-g', 'Gastos de hoy: ' + dinero(gasH));
             const nSC = historialVentas.filter(v => dia(v).substring(0, 7) === mes && ventaSinCosto(v)).length;
             set('gp-aviso', nSC ? '⚠️ ' + nSC + ' ventas de este mes llevan productos SIN COSTO: esa parte no cuenta como ganancia. Ponles su costo en Inventario para que la ganancia sea exacta.' : '');
-            // v12.85.37: dinero que te queda = lo cobrado − compras de mercancía − gastos
+            // v12.85.39: dinero que te queda = lo cobrado − compras de mercancía − gastos
             const cobrado = historialVentas.reduce((a, v) => a + ingresosDeVenta(v).reduce((b, x) => b + (Number(x.monto) || 0), 0), 0) - historialVentas.flatMap(v => v.devoluciones || []).reduce((a, d) => a + (Number(d.total) || 0), 0);
             const compras = historialCompras.reduce((a, c) => a + (parseFloat(c.cant) || 0) * (parseFloat(c.costo) || 0), 0);
             const gastosT = historialGastos.reduce((a, g) => a + (Number(g.monto) || 0), 0);
@@ -7212,7 +7280,7 @@ html:not(.dark) .pos-pie{background:#fff}
             elIva.innerText = `+ IVA cobrado: $${totalIvaCobrado.toFixed(2)}`;
             document.getElementById('stat-ganancia').innerText = `$${gananciaNetaReal.toFixed(2)}`;
             document.getElementById('stat-gastos').innerText = `$${totalGastos.toFixed(2)}`;
-            // v12.85.37: lo que compraste de mercancía (botón Compra) también se ve aquí. No se suma a "Gastos" para no descontarlo dos veces de la ganancia (el costo ya se resta al vender).
+            // v12.85.39: lo que compraste de mercancía (botón Compra) también se ve aquí. No se suma a "Gastos" para no descontarlo dos veces de la ganancia (el costo ya se resta al vender).
             const totalCompras = historialCompras.reduce((a, c) => a + (parseFloat(c.cant) || 0) * (parseFloat(c.costo) || 0), 0);
             const elCmp = document.getElementById('stat-compras');
             if (elCmp) elCmp.innerText = historialCompras.length ? `🛒 Compras de mercancía: $${totalCompras.toFixed(2)} (${historialCompras.length}) · toca para ver` : '';
@@ -9405,7 +9473,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <script>
 /* v12.85.28: aviso de versión nueva en la app de Android (no se actualiza sola: se descarga e instala encima) */
 (function(){
- var VER='12.85.37',REPO='dacrohx08-bot/system-ventas-pro',APK='https://github.com/'+REPO+'/releases/latest/download/SystemVentasPro-Android.apk';
+ var VER='12.85.39',REPO='dacrohx08-bot/system-ventas-pro',APK='https://github.com/'+REPO+'/releases/latest/download/SystemVentasPro-Android.apk';
  function esAndroid(){try{return !!(window.Capacitor&&Capacitor.getPlatform&&Capacitor.getPlatform()==='android')}catch(e){return false}}
  function num(v){return String(v||'').replace(/^v/i,'').split('.').map(function(x){return parseInt(x,10)||0})}
  function mayor(a,b){a=num(a);b=num(b);for(var i=0;i<3;i++){if((a[i]||0)>(b[i]||0))return true;if((a[i]||0)<(b[i]||0))return false}return false}
