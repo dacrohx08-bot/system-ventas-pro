@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sistema de punto de venta e inventario">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KPHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHJ4PSIxMDgiIGZpbGw9IiMwYjEyMjAiLz4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjU2IDI1Nikgc2NhbGUoLjc4KSB0cmFuc2xhdGUoLTIwMCAtMjUwKSI+CjxwYXRoIGlkPSJoIiBkPSJNMjAwIDIwQzI5MiAyMCAzNTIgMTAwIDM1MiAyMTVDMzUyIDMyNSAyOTIgNDE4IDIzOCA0NjhDMjE4IDQ4NyAxODIgNDg3IDE2MiA0NjhDMTA4IDQxOCA0OCAzMjUgNDggMjE1QzQ4IDEwMCAxMDggMjAgMjAwIDIwWiIgZmlsbD0iIzIyYzU1ZSIvPgo8cGF0aCBkPSJNNjAgMjM1QzYwIDIwOCAxMzAgMjE1IDE5MCAzMjhDMTI4IDM1MiA2NCAzMDUgNjAgMjM1WiIgZmlsbD0iIzA1MDgwZiIvPgo8cGF0aCBkPSJNMzQwIDIzNUMzNDAgMjA4IDI3MCAyMTUgMjEwIDMyOEMyNzIgMzUyIDMzNiAzMDUgMzQwIDIzNVoiIGZpbGw9IiMwNTA4MGYiLz4KPC9nPjwvc3ZnPgo=">
-    <title>SYSTEM PRO :: SYSTEM VENTAS PRO v12.85.45 (HOLOGRAPHIC POS EDITION)</title>
+    <title>SYSTEM PRO :: SYSTEM VENTAS PRO v12.85.47 (HOLOGRAPHIC POS EDITION)</title>
     <!-- Chart.js -->
     <script>/* Chart.js 4.4.1 (MIT) incluido: las gráficas funcionan sin internet */
 /*!
@@ -378,6 +378,10 @@ html:not(.dark) .rp-caja{--rp-caja:#ffffff}
 .rp-dia.rp-th{border-top:0;font-size:10px;font-weight:900;text-transform:uppercase;color:var(--rp-cy);padding-top:0}
 .rp-vacio{font-size:12px;color:var(--rp-mut);text-align:center;padding:6px 0}
 .rp-btn{background:#1e293b;color:#67e8f9;border:1px solid #334155}
+#modal-devolucion .grid>*,#modal-etiquetas .flex>*{min-width:0;max-width:100%}
+#dev-btn-registrar{white-space:normal;line-height:1.15;padding-left:6px;padding-right:6px}
+#dev-items-body button{white-space:nowrap;flex-shrink:0}
+#modal-devolucion input,#modal-devolucion select,#modal-etiquetas select,#modal-etiquetas input{max-width:100%}
 .rp-btn:hover{background:#334155}
 html:not(.dark) .rp-btn{background:#e2e8f0;color:#0e7490;border-color:#94a3b8}
 html:not(.dark) .rp-btn:hover{background:#cbd5e1}
@@ -470,7 +474,7 @@ html:not(.dark) .pos-pie{background:#fff}
             <div class="flex items-center gap-1.5">
                 <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQwIDEyIDMyMCA0ODYiPgoKPGc+CjxwYXRoIGQ9Ik0yMDAgMjBDMjkyIDIwIDM1MiAxMDAgMzUyIDIxNUMzNTIgMzI1IDI5MiA0MTggMjM4IDQ2OEMyMTggNDg3IDE4MiA0ODcgMTYyIDQ2OEMxMDggNDE4IDQ4IDMyNSA0OCAyMTVDNDggMTAwIDEwOCAyMCAyMDAgMjBaIiBmaWxsPSIjMjJjNTVlIi8+CjxwYXRoIGQ9Ik02MCAyMzVDNjAgMjA4IDEzMCAyMTUgMTkwIDMyOEMxMjggMzUyIDY0IDMwNSA2MCAyMzVaIiBmaWxsPSIjMDUwODBmIi8+CjxwYXRoIGQ9Ik0zNDAgMjM1QzM0MCAyMDggMjcwIDIxNSAyMTAgMzI4QzI3MiAzNTIgMzM2IDMwNSAzNDAgMjM1WiIgZmlsbD0iIzA1MDgwZiIvPgo8L2c+PC9zdmc+Cg==" alt="" style="height:1.4em;width:auto;display:inline-block;vertical-align:middle" class="animate-pulse">
                 <span class="text-xs font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-500">SYSTEM VENTAS PRO</span>
-                <span id="badge-version-modo" class="text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold">v12.85.45 HOLOGRAPHIC</span>
+                <span id="badge-version-modo" class="text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold">v12.85.47 HOLOGRAPHIC</span>
             </div>
 
             <!-- MENÚS DESPLEGABLES CON CONTROL DE PERMISOS -->
@@ -713,14 +717,14 @@ html:not(.dark) .pos-pie{background:#fff}
                 </div>
             </div>
 
-            <!-- v12.85.45: VENTAS POR PERIODO -->
+            <!-- v12.85.47: VENTAS POR PERIODO -->
             <div id="ven-periodos" class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
                 <div class="glass-panel p-3.5 rounded-xl border-l-4 border-cyan-400"><p class="text-[10px] text-slate-400 font-extrabold uppercase">Venta de hoy</p><p id="vp-hoy" class="text-base font-black text-cyan-400 font-mono mt-0.5">$0.00</p><p id="vp-hoy-n" class="text-[9px] font-bold text-slate-500 mt-0.5"></p></div>
                 <div class="glass-panel p-3.5 rounded-xl border-l-4 border-cyan-400"><p class="text-[10px] text-slate-400 font-extrabold uppercase">Venta de ayer</p><p id="vp-ayer" class="text-base font-black text-cyan-400 font-mono mt-0.5">$0.00</p><p id="vp-ayer-n" class="text-[9px] font-bold text-slate-500 mt-0.5"></p></div>
                 <div class="glass-panel p-3.5 rounded-xl border-l-4 border-cyan-400"><p class="text-[10px] text-slate-400 font-extrabold uppercase">Ventas de la semana (últimos 7 días)</p><p id="vp-7" class="text-base font-black text-cyan-400 font-mono mt-0.5">$0.00</p><p id="vp-7-n" class="text-[9px] font-bold text-slate-500 mt-0.5"></p></div>
                 <div class="glass-panel p-3.5 rounded-xl border-l-4 border-cyan-400"><p class="text-[10px] text-slate-400 font-extrabold uppercase">Ventas del mes</p><p id="vp-mes" class="text-base font-black text-cyan-400 font-mono mt-0.5">$0.00</p><p id="vp-mes-n" class="text-[9px] font-bold text-slate-500 mt-0.5"></p></div>
             </div>
-            <!-- v12.85.45: GANANCIAS POR PERIODO (igual que en el celular) -->
+            <!-- v12.85.47: GANANCIAS POR PERIODO (igual que en el celular) -->
             <div id="gan-periodos" class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
                 <div class="glass-panel p-3.5 rounded-xl border-l-4 border-emerald-400"><p class="text-[10px] text-slate-400 font-extrabold uppercase">Ganancia de hoy</p><p id="gp-hoy" class="text-base font-black text-emerald-400 font-mono mt-0.5">$0.00</p><p id="gp-hoy-v" class="text-[9px] font-bold text-slate-500 mt-0.5"></p></div>
                 <div class="glass-panel p-3.5 rounded-xl border-l-4 border-emerald-400"><p class="text-[10px] text-slate-400 font-extrabold uppercase">Ganancia últimos 7 días</p><p id="gp-7" class="text-base font-black text-emerald-400 font-mono mt-0.5">$0.00</p><p id="gp-7-g" class="text-[9px] font-bold text-slate-500 mt-0.5"></p></div>
@@ -728,7 +732,7 @@ html:not(.dark) .pos-pie{background:#fff}
                 <div class="glass-panel p-3.5 rounded-xl border-l-4 border-purple-500"><p class="text-[10px] text-slate-400 font-extrabold uppercase">Utilidad del mes (ganancia − gastos)</p><p id="gp-util" class="text-base font-black text-purple-400 font-mono mt-0.5">$0.00</p><p id="gp-hoy-g" class="text-[9px] font-bold text-slate-500 mt-0.5"></p></div>
             </div>
             <p id="gp-aviso" class="text-[11px] font-bold text-amber-400 mt-2"></p>
-            <!-- v12.85.45: DINERO QUE TE QUEDA (aparte de la ganancia) -->
+            <!-- v12.85.47: DINERO QUE TE QUEDA (aparte de la ganancia) -->
             <div id="dinero-queda" class="glass-panel p-3.5 rounded-xl border-l-4 border-amber-400 mt-3">
                 <p class="text-[10px] text-slate-400 font-extrabold uppercase">💵 Dinero que te queda (cobrado − compras de mercancía − gastos)</p>
                 <p id="dq-total" class="text-xl font-black text-amber-400 font-mono mt-0.5">$0.00</p>
@@ -883,7 +887,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- MODAL: AVISO DE VENTAS AL CELULAR (ntfy) v12.85.45 -->
+    <!-- MODAL: AVISO DE VENTAS AL CELULAR (ntfy) v12.85.47 -->
     <div id="modal-ntfy" class="fixed inset-0 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4 z-[105]">
         <div class="glass-panel bg-slate-900 border border-yellow-500/60 w-full max-w-lg p-6 rounded-2xl shadow-2xl space-y-3 max-h-[92vh] overflow-y-auto">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -1514,6 +1518,10 @@ html:not(.dark) .pos-pie{background:#fff}
             </div>
             <div class="space-y-3 text-xs font-bold text-slate-300">
                 <div id="turnos-box" class="bg-slate-950 p-3 rounded-xl border border-slate-800"></div>
+                <div class="grid grid-cols-2 gap-2">
+                    <button type="button" onclick="conteoAbrir()" class="py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-slate-950 font-black text-xs uppercase shadow cursor-pointer">💵 Conteo físico de caja</button>
+                    <button type="button" onclick="conteoHistorial()" class="py-2.5 rounded-xl rp-btn font-black text-xs uppercase cursor-pointer">📚 Historial de conteos</button>
+                </div>
                 <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-center space-y-1">
                     <p class="text-slate-400 text-[10px] uppercase">Estado Actual</p>
                     <p id="caja-estado-txt" class="text-base font-black text-emerald-400">ABIERTA</p>
@@ -1954,7 +1962,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.45: LISTA DE COMPRAS REGISTRADAS -->
+    <!-- v12.85.47: LISTA DE COMPRAS REGISTRADAS -->
     <div id="modal-lista-compras" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-slate-700 w-full max-w-3xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[90vh]">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -1973,7 +1981,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.45: EDITAR COMPRA -->
+    <!-- v12.85.47: EDITAR COMPRA -->
     <div id="modal-editar-compra" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-slate-700 w-full max-w-md p-5 rounded-2xl shadow-2xl space-y-3">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2524,6 +2532,7 @@ html:not(.dark) .pos-pie{background:#fff}
                 <div class="flex justify-between"><span>Efectivo que debe haber en caja:</span><span id="ct-esperado" class="font-mono font-black text-cyan-400"></span></div>
                 <div>
                     <label class="text-slate-400 block mb-1">Efectivo que contaste ($)</label>
+                    <button type="button" onclick="conteoAbrir('cierre')" class="rp-btn w-full mb-1.5 py-1.5 rounded-lg text-[11px] font-black cursor-pointer">💵 Contar billetes y monedas pieza por pieza</button>
                     <input type="text" inputmode="decimal" id="ct-contado" oninput="calcularDiferenciaTurno()" class="w-full bg-slate-950 border border-slate-800 p-2 rounded-lg text-emerald-400 font-mono text-center font-black text-sm">
                 </div>
                 <div class="text-center text-sm font-black" id="ct-diff">—</div>
@@ -2537,6 +2546,47 @@ html:not(.dark) .pos-pie{background:#fff}
                 <button onclick="confirmarCierreTurno(false)" class="bp bp-pink py-2.5 rounded-xl font-black text-xs uppercase cursor-pointer">🔒 Cerrar turno</button>
                 <button onclick="confirmarCierreTurno(true)" class="bp bp-green py-2.5 rounded-xl font-black text-xs uppercase cursor-pointer">🖨️ Cerrar e imprimir</button>
             </div>
+        </div>
+    </div>
+
+    <!-- v12.85.47: CONTEO FÍSICO DE CAJA -->
+    <div id="modal-conteo" class="fixed inset-0 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4 z-[105]">
+        <div class="glass-panel bg-slate-900 border border-emerald-500/60 w-full max-w-lg p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 overflow-y-auto" style="max-height:calc(94 * var(--vh))">
+            <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+                <h3 class="text-xs font-black text-emerald-400 tracking-wider uppercase">💵 CONTEO FÍSICO DE LA CAJA</h3>
+                <button onclick="cerrarModal('modal-conteo')" class="btn-cerrar-modal-custom w-7 h-7 rounded-lg flex items-center justify-center text-xs cursor-pointer">✕</button>
+            </div>
+            <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-xs font-bold space-y-1.5">
+                <div class="flex justify-between items-baseline"><div><div class="text-slate-200">Contado</div><div class="text-[10px] text-slate-400 font-normal">Billetes y monedas, pieza por pieza</div></div><span id="cn-contado" class="font-mono font-black text-emerald-400 text-base">$0.00</span></div>
+                <div class="flex justify-between items-baseline border-t border-slate-800 pt-1.5"><div><div class="text-slate-200">El sistema dice</div><div id="cn-libro-det" class="text-[10px] text-slate-400 font-normal"></div></div><span id="cn-libro" class="font-mono font-black text-cyan-400 text-base">$0.00</span></div>
+                <div class="flex justify-between items-center border-t border-slate-800 pt-1.5"><span class="text-slate-200">Resultado</span><span id="cn-result" class="px-3 py-1 rounded-full text-[11px] font-black" style="background:#1e293b;color:var(--rp-mut)">Sin contar</span></div>
+            </div>
+            <p class="text-[10px] text-slate-400">Cuenta cuántas piezas hay de cada billete y moneda. Al guardarlo, ese total queda como el saldo real de la caja ese día y se compara con lo que dice el sistema (fondo + ventas en efectivo − gastos).</p>
+            <button type="button" id="cn-btn-ultimo" onclick="conteoCargarUltimo()" class="rp-btn w-full py-1.5 rounded-lg text-[11px] font-black cursor-pointer">↩ Cargar las piezas de mi último conteo</button>
+            <div id="cn-grid"></div>
+            <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-xs font-bold space-y-1.5">
+                <div class="flex justify-between items-center gap-2"><span class="text-slate-300">Fondo fijo de caja ($)</span><input type="text" inputmode="decimal" id="cn-fondo-fijo" oninput="conteoRecalcular()" class="w-28 bg-slate-900 border border-slate-700 p-1.5 rounded-lg text-amber-400 font-mono text-center font-black"></div>
+                <div class="flex justify-between"><span class="text-slate-400 font-normal">Se queda en caja (fondo fijo)</span><span id="cn-queda" class="font-mono text-slate-200">$0.00</span></div>
+                <div class="flex justify-between"><span id="cn-exc-t" class="text-slate-300">Excedente para retirar</span><span id="cn-exc" class="font-mono font-black text-amber-400">$0.00</span></div>
+                <p class="text-[10px] text-slate-500 font-normal">El fondo fijo es lo que dejas siempre en caja (para cambio y proveedores). Lo que sobra por encima es lo que debes retirar.</p>
+            </div>
+            <input type="text" id="cn-nota" maxlength="120" placeholder="Nota (opcional)" class="w-full bg-slate-950 border border-slate-800 p-2 rounded-lg text-xs text-slate-100">
+            <p id="cn-error" class="hidden text-rose-400 font-black text-xs"></p>
+            <div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-800">
+                <button type="button" onclick="conteoLimpiar()" class="rp-btn py-2.5 rounded-xl font-black text-xs uppercase cursor-pointer">🧹 Limpiar</button>
+                <button type="button" onclick="conteoGuardar()" id="cn-btn-guardar" class="bp bp-green py-2.5 rounded-xl font-black text-xs uppercase cursor-pointer">💾 Guardar conteo</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-conteos-hist" class="fixed inset-0 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4 z-[105]">
+        <div class="glass-panel bg-slate-900 border border-cyan-500/50 w-full max-w-2xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 overflow-y-auto" style="max-height:calc(94 * var(--vh))">
+            <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+                <h3 class="text-xs font-black text-cyan-400 tracking-wider uppercase">📚 HISTORIAL DE CONTEOS DE CAJA</h3>
+                <button onclick="cerrarModal('modal-conteos-hist')" class="btn-cerrar-modal-custom w-7 h-7 rounded-lg flex items-center justify-center text-xs cursor-pointer">✕</button>
+            </div>
+            <div class="flex gap-2"><button type="button" onclick="conteoExportar()" class="bp bp-green flex-1 py-2 rounded-xl font-black text-xs uppercase cursor-pointer">📥 Exportar a Excel</button><button type="button" onclick="cerrarModal('modal-conteos-hist'); conteoAbrir()" class="rp-btn flex-1 py-2 rounded-xl font-black text-xs uppercase cursor-pointer">💵 Nuevo conteo</button></div>
+            <div id="chc-lista"></div>
         </div>
     </div>
 
@@ -2700,7 +2750,7 @@ html:not(.dark) .pos-pie{background:#fff}
                 </div>
             </div>
 
-            <p class="lp-nota" style="text-align:center; margin-top: 1.25rem;">SYSTEM VENTAS PRO v12.85.45 · Tus datos se guardan en tu propio equipo.</p>
+            <p class="lp-nota" style="text-align:center; margin-top: 1.25rem;">SYSTEM VENTAS PRO v12.85.47 · Tus datos se guardan en tu propio equipo.</p>
             <p id="lp-pruebas" style="display:none; text-align:center; margin-top:.75rem;"><a href="javascript:resetearADemoPruebas()" style="color:#fbbf24; font-size:.75rem; font-weight:700; text-decoration:underline;">Restablecer a DEMO (solo pruebas del dueño)</a></p>
         </div>
     </div>
@@ -3003,10 +3053,10 @@ html:not(.dark) .pos-pie{background:#fff}
             try { pintarBannerConsulta(); } catch (e) {}
             const badge = document.getElementById('badge-version-modo');
             if(licenciaData.tipo === "PRO") {
-                badge.innerText = "v12.85.45 PRO";
+                badge.innerText = "v12.85.47 PRO";
                 badge.className = "text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold";
             } else {
-                badge.innerText = "v12.85.45 HOLOGRAPHIC";
+                badge.innerText = "v12.85.47 HOLOGRAPHIC";
                 badge.className = "text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold";
             }
         }
@@ -3054,7 +3104,7 @@ html:not(.dark) .pos-pie{background:#fff}
                 fecha: new Date().toISOString(),
                 inventario, usuariosSistema, clientesSistema, proveedoresSistema,
                 historialGastos, historialVentas, historialCompras, listaCategorias,
-                listaMedidas, negocioData, cajaEstado, turnosCaja, listaServicios, rolesPermisosData,
+                listaMedidas, negocioData, cajaEstado, turnosCaja, conteosCaja, listaServicios, rolesPermisosData,
                 licenciaData, backupConfig, configTicketData, ventasEnEspera, ventasAnuladas, ventasDevueltas, estadoLic, movimientosInv
             };
         }
@@ -3118,7 +3168,7 @@ html:not(.dark) .pos-pie{background:#fff}
             else if (respEstado === 'error') msg = '⚠️ Falló el respaldo en carpeta — toca para revisar';
             else if (respEstado !== 'activo' && diasSinCopia > 7 && enVisorIncrustado()) msg = '⚠️ Abre el sistema en Chrome o Edge para respaldar en carpeta';
             else if (respEstado !== 'activo' && diasSinCopia > 7) msg = respEstado === 'no-soportado' ? '⚠️ Descarga una copia de seguridad (hace más de 7 días)' : '⚠️ Sin respaldo externo — toca para configurarlo';
-            pill.style.cssText = 'position:fixed;left:10px;bottom:10px;z-index:60;padding:6px 12px;border-radius:999px;font-size:11px;font-weight:900;cursor:pointer;background:#f59e0b;color:#1c1917;border:1px solid #b45309;box-shadow:0 2px 10px rgba(0,0,0,.4);display:' + (msg ? 'block' : 'none');
+            pill.style.cssText = 'position:fixed;left:10px;bottom:10px;z-index:40;padding:6px 12px;border-radius:999px;font-size:11px;font-weight:900;cursor:pointer;background:#f59e0b;color:#1c1917;border:1px solid #b45309;box-shadow:0 2px 10px rgba(0,0,0,.4);display:' + (msg ? 'block' : 'none');
             pill.innerText = msg;
         }
         async function respInicializar() {
@@ -3391,6 +3441,7 @@ html:not(.dark) .pos-pie{background:#fff}
                     negocioData = contenido.negocioData || negocioData;
                     cajaEstado = contenido.cajaEstado || cajaEstado;
                     turnosCaja = Array.isArray(contenido.turnosCaja) ? contenido.turnosCaja : turnosCaja;
+                    conteosCaja = Array.isArray(contenido.conteosCaja) ? contenido.conteosCaja : conteosCaja;
                     listaServicios = contenido.listaServicios || listaServicios;
                     rolesPermisosData = contenido.rolesPermisosData || rolesPermisosData;
                     licenciaData = contenido.licenciaData || licenciaData;
@@ -3792,6 +3843,7 @@ html:not(.dark) .pos-pie{background:#fff}
         let negocioData = JSON.parse(localStorage.getItem('nexus_negocio')) || { rfc: 'XAXX010101000', razon: 'SYSTEM VENTAS PRO S.A.', nombre: 'SYSTEM VENTAS PRO', direccion: 'SIN DIRECCIÓN', correo: 'SIN CORREO', logo: '' };
         let cajaEstado = JSON.parse(localStorage.getItem('nexus_caja')) || { abierta: true, fondo: 1500 };
         let turnosCaja = (function () { try { const v = JSON.parse(localStorage.getItem('nexus_turnos')); return Array.isArray(v) ? v : []; } catch (e) { return []; } })();
+        let conteosCaja = (function () { try { const v = JSON.parse(localStorage.getItem('svp_conteos')); return Array.isArray(v) ? v : []; } catch (e) { return []; } })();   // v12.85.47: conteos físicos de caja
 
         let listaServicios = JSON.parse(localStorage.getItem('nexus_servicios_v8')) || [
             { id: 201, nombre: "RECARGA TELCEL / MOVISTAR" },
@@ -3878,6 +3930,7 @@ html:not(.dark) .pos-pie{background:#fff}
             localStorage.setItem('nexus_compras_v9', JSON.stringify(historialCompras));
             localStorage.setItem('nexus_caja', JSON.stringify(cajaEstado));
             localStorage.setItem('nexus_turnos', JSON.stringify(turnosCaja.slice(0, 3000)));
+            localStorage.setItem('svp_conteos', JSON.stringify(conteosCaja.slice(0, 3000)));
             localStorage.setItem('nexus_gastos_v8', JSON.stringify(historialGastos));
             localStorage.setItem('nexus_clientes_v9', JSON.stringify(clientesSistema));
             localStorage.setItem('nexus_proveedores_v8', JSON.stringify(proveedoresSistema));
@@ -4715,7 +4768,7 @@ html:not(.dark) .pos-pie{background:#fff}
             reiniciarCamposClave();
             const campoUsuario = document.getElementById('login-usuario');
             campoUsuario.value = '';
-            // Se rellena el nombre si la persona lo eligió en el menú "cambiar de usuario"; si no, con el último que entró en este equipo (v12.85.45)
+            // Se rellena el nombre si la persona lo eligió en el menú "cambiar de usuario"; si no, con el último que entró en este equipo (v12.85.47)
             if(idPreferido !== undefined && idPreferido !== null) {
                 const elegido = usuariosSistema.find(x => String(x.id) === String(idPreferido));
                 if(elegido) campoUsuario.value = elegido.nombre;
@@ -4885,7 +4938,7 @@ html:not(.dark) .pos-pie{background:#fff}
                 return;
             }
             idUsuarioActivo = usuario.id;
-            try { localStorage.setItem('svp_ultimo_usuario', usuario.nombre); } catch (e) {}   // v12.85.45: la próxima vez ya aparece tu nombre
+            try { localStorage.setItem('svp_ultimo_usuario', usuario.nombre); } catch (e) {}   // v12.85.47: la próxima vez ya aparece tu nombre
             guardarMemoria();
             actualizarBarraUsuarioActivo();
             const modal = document.getElementById('modal-login-sistema');
@@ -5056,7 +5109,7 @@ html:not(.dark) .pos-pie{background:#fff}
         // ===== CORTE DE CAJA Y REPORTES v12.85.28 =====
         const METODOS_PAGO = ['EFECTIVO', 'TARJETA', 'TRANSFERENCIA'];
         function dinero(n) { return '$' + (Number(n) || 0).toFixed(2); }
-        function csvCelda(x) { return '"' + String(x === undefined || x === null ? '' : x).replace(/"/g, '""') + '"'; }
+        // (csvCelda se define más abajo, junto a descargarCsv)
         function isoADMY(iso) { const p = String(iso).split('-'); return p.length === 3 ? p[2] + '/' + p[1] + '/' + p[0] : iso; }
         function sumarDiasISO(iso, n) { const p = iso.split('-').map(Number); return fechaLocalISO(new Date(p[0], p[1] - 1, p[2] + n)); }
 
@@ -5432,7 +5485,7 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
         document.getElementById('np-medida').addEventListener('change', function () { document.getElementById('np-fraccion').checked = esFraccionable({ medida: this.value }); });
-        // v12.85.45: al escribir/escanear un código nuevo, busca nombre y foto en el catálogo público Open Food Facts
+        // v12.85.47: al escribir/escanear un código nuevo, busca nombre y foto en el catálogo público Open Food Facts
         let _npImagenCat = '', _npSug = null, _npSugCodigo = '';
         function npOcultarSugerencia() {
             _npSug = null; _npSugCodigo = '';
@@ -5538,10 +5591,10 @@ html:not(.dark) .pos-pie{background:#fff}
             prodsFiltrados.map(p => `<option value="${p.id}">${escHtml(p.codigo)} - ${escHtml(p.nombre)} (Stock actual: ${p.stock})</option>`).join('');
         }
 
-        // v12.85.45: al elegir el producto, el proveedor se pone solo con el que ya tiene (se puede cambiar a mano)
+        // v12.85.47: al elegir el producto, el proveedor se pone solo con el que ya tiene (se puede cambiar a mano)
         function compraPonerProveedorDelProducto() {
             const prod = inventario.find(p => p.id == document.getElementById('compra-producto').value);
-            // v12.85.45: el costo unitario se llena con el costo actual del producto elegido (se puede editar si subió o bajó)
+            // v12.85.47: el costo unitario se llena con el costo actual del producto elegido (se puede editar si subió o bajó)
             const cc = document.getElementById('compra-costo');
             if (cc && prod) cc.value = (parseFloat(prod.costo) > 0) ? String(Math.round(parseFloat(prod.costo) * 100) / 100) : '';
             const sel = document.getElementById('compra-proveedor');
@@ -6372,7 +6425,7 @@ html:not(.dark) .pos-pie{background:#fff}
                 mostrarAvisoPro("Ingrese un monto válido mayor a 0.", "Validación", "⚠️");
                 return;
             }
-            // v12.85.45: lo que ganas en este servicio (opcional). Se guarda como costo = monto − ganancia
+            // v12.85.47: lo que ganas en este servicio (opcional). Se guarda como costo = monto − ganancia
             const ganSrv = parseFloat(document.getElementById('input-gan-servicio').value) || 0;
             if (ganSrv > monto) { mostrarAvisoPro('Tu ganancia no puede ser mayor que el monto cobrado.', 'Validación', '⚠️'); return; }
 
@@ -7243,9 +7296,9 @@ html:not(.dark) .pos-pie{background:#fff}
 
         function filtrarTablaVentas() { _pagVen.p = 1; renderizarTablaVentas(); }
 
-        // v12.85.45: MISMA cuenta que el panel del celular: ganancia = total de la venta − costo guardado de cada pieza vendida
-        function gananciaCelular(v) { return (Number(v.total) || 0) - (v.items || []).reduce((a, i) => { const c = Number(i.costo) || 0, q = Number(i.cant) || 0; return a + (c > 0 ? c * q : (Number(i.precio) || 0) * q); }, 0); }   // lo vendido SIN costo registrado no cuenta como ganancia
-        // ===== AVISO DE VENTAS AL CELULAR (ntfy) v12.85.45 =====
+        // v12.85.47: MISMA cuenta que el panel del celular: ganancia = total de la venta − costo guardado de cada pieza vendida
+        function gananciaCelular(v) { return redondear2((v.items || []).reduce((a, i) => { const c = Number(i.costo) || 0, q = Number(i.cant) || 0; return a + (c > 0 ? importeLinea(i) - redondear2(c * q) : 0); }, 0)); }   // misma regla que el reporte: solo lo que tiene costo, sin IVA ni envío
+        // ===== AVISO DE VENTAS AL CELULAR (ntfy) v12.85.47 =====
         function ntfyCfg() { try { return Object.assign({ on: false, topic: '' }, JSON.parse(localStorage.getItem('svp_ntfy') || '{}')); } catch (e) { return { on: false, topic: '' }; } }
         function ntfyGenTema() { const a = 'abcdefghijkmnpqrstuvwxyz23456789'; let t = 'ventas-'; const r = new Uint8Array(16); (window.crypto || {}).getRandomValues ? crypto.getRandomValues(r) : r.forEach((_, i) => r[i] = Math.random() * 256); r.forEach(n => t += a[n % a.length]); return t; }
         function ntfyAbrir() { const c = ntfyCfg(); if (!c.topic) c.topic = ntfyGenTema(); document.getElementById('ntfy-tema').value = c.topic; document.getElementById('ntfy-activo').checked = !!c.on; document.getElementById('ntfy-estado').innerText = ''; abrirModal('modal-ntfy'); }
@@ -7317,7 +7370,7 @@ html:not(.dark) .pos-pie{background:#fff}
             set('gp-util', dinero(ganM - gasM)); set('gp-hoy-g', 'Gastos de hoy: ' + dinero(gasH));
             const nSC = historialVentas.filter(v => dia(v).substring(0, 7) === mes && ventaSinCosto(v)).length;
             set('gp-aviso', nSC ? '⚠️ ' + nSC + ' ventas de este mes llevan productos SIN COSTO: esa parte no cuenta como ganancia. Ponles su costo en Inventario para que la ganancia sea exacta.' : '');
-            // v12.85.45: dinero que te queda = lo cobrado − compras de mercancía − gastos
+            // v12.85.47: dinero que te queda = lo cobrado − compras de mercancía − gastos
             const cobrado = historialVentas.reduce((a, v) => a + ingresosDeVenta(v).reduce((b, x) => b + (Number(x.monto) || 0), 0), 0) - historialVentas.flatMap(v => v.devoluciones || []).reduce((a, d) => a + (Number(d.total) || 0), 0);
             const compras = historialCompras.reduce((a, c) => a + (parseFloat(c.cant) || 0) * (parseFloat(c.costo) || 0), 0);
             const gastosT = historialGastos.reduce((a, g) => a + (Number(g.monto) || 0), 0);
@@ -7366,7 +7419,7 @@ html:not(.dark) .pos-pie{background:#fff}
             elIva.innerText = `+ IVA cobrado: $${totalIvaCobrado.toFixed(2)}`;
             document.getElementById('stat-ganancia').innerText = `$${gananciaNetaReal.toFixed(2)}`;
             document.getElementById('stat-gastos').innerText = `$${totalGastos.toFixed(2)}`;
-            // v12.85.45: lo que compraste de mercancía (botón Compra) también se ve aquí. No se suma a "Gastos" para no descontarlo dos veces de la ganancia (el costo ya se resta al vender).
+            // v12.85.47: lo que compraste de mercancía (botón Compra) también se ve aquí. No se suma a "Gastos" para no descontarlo dos veces de la ganancia (el costo ya se resta al vender).
             const totalCompras = historialCompras.reduce((a, c) => a + (parseFloat(c.cant) || 0) * (parseFloat(c.costo) || 0), 0);
             const elCmp = document.getElementById('stat-compras');
             if (elCmp) elCmp.innerText = historialCompras.length ? `🛒 Compras de mercancía: $${totalCompras.toFixed(2)} (${historialCompras.length}) · toca para ver` : '';
@@ -9107,6 +9160,135 @@ html:not(.dark) .pos-pie{background:#fff}
             imprimirHtmlTermico(_htmlCorteTurno(t, r));
         }
 
+
+        // ===== v12.85.47: CONTEO FÍSICO DE CAJA (billetes y monedas pieza por pieza) =====
+        const CONTEO_DEN = [1000, 500, 200, 100, 50, 20].map(v => ({ k: 'B' + v, v, billete: true })).concat([20, 10, 5, 2, 1, 0.5].map(v => ({ k: 'M' + v, v, billete: false })));
+        let _conteoModo = null, _cnHist = [];
+        function conteoLibro() {
+            const t = turnoAbierto();
+            if (t) {
+                const r = calcularReporte('0000-00-00', '9999-12-31', t.id), fondo = Number(t.fondo) || 0;
+                return { fondo, efectivo: redondear2(r.efectivoNeto), esperado: redondear2(fondo + r.efectivoNeto), etiqueta: 'Turno de ' + t.usuario, turnoId: t.id };
+            }
+            const hoy = fechaLocalISO(), r = calcularReporte(hoy, hoy), inp = document.getElementById('caja-fondo-actual'), fi = inp ? parseFloat(inp.value) : NaN;
+            const fondo = isFinite(fi) ? fi : (Number(cajaEstado.fondo) || 0);     // mismo fondo que muestra el corte de caja
+            return { fondo, efectivo: redondear2(r.efectivoNeto), esperado: redondear2(fondo + r.efectivoNeto), etiqueta: 'Hoy ' + isoADMY(hoy), turnoId: null };
+        }
+        function _cnEl(id) { return document.getElementById(id); }
+        function _cnId(k) { return 'cn-p-' + String(k).replace('.', '_'); }
+        function _cnNombreDen(k) { const v = Number(String(k).substring(1)); return (String(k)[0] === 'M' ? 'Moneda ' : 'Billete ') + (v >= 1 ? '$' + v.toLocaleString('es-MX') : '$' + v.toFixed(2)); }
+        function conteoAbrir(modo) {
+            _conteoModo = modo === 'cierre' ? 'cierre' : null;
+            const nombre = d => d >= 1 ? '$' + d.toLocaleString('es-MX') : '$' + d.toFixed(2);
+            const fila = x => '<div class="py-1 border-t border-slate-800" style="display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:8px;align-items:center"><span class="text-xs font-black text-slate-200">' + nombre(x.v) + '</span>' +
+                '<input type="number" inputmode="numeric" min="0" step="1" id="' + _cnId(x.k) + '" placeholder="0" oninput="conteoRecalcular()" onfocus="this.select()" class="w-full bg-slate-950 border border-slate-700 p-1.5 rounded-lg text-center font-mono font-black text-sm text-emerald-300">' +
+                '<span id="' + _cnId(x.k) + '-i" class="text-right font-mono text-xs text-slate-300">$0.00</span></div>';
+            const cab = t => '<div class="pt-2 text-[10px] font-black uppercase tracking-wider text-slate-400" style="display:grid;grid-template-columns:1fr 1.1fr 1fr;gap:8px;align-items:center"><span>' + t + '</span><span class="text-center">Piezas</span><span class="text-right">Importe</span></div>';
+            _cnEl('cn-grid').innerHTML = cab('Billetes') + CONTEO_DEN.filter(x => x.billete).map(fila).join('') + '<div class="h-2"></div>' + cab('Monedas') + CONTEO_DEN.filter(x => !x.billete).map(fila).join('');
+            const ff = Number((negocioData || {}).fondoFijo) || 0;
+            _cnEl('cn-fondo-fijo').value = ff > 0 ? String(ff) : '';
+            _cnEl('cn-fondo-fijo').disabled = !esDueno();
+            _cnEl('cn-nota').value = ''; _cnEl('cn-error').classList.add('hidden');
+            _cnEl('cn-btn-guardar').innerHTML = _conteoModo === 'cierre' ? '✅ Usar en el cierre' : '💾 Guardar conteo';
+            const u = obtenerUsuarioActivo();
+            _cnEl('cn-btn-ultimo').style.display = conteosCaja.some(c => u && String(c.usuarioId) === String(u.id)) ? '' : 'none';
+            conteoRecalcular();
+            abrirModal('modal-conteo');
+        }
+        function conteoPiezas() {
+            const o = {};
+            CONTEO_DEN.forEach(x => { const n = Math.max(0, Math.floor(Number(_cnEl(_cnId(x.k)).value) || 0)); if (n > 0) o[x.k] = n; });
+            return o;
+        }
+        function conteoTotal(piezas) { return redondear2(Object.keys(piezas).reduce((a, k) => a + Number(String(k).substring(1)) * piezas[k], 0)); }
+        function conteoRecalcular() {
+            let total = 0;
+            CONTEO_DEN.forEach(x => {
+                const n = Math.max(0, Math.floor(Number(_cnEl(_cnId(x.k)).value) || 0)), imp = redondear2(n * x.v);
+                total += imp; _cnEl(_cnId(x.k) + '-i').textContent = dinero(imp);
+            });
+            total = redondear2(total);
+            const L = conteoLibro();
+            _cnEl('cn-contado').textContent = dinero(total);
+            _cnEl('cn-libro').textContent = dinero(L.esperado);
+            _cnEl('cn-libro-det').textContent = L.etiqueta + ': fondo ' + dinero(L.fondo) + (L.efectivo >= 0 ? ' + ' : ' − ') + 'efectivo neto ' + dinero(Math.abs(L.efectivo));
+            const res = _cnEl('cn-result'), d = redondear2(total - L.esperado), hay = total > 0;
+            if (!hay) { res.textContent = 'Sin contar'; res.style.background = '#1e293b'; res.style.color = 'var(--rp-mut)'; }
+            else if (d === 0) { res.textContent = 'Cuadra'; res.style.background = 'rgba(16,185,129,.2)'; res.style.color = 'var(--rp-gr)'; }
+            else if (d > 0) { res.textContent = 'Sobran ' + dinero(d); res.style.background = 'rgba(251,191,36,.2)'; res.style.color = 'var(--rp-am)'; }
+            else { res.textContent = 'Faltan ' + dinero(-d); res.style.background = 'rgba(251,113,133,.2)'; res.style.color = 'var(--rp-rs)'; }
+            const ff = Math.max(0, numDec(_cnEl('cn-fondo-fijo').value) || 0);
+            _cnEl('cn-queda').textContent = dinero(ff > 0 ? Math.min(ff, total) : 0);
+            const exc = ff > 0 ? redondear2(total - ff) : 0;
+            _cnEl('cn-exc-t').textContent = exc < 0 ? 'Falta para completar el fondo fijo' : 'Excedente para retirar';
+            _cnEl('cn-exc').textContent = ff > 0 ? dinero(Math.abs(exc)) : '—';
+            _cnEl('cn-exc').style.color = exc < 0 ? 'var(--rp-rs)' : 'var(--rp-am)';
+        }
+        function conteoLimpiar() { CONTEO_DEN.forEach(x => { _cnEl(_cnId(x.k)).value = ''; }); conteoRecalcular(); }
+        function conteoCargarPiezas(piezas) {
+            CONTEO_DEN.forEach(x => { const n = (piezas || {})[x.k]; _cnEl(_cnId(x.k)).value = n ? String(n) : ''; });
+            conteoRecalcular();
+        }
+        function conteoCargarUltimo() {
+            const u = obtenerUsuarioActivo(); const c = conteosCaja.find(x => u && String(x.usuarioId) === String(u.id));
+            if (c) conteoCargarPiezas(c.piezas);
+        }
+        function conteoGuardar() {
+            const err = _cnEl('cn-error'), piezas = conteoPiezas(), total = conteoTotal(piezas);
+            if (!(total > 0)) { err.textContent = 'Escribe cuántas piezas hay de al menos un billete o moneda.'; err.classList.remove('hidden'); return; }
+            err.classList.add('hidden');
+            const L = conteoLibro(), u = obtenerUsuarioActivo(), ff = Math.max(0, numDec(_cnEl('cn-fondo-fijo').value) || 0);
+            if (esDueno() && ff !== (Number(negocioData.fondoFijo) || 0)) negocioData.fondoFijo = ff;
+            const rec = {
+                id: Date.now(), fecha: fechaHoraLocal(), usuarioId: u ? u.id : null, usuario: u ? u.nombre : 'ADMINISTRADOR',
+                alcance: L.etiqueta, turnoId: L.turnoId, fondo: L.fondo, efectivoNeto: L.efectivo, esperado: L.esperado,
+                contado: total, diferencia: redondear2(total - L.esperado), fondoFijo: ff, excedente: ff > 0 ? redondear2(total - ff) : 0,
+                piezas, nota: _cnEl('cn-nota').value.trim()
+            };
+            conteosCaja.unshift(rec);
+            guardarMemoria();
+            if (_conteoModo === 'cierre') {
+                const ct = document.getElementById('ct-contado'); if (ct) { ct.value = String(total); calcularDiferenciaTurno(); }
+            }
+            cerrarModal('modal-conteo');
+            mostrarAvisoPro('Conteo guardado: ' + dinero(total) + '. ' + (rec.diferencia === 0 ? 'La caja cuadra.' : (rec.diferencia > 0 ? 'Sobran ' : 'Faltan ') + dinero(Math.abs(rec.diferencia)) + '.'), 'Conteo de caja', '💵');
+        }
+        function conteoHistorial() {
+            const dueno = esDueno(), u = obtenerUsuarioActivo();
+            const lista = conteosCaja.filter(c => dueno || (u && String(c.usuarioId) === String(u.id))).slice(0, 150);
+            _cnHist = lista;
+            document.getElementById('chc-lista').innerHTML = lista.length ? lista.map(c => {
+                const dif = c.diferencia || 0, col = dif === 0 ? 'var(--rp-gr)' : (dif > 0 ? 'var(--rp-am)' : 'var(--rp-rs)');
+                const det = CONTEO_DEN.filter(x => (c.piezas || {})[x.k]).map(x => _cnNombreDen(x.k) + ' × ' + c.piezas[x.k]).join(' · ');
+                return '<div class="rp-item"><div class="rp-l1"><span>' + escHtml(formatearFecha(c.fecha)) + ' · ' + escHtml(c.usuario) + '</span><span style="color:' + col + '">' + (dif === 0 ? 'Cuadra' : (dif > 0 ? 'Sobran ' : 'Faltan ') + dinero(Math.abs(dif))) + '</span></div>' +
+                    '<div class="rp-l2">' + escHtml(c.alcance || '') + ' · Contado ' + dinero(c.contado) + ' · Sistema ' + dinero(c.esperado) + (c.fondoFijo > 0 ? ' · Excedente ' + dinero(c.excedente) : '') + '</div>' +
+                    '<div class="rp-l3">' + escHtml(det) + (c.nota ? '<br>Nota: ' + escHtml(c.nota) : '') + '</div>' +
+                    '<div class="mt-1 flex gap-2"><button type="button" onclick="conteoUsarComoBase(' + c.id + ')" class="rp-btn px-2.5 py-1 rounded-lg text-[11px] font-black cursor-pointer">↩ Usar como base</button>' +
+                    (dueno ? '<button type="button" onclick="conteoEliminar(' + c.id + ')" class="rp-btn px-2.5 py-1 rounded-lg text-[11px] font-black cursor-pointer" style="color:var(--rp-rs)">🗑️ Eliminar</button>' : '') + '</div></div>';
+            }).join('') : '<div class="rp-vacio">Todavía no hay conteos guardados. Toca "Nuevo conteo".</div>';
+            abrirModal('modal-conteos-hist');
+        }
+        function conteoUsarComoBase(id) {
+            const c = conteosCaja.find(x => x.id === id); if (!c) return;
+            cerrarModal('modal-conteos-hist'); conteoAbrir(); conteoCargarPiezas(c.piezas);
+        }
+        function conteoEliminar(id) {
+            if (!esDueno()) return;
+            mostrarConfirmacionPro('¿Eliminar este conteo del historial? No se puede deshacer.', 'Eliminar conteo', '🗑️', () => {
+                conteosCaja = conteosCaja.filter(x => x.id !== id); guardarMemoria(); conteoHistorial();
+            });
+        }
+        function conteoExportar() {
+            const dueno = esDueno(), u = obtenerUsuarioActivo();
+            const lista = conteosCaja.filter(c => dueno || (u && String(c.usuarioId) === String(u.id)));
+            if (!lista.length) { mostrarAvisoPro('Todavía no hay conteos para exportar.'); return; }
+            const filas = [['Fecha', 'Cajero', 'Alcance', 'Fondo', 'Efectivo neto', 'El sistema dice', 'Contado', 'Diferencia', 'Resultado', 'Fondo fijo', 'Excedente'].concat(CONTEO_DEN.map(x => _cnNombreDen(x.k) + ' (piezas)')).concat(['Nota'])];
+            lista.forEach(c => filas.push([formatearFecha(c.fecha), c.usuario, c.alcance, c.fondo, c.efectivoNeto, c.esperado, c.contado, c.diferencia, c.diferencia === 0 ? 'Cuadra' : (c.diferencia > 0 ? 'Sobran' : 'Faltan'), c.fondoFijo, c.excedente].concat(CONTEO_DEN.map(x => (c.piezas || {})[x.k] || 0)).concat([c.nota || ''])));
+            const blob = new Blob(['﻿' + filas.map(f => f.map(csvCelda).join(',')).join('\r\n')], { type: 'text/csv;charset=utf-8' });
+            const link = document.createElement('a'); link.href = URL.createObjectURL(blob); link.download = 'Conteos_de_Caja_' + fechaLocalISO() + '.csv';
+            document.body.appendChild(link); link.click(); document.body.removeChild(link);
+        }
+
         // ---- Ganancia (solo el DUEÑO la ve: lleva los costos) ----
         function calcularGanancia(r) {
             const g = { ingreso: 0, costo: 0, sinCosto: 0, devIng: 0, devCosto: 0, prod: {}, cat: {} };
@@ -9559,7 +9741,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <script>
 /* v12.85.28: aviso de versión nueva en la app de Android (no se actualiza sola: se descarga e instala encima) */
 (function(){
- var VER='12.85.45',REPO='dacrohx08-bot/system-ventas-pro',APK='https://github.com/'+REPO+'/releases/latest/download/SystemVentasPro-Android.apk';
+ var VER='12.85.47',REPO='dacrohx08-bot/system-ventas-pro',APK='https://github.com/'+REPO+'/releases/latest/download/SystemVentasPro-Android.apk';
  function esAndroid(){try{return !!(window.Capacitor&&Capacitor.getPlatform&&Capacitor.getPlatform()==='android')}catch(e){return false}}
  function num(v){return String(v||'').replace(/^v/i,'').split('.').map(function(x){return parseInt(x,10)||0})}
  function mayor(a,b){a=num(a);b=num(b);for(var i=0;i<3;i++){if((a[i]||0)>(b[i]||0))return true;if((a[i]||0)<(b[i]||0))return false}return false}
