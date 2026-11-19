@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Sistema de punto de venta e inventario">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj4KPHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHJ4PSIxMDgiIGZpbGw9IiMwYjEyMjAiLz4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjU2IDI1Nikgc2NhbGUoLjc4KSB0cmFuc2xhdGUoLTIwMCAtMjUwKSI+CjxwYXRoIGlkPSJoIiBkPSJNMjAwIDIwQzI5MiAyMCAzNTIgMTAwIDM1MiAyMTVDMzUyIDMyNSAyOTIgNDE4IDIzOCA0NjhDMjE4IDQ4NyAxODIgNDg3IDE2MiA0NjhDMTA4IDQxOCA0OCAzMjUgNDggMjE1QzQ4IDEwMCAxMDggMjAgMjAwIDIwWiIgZmlsbD0iIzIyYzU1ZSIvPgo8cGF0aCBkPSJNNjAgMjM1QzYwIDIwOCAxMzAgMjE1IDE5MCAzMjhDMTI4IDM1MiA2NCAzMDUgNjAgMjM1WiIgZmlsbD0iIzA1MDgwZiIvPgo8cGF0aCBkPSJNMzQwIDIzNUMzNDAgMjA4IDI3MCAyMTUgMjEwIDMyOEMyNzIgMzUyIDMzNiAzMDUgMzQwIDIzNVoiIGZpbGw9IiMwNTA4MGYiLz4KPC9nPjwvc3ZnPgo=">
-    <title>SYSTEM PRO :: SYSTEM VENTAS PRO v12.85.49 (HOLOGRAPHIC POS EDITION)</title>
+    <title>SYSTEM PRO :: SYSTEM VENTAS PRO v12.85.55 (HOLOGRAPHIC POS EDITION)</title>
     <!-- Chart.js -->
     <script>/* Chart.js 4.4.1 (MIT) incluido: las gráficas funcionan sin internet */
 /*!
@@ -474,7 +474,7 @@ html:not(.dark) .pos-pie{background:#fff}
             <div class="flex items-center gap-1.5">
                 <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjQwIDEyIDMyMCA0ODYiPgoKPGc+CjxwYXRoIGQ9Ik0yMDAgMjBDMjkyIDIwIDM1MiAxMDAgMzUyIDIxNUMzNTIgMzI1IDI5MiA0MTggMjM4IDQ2OEMyMTggNDg3IDE4MiA0ODcgMTYyIDQ2OEMxMDggNDE4IDQ4IDMyNSA0OCAyMTVDNDggMTAwIDEwOCAyMCAyMDAgMjBaIiBmaWxsPSIjMjJjNTVlIi8+CjxwYXRoIGQ9Ik02MCAyMzVDNjAgMjA4IDEzMCAyMTUgMTkwIDMyOEMxMjggMzUyIDY0IDMwNSA2MCAyMzVaIiBmaWxsPSIjMDUwODBmIi8+CjxwYXRoIGQ9Ik0zNDAgMjM1QzM0MCAyMDggMjcwIDIxNSAyMTAgMzI4QzI3MiAzNTIgMzM2IDMwNSAzNDAgMjM1WiIgZmlsbD0iIzA1MDgwZiIvPgo8L2c+PC9zdmc+Cg==" alt="" style="height:1.4em;width:auto;display:inline-block;vertical-align:middle" class="animate-pulse">
                 <span class="text-xs font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-500">SYSTEM VENTAS PRO</span>
-                <span id="badge-version-modo" class="text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold">v12.85.49 HOLOGRAPHIC</span>
+                <span id="badge-version-modo" class="text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold">v12.85.55 HOLOGRAPHIC</span>
             </div>
 
             <!-- MENÚS DESPLEGABLES CON CONTROL DE PERMISOS -->
@@ -554,7 +554,7 @@ html:not(.dark) .pos-pie{background:#fff}
         <button onclick="abrirModalReporte()" id="tab-reporte-btn" class="px-4 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-black shadow cursor-pointer transition-transform">📊 REPORTES</button>
         <button onclick="abrirModalCaja()" id="tab-caja-btn" class="px-4 py-1.5 rounded-lg bg-amber-600 text-white font-black shadow neon-glow-amber cursor-pointer transition-transform">🧮 CAJA</button>
         <button onclick="abrirModalConfigTicket()" id="tab-config-ticket" class="px-4 py-1.5 rounded-lg bg-cyan-600 hover:bg-cyan-500 text-white font-black shadow cursor-pointer transition-transform flex items-center gap-1.5">🧾 TICKET</button>
-        <button onclick="provPagoAbrir()" id="tab-prov-pago" class="px-4 py-1.5 rounded-lg bg-orange-600 hover:bg-orange-500 text-white font-black shadow cursor-pointer transition-transform flex items-center gap-1.5">💵 PAGO PROVEEDOR</button>
+        <button onclick="provPagoAbrir()" id="tab-prov-pago" style="background:#ea580c;color:#fff" class="px-4 py-1.5 rounded-lg text-white font-black shadow cursor-pointer transition-transform flex items-center gap-1.5">💵 PAGO PROVEEDOR</button>
         <button onclick="abrirModal('modal-proveedores-gestion')" id="tab-proveedores-gestion" class="px-4 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-black shadow cursor-pointer transition-transform flex items-center gap-1.5">🚚 PROVEEDORES</button>
         <button onclick="abrirModal('modal-documentos')" id="tab-documentos" class="px-4 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-black shadow cursor-pointer transition-transform flex items-center gap-1.5">📄 DOCUMENTOS</button>
         <button onclick="abrirModalReporte(); repRapido('todo')" id="btn-ver-anuladas" class="px-4 py-1.5 rounded-lg bg-rose-600 hover:bg-rose-500 text-white font-black shadow cursor-pointer transition-transform flex items-center gap-1.5">🚫 ANULADAS</button>
@@ -718,14 +718,14 @@ html:not(.dark) .pos-pie{background:#fff}
                 </div>
             </div>
 
-            <!-- v12.85.49: VENTAS POR PERIODO -->
+            <!-- v12.85.55: VENTAS POR PERIODO -->
             <div id="ven-periodos" class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
                 <div class="glass-panel p-3.5 rounded-xl border-l-4 border-cyan-400"><p class="text-[10px] text-slate-400 font-extrabold uppercase">Venta de hoy</p><p id="vp-hoy" class="text-base font-black text-cyan-400 font-mono mt-0.5">$0.00</p><p id="vp-hoy-n" class="text-[9px] font-bold text-slate-500 mt-0.5"></p></div>
                 <div class="glass-panel p-3.5 rounded-xl border-l-4 border-cyan-400"><p class="text-[10px] text-slate-400 font-extrabold uppercase">Venta de ayer</p><p id="vp-ayer" class="text-base font-black text-cyan-400 font-mono mt-0.5">$0.00</p><p id="vp-ayer-n" class="text-[9px] font-bold text-slate-500 mt-0.5"></p></div>
                 <div class="glass-panel p-3.5 rounded-xl border-l-4 border-cyan-400"><p class="text-[10px] text-slate-400 font-extrabold uppercase">Ventas de la semana (últimos 7 días)</p><p id="vp-7" class="text-base font-black text-cyan-400 font-mono mt-0.5">$0.00</p><p id="vp-7-n" class="text-[9px] font-bold text-slate-500 mt-0.5"></p></div>
                 <div class="glass-panel p-3.5 rounded-xl border-l-4 border-cyan-400"><p class="text-[10px] text-slate-400 font-extrabold uppercase">Ventas del mes</p><p id="vp-mes" class="text-base font-black text-cyan-400 font-mono mt-0.5">$0.00</p><p id="vp-mes-n" class="text-[9px] font-bold text-slate-500 mt-0.5"></p></div>
             </div>
-            <!-- v12.85.49: GANANCIAS POR PERIODO (igual que en el celular) -->
+            <!-- v12.85.55: GANANCIAS POR PERIODO (igual que en el celular) -->
             <div id="gan-periodos" class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-3">
                 <div class="glass-panel p-3.5 rounded-xl border-l-4 border-emerald-400"><p class="text-[10px] text-slate-400 font-extrabold uppercase">Ganancia de hoy</p><p id="gp-hoy" class="text-base font-black text-emerald-400 font-mono mt-0.5">$0.00</p><p id="gp-hoy-v" class="text-[9px] font-bold text-slate-500 mt-0.5"></p></div>
                 <div class="glass-panel p-3.5 rounded-xl border-l-4 border-emerald-400"><p class="text-[10px] text-slate-400 font-extrabold uppercase">Ganancia últimos 7 días</p><p id="gp-7" class="text-base font-black text-emerald-400 font-mono mt-0.5">$0.00</p><p id="gp-7-g" class="text-[9px] font-bold text-slate-500 mt-0.5"></p></div>
@@ -733,7 +733,7 @@ html:not(.dark) .pos-pie{background:#fff}
                 <div class="glass-panel p-3.5 rounded-xl border-l-4 border-purple-500"><p class="text-[10px] text-slate-400 font-extrabold uppercase">Utilidad del mes (ganancia − gastos)</p><p id="gp-util" class="text-base font-black text-purple-400 font-mono mt-0.5">$0.00</p><p id="gp-hoy-g" class="text-[9px] font-bold text-slate-500 mt-0.5"></p></div>
             </div>
             <p id="gp-aviso" class="text-[11px] font-bold text-amber-400 mt-2"></p>
-            <!-- v12.85.49: DINERO QUE TE QUEDA (aparte de la ganancia) -->
+            <!-- v12.85.55: DINERO QUE TE QUEDA (aparte de la ganancia) -->
             <div id="dinero-queda" class="glass-panel p-3.5 rounded-xl border-l-4 border-amber-400 mt-3">
                 <p class="text-[10px] text-slate-400 font-extrabold uppercase">💵 Dinero que te queda (cobrado − compras de mercancía − gastos)</p>
                 <p id="dq-total" class="text-xl font-black text-amber-400 font-mono mt-0.5">$0.00</p>
@@ -888,7 +888,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- MODAL: AVISO DE VENTAS AL CELULAR (ntfy) v12.85.49 -->
+    <!-- MODAL: AVISO DE VENTAS AL CELULAR (ntfy) v12.85.55 -->
     <div id="modal-ntfy" class="fixed inset-0 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4 z-[105]">
         <div class="glass-panel bg-slate-900 border border-yellow-500/60 w-full max-w-lg p-6 rounded-2xl shadow-2xl space-y-3 max-h-[92vh] overflow-y-auto">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -1523,6 +1523,7 @@ html:not(.dark) .pos-pie{background:#fff}
                     <button type="button" onclick="conteoAbrir()" class="py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-slate-950 font-black text-xs uppercase shadow cursor-pointer">💵 Conteo físico de caja</button>
                     <button type="button" onclick="conteoHistorial()" class="py-2.5 rounded-xl rp-btn font-black text-xs uppercase cursor-pointer">📚 Historial de conteos</button>
                 </div>
+                <button type="button" onclick="imprimirDiaCarta()" style="background:#7c3aed;color:#fff" class="w-full py-2.5 rounded-xl font-black text-xs uppercase shadow cursor-pointer">📄 Documento del día (ventas, compras, gastos y ganancias)</button>
                 <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-center space-y-1">
                     <p class="text-slate-400 text-[10px] uppercase">Estado Actual</p>
                     <p id="caja-estado-txt" class="text-base font-black text-emerald-400">ABIERTA</p>
@@ -1691,16 +1692,24 @@ html:not(.dark) .pos-pie{background:#fff}
                 <div class="grid grid-cols-2 gap-2">
                     <div>
                         <label class="text-slate-400 block mb-1">Cantidad a ingresar</label>
-                        <input type="number" id="compra-cant" value="1" min="0" step="any" class="w-full bg-slate-950 border border-slate-800 p-2 rounded-lg text-cyan-400 font-mono font-black">
+                        <input type="number" id="compra-cant" value="1" min="0" step="any" oninput="compraPagoTotal()" class="w-full bg-slate-950 border border-slate-800 p-2 rounded-lg text-cyan-400 font-mono font-black">
                     </div>
                     <div>
                         <label class="text-slate-400 block mb-1">Costo Unitario ($)</label>
-                        <input type="number" id="compra-costo" step="0.01" placeholder="0.00" class="w-full bg-slate-950 border border-slate-800 p-2 rounded-lg text-purple-400 font-mono font-black">
+                        <input type="number" id="compra-costo" step="0.01" placeholder="0.00" oninput="compraPagoTotal()" class="w-full bg-slate-950 border border-slate-800 p-2 rounded-lg text-purple-400 font-mono font-black">
                     </div>
                 </div>
                 <div>
                     <label class="text-slate-400 block mb-1">⏳ Fecha de caducidad de estas piezas <span class="text-slate-500 text-[10px]">(opcional — crea un lote)</span></label>
                     <input type="text" id="compra-caducidad" inputmode="numeric" maxlength="10" placeholder="DD/MM/AAAA" oninput="formatearFechaProducto(this)" autocomplete="off" class="w-full bg-slate-950 border border-slate-800 p-2 rounded-lg text-amber-300 font-mono font-black">
+                </div>
+                <div style="border:1px solid #fb923c;border-radius:12px;padding:10px">
+                    <label class="text-slate-400 block mb-1">💵 ¿Cómo pagaste esta compra?</label>
+                    <select id="compra-pago" class="w-full bg-slate-950 border border-slate-800 p-2 rounded-lg text-slate-100 font-bold">
+                        <option value="CAJA">💵 Con dinero de la caja (se resta de la caja)</option>
+                        <option value="OTRO">🏦 No salió de la caja (transferencia, crédito o de mi bolsillo)</option>
+                    </select>
+                    <div id="compra-pago-total" style="margin-top:6px;font-size:11px;font-weight:900;color:#fb923c"></div>
                 </div>
             </div>
 
@@ -1963,7 +1972,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.49: LISTA DE COMPRAS REGISTRADAS -->
+    <!-- v12.85.55: LISTA DE COMPRAS REGISTRADAS -->
     <div id="modal-lista-compras" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-slate-700 w-full max-w-3xl p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[90vh]">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -1982,7 +1991,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.49: EDITAR COMPRA -->
+    <!-- v12.85.55: EDITAR COMPRA -->
     <div id="modal-editar-compra" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-slate-700 w-full max-w-md p-5 rounded-2xl shadow-2xl space-y-3">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2044,11 +2053,11 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.49: PAGO A PROVEEDOR (sale de la caja) -->
+    <!-- v12.85.55: PAGO A PROVEEDOR (sale de la caja) -->
     <div id="modal-prov-pago" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 z-50">
         <div class="glass-panel bg-slate-900 border border-slate-700 w-full max-w-md p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 max-h-[92vh] overflow-y-auto">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
-                <h3 class="text-xs font-black text-orange-400 tracking-wider uppercase">💵 PAGO A PROVEEDOR (SALE DE LA CAJA)</h3>
+                <h3 style="color:#fb923c" class="text-xs font-black tracking-wider uppercase">💵 PAGO A PROVEEDOR (SALE DE LA CAJA)</h3>
                 <button onclick="cerrarModal('modal-prov-pago')" class="btn-cerrar-modal-custom w-7 h-7 rounded-lg flex items-center justify-center text-xs cursor-pointer">✕</button>
             </div>
             <div id="prov-pago-caja" class="text-[11px] font-bold text-slate-300 bg-slate-950 border border-slate-800 rounded-xl p-2.5"></div>
@@ -2058,7 +2067,7 @@ html:not(.dark) .pos-pie{background:#fff}
                     <input type="text" id="prov-pago-otro" placeholder="Nombre del proveedor..." style="display:none" class="w-full mt-1 bg-slate-900 border border-slate-800 p-2 rounded-lg text-slate-100">
                 </div>
                 <div><label class="text-slate-400 block mb-1">Monto pagado ($)</label>
-                    <input type="number" id="prov-pago-monto" inputmode="decimal" step="0.01" placeholder="0.00" class="w-full bg-slate-900 border border-slate-800 p-2 rounded-lg text-orange-300 font-mono font-black text-lg"></div>
+                    <input type="number" id="prov-pago-monto" inputmode="decimal" step="0.01" placeholder="0.00" style="color:#fdba74" class="w-full bg-slate-900 border border-slate-800 p-2 rounded-lg font-mono font-black text-lg"></div>
                 <div><label class="text-slate-400 block mb-1">Nota (opcional)</label>
                     <input type="text" id="prov-pago-nota" placeholder="Ej: refrescos, factura 123..." class="w-full bg-slate-900 border border-slate-800 p-2 rounded-lg text-slate-100"></div>
                 <button onclick="provPagoGuardar()" class="bp bp-green w-full py-2.5 rounded-xl font-black text-xs uppercase cursor-pointer">✅ REGISTRAR PAGO</button>
@@ -2575,7 +2584,7 @@ html:not(.dark) .pos-pie{background:#fff}
         </div>
     </div>
 
-    <!-- v12.85.49: CONTEO FÍSICO DE CAJA -->
+    <!-- v12.85.55: CONTEO FÍSICO DE CAJA -->
     <div id="modal-conteo" class="fixed inset-0 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4 z-[105]">
         <div class="glass-panel bg-slate-900 border border-emerald-500/60 w-full max-w-lg p-5 rounded-2xl shadow-2xl flex flex-col space-y-3 overflow-y-auto" style="max-height:calc(94 * var(--vh))">
             <div class="flex justify-between items-center border-b border-slate-800 pb-2">
@@ -2776,7 +2785,7 @@ html:not(.dark) .pos-pie{background:#fff}
                 </div>
             </div>
 
-            <p class="lp-nota" style="text-align:center; margin-top: 1.25rem;">SYSTEM VENTAS PRO v12.85.49 · Tus datos se guardan en tu propio equipo.</p>
+            <p class="lp-nota" style="text-align:center; margin-top: 1.25rem;">SYSTEM VENTAS PRO v12.85.55 · Tus datos se guardan en tu propio equipo.</p>
             <p id="lp-pruebas" style="display:none; text-align:center; margin-top:.75rem;"><a href="javascript:resetearADemoPruebas()" style="color:#fbbf24; font-size:.75rem; font-weight:700; text-decoration:underline;">Restablecer a DEMO (solo pruebas del dueño)</a></p>
         </div>
     </div>
@@ -3079,10 +3088,10 @@ html:not(.dark) .pos-pie{background:#fff}
             try { pintarBannerConsulta(); } catch (e) {}
             const badge = document.getElementById('badge-version-modo');
             if(licenciaData.tipo === "PRO") {
-                badge.innerText = "v12.85.49 PRO";
+                badge.innerText = "v12.85.55 PRO";
                 badge.className = "text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold";
             } else {
-                badge.innerText = "v12.85.49 HOLOGRAPHIC";
+                badge.innerText = "v12.85.55 HOLOGRAPHIC";
                 badge.className = "text-[9px] bg-emerald-950 text-emerald-400 border border-emerald-800/50 px-1.5 py-0.2 rounded font-mono font-extrabold";
             }
         }
@@ -3869,7 +3878,7 @@ html:not(.dark) .pos-pie{background:#fff}
         let negocioData = JSON.parse(localStorage.getItem('nexus_negocio')) || { rfc: 'XAXX010101000', razon: 'SYSTEM VENTAS PRO S.A.', nombre: 'SYSTEM VENTAS PRO', direccion: 'SIN DIRECCIÓN', correo: 'SIN CORREO', logo: '' };
         let cajaEstado = JSON.parse(localStorage.getItem('nexus_caja')) || { abierta: true, fondo: 1500 };
         let turnosCaja = (function () { try { const v = JSON.parse(localStorage.getItem('nexus_turnos')); return Array.isArray(v) ? v : []; } catch (e) { return []; } })();
-        let conteosCaja = (function () { try { const v = JSON.parse(localStorage.getItem('svp_conteos')); return Array.isArray(v) ? v : []; } catch (e) { return []; } })();   // v12.85.49: conteos físicos de caja
+        let conteosCaja = (function () { try { const v = JSON.parse(localStorage.getItem('svp_conteos')); return Array.isArray(v) ? v : []; } catch (e) { return []; } })();   // v12.85.55: conteos físicos de caja
 
         let listaServicios = JSON.parse(localStorage.getItem('nexus_servicios_v8')) || [
             { id: 201, nombre: "RECARGA TELCEL / MOVISTAR" },
@@ -4089,6 +4098,7 @@ html:not(.dark) .pos-pie{background:#fff}
             l.c = r3(l.c - q); p.lotes = p.lotes.filter(x => x.c > 0.0005);
             p.stock = Math.max(0, r3(p.stock - q));
             registrarMovimiento(p, motivo, -q, antes, texto, '');
+            if (motivo === 'DEV_PROV_REEMBOLSO' && movimientosInv[0]) movimientosInv[0].monto = redondear2(numDec(document.getElementById('bj-monto').value) || 0);
             lotesNormalizar(p); guardarMemoria(); renderizarInventario(); pintarPorCaducar(); actualizarBotonCaducar(); actualizarBotonSurtir();
             cerrarModal('modal-baja-lote');
         }
@@ -4794,7 +4804,7 @@ html:not(.dark) .pos-pie{background:#fff}
             reiniciarCamposClave();
             const campoUsuario = document.getElementById('login-usuario');
             campoUsuario.value = '';
-            // Se rellena el nombre si la persona lo eligió en el menú "cambiar de usuario"; si no, con el último que entró en este equipo (v12.85.49)
+            // Se rellena el nombre si la persona lo eligió en el menú "cambiar de usuario"; si no, con el último que entró en este equipo (v12.85.55)
             if(idPreferido !== undefined && idPreferido !== null) {
                 const elegido = usuariosSistema.find(x => String(x.id) === String(idPreferido));
                 if(elegido) campoUsuario.value = elegido.nombre;
@@ -4964,7 +4974,7 @@ html:not(.dark) .pos-pie{background:#fff}
                 return;
             }
             idUsuarioActivo = usuario.id;
-            try { localStorage.setItem('svp_ultimo_usuario', usuario.nombre); } catch (e) {}   // v12.85.49: la próxima vez ya aparece tu nombre
+            try { localStorage.setItem('svp_ultimo_usuario', usuario.nombre); } catch (e) {}   // v12.85.55: la próxima vez ya aparece tu nombre
             guardarMemoria();
             actualizarBarraUsuarioActivo();
             const modal = document.getElementById('modal-login-sistema');
@@ -5241,6 +5251,28 @@ html:not(.dark) .pos-pie{background:#fff}
         }
         function tituloSeccion(t) { return '<div style="margin-top:8px;padding-top:6px;border-top:1px solid var(--rp-ln);font-size:10px;font-weight:900;text-transform:uppercase;color:var(--rp-cy)">' + t + '</div>'; }
 
+        // v12.85.55: explicación en palabras sencillas de DÓNDE sale cada número y por qué cuadra
+        function cuadreExplicaHtml(r, fondo) {
+            const ef = redondear2(r.metodos.EFECTIVO.ventas + r.metodos.EFECTIVO.abonos);
+            const otros = redondear2(r.cobrado - ef);
+            const gOp = redondear2(r.totalGastos - (r.totalProv || 0)), prov = r.totalProv || 0;
+            const f = fondo !== undefined ? fondo : 0;
+            const caja = redondear2(f + r.efectivoNeto);
+            const p = (t) => '<div style="font-size:11px;line-height:1.45;color:var(--rp-mut);margin:2px 0 6px">' + t + '</div>';
+            const b = (t) => '<b style="color:var(--rp-cy)">' + t + '</b>';
+            let h = tituloSeccion('📘 ¿De dónde sale cada número? (por qué cuadra)');
+            h += p(b('1) VENTAS ' + dinero(r.total - r.devTotal)) + ': es la suma de todos los tickets del periodo' + (r.devTotal > 0 ? ', menos lo devuelto' : '') + '. Es lo que vendiste, aunque no todo haya entrado como efectivo.');
+            h += p(b('2) LO COBRADO ' + dinero(r.cobrado)) + ' se reparte así: efectivo ' + dinero(ef) + ' (va al cajón) y otros métodos ' + dinero(otros) + ' (tarjeta/transferencia: NO están en el cajón)' + (r.credito.pendiente > 0 ? '. Además ' + dinero(r.credito.pendiente) + ' quedó fiado (aún no se cobra)' : '') + '.');
+            h += p(b('3) EFECTIVO EN CAJA ' + dinero(caja)) + ': ' + (fondo !== undefined ? 'fondo ' + dinero(f) + ' + ' : '') + 'efectivo cobrado ' + dinero(ef) + ' − gastos ' + dinero(gOp) + ' − pagos a proveedores ' + dinero(prov) + (r.totalReversos + r.totalReembolsos > 0 ? ' − devoluciones/anulaciones en efectivo ' + dinero(r.reversos.EFECTIVO + r.reembolsos.EFECTIVO) : '') + '. Este es el dinero que debes contar con tus manos.');
+            if (esDueno()) {
+                const g = calcularGanancia(r);
+                h += p(b('4) GANANCIA BRUTA ' + dinero(g.bruta)) + ': lo vendido (sin IVA) ' + dinero(g.ingresoNeto) + ' − lo que te costó esa mercancía ' + dinero(g.costoNeto) + '. Sale de los costos registrados en tu inventario.');
+                h += p(b('5) GANANCIA NETA ' + dinero(g.neta)) + ': ganancia bruta ' + dinero(g.bruta) + ' − gastos ' + dinero(gOp) + '. Los pagos a proveedores (' + dinero(prov) + ') NO se restan aquí, porque el costo de la mercancía ya se descontó en el punto 4; restarlos otra vez la contaría doble.');
+            }
+            h += p('<i>Por eso ventas, caja y ganancia son números distintos: la caja es solo efectivo y sí baja con proveedores; la ganancia no. Si lo que cuentas no coincide con el punto 3, revisa si sacaste dinero sin anotarlo.</i>');
+            return h;
+        }
+
         function resumenReporteHtml(r, fondo) {
             let h = '';
             h += filaHtml('Periodo:', etiquetaPeriodo(r), 'color:var(--rp-cy);font-weight:900');
@@ -5279,6 +5311,7 @@ html:not(.dark) .pos-pie{background:#fff}
             h += filaHtml('- Gastos (' + (r.gastos.length - r.gastos.filter(esPagoProv).length) + '):', dinero(r.totalGastos - r.totalProv), 'color:var(--rp-rs)');
             if (r.totalProv > 0) h += filaHtml('- Pagos a proveedores:', dinero(r.totalProv), 'color:var(--rp-rs)');
             h += filaHtml('= ' + (fondo !== undefined ? 'EFECTIVO EN CAJA:' : 'EFECTIVO NETO:'), dinero(r.efectivoNeto + (fondo || 0)), 'font-weight:900;color:var(--rp-cy);border-top:1px solid var(--rp-ln);padding-top:3px;margin-top:3px');
+            h += cuadreExplicaHtml(r, fondo);
             return h;
         }
 
@@ -5426,7 +5459,8 @@ html:not(.dark) .pos-pie{background:#fff}
             L.push([c('Crédito pendiente de cobro'), r.credito.pendiente.toFixed(2)].join(','));
             METODOS_PAGO.forEach(m => L.push([c('Cobrado en ' + m + ' (ventas ' + r.metodos[m].ventas.toFixed(2) + ' + abonos ' + r.metodos[m].abonos.toFixed(2) + ')'), (r.metodos[m].ventas + r.metodos[m].abonos).toFixed(2)].join(',')));
             L.push([c('Total cobrado'), r.cobrado.toFixed(2)].join(','));
-            L.push([c('Gastos'), r.totalGastos.toFixed(2)].join(','));
+            L.push([c('Gastos'), redondear2(r.totalGastos - r.totalProv).toFixed(2)].join(','));
+            L.push([c('Pagos a proveedores (salen de caja, no son gasto)'), (r.totalProv || 0).toFixed(2)].join(','));
             L.push([c('Efectivo neto (cobrado en efectivo - gastos)'), r.efectivoNeto.toFixed(2)].join(','));
             L.push('');
             L.push(['ID', 'Fecha (DD/MM/AAAA)', 'Correlativo', 'Cliente', 'Subtotal', 'IVA', 'Total', 'FormaPago', 'MetodoPago', 'Abonado', 'Saldo', 'Operador'].map(c).join(','));
@@ -5464,6 +5498,7 @@ html:not(.dark) .pos-pie{background:#fff}
             actualizarBotonCaja();
             cerrarModal('modal-caja');
             mostrarAvisoPro(`Caja ${estado ? 'abierta' : 'cerrada'} exitosamente.`, "Caja", "🧮");
+            if (!estado) setTimeout(() => ofrecerDocumentoDia(cajaEstado.fondo), 600);
         }
 
         function actualizarBotonCaja() {
@@ -5514,7 +5549,7 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
         document.getElementById('np-medida').addEventListener('change', function () { document.getElementById('np-fraccion').checked = esFraccionable({ medida: this.value }); });
-        // v12.85.49: al escribir/escanear un código nuevo, busca nombre y foto en el catálogo público Open Food Facts
+        // v12.85.55: al escribir/escanear un código nuevo, busca nombre y foto en el catálogo público Open Food Facts
         let _npImagenCat = '', _npSug = null, _npSugCodigo = '';
         function npOcultarSugerencia() {
             _npSug = null; _npSugCodigo = '';
@@ -5593,7 +5628,13 @@ html:not(.dark) .pos-pie{background:#fff}
             }
         }
 
+        function compraPagoTotal() {
+            const e = document.getElementById('compra-pago-total'); if (!e) return;
+            const t = redondear2((numDec(document.getElementById('compra-cant').value) || 0) * (parseFloat(document.getElementById('compra-costo').value) || 0));
+            e.innerText = t > 0 ? 'Total de la compra: ' + dinero(t) : 'Escribe el costo unitario para calcular el total.';
+        }
         function inicializarModuloCompra() {
+            try { document.getElementById('compra-pago').value = 'CAJA'; compraPagoTotal(); } catch (e) {}
             const hoy = fechaLocalISO();
             const inputCompraFecha = document.getElementById('compra-fecha');
             inputCompraFecha.value = hoy;
@@ -5620,10 +5661,10 @@ html:not(.dark) .pos-pie{background:#fff}
             prodsFiltrados.map(p => `<option value="${p.id}">${escHtml(p.codigo)} - ${escHtml(p.nombre)} (Stock actual: ${p.stock})</option>`).join('');
         }
 
-        // v12.85.49: al elegir el producto, el proveedor se pone solo con el que ya tiene (se puede cambiar a mano)
+        // v12.85.55: al elegir el producto, el proveedor se pone solo con el que ya tiene (se puede cambiar a mano)
         function compraPonerProveedorDelProducto() {
             const prod = inventario.find(p => p.id == document.getElementById('compra-producto').value);
-            // v12.85.49: el costo unitario se llena con el costo actual del producto elegido (se puede editar si subió o bajó)
+            // v12.85.55: el costo unitario se llena con el costo actual del producto elegido (se puede editar si subió o bajó)
             const cc = document.getElementById('compra-costo');
             if (cc && prod) cc.value = (parseFloat(prod.costo) > 0) ? String(Math.round(parseFloat(prod.costo) * 100) / 100) : '';
             const sel = document.getElementById('compra-proveedor');
@@ -5662,6 +5703,7 @@ html:not(.dark) .pos-pie{background:#fff}
             const prod = _compraProd(c);
             mostrarConfirmacionPro('¿Eliminar esta compra de "' + c.producto + '" (' + c.cant + ' pzas)?' + (prod ? '\n\nSe le restarán ' + c.cant + ' piezas al stock (hoy tiene ' + prod.stock + ').' : '\n\nEl producto ya no existe; solo se borra el registro.'), 'Eliminar compra', '🗑️', () => {
                 if (prod) { const antes = prod.stock; prod.stock = Math.max(0, r3(prod.stock - (parseFloat(c.cant) || 0))); lotesNormalizar(prod); registrarMovimiento(prod, 'AJUSTE', prod.stock - antes, antes, 'Compra eliminada', ''); }
+                historialGastos = historialGastos.filter(g => !(g.compraId != null && g.compraId == id));   // el pago de esa compra regresa a la caja
                 historialCompras = historialCompras.filter(x => x.id != id);
                 _compraRefrescar();
             });
@@ -5689,6 +5731,7 @@ html:not(.dark) .pos-pie{background:#fff}
             // si es la compra más reciente de ese producto, su costo pasa a ser el costo del producto
             if (prod && costo > 0 && historialCompras.find(x => _compraProd(x) === prod) === c) prod.costo = costo;
             c.cant = cant; c.costo = costo;
+            { const gl = historialGastos.find(g => g.compraId != null && g.compraId == c.id); if (gl) { gl.monto = redondear2(cant * costo); if (!(gl.monto > 0)) historialGastos = historialGastos.filter(g => g !== gl); } }
             c.proveedor = document.getElementById('ec-prov').value.trim() || c.proveedor;
             const f = document.getElementById('ec-fecha').value; if (f) c.fecha = f;
             if (prod) c.prodId = prod.id;
@@ -5716,7 +5759,10 @@ html:not(.dark) .pos-pie{background:#fff}
             const cadTxt = (document.getElementById('compra-caducidad').value || '').trim();
             const cadISO = cadTxt ? convertirFechaProductoAISO(cadTxt) : '';
             if (cadTxt && !fechaISOValida(cadISO)) { mostrarAvisoPro('Escribe la fecha de caducidad con formato DD/MM/AAAA, o déjala vacía.', 'Fecha incorrecta', '⚠️'); return; }
+            const totalCompra = redondear2(cant * costo), pagaCaja = (document.getElementById('compra-pago').value === 'CAJA') && totalCompra > 0;
+            if (pagaCaja && !cajaEstado.abierta) { mostrarAvisoPro('La caja está CERRADA. Ábrela para que el pago salga de la caja, o elige «No salió de la caja».', 'Caja cerrada', '⚠️'); return; }
             if(prod && cant > 0) {
+                const idCompra = Date.now();
                 lotesNormalizar(prod);
                 const stockAntes = prod.stock;
                 prod.stock = r3(prod.stock + cant);
@@ -5724,8 +5770,10 @@ html:not(.dark) .pos-pie{background:#fff}
                 registrarMovimiento(prod, 'COMPRA', cant, stockAntes, 'Compra a ' + proveedor, '');
                 if(costo > 0) prod.costo = costo;
 
+                if (pagaCaja) historialGastos.unshift({ id: idCompra + 1, fecha: fechaLocalISO(), categoria: 'PAGO A PROVEEDOR', monto: totalCompra, desc: (proveedor || 'Proveedor') + ' - compra: ' + prod.nombre + ' x' + cant, turnoId: turnoIdActual(), compraId: idCompra });
                 historialCompras.unshift({
-                    id: Date.now(),
+                    id: idCompra,
+                    pagoCaja: pagaCaja,
                     fecha,
                     proveedor,
                     prodId: prod.id,
@@ -5738,7 +5786,7 @@ html:not(.dark) .pos-pie{background:#fff}
                 guardarMemoria();
                 cerrarModal('modal-compra');
                 renderizarInventario();
-                mostrarAvisoPro(`¡Compra registrada con éxito!\nProveedor: ${proveedor}\nStock actualizado.`, "Inventario", "🛒");
+                mostrarAvisoPro(`¡Compra registrada con éxito!\nProveedor: ${proveedor}\nStock actualizado.` + (pagaCaja ? `\n💵 Se restaron ${dinero(totalCompra)} de la caja.` : ''), "Inventario", "🛒");
             } else {
                 mostrarAvisoPro('La compra NO se guardó: revisa que el producto esté elegido y que la cantidad sea mayor a 0.', 'Compra no guardada', '⚠️');
             }
@@ -6127,9 +6175,9 @@ html:not(.dark) .pos-pie{background:#fff}
         function renderizarTablaGastos() {
             const tbody = document.getElementById('tabla-gastos-body');
             tbody.innerHTML = historialGastos.length === 0 ? `<tr><td colspan="5" class="p-3 text-center text-slate-500">Sin gastos</td></tr>` : 
-            historialGastos.map((g, i) => `<tr class="fila-chk"><td class="p-3 text-xs">${formatearFecha(g.fecha)}</td><td class="p-3 text-xs">${g.categoria}</td><td class="p-3 text-xs">${g.desc}</td><td class="p-3 text-right text-rose-400 text-xs">$${g.monto.toFixed(2)}</td><td class="p-3 text-center"><button onclick="mostrarConfirmacionPro('¿Estás seguro de eliminar este gasto de $${g.monto.toFixed(2)}?', 'Eliminar Gasto', '💸', () => { historialGastos.splice(${i},1); guardarMemoria(); renderizarTablaGastos(); mostrarAvisoPro('Gasto eliminado.'); })" class="text-rose-400"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-2px;flex-shrink:0"><path d="M3 6h18M8 6V4h8v2M6 6l1 15h10l1-15M10 10v7M14 10v7"/></svg> Eliminar</button></td></tr>`).join('');
+            historialGastos.map((g, i) => `<tr class="fila-chk"${esPagoProv(g) ? ' style="background:rgba(251,146,60,.10)"' : ''}><td class="p-3 text-xs">${formatearFecha(g.fecha)}</td><td class="p-3 text-xs">${esPagoProv(g) ? '🚚 ' : ''}${g.categoria}</td><td class="p-3 text-xs">${g.desc}</td><td class="p-3 text-right text-rose-400 text-xs">$${g.monto.toFixed(2)}</td><td class="p-3 text-center"><button onclick="mostrarConfirmacionPro('¿Estás seguro de eliminar este gasto de $${g.monto.toFixed(2)}?', 'Eliminar Gasto', '💸', () => { historialGastos.splice(${i},1); guardarMemoria(); renderizarTablaGastos(); mostrarAvisoPro('Gasto eliminado.'); })" class="text-rose-400"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-2px;flex-shrink:0"><path d="M3 6h18M8 6V4h8v2M6 6l1 15h10l1-15M10 10v7M14 10v7"/></svg> Eliminar</button></td></tr>`).join('');
         }
-        // ===== v12.85.49: PAGO A PROVEEDOR desde la caja =====
+        // ===== v12.85.55: PAGO A PROVEEDOR desde la caja =====
         function provPagoRefrescar() {
             const h = fechaLocalISO(), r = calcularReporte(h, h);
             const inp = document.getElementById('caja-fondo-actual'), fi = inp ? parseFloat(inp.value) : NaN;
@@ -6490,7 +6538,7 @@ html:not(.dark) .pos-pie{background:#fff}
                 mostrarAvisoPro("Ingrese un monto válido mayor a 0.", "Validación", "⚠️");
                 return;
             }
-            // v12.85.49: lo que ganas en este servicio (opcional). Se guarda como costo = monto − ganancia
+            // v12.85.55: lo que ganas en este servicio (opcional). Se guarda como costo = monto − ganancia
             const ganSrv = parseFloat(document.getElementById('input-gan-servicio').value) || 0;
             if (ganSrv > monto) { mostrarAvisoPro('Tu ganancia no puede ser mayor que el monto cobrado.', 'Validación', '⚠️'); return; }
 
@@ -7361,9 +7409,9 @@ html:not(.dark) .pos-pie{background:#fff}
 
         function filtrarTablaVentas() { _pagVen.p = 1; renderizarTablaVentas(); }
 
-        // v12.85.49: MISMA cuenta que el panel del celular: ganancia = total de la venta − costo guardado de cada pieza vendida
+        // v12.85.55: MISMA cuenta que el panel del celular: ganancia = total de la venta − costo guardado de cada pieza vendida
         function gananciaCelular(v) { return redondear2((v.items || []).reduce((a, i) => { const c = Number(i.costo) || 0, q = Number(i.cant) || 0; return a + (c > 0 ? importeLinea(i) - redondear2(c * q) : 0); }, 0)); }   // misma regla que el reporte: solo lo que tiene costo, sin IVA ni envío
-        // ===== AVISO DE VENTAS AL CELULAR (ntfy) v12.85.49 =====
+        // ===== AVISO DE VENTAS AL CELULAR (ntfy) v12.85.55 =====
         function ntfyCfg() { try { return Object.assign({ on: false, topic: '' }, JSON.parse(localStorage.getItem('svp_ntfy') || '{}')); } catch (e) { return { on: false, topic: '' }; } }
         function ntfyGenTema() { const a = 'abcdefghijkmnpqrstuvwxyz23456789'; let t = 'ventas-'; const r = new Uint8Array(16); (window.crypto || {}).getRandomValues ? crypto.getRandomValues(r) : r.forEach((_, i) => r[i] = Math.random() * 256); r.forEach(n => t += a[n % a.length]); return t; }
         function ntfyAbrir() { const c = ntfyCfg(); if (!c.topic) c.topic = ntfyGenTema(); document.getElementById('ntfy-tema').value = c.topic; document.getElementById('ntfy-activo').checked = !!c.on; document.getElementById('ntfy-estado').innerText = ''; abrirModal('modal-ntfy'); }
@@ -7435,7 +7483,7 @@ html:not(.dark) .pos-pie{background:#fff}
             set('gp-util', dinero(ganM - gasM)); set('gp-hoy-g', 'Gastos de hoy: ' + dinero(gasH));
             const nSC = historialVentas.filter(v => dia(v).substring(0, 7) === mes && ventaSinCosto(v)).length;
             set('gp-aviso', nSC ? '⚠️ ' + nSC + ' ventas de este mes llevan productos SIN COSTO: esa parte no cuenta como ganancia. Ponles su costo en Inventario para que la ganancia sea exacta.' : '');
-            // v12.85.49: dinero que te queda = lo cobrado − compras de mercancía − gastos
+            // v12.85.55: dinero que te queda = lo cobrado − compras de mercancía − gastos
             const cobrado = historialVentas.reduce((a, v) => a + ingresosDeVenta(v).reduce((b, x) => b + (Number(x.monto) || 0), 0), 0) - historialVentas.flatMap(v => v.devoluciones || []).reduce((a, d) => a + (Number(d.total) || 0), 0);
             const compras = historialCompras.reduce((a, c) => a + (parseFloat(c.cant) || 0) * (parseFloat(c.costo) || 0), 0);
             const gastosT = historialGastos.filter(g => !esPagoProv(g)).reduce((a, g) => a + (Number(g.monto) || 0), 0);
@@ -7484,7 +7532,7 @@ html:not(.dark) .pos-pie{background:#fff}
             elIva.innerText = `+ IVA cobrado: $${totalIvaCobrado.toFixed(2)}`;
             document.getElementById('stat-ganancia').innerText = `$${gananciaNetaReal.toFixed(2)}`;
             document.getElementById('stat-gastos').innerText = `$${totalGastos.toFixed(2)}`;
-            // v12.85.49: lo que compraste de mercancía (botón Compra) también se ve aquí. No se suma a "Gastos" para no descontarlo dos veces de la ganancia (el costo ya se resta al vender).
+            // v12.85.55: lo que compraste de mercancía (botón Compra) también se ve aquí. No se suma a "Gastos" para no descontarlo dos veces de la ganancia (el costo ya se resta al vender).
             const totalCompras = historialCompras.reduce((a, c) => a + (parseFloat(c.cant) || 0) * (parseFloat(c.costo) || 0), 0);
             const elCmp = document.getElementById('stat-compras');
             if (elCmp) elCmp.innerText = historialCompras.length ? `🛒 Compras de mercancía: $${totalCompras.toFixed(2)} (${historialCompras.length}) · toca para ver` : '';
@@ -8801,7 +8849,7 @@ html:not(.dark) .pos-pie{background:#fff}
             try {
                 if (!Array.isArray(movimientosInv)) movimientosInv = [];
                 const u = obtenerUsuarioActivo();
-                movimientosInv.unshift({ id: Date.now() + '_' + movimientosInv.length, fecha: fechaHoraLocal(), prodId: prod.id, codigo: prod.codigo || '', nombre: prod.nombre, tipo, cant: r3(delta), antes: r3(antes), despues: r3(prod.stock), motivo: motivo || '', ref: ref || '', usuario: u ? u.nombre : '' });
+                movimientosInv.unshift({ id: Date.now() + '_' + movimientosInv.length, fecha: fechaHoraLocal(), costo: Number(prod.costo) || 0, prodId: prod.id, codigo: prod.codigo || '', nombre: prod.nombre, tipo, cant: r3(delta), antes: r3(antes), despues: r3(prod.stock), motivo: motivo || '', ref: ref || '', usuario: u ? u.nombre : '' });
                 const _capMov = svpAlm.modo === 'idb' ? 20000 : 3000; if (movimientosInv.length > _capMov) movimientosInv.length = _capMov;
             } catch (e) { console.error(e); }
         }
@@ -9204,6 +9252,7 @@ html:not(.dark) .pos-pie{background:#fff}
             if (imprimir) imprimirHtmlTermico(_htmlCorteTurno(t, r));
             mostrarAvisoPro('Turno de ' + t.usuario + ' cerrado. ' + (t.diferencia === 0 ? 'La caja cuadra.' : (t.diferencia > 0 ? 'Sobran ' : 'Faltan ') + dinero(Math.abs(t.diferencia)) + '.'), 'Turno cerrado', '🔒');
             _cierreTurno = null;
+            setTimeout(() => ofrecerDocumentoDia(), 600);
         }
         function abrirHistorialTurnos() {
             const dueno = esDueno(), u = obtenerUsuarioActivo();
@@ -9226,7 +9275,7 @@ html:not(.dark) .pos-pie{background:#fff}
         }
 
 
-        // ===== v12.85.49: CONTEO FÍSICO DE CAJA (billetes y monedas pieza por pieza) =====
+        // ===== v12.85.55: CONTEO FÍSICO DE CAJA (billetes y monedas pieza por pieza) =====
         const CONTEO_DEN = [1000, 500, 200, 100, 50, 20].map(v => ({ k: 'B' + v, v, billete: true })).concat([20, 10, 5, 2, 1, 0.5].map(v => ({ k: 'M' + v, v, billete: false })));
         let _conteoModo = null, _cnHist = [];
         function conteoLibro() {
@@ -9431,6 +9480,91 @@ html:not(.dark) .pos-pie{background:#fff}
         function cjKV(filas) { return '<table class="cj-kv">' + filas.map(f => '<tr class="' + (f[2] || '') + '"><td>' + f[0] + '</td><td class="r">' + f[1] + '</td></tr>').join('') + '</table>'; }
         function cjSec(t) { return '<div class="cj-sec">' + t + '</div>'; }
 
+        // ===== v12.85.55: DOCUMENTO DEL DÍA (ventas, compras, gastos, caja y ganancias con explicaciones) =====
+        function cartaDiaHtml(dia, fondoDado) {
+            const dueno = esDueno(), r = calcularReporte(dia, dia);
+            const inp = document.getElementById('caja-fondo-actual'), fi = inp ? parseFloat(inp.value) : NaN;
+            const tDia = turnosCaja.filter(t => String(t.apertura || '').substring(0, 10) === dia);
+            const fondo = tDia.length ? redondear2(tDia.reduce((a, t) => a + (Number(t.fondo) || 0), 0)) : ((fondoDado !== undefined && fondoDado !== null) ? fondoDado : (isFinite(fi) ? fi : (Number(cajaEstado.fondo) || 0)));
+            const ef = redondear2(r.metodos.EFECTIVO.ventas + r.metodos.EFECTIVO.abonos), otros = redondear2(r.cobrado - ef);
+            const prov = r.totalProv || 0, gOp = redondear2(r.totalGastos - prov);
+            const compras = historialCompras.filter(c => String(c.fecha || '').substring(0, 10) === dia);
+            const totCompras = redondear2(compras.reduce((a, c) => a + (parseFloat(c.cant) || 0) * (parseFloat(c.costo) || 0), 0));
+            const cajaEsp = redondear2(fondo + r.efectivoNeto);
+            const conteo = conteosCaja.find(c => String(c.fecha || '').substring(0, 10) === dia);   // el más reciente del día
+            const nota = t => '<div class="cj-nota" style="font-size:11px;line-height:1.5;margin:3px 0 8px">' + t + '</div>';
+            let h = cjEncabezado('DOCUMENTO DEL DÍA — CIERRE DE CAJA', 'Día ' + isoADMY(dia));
+            const g = dueno ? calcularGanancia(r) : null;
+            h += '<div class="cj-kpis"><div><span>Vendido</span><b>' + dinero(r.total - r.devTotal) + '</b></div><div><span>Efectivo en caja</span><b>' + dinero(cajaEsp) + '</b></div><div><span>Gastos</span><b>' + dinero(gOp) + '</b></div>' +
+                (dueno ? '<div><span>Ganancia neta</span><b style="color:' + (g.neta >= 0 ? '#047857' : '#be123c') + '">' + dinero(g.neta) + '</b></div>' : '<div><span>Tickets</span><b>' + r.nVentas + '</b></div>') + '</div>';
+            // 1 ventas
+            h += cjSec('1) VENTAS DEL DÍA') + cjKV([['Tickets vendidos', String(r.nVentas)], ['Total vendido', dinero(r.total), 'b']].concat(r.devs.length ? [['− Devoluciones (' + r.devs.length + ')', dinero(r.devTotal)], ['VENTA NETA', dinero(r.total - r.devTotal), 'b']] : []).concat([['Cobrado en EFECTIVO (entra al cajón)', dinero(ef)], ['Cobrado con tarjeta / transferencia (NO está en el cajón)', dinero(otros)], ['Quedó fiado (por cobrar)', dinero(r.credito.pendiente)]]));
+            h += nota('<b>Qué significa:</b> «vendido» es todo lo que se facturó hoy. No todo es efectivo: lo de tarjeta o transferencia lo recibes en el banco, y lo fiado lo cobrarás después. Por eso la caja y las ventas no son el mismo número.');
+            if (r.ventas.length) {
+                const lista = r.ventas.slice().sort((a, b) => a.fecha < b.fecha ? -1 : 1);
+                h += cjTabla([{ t: 'Ticket' }, { t: 'Hora' }, { t: 'Productos vendidos' }, { t: 'Pago' }, { t: 'Total', a: 'r' }].concat(dueno ? [{ t: 'Ganancia', a: 'r' }] : []),
+                    lista.map(v => [escHtml(v.correlativo), escHtml(String(v.fecha).substring(11, 16)), escHtml((v.items || []).map(i => i.cant + '× ' + i.nombre).join(', ')), escHtml(v.al + ' / ' + v.con), dinero(v.total)].concat(dueno ? [dinero(gananciaCelular(v))] : [])),
+                    ['', '', '', 'TOTAL', dinero(r.total)].concat(dueno ? [dinero(lista.reduce((a, v) => a + gananciaCelular(v), 0))] : []));
+            }
+            // 2 compras
+            h += cjSec('2) COMPRAS DE MERCANCÍA DEL DÍA');
+            if (compras.length) {
+                h += cjTabla([{ t: 'Proveedor' }, { t: 'Producto' }, { t: 'Cant.', a: 'r' }, { t: 'Costo', a: 'r' }, { t: 'Total', a: 'r' }, { t: 'Pagada' }],
+                    compras.map(c => [escHtml(c.proveedor || ''), escHtml(c.producto), c.cant, dinero(c.costo), dinero((parseFloat(c.cant) || 0) * (parseFloat(c.costo) || 0)), c.pagoCaja ? 'Con dinero de la caja' : 'No salió de la caja']), ['', '', '', 'TOTAL', dinero(totCompras), '']);
+            } else h += nota('Hoy no se registraron compras.');
+            h += nota('<b>Qué significa:</b> es mercancía que entró al inventario. Las compras pagadas con dinero de la caja aparecen abajo como «pagos a proveedores» y bajan el efectivo. Una compra NO baja la ganancia por sí sola: el costo se descuenta cuando vendes ese producto.');
+            // 3 gastos y proveedores
+            const _gOp = r.gastos.filter(x => !esPagoProv(x)), _gPv = r.gastos.filter(esPagoProv);
+            h += cjSec('3) GASTOS DEL DÍA (renta, luz, etc.)');
+            h += _gOp.length ? cjTabla([{ t: 'Categoría' }, { t: 'Descripción' }, { t: 'Monto', a: 'r' }], _gOp.map(x => [escHtml(x.categoria), escHtml(x.desc || ''), dinero(x.monto)]), ['', 'TOTAL', dinero(gOp)]) : nota('Hoy no hubo gastos.');
+            h += nota('<b>Qué significa:</b> los gastos salen de la caja Y se restan de tu ganancia, porque son costos del negocio que no son mercancía.');
+            h += cjSec('4) PAGOS A PROVEEDORES DEL DÍA');
+            h += _gPv.length ? cjTabla([{ t: 'Proveedor / nota' }, { t: 'Monto', a: 'r' }], _gPv.map(x => [escHtml(x.desc || ''), dinero(x.monto)]), ['TOTAL', dinero(prov)]) : nota('Hoy no se pagó a proveedores con dinero de la caja.');
+            h += nota('<b>Qué significa:</b> es dinero que sacaste de la caja para pagar mercancía. Baja el efectivo del cajón, pero NO se resta de la ganancia (el costo ya se descuenta al vender; restarlo otra vez lo contaría doble).');
+            if (r.devs.length) h += cjSec('Devoluciones del día') + cjTabla([{ t: 'Folio' }, { t: 'Venta' }, { t: 'Productos' }, { t: 'Motivo' }, { t: 'Total', a: 'r' }], r.devs.map(({ d, v }) => [escHtml(d.correlativo), escHtml(v.correlativo), escHtml((d.items || []).map(i => i.cant + '× ' + i.nombre).join(', ')), escHtml(d.motivo || ''), dinero(d.total)]));
+            if (r.anuladas.length) h += cjSec('Ventas anuladas hoy') + cjTabla([{ t: 'Ticket' }, { t: 'Anulada por' }, { t: 'Total', a: 'r' }], r.anuladas.map(v => [escHtml(v.correlativo), escHtml(v.anuladaPor || ''), dinero(v.total)]));
+            // 5 caja
+            const cj = [['+ Fondo con el que abriste la caja', dinero(fondo)], ['+ Efectivo cobrado hoy', dinero(ef)]];
+            if (r.reversos.EFECTIVO > 0) cj.push(['− Efectivo devuelto por anulaciones', dinero(r.reversos.EFECTIVO)]);
+            if (r.reembolsos.EFECTIVO > 0) cj.push(['− Efectivo reembolsado por devoluciones', dinero(r.reembolsos.EFECTIVO)]);
+            cj.push(['− Gastos', dinero(gOp)], ['− Pagos a proveedores', dinero(prov)], ['= EFECTIVO QUE DEBE HABER EN LA CAJA', dinero(cajaEsp), 'b']);
+            if (conteo) { cj.push(['Efectivo CONTADO (conteo físico ' + escHtml(String(conteo.fecha).substring(11, 16)) + ')', dinero(conteo.contado)], [conteo.contado - cajaEsp === 0 ? 'DIFERENCIA: la caja cuadra' : (conteo.contado > cajaEsp ? 'DIFERENCIA: SOBRAN' : 'DIFERENCIA: FALTAN'), dinero(Math.abs(redondear2(conteo.contado - cajaEsp))), 'b']); }
+            h += cjSec('5) CAJA: ¿CUÁNTO DEBE HABER?') + cjKV(cj);
+            h += nota('<b>Qué significa:</b> la caja solo cuenta EFECTIVO. Empieza con tu fondo, suma lo cobrado en efectivo y resta lo que sacaste (gastos y proveedores). Ese resultado es lo que debes tener contado con tus manos' + (conteo ? '.' : '; hoy no hay conteo físico guardado, haz el «Conteo físico de caja» para comparar.') + ' Si sobra o falta, casi siempre es dinero que salió sin anotarse o un cambio mal dado.');
+            // 6 ganancia
+            // 6) bajas / pérdidas
+            const _h0 = h;   // las bajas muestran costos: solo las ve el dueño
+            const MOTIVOS_PERD = ['Merma / dañado', 'Caducado', 'Robo / pérdida', 'Muestra / regalo / consumo propio'];
+            const movsDia = (movimientosInv || []).filter(m => String(m.fecha).slice(0, 10) === dia);
+            const costoMov = m => { const c = Number(m.costo); if (isFinite(c) && c > 0) return c; const pr = inventario.find(x => x.id === m.prodId); return pr ? Number(pr.costo) || 0 : 0; };
+            const perdidas = movsDia.filter(m => m.tipo === 'MERMA' || (m.tipo === 'AJUSTE' && Number(m.cant) < 0 && MOTIVOS_PERD.some(x => String(m.motivo || '').indexOf(x) === 0)));
+            const cambios = movsDia.filter(m => m.tipo === 'DEV_PROV_CAMBIO'), reembs = movsDia.filter(m => m.tipo === 'DEV_PROV_REEMBOLSO');
+            const valPerd = redondear2(perdidas.reduce((a, m) => a + Math.abs(Number(m.cant) || 0) * costoMov(m), 0));
+            const valReemb = redondear2(reembs.reduce((a, m) => a + (Number(m.monto) || 0), 0));
+            h += cjSec('6) BAJAS DE MERCANCÍA Y PÉRDIDAS DEL DÍA');
+            if (perdidas.length || cambios.length || reembs.length) {
+                const filas = [];
+                perdidas.forEach(m => filas.push([escHtml(m.nombre), fmtCant(Math.abs(m.cant)), 'PÉRDIDA: ' + escHtml(String(m.motivo || 'Baja').split(' · ')[0].replace(/\(lote.*$/, '').trim()), dinero(Math.abs(Number(m.cant) || 0) * costoMov(m))]));
+                cambios.forEach(m => filas.push([escHtml(m.nombre), fmtCant(Math.abs(m.cant)), 'Devuelto al proveedor para CAMBIO (no es pérdida si lo repone)', dinero(0)]));
+                reembs.forEach(m => filas.push([escHtml(m.nombre), fmtCant(Math.abs(m.cant)), 'Devuelto al proveedor con REEMBOLSO de ' + dinero(m.monto || 0), dinero(Math.max(0, redondear2(Math.abs(Number(m.cant) || 0) * costoMov(m) - (Number(m.monto) || 0))))]));
+                h += cjTabla([{ t: 'Producto' }, { t: 'Piezas', a: 'r' }, { t: 'Qué pasó' }, { t: 'Costo perdido', a: 'r' }], filas.map(f => f), ['', '', 'TOTAL PERDIDO', dinero(redondear2(valPerd + reembs.reduce((a, m) => a + Math.max(0, Math.abs(Number(m.cant) || 0) * costoMov(m) - (Number(m.monto) || 0)), 0)))]);
+            } else h += nota('Hoy no se dieron de baja productos.');
+            h += nota('<b>Qué significa:</b> son piezas que salieron del inventario sin venderse (caducadas, dañadas, perdidas o regaladas). Su costo es dinero que ya pagaste y no recuperaste, por eso es una <b>pérdida</b>, sobre todo con proveedores que no hacen cambios. Si el proveedor las cambia, no hay pérdida; si las reembolsa, solo se pierde la diferencia. <b>Esta pérdida NO baja la caja de hoy</b> (el dinero salió el día que compraste), pero sí reduce lo que realmente ganaste.');
+            const perdTotal = redondear2(valPerd + reembs.reduce((a, m) => a + Math.max(0, Math.abs(Number(m.cant) || 0) * costoMov(m) - (Number(m.monto) || 0)), 0));
+            if (valReemb > 0) h += nota('El proveedor te reembolsó ' + dinero(valReemb) + ' por devoluciones. Si te lo dio en efectivo, anótalo para que la caja cuadre (ese dinero entró al cajón).');
+            if (!dueno) h = _h0;
+            if (dueno) {
+                h += cjSec('7) GANANCIA DEL DÍA') + cjKV([['Vendido sin IVA (productos con costo registrado)', dinero(g.ingresoNeto)], ['− Costo de lo que se vendió', dinero(g.costoNeto)], ['= GANANCIA BRUTA' + (g.ingresoNeto > 0 ? ' (' + g.margen.toFixed(1) + '%)' : ''), dinero(g.bruta), 'b'], ['− Gastos del día (sin proveedores)', dinero(gOp)], ['= GANANCIA NETA', dinero(g.neta), 'b'], ['− Pérdidas por bajas de mercancía (punto 6)', dinero(perdTotal)], ['= GANANCIA REAL (después de pérdidas)', dinero(redondear2(g.neta - perdTotal)), 'b']]);
+                h += nota('<b>Qué significa:</b> la ganancia bruta es lo que vendiste menos lo que te costó esa mercancía. La neta es lo que realmente te quedó después de pagar los gastos. ' + (g.sinCosto > 0 ? dinero(g.sinCosto) + ' de ventas no tienen costo registrado (servicios o recargas), por eso no suman a la ganancia. ' : '') + 'Los pagos a proveedores no se restan aquí porque ya están incluidos en el costo. La GANANCIA REAL además descuenta la mercancía que diste de baja.');
+            }
+            h += cjSec('RESUMEN EN UNA FRASE') + nota('Hoy vendiste ' + dinero(r.total - r.devTotal) + ': ' + dinero(ef) + ' entraron en efectivo y ' + dinero(otros) + ' por otros medios. De la caja salieron ' + dinero(gOp) + ' de gastos y ' + dinero(prov) + ' para proveedores, así que el cajón debe tener ' + dinero(cajaEsp) + '.' + (dueno ? ' Tu ganancia neta del día fue ' + dinero(g.neta) + (perdTotal > 0 ? ' y, después de ' + dinero(perdTotal) + ' de pérdidas por bajas, tu ganancia real fue ' + dinero(redondear2(g.neta - perdTotal)) : '') + '.' : ''));
+            return h;
+        }
+        function imprimirDiaCarta(dia, fondo) { imprimirHtmlCarta(cartaDiaHtml(dia || fechaLocalISO(), fondo)); }
+        function ofrecerDocumentoDia(fondo) {
+            try { mostrarConfirmacionPro('¿Quieres el DOCUMENTO DEL DÍA con todas las ventas, compras, gastos, caja y ganancias explicadas?\n\n(Se abre para imprimir o guardar como PDF.)', 'Cierre de caja', '📄', () => imprimirDiaCarta(fechaLocalISO(), fondo)); } catch (e) {}
+        }
+
         function cartaReporteVentasHtml(r) {
             const dueno = esDueno();
             let h = cjEncabezado('REPORTE DE VENTAS', escHtml(etiquetaPeriodo(r)));
@@ -9479,8 +9613,11 @@ html:not(.dark) .pos-pie{background:#fff}
                 r.devs.map(({ d, v }) => [escHtml(d.correlativo), escHtml(formatearFecha(d.fecha)), escHtml(v.correlativo), escHtml((d.items || []).map(i => i.cant + '× ' + i.nombre).join(', ')), escHtml(d.motivo || ''), dinero(d.total)]), ['', '', '', '', 'TOTAL', dinero(r.devTotal)]);
             if (r.anuladas.length) h += cjSec('Ventas anuladas (' + r.anuladas.length + ')') + cjTabla([{ t: 'Ticket' }, { t: 'Vendida' }, { t: 'Anulada' }, { t: 'Cliente' }, { t: 'Por' }, { t: 'Total', a: 'r' }],
                 r.anuladas.map(v => [escHtml(v.correlativo), escHtml(formatearFecha(v.fecha)), escHtml(formatearFecha(v.fechaAnulacion)), escHtml(v.cliente), escHtml(v.anuladaPor || ''), dinero(v.total)]));
-            if (r.gastos.length) h += cjSec('Gastos (' + r.gastos.length + ')') + cjTabla([{ t: 'Fecha' }, { t: 'Categoría' }, { t: 'Descripción' }, { t: 'Monto', a: 'r' }],
-                r.gastos.map(x => [escHtml(isoADMY(String(x.fecha).substring(0, 10))), escHtml(x.categoria), escHtml(x.desc || ''), dinero(x.monto)]), ['', '', 'TOTAL', dinero(r.totalGastos)]);
+            const _gOp = r.gastos.filter(x => !esPagoProv(x)), _gPv = r.gastos.filter(esPagoProv);
+            if (_gOp.length) h += cjSec('Gastos (' + _gOp.length + ')') + cjTabla([{ t: 'Fecha' }, { t: 'Categoría' }, { t: 'Descripción' }, { t: 'Monto', a: 'r' }],
+                _gOp.map(x => [escHtml(isoADMY(String(x.fecha).substring(0, 10))), escHtml(x.categoria), escHtml(x.desc || ''), dinero(x.monto)]), ['', '', 'TOTAL', dinero(r.totalGastos - r.totalProv)]);
+            if (_gPv.length) h += cjSec('Pagos a proveedores (' + _gPv.length + ') — salen de la caja, no son gasto') + cjTabla([{ t: 'Fecha' }, { t: 'Proveedor / nota' }, { t: 'Monto', a: 'r' }],
+                _gPv.map(x => [escHtml(isoADMY(String(x.fecha).substring(0, 10))), escHtml(x.desc || ''), dinero(x.monto)]), ['', 'TOTAL', dinero(r.totalProv)]);
             return h;
         }
         function imprimirReporteCarta() {
@@ -9806,7 +9943,7 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
 <script>
 /* v12.85.28: aviso de versión nueva en la app de Android (no se actualiza sola: se descarga e instala encima) */
 (function(){
- var VER='12.85.49',REPO='dacrohx08-bot/system-ventas-pro',APK='https://github.com/'+REPO+'/releases/latest/download/SystemVentasPro-Android.apk';
+ var VER='12.85.55',REPO='dacrohx08-bot/system-ventas-pro',APK='https://github.com/'+REPO+'/releases/latest/download/SystemVentasPro-Android.apk';
  function esAndroid(){try{return !!(window.Capacitor&&Capacitor.getPlatform&&Capacitor.getPlatform()==='android')}catch(e){return false}}
  function num(v){return String(v||'').replace(/^v/i,'').split('.').map(function(x){return parseInt(x,10)||0})}
  function mayor(a,b){a=num(a);b=num(b);for(var i=0;i<3;i++){if((a[i]||0)>(b[i]||0))return true;if((a[i]||0)<(b[i]||0))return false}return false}
